@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B91B36A81B71181000B1BE78 /* Level1.plist in Resources */ = {isa = PBXBuildFile; fileRef = B91B36A71B71181000B1BE78 /* Level1.plist */; };
+		B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B36A91B71181F00B1BE78 /* GameState.swift */; };
 		D471FDBF1B6FD3B000D80921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDBE1B6FD3B000D80921 /* AppDelegate.swift */; };
 		D471FDC11B6FD3B000D80921 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D471FDC01B6FD3B000D80921 /* GameScene.sks */; };
 		D471FDC31B6FD3B000D80921 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDC21B6FD3B000D80921 /* GameScene.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B91B36A71B71181000B1BE78 /* Level1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Level1.plist; sourceTree = "<group>"; };
+		B91B36A91B71181F00B1BE78 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		D471FDB91B6FD3B000D80921 /* FCTerrorGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FCTerrorGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D471FDBD1B6FD3B000D80921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D471FDBE1B6FD3B000D80921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B91B36A61B71181000B1BE78 /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				B91B36A71B71181000B1BE78 /* Level1.plist */,
+			);
+			path = Levels;
+			sourceTree = "<group>";
+		};
 		D471FDB01B6FD3B000D80921 = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +98,10 @@
 				D471FDC21B6FD3B000D80921 /* GameScene.swift */,
 				D471FDC41B6FD3B000D80921 /* GameViewController.swift */,
 				D471FDC61B6FD3B000D80921 /* Main.storyboard */,
+				B91B36A91B71181F00B1BE78 /* GameState.swift */,
 				D471FDC91B6FD3B000D80921 /* Images.xcassets */,
 				D471FDCB1B6FD3B000D80921 /* LaunchScreen.xib */,
+				B91B36A61B71181000B1BE78 /* Levels */,
 				D471FDBC1B6FD3B000D80921 /* Supporting Files */,
 			);
 			path = FCTerrorGame;
@@ -199,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D471FDCD1B6FD3B000D80921 /* LaunchScreen.xib in Resources */,
+				B91B36A81B71181000B1BE78 /* Level1.plist in Resources */,
 				D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */,
 				D471FDC11B6FD3B000D80921 /* GameScene.sks in Resources */,
 				D471FDC81B6FD3B000D80921 /* Main.storyboard in Resources */,
@@ -220,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D471FDC31B6FD3B000D80921 /* GameScene.swift in Sources */,
+				B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */,
 				D471FDC51B6FD3B000D80921 /* GameViewController.swift in Sources */,
 				D471FDBF1B6FD3B000D80921 /* AppDelegate.swift in Sources */,
 			);
@@ -419,6 +435,7 @@
 				D471FDDE1B6FD3B000D80921 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D471FDDF1B6FD3B000D80921 /* Build configuration list for PBXNativeTarget "FCTerrorGameTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +444,7 @@
 				D471FDE11B6FD3B000D80921 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

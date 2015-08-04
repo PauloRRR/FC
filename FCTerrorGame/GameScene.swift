@@ -1,42 +1,84 @@
 //
 //  GameScene.swift
-//  FCTerrorGame
+//  FCTeste
 //
-//  Created by Paulo Ricardo Ramos da Rosa on 8/3/15.
-//  Copyright (c) 2015 Paulo Ricardo Ramos da Rosa. All rights reserved.
+//  Created by Adriano Soares on 04/08/15.
+//  Copyright (c) 2015 bepid. All rights reserved.
 //
 
 import SpriteKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, UIGestureRecognizerDelegate {
+    var gameState = GameState.sharedInstance;
+    var level: NSDictionary?
+    var room: NSDictionary?
+    
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+        var filePath = NSBundle.mainBundle().pathForResource("Level1",
+            ofType: "plist")
+        level = NSDictionary(contentsOfFile: filePath!)
+        room = NSDictionary(dictionary: (level!["Rooms"] as! NSArray)[gameState.room]
+            as! [NSObject : AnyObject])
         
-        self.addChild(myLabel)
+        var swipeLeft   = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft:"))
+        var swipeUp     = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))
+        var swipeRight  = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight:"))
+        var swipeDown   = UISwipeGestureRecognizer(target: self, action: Selector("swipeDown:"))
+        swipeLeft.direction  = .Left
+        swipeUp.direction    = .Up
+        swipeRight.direction = .Right
+        swipeDown.direction  = .Down
+        view.addGestureRecognizer(swipeLeft)
+        view.addGestureRecognizer(swipeUp)
+        view.addGestureRecognizer(swipeRight)
+        view.addGestureRecognizer(swipeDown)
+        
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        /* Called when a touch begins */
+    func swipeLeft(gesture: UISwipeGestureRecognizer) {
+        print(hasEvent("swipeLeft"))
         
-        for touch in (touches as! Set<UITouch>) {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
+        println("Left")
+    }
+    
+    func swipeUp(gesture: UISwipeGestureRecognizer) {
+        print(hasEvent("swipeUp"))
+        
+        println("Up")
+    }
+    func swipeRight(gesture: UISwipeGestureRecognizer) {
+        print(hasEvent("swipeRight"))
+        
+        println("Right")
+    }
+    
+    func swipeDown(gesture: UISwipeGestureRecognizer) {
+        print(hasEvent("swipeDown"))
+        
+        println("Down")
+    }
+    
+    func hasEvent(name: String) -> Int {
+        if let room = self.room {
+            println("hasRoom")
+            var array = room["Events"] as! [NSDictionary]
+            for index in 0..<array.count {
+                var event = array[index] as NSDictionary
+                if (event.objectForKey("action") as? String == name) {
+                    return index;
+                
+                }
+            }
+        
         }
+
+    
+        return -1;
+    }
+    
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+
     }
    
     override func update(currentTime: CFTimeInterval) {

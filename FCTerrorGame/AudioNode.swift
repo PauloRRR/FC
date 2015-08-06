@@ -80,6 +80,32 @@ class AudioNode: NSObject {
             self.enviroNode.listenerAngularOrientation = AVAudioMake3DAngularOrientation(yaw, pitch, roll)
     }
     
+    func getPlayer3DPosition()->AVAudio3DPoint{
+        return self.player.position
+    }
     
-   
+    func getListener3DPosition()->AVAudio3DPoint{
+        return self.enviroNode.listenerPosition
+    }
+    
+    func getListenerAngularPosition()->AVAudio3DAngularOrientation{
+        return self.enviroNode.listenerAngularOrientation
+    }
+    
+    func setLeftChannel(){
+        self.player.pan = -1
+    }
+    
+    func setRightChannel(){
+        self.player.pan = 1
+    }
+    
+    func setCenterChannel(){
+        self.player.pan = 0
+    }
+    
+    func setVolume(vol:Float){
+        self.player.volume = vol
+    }
+    
 }

@@ -12,7 +12,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     var gameState = GameState.sharedInstance;
     var level: NSDictionary?
     var room: NSDictionary?
-    
+
     override func didMoveToView(view: SKView) {
         var filePath = NSBundle.mainBundle().pathForResource("Level1",
             ofType: "plist")
@@ -32,8 +32,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         view.addGestureRecognizer(swipeUp)
         view.addGestureRecognizer(swipeRight)
         view.addGestureRecognizer(swipeDown)
-        
-    }
+            }
     
     func swipeLeft(gesture: UISwipeGestureRecognizer) {
         var event = fetchEvent("swipeLeft")

@@ -36,37 +36,46 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     }
     
     func swipeLeft(gesture: UISwipeGestureRecognizer) {
-        print(hasEvent("swipeLeft"))
+        var event = fetchEvent("swipeLeft")
+        if (event >= 0) {
+            println("Left")
+
         
-        println("Left")
+        }
     }
     
     func swipeUp(gesture: UISwipeGestureRecognizer) {
-        print(hasEvent("swipeUp"))
-        
-        println("Up")
+        var event = fetchEvent("swipeUp")
+        if (event >= 0) {
+            println("Up")
+            
+            
+        }
     }
     func swipeRight(gesture: UISwipeGestureRecognizer) {
-        print(hasEvent("swipeRight"))
-        
-        println("Right")
+        var event = fetchEvent("swipeRight")
+        if (event >= 0) {
+            println("Right")
+            
+            
+        }
     }
     
     func swipeDown(gesture: UISwipeGestureRecognizer) {
-        print(hasEvent("swipeDown"))
-        
-        println("Down")
+        var event = fetchEvent("swipeDown")
+        if (event >= 0) {
+            println("Down")
+            
+        }
     }
     
-    func hasEvent(name: String) -> Int {
+    func fetchEvent(name: String) -> Int {
         if let room = self.room {
-            println("hasRoom")
             var array = room["Events"] as! [NSDictionary]
             for index in 0..<array.count {
                 var event = array[index] as NSDictionary
-                if (event.objectForKey("action") as? String == name) {
+                if (event.objectForKey("trigger") as? String == name) {
                     return index;
-                
                 }
             }
         

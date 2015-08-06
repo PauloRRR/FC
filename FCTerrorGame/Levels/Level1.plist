@@ -8,11 +8,11 @@
 			<key>Events</key>
 			<array>
 				<dict>
-					<key>action</key>
+					<key>trigger</key>
 					<string>swipeLeft</string>
 				</dict>
 				<dict>
-					<key>action</key>
+					<key>trigger</key>
 					<string>swipeRight</string>
 				</dict>
 			</array>

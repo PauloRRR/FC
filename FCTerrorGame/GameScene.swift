@@ -10,15 +10,16 @@ import SpriteKit
 
 class GameScene: SKScene, UIGestureRecognizerDelegate {
     var gameState = GameState.sharedInstance;
-    var level: NSDictionary?
-    var room: NSDictionary?
+    var level: JSON!
 
     override func didMoveToView(view: SKView) {
-        var filePath = NSBundle.mainBundle().pathForResource("Level1",
-            ofType: "plist")
-        level = NSDictionary(contentsOfFile: filePath!)
-        room = NSDictionary(dictionary: (level!["Rooms"] as! NSArray)[gameState.room]
-            as! [NSObject : AnyObject])
+        if let filePath = NSBundle.mainBundle().pathForResource("Level1", ofType: "json") {
+            level =  JSON(data: NSData(contentsOfFile: filePath)!)
+        } else {
+            level = JSON.nullJSON
+        }
+        println(level[0])
+
         
         var swipeLeft   = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft:"))
         var swipeUp     = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))
@@ -32,56 +33,40 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         view.addGestureRecognizer(swipeUp)
         view.addGestureRecognizer(swipeRight)
         view.addGestureRecognizer(swipeDown)
-            }
+    }
     
     func swipeLeft(gesture: UISwipeGestureRecognizer) {
-        var event = fetchEvent("swipeLeft")
-        if (event >= 0) {
-            println("Left")
-
-        
-        }
+        doAction("swipeLeft")
     }
     
     func swipeUp(gesture: UISwipeGestureRecognizer) {
-        var event = fetchEvent("swipeUp")
-        if (event >= 0) {
-            println("Up")
-            
-            
-        }
+        doAction("swipeUp")
     }
     func swipeRight(gesture: UISwipeGestureRecognizer) {
-        var event = fetchEvent("swipeRight")
-        if (event >= 0) {
-            println("Right")
-            
-            
-        }
+        doAction("swipeRight")
     }
     
     func swipeDown(gesture: UISwipeGestureRecognizer) {
-        var event = fetchEvent("swipeDown")
-        if (event >= 0) {
-            println("Down")
-            
-        }
+        doAction("swipeDown")
     }
     
-    func fetchEvent(name: String) -> Int {
-        if let room = self.room {
-            var array = room["Events"] as! [NSDictionary]
-            for index in 0..<array.count {
-                var event = array[index] as NSDictionary
-                if (event.objectForKey("trigger") as? String == name) {
-                    return index;
-                }
+    func doAction(name: String) {
+        let event = level[gameState.room]["events"][name]
+        if (event.description != "null") {
+            switch event["action"].stringValue {
+                case "pickItem":
+                    println("pickItem")
+                    break;
+                case "gotoRoom":
+                    println("goto")
+                    break;
+            
+                default:
+                    break;
+            
             }
         
         }
-
-    
-        return -1;
     }
     
     

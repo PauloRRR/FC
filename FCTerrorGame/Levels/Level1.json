@@ -1,0 +1,14 @@
+[
+    {
+        "events": {
+            "swipeLeft": {
+                "action": "pickItem",
+                "item": "key"
+            },
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 1
+            }
+        }
+    }
+]

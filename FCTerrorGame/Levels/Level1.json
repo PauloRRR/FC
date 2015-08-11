@@ -1,5 +1,7 @@
 [
     {
+        "background": "placeholder-bg1",
+        "listener" : "", 
         "events": {
             "swipeLeft": {
                 "action": "pickItem",
@@ -8,6 +10,19 @@
             "swipeUp": {
                 "action": "gotoRoom",
                 "room": 1
+            }
+        }
+    },
+    {
+        "background": "placeholder-bg2",
+        "events": {
+            "swipeLeft": {
+                "action": "pickItem",
+                "item": "key"
+            },
+            "swipeDown": {
+                "action": "gotoRoom",
+                "room": 0
             }
         }
     }

@@ -11,7 +11,9 @@ import SpriteKit
 class GameScene: SKScene, UIGestureRecognizerDelegate {
     var gameState = GameState.sharedInstance;
     var level: JSON!
-
+    var audio = AudioNode(soundName: "helicopterMono", format: "mp3")
+    
+    
     override func didMoveToView(view: SKView) {
         if let filePath = NSBundle.mainBundle().pathForResource("Level1", ofType: "json") {
             level =  JSON(data: NSData(contentsOfFile: filePath)!)
@@ -19,7 +21,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
             level = JSON.nullJSON
         }
         println(level[0])
-
+        
         
         var swipeLeft   = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft:"))
         var swipeUp     = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))

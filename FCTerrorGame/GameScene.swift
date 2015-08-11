@@ -35,7 +35,35 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         view.addGestureRecognizer(swipeUp)
         view.addGestureRecognizer(swipeRight)
         view.addGestureRecognizer(swipeDown)
+        
+        loadRoom()
     }
+
+    
+    
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+
+    }
+   
+    override func update(currentTime: CFTimeInterval) {
+        /* Called before each frame is rendered */
+    }
+    
+    // MARK: Level Functions
+    
+    func loadRoom () {
+        background = SKSpriteNode(imageNamed: level[gameState.room]["background"].stringValue)
+        background?.position = CGPoint(x: frame.midX, y: frame.midY)
+    
+        if let bg = background {
+            addChild(bg)
+        }
+        gameState.saveState()
+        
+    }
+
+    // MARK: Controls
+
     
     func swipeLeft(gesture: UISwipeGestureRecognizer) {
         doAction("swipeLeft")
@@ -56,27 +84,50 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         let event = level[gameState.room]["events"][name]
         if (event.description != "null") {
             switch event["action"].stringValue {
-                case "pickItem":
-                    println("pickItem")
-                    break;
-                case "gotoRoom":
-                    println("goto")
-                    break;
-            
-                default:
-                    break;
-            
+            case "pickItem":
+                pickItem(event)
+                break;
+            case "gotoRoom":
+                goToRoom(event)
+                break;
+                
+            default:
+                break;
+                
             }
-        
+            
         }
     }
     
+    func checkPrerequisite (action: JSON) -> Bool {
+        
+        return true;
+    }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    func checkItem (action: JSON) -> Bool {
+        
+        return true;
+    }
 
+    
+    // MARK: Actions
+
+    func goToRoom (action :JSON) {
+        if (checkPrerequisite(action)) {
+            gameState.room = action["room"].intValue
+            var transition = SKTransition.fadeWithDuration(1)
+            var scene = GameScene(size: self.size)
+            self.view?.presentScene(scene, transition: transition)
+        }
+        
     }
-   
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+    
+    func pickItem (action :JSON) {
+        if (checkPrerequisite(action) && checkItem(action)) {
+            gameState.items.append(action["item"].stringValue)
+        }
+    
     }
+    
+    
 }

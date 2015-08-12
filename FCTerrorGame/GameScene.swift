@@ -12,7 +12,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     var gameState = GameState.sharedInstance;
     var level: JSON!
     var audio = AudioNode(soundName: "helicopterMono", format: "mp3")
-    
+    var background: SKSpriteNode?
     
     override func didMoveToView(view: SKView) {
         if let filePath = NSBundle.mainBundle().pathForResource("Level1", ofType: "json") {

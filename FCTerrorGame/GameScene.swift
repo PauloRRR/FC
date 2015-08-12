@@ -52,7 +52,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     // MARK: Level Functions
     
     func loadRoom () {
-        background = SKSpriteNode(imageNamed: level[gameState.room]["background"].stringValue)
+        background = SKSpriteNode?(imageNamed: level[gameState.room]["background"].stringValue)
         background?.position = CGPoint(x: frame.midX, y: frame.midY)
     
         if let bg = background {

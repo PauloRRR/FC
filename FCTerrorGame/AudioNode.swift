@@ -59,6 +59,7 @@ class AudioNode: NSObject {
     }
     
     func playOnce(){
+        self.player.scheduleBuffer(audioFileBuffer, atTime: nil, options: nil, completionHandler: nil)
         self.player.play()
     }
     

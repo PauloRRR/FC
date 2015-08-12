@@ -98,11 +98,25 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     }
     
     func checkPrerequisite (action: JSON) -> Bool {
-        
-        return true;
+        if let prerequisite = action["prerequisite"].string {
+            var items = gameState.items.filter( {$0 == prerequisite } )
+            if (items.count > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return true;
+        }
     }
     
     func checkItem (action: JSON) -> Bool {
+        if let item = action["item"].string {
+            var items = gameState.items.filter( {$0 == item } )
+            if (items.count > 0) {
+                return false;
+            }
+        }
         
         return true;
     }

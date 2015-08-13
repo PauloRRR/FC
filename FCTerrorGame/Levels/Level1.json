@@ -1,6 +1,6 @@
 [
     {
-        "background": "placeholder-bg1",
+        "background": "asylumRoom",
         "listener" : "",
         "events": {
             "swipeLeft": {
@@ -20,7 +20,7 @@
         }
     },
     {
-        "background": "placeholder-bg2",
+        "background": "asylumCorridor",
         "events": {
             "swipeLeft": {
                 "action": "pickItem",

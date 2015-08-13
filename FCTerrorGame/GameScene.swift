@@ -12,6 +12,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     var gameState = GameState.sharedInstance;
     var level: JSON!
     var audio = AudioNode(soundName: "helicopterMono", format: "mp3")
+    var audio2 = AudioNode(soundName: "helicopterMono", format: "mp3")
+
     var background: SKSpriteNode?
     
     override func didMoveToView(view: SKView) {
@@ -77,6 +79,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     
     func swipeDown(gesture: UISwipeGestureRecognizer) {
         doAction("swipeDown")
+        audio2.playOnce()
     }
     
     func doAction(name: String) {
@@ -158,7 +161,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     func playSound (action: [String: JSON]) {
         //TODO: Tocar som
         if let soundName = action["sound"]?.string {
-            var audio = AudioNode(soundName: soundName, format: "mp3")
+            audio = AudioNode(soundName: "helicopterMono", format: "mp3")
             audio.playOnce();
         }
 

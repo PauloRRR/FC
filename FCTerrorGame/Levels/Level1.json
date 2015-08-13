@@ -14,7 +14,10 @@
                 "action": "gotoRoom",
                 "room": 1,
                 "failPrerequisite": {
-                    "sound": "helicopterMono"
+                    "sound": "locked",
+                    "format": "wav",
+                    "x": 10.0,
+                    "y": 0.0
                 }
             }
         }
@@ -29,8 +32,26 @@
             "swipeDown": {
                 "prerequisite": "otherKey",
                 "action": "gotoRoom",
-                "room": 0
+                "room": 0,
+                "failPrerequisite": {
+                    "sound": "locked",
+                    "format": "wav",
+                    "x": 0.0,
+                    "y": 0.0
+                }
+            },
+            "swipeRight": {
+                "prerequisite": "No",
+                "action": "gotoRoom",
+                "room": 0,
+                "failPrerequisite": {
+                    "sound": "locked",
+                    "format": "wav",
+                    "x": 10.0,
+                    "y": 0.0
+                }
             }
+
         }
     }
 ]

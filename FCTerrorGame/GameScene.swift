@@ -11,9 +11,6 @@ import SpriteKit
 class GameScene: SKScene, UIGestureRecognizerDelegate {
     var gameState = GameState.sharedInstance;
     var level: JSON!
-    var audio = AudioNode(soundName: "helicopterMono", format: "mp3")
-    var audio2 = AudioNode(soundName: "helicopterMono", format: "mp3")
-
     var background: SKSpriteNode?
    
     
@@ -82,7 +79,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     
     func swipeDown(gesture: UISwipeGestureRecognizer) {
         doAction("swipeDown")
-        audio2.playOnce()
     }
     
     func doAction(name: String) {
@@ -166,6 +162,12 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         if let soundName = action["sound"]?.string {
 //            audio = AudioNode(soundName: soundName, format: "mp3")
 //            audio.playOnce();
+            if let format = action["format"]?.string{
+                var x = action["x"]?.float
+                var y = action["y"]?.float
+                println("\(x),\(y)")
+                Singleton.addSoundArray(soundName, frmt: format, x: x!, y: y!)
+            }
         }
 
     }

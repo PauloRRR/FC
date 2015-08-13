@@ -13,6 +13,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     var level: JSON!
     var audio = AudioNode(soundName: "helicopterMono", format: "mp3")
     var background: SKSpriteNode?
+   
     
     override func didMoveToView(view: SKView) {
         if let filePath = NSBundle.mainBundle().pathForResource("Level1", ofType: "json") {
@@ -34,8 +35,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         view.addGestureRecognizer(swipeUp)
         view.addGestureRecognizer(swipeRight)
         view.addGestureRecognizer(swipeDown)
-        
         loadRoom()
+        Singleton.playBGSound("asylum", frmt: "mp3")
     }
 
     
@@ -53,11 +54,12 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     func loadRoom () {
         background = SKSpriteNode(imageNamed: level[gameState.room]["background"].stringValue)
         background?.position = CGPoint(x: frame.midX, y: frame.midY)
-    
+        
         if let bg = background {
             addChild(bg)
         }
         gameState.saveState()
+        
         
     }
 
@@ -73,6 +75,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     }
     func swipeRight(gesture: UISwipeGestureRecognizer) {
         doAction("swipeRight")
+       
     }
     
     func swipeDown(gesture: UISwipeGestureRecognizer) {
@@ -150,7 +153,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         if (checkPrerequisite(action) && checkItem(action)) {
             gameState.items.append(action["item"].stringValue)
             gameState.updateState()
-
+            
         }
     
     }
@@ -158,8 +161,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     func playSound (action: [String: JSON]) {
         //TODO: Tocar som
         if let soundName = action["sound"]?.string {
-            var audio = AudioNode(soundName: soundName, format: "mp3")
-            audio.playOnce();
+//            audio = AudioNode(soundName: soundName, format: "mp3")
+//            audio.playOnce();
         }
 
     }

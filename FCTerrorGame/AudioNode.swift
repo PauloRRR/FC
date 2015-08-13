@@ -16,7 +16,7 @@ class AudioNode: NSObject {
     var audioEngine = AVAudioEngine()
     var enviroNode = AVAudioEnvironmentNode()
     var audioFileBuffer = AVAudioPCMBuffer()
-    
+
     init(soundName:String,format:String) {
         
         self.player.renderingAlgorithm = AVAudio3DMixingRenderingAlgorithm.HRTF

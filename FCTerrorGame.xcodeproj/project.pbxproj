@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		306F7C731B7118A100E8501A /* AudioNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F7C721B7118A100E8501A /* AudioNode.swift */; };
 		306F7C771B7274F900E8501A /* helicopterMono.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C761B7274F900E8501A /* helicopterMono.mp3 */; };
+		306F7C7B1B7D014C00E8501A /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F7C7A1B7D014C00E8501A /* Singleton.swift */; };
+		306F7C7D1B7D023700E8501A /* asylum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C7C1B7D023700E8501A /* asylum.mp3 */; };
+		306F7C7F1B7D113600E8501A /* BackGroundSoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */; };
+		306F7C811B7D1BF500E8501A /* locked.wav in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C801B7D1BF500E8501A /* locked.wav */; };
 		B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B36A91B71181F00B1BE78 /* GameState.swift */; };
 		B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */; };
 		B985E0761B75300200CBAC43 /* Level1.json in Resources */ = {isa = PBXBuildFile; fileRef = B985E0751B75300200CBAC43 /* Level1.json */; };
@@ -35,6 +39,10 @@
 /* Begin PBXFileReference section */
 		306F7C721B7118A100E8501A /* AudioNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioNode.swift; sourceTree = "<group>"; };
 		306F7C761B7274F900E8501A /* helicopterMono.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = helicopterMono.mp3; sourceTree = "<group>"; };
+		306F7C7A1B7D014C00E8501A /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		306F7C7C1B7D023700E8501A /* asylum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = asylum.mp3; sourceTree = "<group>"; };
+		306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGroundSoundNode.swift; sourceTree = "<group>"; };
+		306F7C801B7D1BF500E8501A /* locked.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = locked.wav; sourceTree = "<group>"; };
 		B91B36A91B71181F00B1BE78 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		B985E0751B75300200CBAC43 /* Level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level1.json; sourceTree = "<group>"; };
@@ -84,7 +92,9 @@
 				D471FDBB1B6FD3B000D80921 /* FCTerrorGame */,
 				D471FDD51B6FD3B000D80921 /* FCTerrorGameTests */,
 				D471FDBA1B6FD3B000D80921 /* Products */,
+				306F7C7C1B7D023700E8501A /* asylum.mp3 */,
 				306F7C761B7274F900E8501A /* helicopterMono.mp3 */,
+				306F7C801B7D1BF500E8501A /* locked.wav */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +122,8 @@
 				B91B36A61B71181000B1BE78 /* Levels */,
 				D471FDBC1B6FD3B000D80921 /* Supporting Files */,
 				306F7C721B7118A100E8501A /* AudioNode.swift */,
+				306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */,
+				306F7C7A1B7D014C00E8501A /* Singleton.swift */,
 			);
 			path = FCTerrorGame;
 			sourceTree = "<group>";
@@ -221,8 +233,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				306F7C811B7D1BF500E8501A /* locked.wav in Resources */,
 				306F7C771B7274F900E8501A /* helicopterMono.mp3 in Resources */,
 				D471FDCD1B6FD3B000D80921 /* LaunchScreen.xib in Resources */,
+				306F7C7D1B7D023700E8501A /* asylum.mp3 in Resources */,
 				D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */,
 				D471FDC11B6FD3B000D80921 /* GameScene.sks in Resources */,
 				B985E0761B75300200CBAC43 /* Level1.json in Resources */,
@@ -245,7 +259,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D471FDC31B6FD3B000D80921 /* GameScene.swift in Sources */,
+				306F7C7B1B7D014C00E8501A /* Singleton.swift in Sources */,
 				B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */,
+				306F7C7F1B7D113600E8501A /* BackGroundSoundNode.swift in Sources */,
 				D471FDC51B6FD3B000D80921 /* GameViewController.swift in Sources */,
 				B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */,
 				306F7C731B7118A100E8501A /* AudioNode.swift in Sources */,

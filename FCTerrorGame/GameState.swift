@@ -55,7 +55,11 @@ class GameState {
     }
     
     func updateState () {
-    
+        json = JSON([
+            "level": level,
+            "room" : room,
+            "items": items
+        ])
         saveState();
     }
     

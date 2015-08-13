@@ -5,12 +5,17 @@
         "events": {
             "swipeLeft": {
                 "action": "pickItem",
-                "item": "someKey"
+                "item": "someKey",
+                "hasItem": {
+                }
             },
             "swipeUp": {
                 "prerequisite": "someKey",
                 "action": "gotoRoom",
-                "room": 1
+                "room": 1,
+                "failPrerequisite": {
+                    "sound": "helicopterMono"
+                }
             }
         }
     },

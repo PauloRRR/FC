@@ -14,6 +14,7 @@ class GameState {
     var level = 1
     var room = 0
     var json = JSON.nullJSON
+    var debug = true;
     
     
     var items = [String]()
@@ -25,7 +26,7 @@ class GameState {
         let fileDestinationUrl = documentDirectoryURL.URLByAppendingPathComponent("gameState.json")
         if let data = String(contentsOfURL: fileDestinationUrl, encoding: NSUTF8StringEncoding, error: nil) {
             json = JSON(data: data.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!)
-            if (json == JSON.nullJSON) {
+            if (json == JSON.nullJSON || debug) {
                 defaultJson();
             } else {
                 loadJson();
@@ -55,7 +56,11 @@ class GameState {
     }
     
     func updateState () {
-    
+        json = JSON([
+            "level": level,
+            "room" : room,
+            "items": items
+        ])
         saveState();
     }
     

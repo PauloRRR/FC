@@ -20,7 +20,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         } else {
             level = JSON.nullJSON
         }
-        println(level[0])
         
         
         var swipeLeft   = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft:"))
@@ -105,6 +104,12 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
             if (items.count > 0) {
                 return true;
             } else {
+                if let failPrerequisite = action["failPrerequisite"].dictionary {
+                    println("locked")
+                    playSound(failPrerequisite)
+                }
+                
+                
                 return false;
             }
         } else {
@@ -116,6 +121,10 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         if let item = action["item"].string {
             var items = gameState.items.filter( {$0 == item } )
             if (items.count > 0) {
+                if let hasItem = action["hasItem"].dictionary {
+                    println("hasItem")
+                    playSound(hasItem)
+                }
                 return false;
             }
         }
@@ -129,6 +138,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     func goToRoom (action :JSON) {
         if (checkPrerequisite(action)) {
             gameState.room = action["room"].intValue
+            gameState.updateState()
             var transition = SKTransition.fadeWithDuration(1)
             var scene = GameScene(size: self.size)
             self.view?.presentScene(scene, transition: transition)
@@ -139,9 +149,18 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     func pickItem (action :JSON) {
         if (checkPrerequisite(action) && checkItem(action)) {
             gameState.items.append(action["item"].stringValue)
+            gameState.updateState()
+
         }
     
     }
     
-    
+    func playSound (action: [String: JSON]) {
+        //TODO: Tocar som
+        if let soundName = action["sound"]?.string {
+            var audio = AudioNode(soundName: soundName, format: "mp3")
+            audio.playOnce();
+        }
+
+    }
 }

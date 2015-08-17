@@ -22,14 +22,20 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         }
         
         
-        var swipeLeft   = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft:"))
-        var swipeUp     = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))
-        var swipeRight  = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight:"))
-        var swipeDown   = UISwipeGestureRecognizer(target: self, action: Selector("swipeDown:"))
+        var swipeLeft    = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft:"))
+        var swipeUp      = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))
+        var swipeRight   = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight:"))
+        var swipeDown    = UISwipeGestureRecognizer(target: self, action: Selector("swipeDown:"))
+        var alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
+        
+        
         swipeLeft.direction  = .Left
         swipeUp.direction    = .Up
         swipeRight.direction = .Right
         swipeDown.direction  = .Down
+        alternateTap.numberOfTapsRequired = 5;
+        
+        view.addGestureRecognizer(alternateTap)
         view.addGestureRecognizer(swipeLeft)
         view.addGestureRecognizer(swipeUp)
         view.addGestureRecognizer(swipeRight)
@@ -79,6 +85,12 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     
     func swipeDown(gesture: UISwipeGestureRecognizer) {
         doAction("swipeDown")
+    }
+    
+    func alternateTapping(gesture: UITapGestureRecognizer) {
+        println("tapping");
+    
+    
     }
     
     func doAction(name: String) {

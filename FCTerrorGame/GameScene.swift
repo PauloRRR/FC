@@ -118,9 +118,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
             if (items.count > 0) {
                 return true;
             } else {
-                if let failPrerequisite = action["failPrerequisite"].dictionary {
+                if let failPrerequisite = action["failPrerequisite"].array {
                     println("locked")
-                    playSound(failPrerequisite)
+                    playSoundArray(failPrerequisite)
                 }
                 
                 
@@ -135,9 +135,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         if let item = action["item"].string {
             var items = gameState.items.filter( {$0 == item } )
             if (items.count > 0) {
-                if let hasItem = action["hasItem"].dictionary {
+                if let hasItem = action["hasItem"].array {
                     println("hasItem")
-                    playSound(hasItem)
+                    playSoundArray(hasItem)
                 }
                 return false;
             }
@@ -169,17 +169,26 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     
     }
     
+    func playSoundArray (action : [JSON]) {
+        for sound: JSON in action {
+            playSound(sound.dictionaryValue)
+        }
+    
+    }
+    
     func playSound (action: [String: JSON]) {
-        //TODO: Tocar som
         if let soundName = action["sound"]?.string {
-//            audio = AudioNode(soundName: soundName, format: "mp3")
-//            audio.playOnce();
             if let format = action["format"]?.string{
                 var x = action["x"]?.float
                 var y = action["y"]?.float
-                println("\(x),\(y)")
-                Singleton.addSoundArray(soundName, frmt: format, x: x!, y: y!)
-            }
+                var offset = action["offset"]?.float
+                runAction(
+                    SKAction.sequence([
+                        SKAction.waitForDuration(NSTimeInterval(offset!)),
+                        SKAction.runBlock({ Singleton.addSoundArray(soundName, frmt: format, x: x!, y: y!) })
+                        ])
+                    )
+                            }
         }
 
     }

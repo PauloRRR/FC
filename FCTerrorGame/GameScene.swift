@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene, UIGestureRecognizerDelegate {
+class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureRecognizerDelegate {
     var gameState = GameState.sharedInstance;
     var level: JSON!
     var background: SKSpriteNode?
@@ -34,6 +34,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         swipeRight.direction = .Right
         swipeDown.direction  = .Down
         alternateTap.numberOfTapsRequired = 5;
+        alternateTap.delegate = self
         
         view.addGestureRecognizer(alternateTap)
         view.addGestureRecognizer(swipeLeft)
@@ -87,9 +88,12 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         doAction("swipeDown")
     }
     
-    func alternateTapping(gesture: UITapGestureRecognizer) {
-        println("tapping");
+    func didTap(gesture: UIAlternateTapGestureRecognizer) {
+        println("tapCount: \(gesture.tapCount)")
+    }
     
+    func alternateTapping(gesture: UITapGestureRecognizer) {
+        println("tapped");
     
     }
     
@@ -173,7 +177,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         for sound: JSON in action {
             playSound(sound.dictionaryValue)
         }
-    
     }
     
     func playSound (action: [String: JSON]) {

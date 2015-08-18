@@ -10,6 +10,10 @@ import UIKit
 import UIKit.UIGestureRecognizerSubclass
 
 
+@objc protocol UIAlternateTapGestureRecognizerDelegate: UIGestureRecognizerDelegate {
+    optional func didTap(gesture: UIAlternateTapGestureRecognizer);
+}
+
 class UIAlternateTapGestureRecognizer: UIGestureRecognizer {
     var tapCount = 0;
     var numberOfTapsRequired = 1;
@@ -34,6 +38,12 @@ class UIAlternateTapGestureRecognizer: UIGestureRecognizer {
     override func touchesEnded(touches: Set<NSObject>!, withEvent event: UIEvent!) {
         super.touchesEnded(touches, withEvent: event);
         tapCount++;
+        if let delegate = self.delegate {
+            if (delegate is UIAlternateTapGestureRecognizerDelegate) {
+                (delegate as! UIAlternateTapGestureRecognizerDelegate).didTap!(self)
+            }
+        
+        }
         if (tapCount == numberOfTapsRequired) {
             self.state = UIGestureRecognizerState.Ended;
             tapCount = 0;

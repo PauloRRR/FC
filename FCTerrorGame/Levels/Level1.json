@@ -6,8 +6,10 @@
             "swipeLeft": {
                 "action": "pickItem",
                 "item": "someKey",
-                "hasItem": {
-                }
+                "hasItem": [
+
+
+                ]
             },
             "swipeUp": {
                 "prerequisite": "someKey",
@@ -39,23 +41,29 @@
                 "prerequisite": "otherKey",
                 "action": "gotoRoom",
                 "room": 0,
-                "failPrerequisite": {
-                    "sound": "locked",
-                    "format": "wav",
-                    "x": 0.0,
-                    "y": 0.0
-                }
+                "failPrerequisite": [
+                    {
+                        "offset": 0.0,
+                        "sound": "locked",
+                        "format": "wav",
+                        "x": 0.0,
+                        "y": 0.0
+                    }
+                ]
             },
             "swipeRight": {
                 "prerequisite": "No",
                 "action": "gotoRoom",
                 "room": 0,
-                "failPrerequisite": {
-                    "sound": "locked",
-                    "format": "wav",
-                    "x": 10.0,
-                    "y": 0.0
-                }
+                "failPrerequisite": [
+                    {
+                        "offset": 0.0,
+                        "sound": "locked",
+                        "format": "wav",
+                        "x": 10.0,
+                        "y": 0.0
+                    }
+                ]
             }
 
         }

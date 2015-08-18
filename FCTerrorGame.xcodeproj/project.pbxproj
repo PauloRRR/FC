@@ -14,6 +14,7 @@
 		306F7C7F1B7D113600E8501A /* BackGroundSoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */; };
 		306F7C811B7D1BF500E8501A /* locked.wav in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C801B7D1BF500E8501A /* locked.wav */; };
 		B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B36A91B71181F00B1BE78 /* GameState.swift */; };
+		B91B8A781B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */; };
 		B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */; };
 		B985E0761B75300200CBAC43 /* Level1.json in Resources */ = {isa = PBXBuildFile; fileRef = B985E0751B75300200CBAC43 /* Level1.json */; };
 		D471FDBF1B6FD3B000D80921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDBE1B6FD3B000D80921 /* AppDelegate.swift */; };
@@ -44,6 +45,7 @@
 		306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGroundSoundNode.swift; sourceTree = "<group>"; };
 		306F7C801B7D1BF500E8501A /* locked.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = locked.wav; sourceTree = "<group>"; };
 		B91B36A91B71181F00B1BE78 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlternateTapGestureRecognizer.swift; path = Subclass/UIAlternateTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		B985E0751B75300200CBAC43 /* Level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level1.json; sourceTree = "<group>"; };
 		D471FDB91B6FD3B000D80921 /* FCTerrorGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FCTerrorGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +88,14 @@
 			path = Levels;
 			sourceTree = "<group>";
 		};
+		B91B8A761B8260FF0060CF44 /* Subclass */ = {
+			isa = PBXGroup;
+			children = (
+				B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */,
+			);
+			name = Subclass;
+			sourceTree = "<group>";
+		};
 		D471FDB01B6FD3B000D80921 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		D471FDBB1B6FD3B000D80921 /* FCTerrorGame */ = {
 			isa = PBXGroup;
 			children = (
+				B91B8A761B8260FF0060CF44 /* Subclass */,
 				B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */,
 				D471FDBE1B6FD3B000D80921 /* AppDelegate.swift */,
 				D471FDC01B6FD3B000D80921 /* GameScene.sks */,
@@ -266,6 +277,7 @@
 				B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */,
 				306F7C731B7118A100E8501A /* AudioNode.swift in Sources */,
 				D471FDBF1B6FD3B000D80921 /* AppDelegate.swift in Sources */,
+				B91B8A781B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class GameScene: SKScene, UIGestureRecognizerDelegate {
+class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureRecognizerDelegate {
     var gameState = GameState.sharedInstance;
     var level: JSON!
     var background: SKSpriteNode?
@@ -21,15 +21,21 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
             level = JSON.nullJSON
         }
         
+        var swipeLeft    = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft:"))
+        var swipeUp      = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))
+        var swipeRight   = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight:"))
+        var swipeDown    = UISwipeGestureRecognizer(target: self, action: Selector("swipeDown:"))
+        var alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
         
-        var swipeLeft   = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft:"))
-        var swipeUp     = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))
-        var swipeRight  = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight:"))
-        var swipeDown   = UISwipeGestureRecognizer(target: self, action: Selector("swipeDown:"))
+        
         swipeLeft.direction  = .Left
         swipeUp.direction    = .Up
         swipeRight.direction = .Right
         swipeDown.direction  = .Down
+        alternateTap.numberOfTapsRequired = 5;
+        alternateTap.delegate = self
+        
+        view.addGestureRecognizer(alternateTap)
         view.addGestureRecognizer(swipeLeft)
         view.addGestureRecognizer(swipeUp)
         view.addGestureRecognizer(swipeRight)
@@ -59,7 +65,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         }
         gameState.saveState()
         
-        
+
     }
 
     // MARK: Controls
@@ -79,6 +85,15 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     
     func swipeDown(gesture: UISwipeGestureRecognizer) {
         doAction("swipeDown")
+    }
+    
+    func didTap(gesture: UIAlternateTapGestureRecognizer) {
+        doAction("tap")
+    }
+    
+    func alternateTapping(gesture: UITapGestureRecognizer) {
+        doAction("alternateTap");
+    
     }
     
     func doAction(name: String) {
@@ -106,9 +121,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
             if (items.count > 0) {
                 return true;
             } else {
-                if let failPrerequisite = action["failPrerequisite"].dictionary {
+                if let failPrerequisite = action["failPrerequisite"].array {
                     println("locked")
-                    playSound(failPrerequisite)
+                    playSoundArray(failPrerequisite)
                 }
                 
                 
@@ -123,9 +138,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
         if let item = action["item"].string {
             var items = gameState.items.filter( {$0 == item } )
             if (items.count > 0) {
-                if let hasItem = action["hasItem"].dictionary {
+                if let hasItem = action["hasItem"].array {
                     println("hasItem")
-                    playSound(hasItem)
+                    playSoundArray(hasItem)
                 }
                 return false;
             }
@@ -157,16 +172,24 @@ class GameScene: SKScene, UIGestureRecognizerDelegate {
     
     }
     
+    func playSoundArray (action : [JSON]) {
+        for sound: JSON in action {
+            playSound(sound.dictionaryValue)
+        }
+    }
+    
     func playSound (action: [String: JSON]) {
-        //TODO: Tocar som
         if let soundName = action["sound"]?.string {
-//            audio = AudioNode(soundName: soundName, format: "mp3")
-//            audio.playOnce();
             if let format = action["format"]?.string{
                 var x = action["x"]?.float
                 var y = action["y"]?.float
-                println("\(x),\(y)")
-                Singleton.addSoundArray(soundName, frmt: format, x: x!, y: y!)
+                var offset = action["offset"]?.float
+                runAction(
+                    SKAction.sequence([
+                        SKAction.waitForDuration(NSTimeInterval(offset!)),
+                        SKAction.runBlock({ Singleton.addSoundArray(soundName, frmt: format, x: x!, y: y!) })
+                        ])
+                    )
             }
         }
 

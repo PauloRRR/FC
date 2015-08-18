@@ -21,7 +21,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             level = JSON.nullJSON
         }
         
-        
         var swipeLeft    = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft:"))
         var swipeUp      = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))
         var swipeRight   = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight:"))
@@ -66,7 +65,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
         gameState.saveState()
         
-        
+
     }
 
     // MARK: Controls
@@ -89,11 +88,11 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     }
     
     func didTap(gesture: UIAlternateTapGestureRecognizer) {
-        println("tapCount: \(gesture.tapCount)")
+        doAction("tap")
     }
     
     func alternateTapping(gesture: UITapGestureRecognizer) {
-        println("tapped");
+        doAction("alternateTap");
     
     }
     
@@ -191,7 +190,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                         SKAction.runBlock({ Singleton.addSoundArray(soundName, frmt: format, x: x!, y: y!) })
                         ])
                     )
-                            }
+            }
         }
 
     }

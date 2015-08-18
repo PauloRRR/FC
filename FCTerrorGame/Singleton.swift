@@ -24,11 +24,17 @@ class Singleton {
     }
     
     class func addSoundArray(sndName:String, frmt:String, x:Float, y:Float) {
-        self.sharedInstance.audioArray.removeAll(keepCapacity: true)
+        self.sharedInstance.audioArray.removeAll(keepCapacity: false)
         var audio = AudioNode(soundName: sndName,format: frmt)
         self.sharedInstance.audioArray.append(audio)
         self.sharedInstance.audioArray[0].player3DPosition(x, y: y, z: 0.0)
         self.sharedInstance.audioArray[0].playOnce()
         
+    }
+    
+    class func setListenerPosition(x:Float, y:Float){
+        for (var i = 0; i < self.sharedInstance.audioArray.count; i++){
+            self.sharedInstance.audioArray[i].listener3DPosition(x, y: y, z: 0)
+        }
     }
 }

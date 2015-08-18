@@ -16,7 +16,7 @@
                 "failPrerequisite": {
                     "sound": "locked",
                     "format": "wav",
-                    "x": 10.0,
+                    "x": 0.0,
                     "y": 0.0
                 }
             }
@@ -26,9 +26,15 @@
         "background": "asylumCorridor",
         "events": {
             "swipeLeft": {
-                "action": "pickItem",
-                "item": "otherKey"
-            },
+                "prerequisite": "No",
+                "action": "gotoRoom",
+                "room": 0,
+                "failPrerequisite": {
+                    "sound": "locked",
+                    "format": "wav",
+                    "x": -10.0,
+                    "y": 0.0
+ }            },
             "swipeDown": {
                 "prerequisite": "otherKey",
                 "action": "gotoRoom",

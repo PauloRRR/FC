@@ -17,6 +17,7 @@
 		B91B8A781B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */; };
 		B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */; };
 		B985E0761B75300200CBAC43 /* Level1.json in Resources */ = {isa = PBXBuildFile; fileRef = B985E0751B75300200CBAC43 /* Level1.json */; };
+		D444072F1B83BAAA0049AFE7 /* Map1.json in Resources */ = {isa = PBXBuildFile; fileRef = D444072E1B83BAAA0049AFE7 /* Map1.json */; };
 		D471FDBF1B6FD3B000D80921 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDBE1B6FD3B000D80921 /* AppDelegate.swift */; };
 		D471FDC11B6FD3B000D80921 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = D471FDC01B6FD3B000D80921 /* GameScene.sks */; };
 		D471FDC31B6FD3B000D80921 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDC21B6FD3B000D80921 /* GameScene.swift */; };
@@ -48,6 +49,7 @@
 		B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlternateTapGestureRecognizer.swift; path = Subclass/UIAlternateTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		B985E0751B75300200CBAC43 /* Level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level1.json; sourceTree = "<group>"; };
+		D444072E1B83BAAA0049AFE7 /* Map1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Map1.json; sourceTree = "<group>"; };
 		D471FDB91B6FD3B000D80921 /* MadnessDaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadnessDaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D471FDBD1B6FD3B000D80921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D471FDBE1B6FD3B000D80921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				B985E0751B75300200CBAC43 /* Level1.json */,
+				D444072E1B83BAAA0049AFE7 /* Map1.json */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */,
 				D471FDC11B6FD3B000D80921 /* GameScene.sks in Resources */,
 				B985E0761B75300200CBAC43 /* Level1.json in Resources */,
+				D444072F1B83BAAA0049AFE7 /* Map1.json in Resources */,
 				D471FDC81B6FD3B000D80921 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

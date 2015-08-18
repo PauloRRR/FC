@@ -48,7 +48,7 @@
 		B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlternateTapGestureRecognizer.swift; path = Subclass/UIAlternateTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		B985E0751B75300200CBAC43 /* Level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level1.json; sourceTree = "<group>"; };
-		D471FDB91B6FD3B000D80921 /* FCTerrorGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FCTerrorGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D471FDB91B6FD3B000D80921 /* MadnessDaze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MadnessDaze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D471FDBD1B6FD3B000D80921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D471FDBE1B6FD3B000D80921 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D471FDC01B6FD3B000D80921 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		D471FDC71B6FD3B000D80921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D471FDC91B6FD3B000D80921 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D471FDCC1B6FD3B000D80921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		D471FDD21B6FD3B000D80921 /* FCTerrorGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FCTerrorGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D471FDD21B6FD3B000D80921 /* MadnessDazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadnessDazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D471FDD71B6FD3B000D80921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D471FDD81B6FD3B000D80921 /* FCTerrorGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCTerrorGameTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,8 +111,8 @@
 		D471FDBA1B6FD3B000D80921 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D471FDB91B6FD3B000D80921 /* FCTerrorGame.app */,
-				D471FDD21B6FD3B000D80921 /* FCTerrorGameTests.xctest */,
+				D471FDB91B6FD3B000D80921 /* MadnessDaze.app */,
+				D471FDD21B6FD3B000D80921 /* MadnessDazeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,9 +167,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D471FDB81B6FD3B000D80921 /* FCTerrorGame */ = {
+		D471FDB81B6FD3B000D80921 /* MadnessDaze */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D471FDDC1B6FD3B000D80921 /* Build configuration list for PBXNativeTarget "FCTerrorGame" */;
+			buildConfigurationList = D471FDDC1B6FD3B000D80921 /* Build configuration list for PBXNativeTarget "MadnessDaze" */;
 			buildPhases = (
 				D471FDB51B6FD3B000D80921 /* Sources */,
 				D471FDB61B6FD3B000D80921 /* Frameworks */,
@@ -179,14 +179,14 @@
 			);
 			dependencies = (
 			);
-			name = FCTerrorGame;
+			name = MadnessDaze;
 			productName = FCTerrorGame;
-			productReference = D471FDB91B6FD3B000D80921 /* FCTerrorGame.app */;
+			productReference = D471FDB91B6FD3B000D80921 /* MadnessDaze.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D471FDD11B6FD3B000D80921 /* FCTerrorGameTests */ = {
+		D471FDD11B6FD3B000D80921 /* MadnessDazeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D471FDDF1B6FD3B000D80921 /* Build configuration list for PBXNativeTarget "FCTerrorGameTests" */;
+			buildConfigurationList = D471FDDF1B6FD3B000D80921 /* Build configuration list for PBXNativeTarget "MadnessDazeTests" */;
 			buildPhases = (
 				D471FDCE1B6FD3B000D80921 /* Sources */,
 				D471FDCF1B6FD3B000D80921 /* Frameworks */,
@@ -197,9 +197,9 @@
 			dependencies = (
 				D471FDD41B6FD3B000D80921 /* PBXTargetDependency */,
 			);
-			name = FCTerrorGameTests;
+			name = MadnessDazeTests;
 			productName = FCTerrorGameTests;
-			productReference = D471FDD21B6FD3B000D80921 /* FCTerrorGameTests.xctest */;
+			productReference = D471FDD21B6FD3B000D80921 /* MadnessDazeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -220,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D471FDB41B6FD3B000D80921 /* Build configuration list for PBXProject "FCTerrorGame" */;
+			buildConfigurationList = D471FDB41B6FD3B000D80921 /* Build configuration list for PBXProject "MadnessDaze" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -233,8 +233,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D471FDB81B6FD3B000D80921 /* FCTerrorGame */,
-				D471FDD11B6FD3B000D80921 /* FCTerrorGameTests */,
+				D471FDB81B6FD3B000D80921 /* MadnessDaze */,
+				D471FDD11B6FD3B000D80921 /* MadnessDazeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,7 +294,7 @@
 /* Begin PBXTargetDependency section */
 		D471FDD41B6FD3B000D80921 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D471FDB81B6FD3B000D80921 /* FCTerrorGame */;
+			target = D471FDB81B6FD3B000D80921 /* MadnessDaze */;
 			targetProxy = D471FDD31B6FD3B000D80921 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -408,7 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FCTerrorGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MadnessDaze;
 			};
 			name = Debug;
 		};
@@ -418,7 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FCTerrorGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MadnessDaze;
 			};
 			name = Release;
 		};
@@ -436,8 +436,8 @@
 				);
 				INFOPLIST_FILE = FCTerrorGameTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FCTerrorGame.app/FCTerrorGame";
+				PRODUCT_NAME = MadnessDazeTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MadnessDaze.app/MadnessDaze";
 			};
 			name = Debug;
 		};
@@ -451,15 +451,15 @@
 				);
 				INFOPLIST_FILE = FCTerrorGameTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FCTerrorGame.app/FCTerrorGame";
+				PRODUCT_NAME = MadnessDazeTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MadnessDaze.app/MadnessDaze";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D471FDB41B6FD3B000D80921 /* Build configuration list for PBXProject "FCTerrorGame" */ = {
+		D471FDB41B6FD3B000D80921 /* Build configuration list for PBXProject "MadnessDaze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D471FDDA1B6FD3B000D80921 /* Debug */,
@@ -468,7 +468,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D471FDDC1B6FD3B000D80921 /* Build configuration list for PBXNativeTarget "FCTerrorGame" */ = {
+		D471FDDC1B6FD3B000D80921 /* Build configuration list for PBXNativeTarget "MadnessDaze" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D471FDDD1B6FD3B000D80921 /* Debug */,
@@ -477,7 +477,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D471FDDF1B6FD3B000D80921 /* Build configuration list for PBXNativeTarget "FCTerrorGameTests" */ = {
+		D471FDDF1B6FD3B000D80921 /* Build configuration list for PBXNativeTarget "MadnessDazeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D471FDE01B6FD3B000D80921 /* Debug */,

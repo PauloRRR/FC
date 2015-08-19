@@ -158,6 +158,11 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             gameState.updateState()
             var transition = SKTransition.fadeWithDuration(1)
             var scene = GameScene(size: self.size)
+            if let recognizers = self.view?.gestureRecognizers {
+                for recognizer in recognizers {
+                    self.view?.removeGestureRecognizer(recognizer as! UIGestureRecognizer)
+                }
+            }
             self.view?.presentScene(scene, transition: transition)
         }
         

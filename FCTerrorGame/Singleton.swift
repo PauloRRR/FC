@@ -11,6 +11,7 @@ class Singleton {
     private static let sharedInstance = Singleton()
     var audioArray = [AudioNode]()
     var backgroundPlayer = [BackGroundSoundNode]()
+    let map = [[1],[0,2],[1,3],[2,4],[3]]
     // METHODS
     private init() {
        
@@ -37,4 +38,9 @@ class Singleton {
             self.sharedInstance.audioArray[i].listener3DPosition(x, y: y, z: 0)
         }
     }
+    
+    class func map(room: Int)->[Int]{
+        return self.sharedInstance.map[room]
+    }
+    
 }

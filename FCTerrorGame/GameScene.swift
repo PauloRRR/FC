@@ -12,7 +12,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var gameState = GameState.sharedInstance;
     var level: JSON!
     var background: SKSpriteNode?
-   
+    var enemyControl = EnemyControl()
     
     override func didMoveToView(view: SKView) {
         if let filePath = NSBundle.mainBundle().pathForResource("Level1", ofType: "json") {
@@ -42,12 +42,27 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         view.addGestureRecognizer(swipeDown)
         loadRoom()
         Singleton.playBGSound("asylum", frmt: "mp3")
+        
+        self.runEnemyBehavior()
+        
+        
     }
 
+    // MARK: Enemy Behavior
     
+    func runEnemyBehavior(){
+        runAction(SKAction.repeatActionForever(
+            SKAction.sequence([
+                SKAction.waitForDuration(5.0),
+                SKAction.runBlock({
+                    self.enemyControl.updateEnemiesPosition()
+                })
+                ])
+            ))
+    }
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-
+    
     }
    
     override func update(currentTime: CFTimeInterval) {

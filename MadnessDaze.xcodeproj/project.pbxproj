@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		305224031B84F42C00AD7A98 /* EnemyBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305224021B84F42C00AD7A98 /* EnemyBot.swift */; };
+		305224051B86380300AD7A98 /* EnemyControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305224041B86380300AD7A98 /* EnemyControl.swift */; };
+		305224071B863F2400AD7A98 /* Enemy.json in Resources */ = {isa = PBXBuildFile; fileRef = 305224061B863F2400AD7A98 /* Enemy.json */; };
 		306F7C731B7118A100E8501A /* AudioNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F7C721B7118A100E8501A /* AudioNode.swift */; };
 		306F7C771B7274F900E8501A /* helicopterMono.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C761B7274F900E8501A /* helicopterMono.mp3 */; };
 		306F7C7B1B7D014C00E8501A /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F7C7A1B7D014C00E8501A /* Singleton.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		305224021B84F42C00AD7A98 /* EnemyBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyBot.swift; sourceTree = "<group>"; };
+		305224041B86380300AD7A98 /* EnemyControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyControl.swift; sourceTree = "<group>"; };
+		305224061B863F2400AD7A98 /* Enemy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Enemy.json; sourceTree = "<group>"; };
 		306F7C721B7118A100E8501A /* AudioNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioNode.swift; sourceTree = "<group>"; };
 		306F7C761B7274F900E8501A /* helicopterMono.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = helicopterMono.mp3; sourceTree = "<group>"; };
 		306F7C7A1B7D014C00E8501A /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
@@ -87,6 +93,7 @@
 			children = (
 				B985E0751B75300200CBAC43 /* Level1.json */,
 				D444072E1B83BAAA0049AFE7 /* Map1.json */,
+				305224061B863F2400AD7A98 /* Enemy.json */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -123,6 +130,7 @@
 		D471FDBB1B6FD3B000D80921 /* FCTerrorGame */ = {
 			isa = PBXGroup;
 			children = (
+				305224041B86380300AD7A98 /* EnemyControl.swift */,
 				B91B8A761B8260FF0060CF44 /* Subclass */,
 				B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */,
 				D471FDBE1B6FD3B000D80921 /* AppDelegate.swift */,
@@ -138,6 +146,7 @@
 				306F7C721B7118A100E8501A /* AudioNode.swift */,
 				306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */,
 				306F7C7A1B7D014C00E8501A /* Singleton.swift */,
+				305224021B84F42C00AD7A98 /* EnemyBot.swift */,
 			);
 			path = FCTerrorGame;
 			sourceTree = "<group>";
@@ -251,6 +260,7 @@
 				306F7C771B7274F900E8501A /* helicopterMono.mp3 in Resources */,
 				D471FDCD1B6FD3B000D80921 /* LaunchScreen.xib in Resources */,
 				306F7C7D1B7D023700E8501A /* asylum.mp3 in Resources */,
+				305224071B863F2400AD7A98 /* Enemy.json in Resources */,
 				D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */,
 				D471FDC11B6FD3B000D80921 /* GameScene.sks in Resources */,
 				B985E0761B75300200CBAC43 /* Level1.json in Resources */,
@@ -275,7 +285,9 @@
 			files = (
 				D471FDC31B6FD3B000D80921 /* GameScene.swift in Sources */,
 				306F7C7B1B7D014C00E8501A /* Singleton.swift in Sources */,
+				305224031B84F42C00AD7A98 /* EnemyBot.swift in Sources */,
 				B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */,
+				305224051B86380300AD7A98 /* EnemyControl.swift in Sources */,
 				306F7C7F1B7D113600E8501A /* BackGroundSoundNode.swift in Sources */,
 				D471FDC51B6FD3B000D80921 /* GameViewController.swift in Sources */,
 				B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */,

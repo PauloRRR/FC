@@ -1,0 +1,71 @@
+[
+    {   
+        "background": "asylumRoom",
+        "listener" : "",
+        "events": {
+            "swipeLeft": {
+                "action": "pickItem",
+                "item": "someKey",
+                "hasItem": [
+
+
+                ]
+            },
+            "swipeUp": {
+                "prerequisite": "someKey",
+                "action": "gotoRoom",
+                "room": 1,
+                "failPrerequisite": {
+                    "sound": "locked",
+                    "format": "wav",
+                    "x": 0.0,
+                    "y": 0.0
+                }
+            }
+        }
+    },
+    {
+        "background": "asylumCorridor",
+        "events": {
+            "swipeLeft": {
+                "prerequisite": "No",
+                "action": "gotoRoom",
+                "room": 0,
+                "failPrerequisite": {
+                    "sound": "locked",
+                    "format": "wav",
+                    "x": -10.0,
+                    "y": 0.0
+ }            },
+            "swipeDown": {
+                "prerequisite": "otherKey",
+                "action": "gotoRoom",
+                "room": 0,
+                "failPrerequisite": [
+                    {
+                        "offset": 0.0,
+                        "sound": "locked",
+                        "format": "wav",
+                        "x": 0.0,
+                        "y": 0.0
+                    }
+                ]
+            },
+            "swipeRight": {
+                "prerequisite": "No",
+                "action": "gotoRoom",
+                "room": 0,
+                "failPrerequisite": [
+                    {
+                        "offset": 0.0,
+                        "sound": "locked",
+                        "format": "wav",
+                        "x": 10.0,
+                        "y": 0.0
+                    }
+                ]
+            }
+
+        }
+    }
+]

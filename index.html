@@ -12,10 +12,35 @@
         <title></title>
     </head>
     <body ng-app="editor">
-        <div ng-controller="editorController">
+        <div ng-controller="editorController" class="jumbotron list-group">
+            <button type="button" class="btn btn-primary" ng-click="loadJson();">Load Json</button>
+            <button type="button" class="btn btn-primary" ng-click="saveJson();">Save Json</button></br>
             <button type="button" class="btn btn-primary" ng-click="newRoom();">New Room</button>
-            <div ng-repeat="room in roomList">
-                {{ room }}
+            <div ng-repeat="room in roomList" class="list-group-item">
+                ID : {{ $index }}</br>
+                Background: <input type="text" ng-model="room.background" placeholder="Background"></br>
+                <select ng-model="eventType">
+                    <option ng-repeat="eventOptions in events" value="{{eventOptions}}">{{eventOptions}}</option>
+                </select>
+                <button type="button" class="btn btn-primary" ng-click="newEvent(room, eventType);">New Event</button></br>
+                Events:
+                <div class="list-group">
+                    <div ng-repeat="(eventName, event) in room.events" class="list-group-item">
+                        {{ eventName }}</br>
+                        Prerequisite: <input type="text" ng-model="event.prerequisite" placeholder="Prerequisite"></br>
+                        Action:
+
+                        <select ng-model="event.action" ng-options="action for action in actions" ></select>
+                        <div ng-if="event.action == 'pickItem'">
+                            Item: <input type="text" ng-model="event.item" placeholder="Item"></br>
+                        </div>
+                        <div ng-if="event.action == 'gotoRoom'">
+                            Room: <input type="number" ng-model="event.room" placeholder="Room"></br>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </body>

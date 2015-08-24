@@ -26,7 +26,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         var swipeRight   = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight:"))
         var swipeDown    = UISwipeGestureRecognizer(target: self, action: Selector("swipeDown:"))
         var alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
-//        var tapUp = UITapGestureRecognizer(target: self, action: Selector("tapUp:"))
         
         swipeLeft.direction  = .Left
         swipeUp.direction    = .Up
@@ -34,8 +33,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         swipeDown.direction  = .Down
         alternateTap.numberOfTapsRequired = 5;
         alternateTap.delegate = self
-//        tapUp.locationInView(view)
-//        view.addGestureRecognizer(tapUp)
         view.addGestureRecognizer(alternateTap)
         view.addGestureRecognizer(swipeLeft)
         view.addGestureRecognizer(swipeUp)
@@ -86,10 +83,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
 
     // MARK: Controls
 
-//    func tapUp(gesture: UITapGestureRecognizer){
-//        doAction("tapUp")
-//        println("TAAAAAAAAAP")
-//    }
+
     func swipeLeft(gesture: UISwipeGestureRecognizer) {
         doAction("swipeLeft")
     }
@@ -175,7 +169,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         if (checkPrerequisite(action)) {
             gameState.room = action["room"].intValue
             gameState.updateState()
-            var transition = SKTransition.fadeWithDuration(1)
+            var transition = SKTransition.fadeWithDuration(0)
             var scene = GameScene(size: self.size)
             if let recognizers = self.view?.gestureRecognizers {
                 for recognizer in recognizers {

@@ -1813,6 +1813,1054 @@
             }
         }
 
+    },
+
+    {
+        "id": 111,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 70
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 112
+            }
+        }
+
+    },
+
+    {
+        "id": 112,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 111
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 113
+            }
+        }
+
+    },
+
+    {
+        "id": 113,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 112
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 114
+            }
+        }
+
+    },
+
+    {
+        "id": 114,
+        "background": "asylumIntersection",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 113
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 115
+            },
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 173
+            }
+        }
+
+    },
+
+    {
+        "id": 115,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 114
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 116
+            },
+            "swipeRight": {
+                "action": "gotoRoom",
+                "room": 156
+            }
+        }
+
+    },
+
+    {
+        "id": 116,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 115
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 117
+            }
+        }
+
+    },
+
+    {
+        "id": 117,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 116
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 118
+            }
+        }
+
+    },
+
+    {
+        "id": 118,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 117
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 119
+            }
+        }
+
+    },
+
+    {
+        "id": 119,
+        "background": "asylumIntersection",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 118
+            },
+            "swipeLeft":{
+                "action": "gotoRoom",
+                "room": 144
+            }
+        }
+
+    },
+
+    {
+        "id": 120,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 25
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 121
+            }
+        }
+
+    },
+
+    {
+        "id": 121,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 120
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 122
+            }
+        }
+
+    },
+
+    {
+        "id": 122,
+        "background": "asylumIntersection2",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 121
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 123
+            },
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 131
+            }
+        }
+
+    },
+
+    {
+        "id": 123,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 122
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 124
+            }
+        }
+
+    },
+
+    {
+        "id": 124,
+        "background": "asylumIntersection",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 123
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 125
+            },
+            "swipeRight": {
+                "action": "gotoRoom",
+                "room": 140
+            }
+        }
+
+    },
+
+    {
+        "id": 125,
+        "background": "asylumIntersection2",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 124
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 126
+            },
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 139
+            }
+        }
+
+    },
+
+    {
+        "id": 126,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 125
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 127
+            }
+        }
+
+    },
+
+    {
+        "id": 127,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 126
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 128
+            }
+        }
+
+    },
+
+    {
+        "id": 128,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 127
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 129
+            }
+        }
+
+    },
+
+    {
+        "id": 129,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 128
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 130
+            }
+        }
+
+    },
+
+    {
+        "id": 130,
+        "background": "asylumExit",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 129
+            }
+        }
+
+    },
+
+    {
+        "id": 131,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 132
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 122
+            }
+        }
+
+    },
+
+    {
+        "id": 132,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 133
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 131
+            }
+        }
+
+    },
+
+    {
+        "id": 133,
+        "background": "asylumIntersection",
+        "events": {
+            "swipeDown": {
+                "action": "gotoRoom",
+                "room": 134
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 132
+            }
+        }
+
+    },
+
+    {
+        "id": 134,
+        "background": "asylumIntersection2",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 133
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 136
+            },
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 135
+            }
+        }
+
+    },
+
+    {
+        "id": 135,
+        "background": "asylumRoom2",
+        "events": {
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 134
+            }
+        }
+
+    },
+
+    {
+        "id": 136,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 134
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 137
+            }
+        }
+
+    },
+
+    {
+        "id": 137,
+        "background": "asylumIntersection",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 136
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 138
+            }
+        }
+
+    },
+
+    {
+        "id": 138,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 137
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 139
+            }
+        }
+
+    },
+
+    {
+        "id": 139,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 138
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 125
+            }
+        }
+
+    },
+
+    {
+        "id": 140,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 124
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 141
+            }
+        }
+
+    },
+
+    {
+        "id": 141,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 140
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 142
+            }
+        }
+
+    },
+
+    {
+        "id": 142,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 141
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 143
+            }
+        }
+
+    },
+
+    {
+        "id": 143,
+        "background": "asylumIntersection2",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 142
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 144
+            },
+            "swipeDown": {
+                "action": "gotoRoom",
+                "room": 145
+            }
+        }
+
+    },
+
+    {
+        "id": 144,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 143
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 119
+            }
+        }
+
+    },
+
+    {
+        "id": 145,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 143
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 146
+            }
+        }
+
+    },
+
+    {
+        "id": 146,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 145
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 147
+            }
+        }
+
+    },
+
+    {
+        "id": 147,
+        "background": "asylumIntersection",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 146
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 148
+            }
+        }
+
+    },
+
+    {
+        "id": 148,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 147
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 149
+            }
+        }
+
+    },
+
+    {
+        "id": 148,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 147
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 149
+            }
+        }
+
+    },
+
+    {
+        "id": 149,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 148
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 150
+            }
+        }
+
+    },
+
+    {
+        "id": 150,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 149
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 151
+            }
+        }
+
+    },
+
+    {
+        "id": 151,
+        "background": "asylumIntersection2",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 150
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 152
+            },
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 168
+            }
+        }
+
+    },
+
+    {
+        "id": 152,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 151
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 153
+            }
+        }
+
+    },
+
+    {
+        "id": 153,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 152
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 154
+            }
+        }
+
+    },
+
+    {
+        "id": 154,
+        "background": "asylumIntersection",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 153
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 155
+            }
+        }
+
+    },
+
+    {
+        "id": 155,
+        "background": "asylumRoom2",
+        "events": {
+            "swipeUp":{
+                "action": "gotoRoom",
+                "room": 154
+            }
+        }
+
+    },
+
+    {
+        "id": 156,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 115
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 157
+            }
+        }
+
+    },
+
+    {
+        "id": 157,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 156
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 158
+            }
+        }
+
+    },
+
+    {
+        "id": 158,
+        "background": "asylumIntersection",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 157
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 159
+            },
+            "swipeDown": {
+                "action": "gotoRoom",
+                "room": 162
+            }
+        }
+
+    },
+
+    {
+        "id": 159,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 158
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 160
+            }
+        }
+
+    },
+
+    {
+        "id": 160,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 159
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 161
+            }
+        }
+
+    },
+
+    {
+        "id": 161,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 160
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 101
+            }
+        }
+
+    },
+
+    {
+        "id": 162,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 158
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 163
+            }
+        }
+
+    },
+
+    {
+        "id": 163,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 162
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 164
+            }
+        }
+
+    },
+
+    {
+        "id": 164,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 163
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 165
+            }
+        }
+
+    },
+
+    {
+        "id": 165,
+        "background": "asylumIntersection",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 164
+            },
+            "swipeLeft":{
+                "action": "gotoRoom",
+                "room": 166
+            }
+        }
+
+    },
+
+    {
+        "id": 166,
+        "background": "asylumIntersection2",
+        "events": {
+            "swipeRight": {
+                "action": "gotoRoom",
+                "room": 165
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 167
+            }
+        }
+
+    },
+
+    {
+        "id": 167,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 166
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 168
+            }
+        }
+
+    },
+
+    {
+        "id": 168,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeUp": {
+                "action": "gotoRoom",
+                "room": 167
+            },
+            "swipeDown":{
+                "action": "gotoRoom",
+                "room": 151
+            }
+        }
+
+    },
+
+    {
+        "id": 169,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 25
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 170
+            }
+        }
+
+    },
+
+    {
+        "id": 170,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 169
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 171
+            }
+        }
+
+    },
+
+    {
+        "id": 171,
+        "background": "asylumCorridor",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 170
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 172
+            }
+        }
+
+    },
+
+    {
+        "id": 172,
+        "background": "asylumCorridor2",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 171
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 173
+            }
+        }
+
+    },
+
+    {
+        "id": 173,
+        "background": "asylumCorridor3",
+        "events": {
+            "swipeLeft": {
+                "action": "gotoRoom",
+                "room": 172
+            },
+            "swipeRight":{
+                "action": "gotoRoom",
+                "room": 114
+            }
+        }
+
     }
 
 

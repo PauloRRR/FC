@@ -16,12 +16,14 @@
                 "prerequisite": "someKey",
                 "action": "gotoRoom",
                 "room": 1,
-                "failPrerequisite": {
-                    "sound": "locked",
-                    "format": "wav",
-                    "x": 0.0,
-                    "y": 0.0
-                }
+                "failPrerequisite": [
+                    {
+                        "sound": "locked",
+                        "format": "wav",
+                        "x": 0.0,
+                        "y": 0.0
+                    }
+                ]
             }
         }
     },
@@ -32,14 +34,16 @@
             "swipeLeft": {
                 "action": "gotoRoom",
                 "room": 0,
-                "failPrerequisite": {
-                    "sound": "locked",
-                    "format": "wav",
-                    "x": -10.0,
-                    "y": 0.0
-                }            
+                "failPrerequisite": [
+                    {
+                        "sound": "locked",
+                        "format": "wav",
+                        "x": -10.0,
+                        "y": 0.0
+                    }
+                ]
             },
-            
+
             "swipeUp": {
                 "action": "gotoRoom",
                 "room": 2
@@ -47,7 +51,7 @@
 
         }
     },
- 
+
     {
         "id": 2,
         "background": "asylumCorridor2",
@@ -61,7 +65,7 @@
                 "room": 1
             }
         }
- 
+
     },
 
     {
@@ -77,7 +81,7 @@
                 "room": 2
             }
         }
- 
+
     },
 
     {
@@ -93,7 +97,7 @@
                 "room": 3
             }
         }
- 
+
     },
 
     {
@@ -109,7 +113,7 @@
                 "room": 4
             }
         }
- 
+
     },
 
     {
@@ -125,7 +129,7 @@
                 "room": 5
             }
         }
- 
+
     },
 
     {
@@ -141,7 +145,7 @@
                 "room": 6
             }
         }
- 
+
     },
 
     {
@@ -157,7 +161,7 @@
                 "room": 7
             }
         }
- 
+
     },
 
     {
@@ -173,7 +177,7 @@
                 "room": 8
             }
         }
- 
+
     },
 
     {
@@ -222,7 +226,7 @@
                 "action": "gotoRoom",
                 "room": 11
             }
-            
+
         }
     },
 

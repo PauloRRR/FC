@@ -85,6 +85,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
 
 
     func swipeLeft(gesture: UISwipeGestureRecognizer) {
+        
         doAction("swipeLeft")
     }
     
@@ -110,14 +111,31 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     }
     
     func doAction(name: String) {
-        let event = level[gameState.room]["events"][name]
+        var newAction = name;
+        switch name {
+            case "swipeLeft":
+                newAction = gameState.actions[(0+gameState.rotation)%4]
+                break;
+            case "swipeUp":
+                newAction = gameState.actions[(1+gameState.rotation)%4]
+                break;
+            case "swipeRight":
+                newAction = gameState.actions[(2+gameState.rotation)%4]
+                break;
+            case "swipeDown":
+                newAction = gameState.actions[(3+gameState.rotation)%4]
+                break;
+            default:
+                break;
+        }
+        let event = level[gameState.room]["events"][newAction]
         if (event.description != "null") {
             switch event["action"].stringValue {
             case "pickItem":
                 pickItem(event)
                 break;
             case "gotoRoom":
-                goToRoom(event)
+                goToRoom(event, swipeDirection: newAction)
                 break;
                 
             default:
@@ -165,8 +183,26 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     // MARK: Actions
 
-    func goToRoom (action :JSON) {
+    func goToRoom (action :JSON, swipeDirection: String) {
         if (checkPrerequisite(action)) {
+            println("🍺 state was \(gameState.rotation)")
+            switch swipeDirection {
+            case "swipeRight":
+                gameState.rotation = 1;
+                break;
+            case "swipeUp":
+                gameState.rotation = 0;
+                break;
+            case "swipeLeft":
+                gameState.rotation = 3;
+                break;
+            case "swipeDown":
+                gameState.rotation = 2;
+                break;
+            default:
+                break;
+            }
+            println("🍺 state now is \(gameState.rotation)")
             gameState.room = action["room"].intValue
             gameState.updateState()
             var transition = SKTransition.fadeWithDuration(0)

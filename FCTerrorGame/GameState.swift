@@ -13,8 +13,12 @@ class GameState {
     
     var level = 1
     var room = 0
+    var rotation = 1
     var json = JSON.nullJSON
     var debug = true;
+    
+    var actions = ["swipeLeft", "swipeUp","swipeRight", "swipeDown"]
+    
     
     
     var items = [String]()

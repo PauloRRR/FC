@@ -10,12 +10,15 @@ app.controller('editorController', ['$scope', '$http', function($scope, $http) {
      .then(function(res){
         $scope.roomList = res.data;
       });
-     */
+    */
     $scope.loadJson = function (obj) {
         var json = obj.files[0];
         var r = new FileReader();
             r.onload = function(e) {
-                $scope.roomList = angular.fromJson(e.target.result);
+                $scope.$apply(function() {
+                     $scope.roomList = angular.fromJson(e.target.result);
+                 });
+
             };
             r.readAsText(json);
     };
@@ -36,7 +39,7 @@ app.controller('editorController', ['$scope', '$http', function($scope, $http) {
         $scope.roomList.push({
             "background": "",
             "events": {}
-        } );
+        });
     };
 
     $scope.newEvent = function (room, eventType) {
@@ -45,8 +48,13 @@ app.controller('editorController', ['$scope', '$http', function($scope, $http) {
         };
     };
 
-    $scope.newSound = function (soundArray) {
-        soundArray = soundArray || [];
+    $scope.newSound = function (event, array) {
+        var soundArray = event[array];
+        if (!soundArray) {
+            event[array] = [];
+            soundArray = event[array];
+        }
+
         soundArray.push({
             "offset": 0.0,
             "sound": "",

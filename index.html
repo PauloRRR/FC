@@ -33,7 +33,7 @@
                         <select ng-model="event.action" ng-options="action for action in actions" ></select>
                         <div ng-if="event.action == 'pickItem'">
                             Item: <input type="text" ng-model="event.item" placeholder="Item"></br>
-                            <button type="button" class="btn btn-primary" ng-click="newSound(event.hasItem);">New Sound</button></br>
+                            <button type="button" class="btn btn-primary" ng-click="newSound(event, 'hasItem');">New Sound</button></br>
                             hasItem:</br>
                             <div class="list-group">
                                 <div ng-repeat="sound in event.hasItem" class="list-group-item">
@@ -48,7 +48,7 @@
                         <div ng-if="event.action == 'gotoRoom'">
                             Room: <input type="number" ng-model="event.room" placeholder="Room"></br>
                         </div>
-                        <button type="button" class="btn btn-primary" ng-click="newSound(event.failPrerequisite);">New Sound</button></br>
+                        <button type="button" class="btn btn-primary" ng-click="newSound(event, 'failPrerequisite');">New Sound</button></br>
                         failPrerequisite:</br>
                         <div class="list-group">
                             <div ng-repeat="sound in event.failPrerequisite" class="list-group-item">

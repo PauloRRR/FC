@@ -136,8 +136,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 break;
             case "gotoRoom":
                 goToRoom(event, swipeDirection: newAction)
+                Singleton.addSoundArray("playerSteps", frmt: "mp3", x: 0.0, y: 0.0)
                 break;
-                
             default:
                 break;
                 

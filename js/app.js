@@ -48,6 +48,10 @@ app.controller('editorController', ['$scope', '$http', function($scope, $http) {
         };
     };
 
+    $scope.removeEvent = function (room, event) {
+        delete room.events[event];
+    };
+
     $scope.newSound = function (event, array) {
         var soundArray = event[array];
         if (!soundArray) {
@@ -62,6 +66,10 @@ app.controller('editorController', ['$scope', '$http', function($scope, $http) {
             "x": 0.0,
             "y": 0.0
         });
+    };
+
+    $scope.removeSound = function (array, id) {
+        array.splice(id, 1);
     };
 
 }]);

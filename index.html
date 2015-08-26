@@ -18,7 +18,7 @@
             <button type="button" class="btn btn-primary" ng-click="saveJson();">Save Json</button></br>
             <button type="button" class="btn btn-primary" ng-click="newRoom();">New Room</button>
             <div ng-repeat="room in roomList" class="list-group-item">
-                ID : {{ $index }}</br>
+                ID : {{ $index }} </br>
                 Background: <input type="text" ng-model="room.background" placeholder="Background"></br>
                 <select ng-model="eventType">
                     <option ng-repeat="eventOptions in events" value="{{eventOptions}}">{{eventOptions}}</option>
@@ -27,7 +27,9 @@
                 Events:
                 <div class="list-group">
                     <div ng-repeat="(eventName, event) in room.events" class="list-group-item">
-                        {{ eventName }}</br>
+                        {{ eventName }}<a ng-click="removeEvent(room, eventName);" > <span class="glyphicon glyphicon-remove pull-right" ></span></a></br>
+
+
                         Prerequisite: <input type="text" ng-model="event.prerequisite" placeholder="Prerequisite"></br>
                         Action:
                         <select ng-model="event.action" ng-options="action for action in actions" ></select>
@@ -36,7 +38,8 @@
                             <button type="button" class="btn btn-primary" ng-click="newSound(event, 'hasItem');">New Sound</button></br>
                             hasItem:</br>
                             <div class="list-group">
-                                <div ng-repeat="sound in event.hasItem" class="list-group-item">
+                                <div ng-repeat="(soundIndex, sound) in event.hasItem" class="list-group-item">
+                                    <a ng-click="removeSound(event.hasItem, soundIndex);" > <span class="glyphicon glyphicon-remove pull-right" ></span></a>
                                     Offset: <input type="number" ng-model="sound.offset"   placeholder="Offset" step="any"></br>
                                     Sound:  <input type="text"   ng-model="sound.sound"    placeholder="Sound"></br>
                                     Format: <input type="text"   ng-model="sound.format"   placeholder="format"></br>
@@ -51,7 +54,8 @@
                         <button type="button" class="btn btn-primary" ng-click="newSound(event, 'failPrerequisite');">New Sound</button></br>
                         failPrerequisite:</br>
                         <div class="list-group">
-                            <div ng-repeat="sound in event.failPrerequisite" class="list-group-item">
+                            <div ng-repeat="(soundIndex, sound) in event.failPrerequisite" class="list-group-item">
+                                <a ng-click="removeSound(event.failPrerequisite, soundIndex);" > <span class="glyphicon glyphicon-remove pull-right" ></span></a>
                                 Offset: <input type="number" ng-model="sound.offset"   placeholder="Offset" step="any"></br>
                                 Sound:  <input type="text"   ng-model="sound.sound"    placeholder="Sound"></br>
                                 Format: <input type="text"   ng-model="sound.format"   placeholder="format"></br>

@@ -30,6 +30,7 @@
 		D471FDCD1B6FD3B000D80921 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D471FDCB1B6FD3B000D80921 /* LaunchScreen.xib */; };
 		D471FDD91B6FD3B000D80921 /* FCTerrorGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDD81B6FD3B000D80921 /* FCTerrorGameTests.swift */; };
 		D4A0D3271B8CFB5F0004BB09 /* playerSteps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D3261B8CFB5F0004BB09 /* playerSteps.mp3 */; };
+		D4A0D32B1B8E3B440004BB09 /* crossroad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D32A1B8E3B440004BB09 /* crossroad.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,11 +48,11 @@
 		305224041B86380300AD7A98 /* EnemyControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyControl.swift; sourceTree = "<group>"; };
 		305224061B863F2400AD7A98 /* Enemy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Enemy.json; sourceTree = "<group>"; };
 		306F7C721B7118A100E8501A /* AudioNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioNode.swift; sourceTree = "<group>"; };
-		306F7C761B7274F900E8501A /* helicopterMono.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = helicopterMono.mp3; sourceTree = "<group>"; };
+		306F7C761B7274F900E8501A /* helicopterMono.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = helicopterMono.mp3; path = ../helicopterMono.mp3; sourceTree = "<group>"; };
 		306F7C7A1B7D014C00E8501A /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
-		306F7C7C1B7D023700E8501A /* asylum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = asylum.mp3; sourceTree = "<group>"; };
+		306F7C7C1B7D023700E8501A /* asylum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = asylum.mp3; path = ../asylum.mp3; sourceTree = "<group>"; };
 		306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGroundSoundNode.swift; sourceTree = "<group>"; };
-		306F7C801B7D1BF500E8501A /* locked.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = locked.wav; sourceTree = "<group>"; };
+		306F7C801B7D1BF500E8501A /* locked.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = locked.wav; path = ../locked.wav; sourceTree = "<group>"; };
 		B91B36A91B71181F00B1BE78 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlternateTapGestureRecognizer.swift; path = Subclass/UIAlternateTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -69,7 +70,8 @@
 		D471FDD21B6FD3B000D80921 /* MadnessDazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadnessDazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D471FDD71B6FD3B000D80921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D471FDD81B6FD3B000D80921 /* FCTerrorGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCTerrorGameTests.swift; sourceTree = "<group>"; };
-		D4A0D3261B8CFB5F0004BB09 /* playerSteps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playerSteps.mp3; sourceTree = "<group>"; };
+		D4A0D3261B8CFB5F0004BB09 /* playerSteps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = playerSteps.mp3; path = ../playerSteps.mp3; sourceTree = "<group>"; };
+		D4A0D32A1B8E3B440004BB09 /* crossroad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crossroad.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,10 +116,6 @@
 				D471FDBB1B6FD3B000D80921 /* FCTerrorGame */,
 				D471FDD51B6FD3B000D80921 /* FCTerrorGameTests */,
 				D471FDBA1B6FD3B000D80921 /* Products */,
-				306F7C7C1B7D023700E8501A /* asylum.mp3 */,
-				306F7C761B7274F900E8501A /* helicopterMono.mp3 */,
-				306F7C801B7D1BF500E8501A /* locked.wav */,
-				D4A0D3261B8CFB5F0004BB09 /* playerSteps.mp3 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -133,6 +131,8 @@
 		D471FDBB1B6FD3B000D80921 /* FCTerrorGame */ = {
 			isa = PBXGroup;
 			children = (
+				D4A0D3291B8E3B310004BB09 /* Speeches */,
+				D4A0D3281B8E3B070004BB09 /* Sounds */,
 				305224041B86380300AD7A98 /* EnemyControl.swift */,
 				B91B8A761B8260FF0060CF44 /* Subclass */,
 				B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */,
@@ -177,6 +177,25 @@
 				D471FDD71B6FD3B000D80921 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D4A0D3281B8E3B070004BB09 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				306F7C7C1B7D023700E8501A /* asylum.mp3 */,
+				306F7C761B7274F900E8501A /* helicopterMono.mp3 */,
+				306F7C801B7D1BF500E8501A /* locked.wav */,
+				D4A0D3261B8CFB5F0004BB09 /* playerSteps.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		D4A0D3291B8E3B310004BB09 /* Speeches */ = {
+			isa = PBXGroup;
+			children = (
+				D4A0D32A1B8E3B440004BB09 /* crossroad.mp3 */,
+			);
+			name = Speeches;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +289,7 @@
 				B985E0761B75300200CBAC43 /* Level1.json in Resources */,
 				D444072F1B83BAAA0049AFE7 /* Map1.json in Resources */,
 				D471FDC81B6FD3B000D80921 /* Main.storyboard in Resources */,
+				D4A0D32B1B8E3B440004BB09 /* crossroad.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

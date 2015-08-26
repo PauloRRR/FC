@@ -29,6 +29,7 @@
 		D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D471FDC91B6FD3B000D80921 /* Images.xcassets */; };
 		D471FDCD1B6FD3B000D80921 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D471FDCB1B6FD3B000D80921 /* LaunchScreen.xib */; };
 		D471FDD91B6FD3B000D80921 /* FCTerrorGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDD81B6FD3B000D80921 /* FCTerrorGameTests.swift */; };
+		D4A0D3271B8CFB5F0004BB09 /* playerSteps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D3261B8CFB5F0004BB09 /* playerSteps.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		D471FDD21B6FD3B000D80921 /* MadnessDazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadnessDazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D471FDD71B6FD3B000D80921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D471FDD81B6FD3B000D80921 /* FCTerrorGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCTerrorGameTests.swift; sourceTree = "<group>"; };
+		D4A0D3261B8CFB5F0004BB09 /* playerSteps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playerSteps.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				306F7C7C1B7D023700E8501A /* asylum.mp3 */,
 				306F7C761B7274F900E8501A /* helicopterMono.mp3 */,
 				306F7C801B7D1BF500E8501A /* locked.wav */,
+				D4A0D3261B8CFB5F0004BB09 /* playerSteps.mp3 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -260,6 +263,7 @@
 				306F7C771B7274F900E8501A /* helicopterMono.mp3 in Resources */,
 				D471FDCD1B6FD3B000D80921 /* LaunchScreen.xib in Resources */,
 				306F7C7D1B7D023700E8501A /* asylum.mp3 in Resources */,
+				D4A0D3271B8CFB5F0004BB09 /* playerSteps.mp3 in Resources */,
 				305224071B863F2400AD7A98 /* Enemy.json in Resources */,
 				D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */,
 				D471FDC11B6FD3B000D80921 /* GameScene.sks in Resources */,

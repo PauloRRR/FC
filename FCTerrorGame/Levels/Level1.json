@@ -15,7 +15,7 @@
             "swipeRight": {
                 "prerequisite": "someKey",
                 "action": "gotoRoom",
-                "room": 1,
+                "room": 1,    
                 "failPrerequisite": [
                     {
                         "sound": "locked",
@@ -23,6 +23,15 @@
                         "x": 0.0,
                         "y": 0.0
                     }
+                ],
+                "canWalk": [
+                    {
+                        "sound": "playerSteps",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                    }
+
                 ]
             }
         }

@@ -185,6 +185,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
 
     func goToRoom (action :JSON, swipeDirection: String) {
         if (checkPrerequisite(action)) {
+            
+            
             println("🍺 state was \(gameState.rotation)")
             switch swipeDirection {
             case "swipeRight":
@@ -212,7 +214,10 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                     self.view?.removeGestureRecognizer(recognizer as! UIGestureRecognizer)
                 }
             }
+            
             self.view?.presentScene(scene, transition: transition)
+           
+
         }
         
     }
@@ -240,7 +245,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 var offset = action["offset"]?.float
                 runAction(
                     SKAction.sequence([
-                        SKAction.waitForDuration(NSTimeInterval(offset!)),
+                        //SKAction.waitForDuration(NSTimeInterval(offset!)),
                         SKAction.runBlock({ Singleton.addSoundArray(soundName, frmt: format, x: x!, y: y!) })
                         ])
                     )

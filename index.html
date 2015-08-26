@@ -20,6 +20,20 @@
             <div ng-repeat="room in roomList" class="list-group-item">
                 ID : {{ $index }} </br>
                 Background: <input type="text" ng-model="room.background" placeholder="Background"></br>
+                <button type="button" class="btn btn-primary" ng-click="newSound(room, 'playOnEnter');">New Sound</button></br>
+                playOnEnter:</br>
+                <div class="list-group">
+                    <div ng-repeat="(soundIndex, sound) in room.playOnEnter" class="list-group-item">
+                        <a ng-click="removeSound(room.playOnEnter, soundIndex);" > <span class="glyphicon glyphicon-remove pull-right" ></span></a>
+                        Offset: <input type="number" ng-model="sound.offset"   placeholder="Offset" step="any"></br>
+                        Sound:  <input type="text"   ng-model="sound.sound"    placeholder="Sound"></br>
+                        Format: <input type="text"   ng-model="sound.format"   placeholder="format"></br>
+                        X:      <input type="number" ng-model="sound.x"        placeholder="X" step="any"></br>
+                        Y:      <input type="number" ng-model="sound.y"        placeholder="Y" step="any"></br>
+                    </div>
+                </div>
+
+
                 <select ng-model="eventType">
                     <option ng-repeat="eventOptions in events" value="{{eventOptions}}">{{eventOptions}}</option>
                 </select>

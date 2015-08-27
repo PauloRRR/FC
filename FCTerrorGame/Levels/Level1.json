@@ -418,6 +418,14 @@
     {
         "id": 25,
         "background": "asylumIntersection2",
+        "playOnEnter": [
+                    {
+                        "sound": "crossroad",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                    }
+        ],
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",

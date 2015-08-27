@@ -15,7 +15,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var enemyControl = EnemyControl()
     var manager = GameManager.sharedInstance
     override func didMoveToView(view: SKView) {
-        self.manager.setPlayerPosition(5)
+        //self.manager.setPlayerPosition(0)
         if let filePath = NSBundle.mainBundle().pathForResource("Level1", ofType: "json") {
             level =  JSON(data: NSData(contentsOfFile: filePath)!)
         } else {
@@ -51,9 +51,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     func runEnemyBehavior(){
         runAction(SKAction.repeatActionForever(
             SKAction.sequence([
-                SKAction.waitForDuration(2.0),
+                SKAction.waitForDuration(5.0),
                 SKAction.runBlock({
-                    println("aa")
                     self.enemyControl.updateEnemiesPosition()
                 })
                 ])
@@ -210,6 +209,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             }
             println("🍺 state now is \(gameState.rotation)")
             gameState.room = action["room"].intValue
+            self.manager.setPlayerPosition(gameState.room)
+            self.manager.updateEnemiesListenerPosition()
             gameState.updateState()
             var transition = SKTransition.fadeWithDuration(0)
             var scene = GameScene(size: self.size)

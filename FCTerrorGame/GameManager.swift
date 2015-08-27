@@ -38,15 +38,24 @@ class GameManager {
         
     }
     
-    class func setListenerPosition(x:Float, y:Float){
-        for (var i = 0; i < self.sharedInstance.audioArray.count; i++){
-            self.sharedInstance.audioArray[i].listener3DPosition(x, y: y, z: 0)
+    func setListenerPosition(x:Float, y:Float){
+        for (var i = 0; i < self.audioArray.count; i++){
+            self.audioArray[i].listener3DPosition(x, y: y, z: 0)
+        }
+    }
+    
+    func updateEnemiesListenerPosition(){
+        for (var i = 0; i < self.enemies.count; i++){
+            self.enemies[i].audio.enviroNode.listenerPosition = AVAudio3DPoint(x: 0, y: Float(playerPosition * 10), z: 0)
         }
     }
     
    
     
     func setPlayerPosition(room: Int){
+        self.enviroNode.listenerPosition = AVAudio3DPoint(x: 0, y: Float(room * 10), z: 0)
+        println(self.enviroNode.listenerPosition.y)
+        println("sala \(room)")
         playerPosition = room
     }
     

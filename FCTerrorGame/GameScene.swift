@@ -13,8 +13,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var level: JSON!
     var background: SKSpriteNode?
     var enemyControl = EnemyControl()
-    
+    var manager = GameManager.sharedInstance
     override func didMoveToView(view: SKView) {
+        self.manager.setPlayerPosition(5)
         if let filePath = NSBundle.mainBundle().pathForResource("Level1", ofType: "json") {
             level =  JSON(data: NSData(contentsOfFile: filePath)!)
         } else {
@@ -39,10 +40,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         view.addGestureRecognizer(swipeRight)
         view.addGestureRecognizer(swipeDown)
         loadRoom()
-        Singleton.playBGSound("asylum", frmt: "mp3")
+        
         
         self.runEnemyBehavior()
-        
         
     }
 
@@ -51,8 +51,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     func runEnemyBehavior(){
         runAction(SKAction.repeatActionForever(
             SKAction.sequence([
-                SKAction.waitForDuration(5.0),
+                SKAction.waitForDuration(2.0),
                 SKAction.runBlock({
+                    println("aa")
                     self.enemyControl.updateEnemiesPosition()
                 })
                 ])
@@ -240,8 +241,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 var offset = action["offset"]?.float
                 runAction(
                     SKAction.sequence([
-                        SKAction.waitForDuration(NSTimeInterval(offset!)),
-                        SKAction.runBlock({ Singleton.addSoundArray(soundName, frmt: format, x: x!, y: y!) })
+                        //SKAction.waitForDuration(NSTimeInterval(offset!)),
+                        SKAction.runBlock({ GameManager.addSoundArray(soundName, frmt: format, x: x!, y: y!) })
                         ])
                     )
             }

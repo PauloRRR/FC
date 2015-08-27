@@ -78,7 +78,10 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             addChild(bg)
         }
         gameState.saveState()
-        
+        if let levelSounds = level[gameState.room]["playOnEnter"].array {
+            println("locked")
+            playSoundArray(levelSounds)
+        }
 
     }
 
@@ -137,8 +140,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 break;
             case "gotoRoom":
                 goToRoom(event, swipeDirection: newAction)
+                Singleton.addSoundArray("playerSteps", frmt: "mp3", x: 0.0, y: 0.0)
                 break;
-                
             default:
                 break;
                 
@@ -186,6 +189,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
 
     func goToRoom (action :JSON, swipeDirection: String) {
         if (checkPrerequisite(action)) {
+            
+            
             println("🍺 state was \(gameState.rotation)")
             switch swipeDirection {
             case "swipeRight":
@@ -213,7 +218,10 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                     self.view?.removeGestureRecognizer(recognizer as! UIGestureRecognizer)
                 }
             }
+            
             self.view?.presentScene(scene, transition: transition)
+           
+
         }
         
     }

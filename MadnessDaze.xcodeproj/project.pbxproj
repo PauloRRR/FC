@@ -32,6 +32,8 @@
 		D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D471FDC91B6FD3B000D80921 /* Images.xcassets */; };
 		D471FDCD1B6FD3B000D80921 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D471FDCB1B6FD3B000D80921 /* LaunchScreen.xib */; };
 		D471FDD91B6FD3B000D80921 /* FCTerrorGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDD81B6FD3B000D80921 /* FCTerrorGameTests.swift */; };
+		D4A0D3271B8CFB5F0004BB09 /* playerSteps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D3261B8CFB5F0004BB09 /* playerSteps.mp3 */; };
+		D4A0D32B1B8E3B440004BB09 /* crossroad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D32A1B8E3B440004BB09 /* crossroad.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,8 @@
 		D471FDD21B6FD3B000D80921 /* MadnessDazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadnessDazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D471FDD71B6FD3B000D80921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D471FDD81B6FD3B000D80921 /* FCTerrorGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCTerrorGameTests.swift; sourceTree = "<group>"; };
+		D4A0D3261B8CFB5F0004BB09 /* playerSteps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = playerSteps.mp3; path = ../playerSteps.mp3; sourceTree = "<group>"; };
+		D4A0D32A1B8E3B440004BB09 /* crossroad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crossroad.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D4A0D3281B8E3B070004BB09 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				306F7C7C1B7D023700E8501A /* asylum.mp3 */,
+				306F7C761B7274F900E8501A /* helicopterMono.mp3 */,
+				306F7C801B7D1BF500E8501A /* locked.wav */,
+				D4A0D3261B8CFB5F0004BB09 /* playerSteps.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		D4A0D3291B8E3B310004BB09 /* Speeches */ = {
+			isa = PBXGroup;
+			children = (
+				D4A0D32A1B8E3B440004BB09 /* crossroad.mp3 */,
+			);
+			name = Speeches;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -277,6 +300,7 @@
 				305224091B8CD44800AD7A98 /* footsteps.mp3 in Resources */,
 				D444072F1B83BAAA0049AFE7 /* Map1.json in Resources */,
 				D471FDC81B6FD3B000D80921 /* Main.storyboard in Resources */,
+				D4A0D32B1B8E3B440004BB09 /* crossroad.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

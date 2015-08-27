@@ -140,7 +140,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 break;
             case "gotoRoom":
                 goToRoom(event, swipeDirection: newAction)
-                Singleton.addSoundArray("playerSteps", frmt: "mp3", x: 0.0, y: 0.0)
+                //GameManager.addSoundArray("playerSteps", frmt: "mp3", x: 0.0, y: 0.0)
                 break;
             default:
                 break;
@@ -243,6 +243,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     func playSound (action: [String: JSON]) {
         if let soundName = action["sound"]?.string {
+            println(soundName)
             if let format = action["format"]?.string{
                 var x = action["x"]?.float
                 var y = action["y"]?.float

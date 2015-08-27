@@ -9,20 +9,30 @@
 import UIKit
 import SpriteKit
 class EnemyControl{
-   
+    var manager = GameManager.sharedInstance
     var enemies = [EnemyBot]()
     var enemiesJson: JSON!
+    var enemiesPosition = [Int]()
     init(){
-        self.createEnemies()
+        if(manager.enemiesCreated == false){
+            self.createEnemies()
+            manager.enemiesCreated = true
+        }
     }
     
     func createEnemies(){
         if let filePath = NSBundle.mainBundle().pathForResource("Enemy", ofType: "json") {
             enemiesJson =  JSON(data: NSData(contentsOfFile: filePath)!)
-            println("\(enemiesJson)")
+            
             for(var i = 0; i < enemiesJson.count; i++){
-                var enemy = EnemyBot(botId: enemiesJson[i]["id"].stringValue, startRoom: enemiesJson[i]["startRoomPosition"].intValue, adjacentRooms: Singleton.map(enemiesJson[i]["startRoomPosition"].intValue))
-                self.enemies.append(enemy)
+                var id = enemiesJson[i]["id"].stringValue
+                var startRoom = enemiesJson[i]["startRoom"].intValue
+                var map = enemiesJson[i]["map"].arrayObject
+                println("\(map)")
+                var enemy = EnemyBot(botId: id, startRoom: startRoom, map: map as! [[Int]] )
+                //self.enemies.append(enemy)
+                manager.enemies.append(enemy)
+                manager.enemiesPosition.append(enemy.actualRoom())
             }
         } else {
             enemiesJson = JSON.nullJSON
@@ -30,9 +40,13 @@ class EnemyControl{
     }
     
     func updateEnemiesPosition(){
-        for(var i = 0; i < enemies.count; i++){
-            enemies[i].moveToAdjacentRoom()
+        for(var i = 0; i < manager.enemies.count; i++){
+           manager.enemiesPosition[i] = manager.enemies[i].moveToAdjacentRoom()
         }
+    }
+    
+    func returnEnemiesPosition()->[Int]{
+        return manager.enemiesPosition
     }
   
     

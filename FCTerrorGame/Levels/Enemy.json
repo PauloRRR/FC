@@ -2,11 +2,8 @@
 [
     {
         "id":"Jhon",
-        "startRoomPosition": 3
-    },
- 
-    {
-        "id":"Mark",
-        "startRoomPosition": 1
+        "startRoomPosition": 7,
+        "map": [[1],[0,2],[1,3],[2,4],[3,5],[4,6],[5,7],[6]]
     }
+ 
 ]

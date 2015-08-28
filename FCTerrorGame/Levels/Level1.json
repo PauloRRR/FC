@@ -3,6 +3,14 @@
         "id": 0,
         "background": "TESTE2",
         "listener" : "",
+        "playOnEnter": [
+                    {
+                        "sound": "001_room1-wakingUp_PT-BR_01",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                    }
+        ],
         "events": {
             "swipeLeft": {
                 "action": "pickItem",

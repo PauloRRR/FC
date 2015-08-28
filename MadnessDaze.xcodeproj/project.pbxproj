@@ -24,6 +24,8 @@
 		B91B8A781B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */; };
 		B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */; };
 		B985E0761B75300200CBAC43 /* Level1.json in Resources */ = {isa = PBXBuildFile; fileRef = B985E0751B75300200CBAC43 /* Level1.json */; };
+		D41D57071B90C8610067B6C8 /* 001_room1-wakingUp_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41D57061B90C8610067B6C8 /* 001_room1-wakingUp_PT-BR_01.mp3 */; };
+		D41D57091B90C99F0067B6C8 /* storm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41D57081B90C99F0067B6C8 /* storm.mp3 */; };
 		D444072F1B83BAAA0049AFE7 /* Map1.json in Resources */ = {isa = PBXBuildFile; fileRef = D444072E1B83BAAA0049AFE7 /* Map1.json */; };
 		D4491CD01B8F9BAE009FE55B /* scream3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4491CCF1B8F9BAE009FE55B /* scream3.mp3 */; };
 		D4491CD21B8F9C41009FE55B /* scream2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4491CD11B8F9C41009FE55B /* scream2.mp3 */; };
@@ -72,6 +74,8 @@
 		B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlternateTapGestureRecognizer.swift; path = Subclass/UIAlternateTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		B985E0751B75300200CBAC43 /* Level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Level1.json; sourceTree = "<group>"; };
+		D41D57061B90C8610067B6C8 /* 001_room1-wakingUp_PT-BR_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "001_room1-wakingUp_PT-BR_01.mp3"; sourceTree = "<group>"; };
+		D41D57081B90C99F0067B6C8 /* storm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = storm.mp3; sourceTree = "<group>"; };
 		D444072E1B83BAAA0049AFE7 /* Map1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Map1.json; sourceTree = "<group>"; };
 		D4491CCF1B8F9BAE009FE55B /* scream3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scream3.mp3; sourceTree = "<group>"; };
 		D4491CD11B8F9C41009FE55B /* scream2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = scream2.mp3; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 				D4491CCF1B8F9BAE009FE55B /* scream3.mp3 */,
 				D4491CD31B8FA1CA009FE55B /* scream4.wav */,
 				D4491CD41B8FA1CA009FE55B /* scream5.wav */,
+				D41D57061B90C8610067B6C8 /* 001_room1-wakingUp_PT-BR_01.mp3 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +185,7 @@
 				D471FDBC1B6FD3B000D80921 /* Supporting Files */,
 				306F7C721B7118A100E8501A /* AudioNode.swift */,
 				306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */,
+				D41D57081B90C99F0067B6C8 /* storm.mp3 */,
 				30FA88F91B8D049200FE4700 /* background.mp3 */,
 				306F7C7A1B7D014C00E8501A /* GameManager.swift */,
 				305224021B84F42C00AD7A98 /* EnemyBot.swift */,
@@ -306,8 +312,10 @@
 				30FA88FA1B8D049200FE4700 /* background.mp3 in Resources */,
 				305224071B863F2400AD7A98 /* Enemy.json in Resources */,
 				D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */,
+				D41D57071B90C8610067B6C8 /* 001_room1-wakingUp_PT-BR_01.mp3 in Resources */,
 				D471FDC11B6FD3B000D80921 /* GameScene.sks in Resources */,
 				B985E0761B75300200CBAC43 /* Level1.json in Resources */,
+				D41D57091B90C99F0067B6C8 /* storm.mp3 in Resources */,
 				D4A0D3311B8F6D800004BB09 /* crossroad.mp3 in Resources */,
 				305224091B8CD44800AD7A98 /* footsteps.mp3 in Resources */,
 				D444072F1B83BAAA0049AFE7 /* Map1.json in Resources */,

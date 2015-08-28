@@ -20,7 +20,7 @@ class BackGroundSoundNode {
         backgroundPlayer = AVAudioPlayer(contentsOfURL: bgMusicURL, error: nil)
         backgroundPlayer.numberOfLoops = -1
         backgroundPlayer.prepareToPlay()
-        backgroundPlayer.volume = 1.0
+        backgroundPlayer.volume = 0.15
     }
     
     func play(){

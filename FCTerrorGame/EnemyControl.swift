@@ -26,7 +26,7 @@ class EnemyControl{
             
             for(var i = 0; i < enemiesJson.count; i++){
                 var id = enemiesJson[i]["id"].stringValue
-                var startRoom = enemiesJson[i]["startRoom"].intValue
+                var startRoom = enemiesJson[i]["startRoomPosition"].intValue
                 var map = enemiesJson[i]["map"].arrayObject
                 println("\(map)")
                 var enemy = EnemyBot(botId: id, startRoom: startRoom, map: map as! [[Int]] )

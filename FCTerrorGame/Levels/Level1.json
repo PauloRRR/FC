@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "background": "TESTE",
+        "background": "TESTE2",
         "listener" : "",
         "events": {
             "swipeLeft": {
@@ -88,6 +88,16 @@
     {
         "id": 4,
         "background": "asylumCorridor",
+        "playOnEnter": [
+            
+                {
+                        "sound": "scream3",
+                        "format": "mp3",
+                        "x": 10.0,
+                        "y": 0.0
+                  }
+            
+        ],
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -264,6 +274,16 @@
     {
         "id": 15,
         "background": "asylumCorridor2",
+        "playOnEnter": [
+            
+                {
+                        "sound": "scream2",
+                        "format": "mp3",
+                        "x": -10.0,
+                        "y": 0.0
+                  }
+            
+        ],
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -1559,6 +1579,16 @@
     {
         "id": 94,
         "background": "asylumCorridor",
+        "playOnEnter": [
+            
+                {
+                        "sound": "scream4",
+                        "format": "wav",
+                        "x": 10.0,
+                        "y": 0.0
+                  }
+            
+        ],
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -1607,6 +1637,16 @@
     {
         "id": 97,
         "background": "asylumCorridor",
+        "playOnEnter": [
+            
+                {
+                        "sound": "scream5",
+                        "format": "wav",
+                        "x": -10.0,
+                        "y": 0.0
+                  }
+            
+        ],
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",

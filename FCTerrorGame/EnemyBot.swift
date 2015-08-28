@@ -27,7 +27,7 @@ class EnemyBot: NSObject {
         self.lastRoom = self.currentRoomPosition
         println("\(adjacentRooms)")
         self.audio.setVolume(0.5)
-        //self.audio.player3DPosition(Float(self.currentRoomPosition*10),y: 0, z: 0)
+        self.audio.player3DPosition(0, y: Float(self.currentRoomPosition*10), z: 0)
         self.audio.playLoop()
 
     }
@@ -36,7 +36,7 @@ class EnemyBot: NSObject {
         
         self.lastRoom = self.currentRoomPosition
         let random = Int(arc4random_uniform(UInt32(adjacentRooms.count)))
-        self.currentRoomPosition = adjacentRooms[random]
+        self.currentRoomPosition = adjacentRooms[0]
         self.adjacentRooms = map[self.currentRoomPosition]
         manager.updateEnemiesListenerPosition()
         println("\(self.botId) esta na sala \(self.currentRoomPosition)")

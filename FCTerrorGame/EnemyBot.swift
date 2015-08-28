@@ -17,7 +17,8 @@ class EnemyBot: NSObject {
     var map = [[Int]]()
     var manager = GameManager.sharedInstance
     var audio = AudioNode(soundName: "footsteps", format: "mp3")
-    
+    var breath =  BackGroundSoundNode(soundName: "breathing", format: "mp3")
+    var isBreathing = false
     init(botId: String, startRoom: Int, map: [[Int]])
     {
         self.botId = botId
@@ -50,6 +51,14 @@ class EnemyBot: NSObject {
         println("enemy audio y pos:\(self.audio.getPlayer3DPosition().y)")
         return self.currentRoomPosition
         
+    }
+    
+    func playBreath(){
+        self.breath.backgroundPlayer.volume = Float(1.0)
+        self.breath.play()
+    }
+    func stopBreath(){
+        self.breath.backgroundPlayer.stop()
     }
    
     

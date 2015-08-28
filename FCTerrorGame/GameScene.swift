@@ -51,7 +51,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     func runEnemyBehavior(){
         runAction(SKAction.repeatActionForever(
             SKAction.sequence([
-                SKAction.waitForDuration(5.0),
+                SKAction.waitForDuration(2.0),
                 SKAction.runBlock({
                     self.enemyControl.updateEnemiesPosition()
                 })

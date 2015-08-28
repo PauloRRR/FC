@@ -19,6 +19,7 @@
 		306F7C811B7D1BF500E8501A /* locked.wav in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C801B7D1BF500E8501A /* locked.wav */; };
 		30FA88FA1B8D049200FE4700 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA88F91B8D049200FE4700 /* background.mp3 */; };
 		30FA88FC1B8E1C2700FE4700 /* AudioSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA88FB1B8E1C2700FE4700 /* AudioSingleton.swift */; };
+		30FA89001B90C9EE00FE4700 /* breathing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA88FF1B90C9EE00FE4700 /* breathing.mp3 */; };
 		B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B36A91B71181F00B1BE78 /* GameState.swift */; };
 		B91B8A781B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */; };
 		B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */; };
@@ -66,6 +67,7 @@
 		306F7C801B7D1BF500E8501A /* locked.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = locked.wav; sourceTree = "<group>"; };
 		30FA88F91B8D049200FE4700 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		30FA88FB1B8E1C2700FE4700 /* AudioSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSingleton.swift; sourceTree = "<group>"; };
+		30FA88FF1B90C9EE00FE4700 /* breathing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = breathing.mp3; sourceTree = "<group>"; };
 		B91B36A91B71181F00B1BE78 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlternateTapGestureRecognizer.swift; path = Subclass/UIAlternateTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				306F7C801B7D1BF500E8501A /* locked.wav */,
 				D4A0D32E1B8F6D800004BB09 /* corridorFirstLook.mp3 */,
 				D4A0D32F1B8F6D800004BB09 /* crossroad.mp3 */,
+				30FA88FF1B90C9EE00FE4700 /* breathing.mp3 */,
 				D4A0D3321B8F6F6E0004BB09 /* playerSteps.mp3 */,
 				D4491CD11B8F9C41009FE55B /* scream2.mp3 */,
 				D4491CCF1B8F9BAE009FE55B /* scream3.mp3 */,
@@ -297,6 +300,7 @@
 				D4A0D3301B8F6D800004BB09 /* corridorFirstLook.mp3 in Resources */,
 				306F7C771B7274F900E8501A /* helicopterMono.mp3 in Resources */,
 				D471FDCD1B6FD3B000D80921 /* LaunchScreen.xib in Resources */,
+				30FA89001B90C9EE00FE4700 /* breathing.mp3 in Resources */,
 				D4491CD51B8FA1CA009FE55B /* scream4.wav in Resources */,
 				306F7C7D1B7D023700E8501A /* asylum.mp3 in Resources */,
 				30FA88FA1B8D049200FE4700 /* background.mp3 in Resources */,

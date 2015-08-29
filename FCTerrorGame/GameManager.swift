@@ -47,7 +47,7 @@ class GameManager {
     func updateEnemiesListenerPosition(){
         for (var i = 0; i < self.enemies.count; i++){
             self.enemies[i].audio.enviroNode.listenerPosition = AVAudio3DPoint(x: 0, y: Float(playerPosition * 10), z: 0)
-            if(abs((self.enemies[i].currentRoomPosition - playerPosition)) <= 1){
+            if(abs((self.enemies[i].enemyPosition - playerPosition)) <= 1){
                 if(!self.isBreathing){
                    self.enemies[i].playBreath()
                     self.isBreathing = true

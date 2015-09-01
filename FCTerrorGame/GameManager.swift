@@ -19,7 +19,7 @@ class GameManager {
     var isBreathing = false
     // METHODS
     private init() {
-       self.playBGSound("storm", frmt: "mp3")
+       self.playBGSound("background", frmt: "mp3")
     }
     
      func playBGSound(sndName:String, frmt:String){

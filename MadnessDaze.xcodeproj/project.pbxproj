@@ -39,6 +39,7 @@
 		D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D471FDC91B6FD3B000D80921 /* Images.xcassets */; };
 		D471FDCD1B6FD3B000D80921 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D471FDCB1B6FD3B000D80921 /* LaunchScreen.xib */; };
 		D471FDD91B6FD3B000D80921 /* FCTerrorGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDD81B6FD3B000D80921 /* FCTerrorGameTests.swift */; };
+		D4825C281B94DDBD008B27CE /* StorySoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4825C271B94DDBD008B27CE /* StorySoundNode.swift */; };
 		D4A0D32B1B8E3B440004BB09 /* crossroad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D32A1B8E3B440004BB09 /* crossroad.mp3 */; };
 		D4A0D32D1B8E3FBC0004BB09 /* corridorFirstLook.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D32C1B8E3FBC0004BB09 /* corridorFirstLook.mp3 */; };
 		D4A0D3301B8F6D800004BB09 /* corridorFirstLook.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D32E1B8F6D800004BB09 /* corridorFirstLook.mp3 */; };
@@ -93,6 +94,7 @@
 		D471FDD21B6FD3B000D80921 /* MadnessDazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadnessDazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D471FDD71B6FD3B000D80921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D471FDD81B6FD3B000D80921 /* FCTerrorGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCTerrorGameTests.swift; sourceTree = "<group>"; };
+		D4825C271B94DDBD008B27CE /* StorySoundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySoundNode.swift; sourceTree = "<group>"; };
 		D4A0D32A1B8E3B440004BB09 /* crossroad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crossroad.mp3; sourceTree = "<group>"; };
 		D4A0D32C1B8E3FBC0004BB09 /* corridorFirstLook.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = corridorFirstLook.mp3; sourceTree = "<group>"; };
 		D4A0D32E1B8F6D800004BB09 /* corridorFirstLook.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = corridorFirstLook.mp3; path = ../corridorFirstLook.mp3; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				306F7C721B7118A100E8501A /* AudioNode.swift */,
 				306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */,
+				D4825C271B94DDBD008B27CE /* StorySoundNode.swift */,
 			);
 			name = AudioClasses;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				305224031B84F42C00AD7A98 /* EnemyBot.swift in Sources */,
 				B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */,
 				305224051B86380300AD7A98 /* EnemyControl.swift in Sources */,
+				D4825C281B94DDBD008B27CE /* StorySoundNode.swift in Sources */,
 				306F7C7F1B7D113600E8501A /* BackGroundSoundNode.swift in Sources */,
 				D471FDC51B6FD3B000D80921 /* GameViewController.swift in Sources */,
 				B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */,

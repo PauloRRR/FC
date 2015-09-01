@@ -17,6 +17,7 @@ class GameManager {
     var playerPosition = 0
     var enemiesCreated = false
     var isBreathing = false
+    var storyPlayer = [StorySoundNode]()
     // METHODS
     private init() {
        self.playBGSound("storm", frmt: "mp3")
@@ -27,6 +28,12 @@ class GameManager {
         self.backgroundPlayer.append(audio)
         self.backgroundPlayer[0].play()
         
+    }
+    
+    func initStoryArray(){
+        for (var i = 0; i < storyPlayer.count; i++){
+            //self.storyPlayer[i] =
+        }
     }
     
     class func addSoundArray(sndName:String, frmt:String, x:Float, y:Float) {

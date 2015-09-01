@@ -17,6 +17,7 @@
 		306F7C7D1B7D023700E8501A /* asylum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C7C1B7D023700E8501A /* asylum.mp3 */; };
 		306F7C7F1B7D113600E8501A /* BackGroundSoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */; };
 		306F7C811B7D1BF500E8501A /* locked.wav in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C801B7D1BF500E8501A /* locked.wav */; };
+		30F181971B96040200C2C2C5 /* roomMapping.json in Resources */ = {isa = PBXBuildFile; fileRef = 30F181961B96040200C2C2C5 /* roomMapping.json */; };
 		30FA88FA1B8D049200FE4700 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA88F91B8D049200FE4700 /* background.mp3 */; };
 		30FA88FC1B8E1C2700FE4700 /* AudioSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA88FB1B8E1C2700FE4700 /* AudioSingleton.swift */; };
 		30FA89001B90C9EE00FE4700 /* breathing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA88FF1B90C9EE00FE4700 /* breathing.mp3 */; };
@@ -68,6 +69,7 @@
 		306F7C7C1B7D023700E8501A /* asylum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = asylum.mp3; path = ../asylum.mp3; sourceTree = "<group>"; };
 		306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGroundSoundNode.swift; sourceTree = "<group>"; };
 		306F7C801B7D1BF500E8501A /* locked.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = locked.wav; path = ../locked.wav; sourceTree = "<group>"; };
+		30F181961B96040200C2C2C5 /* roomMapping.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = roomMapping.json; sourceTree = "<group>"; };
 		30FA88F91B8D049200FE4700 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		30FA88FB1B8E1C2700FE4700 /* AudioSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSingleton.swift; sourceTree = "<group>"; };
 		30FA88FF1B90C9EE00FE4700 /* breathing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = breathing.mp3; path = ../breathing.mp3; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		30FA89031B912CFB00FE4700 /* JsonLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				30F181961B96040200C2C2C5 /* roomMapping.json */,
 				B985E0751B75300200CBAC43 /* Level1.json */,
 				D444072E1B83BAAA0049AFE7 /* Map1.json */,
 				305224061B863F2400AD7A98 /* Enemy.json */,
@@ -351,6 +354,7 @@
 				D471FDC11B6FD3B000D80921 /* GameScene.sks in Resources */,
 				B985E0761B75300200CBAC43 /* Level1.json in Resources */,
 				D41D57091B90C99F0067B6C8 /* storm.mp3 in Resources */,
+				30F181971B96040200C2C2C5 /* roomMapping.json in Resources */,
 				D4A0D3311B8F6D800004BB09 /* crossroad.mp3 in Resources */,
 				305224091B8CD44800AD7A98 /* footsteps.mp3 in Resources */,
 				D444072F1B83BAAA0049AFE7 /* Map1.json in Resources */,

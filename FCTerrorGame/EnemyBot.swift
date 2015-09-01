@@ -37,7 +37,7 @@ class EnemyBot: NSObject {
         
         self.lastRoom = self.enemyPosition
         let random = Int(arc4random_uniform(UInt32(adjacentRooms.count)))
-        self.enemyPosition = adjacentRooms[0]
+        self.enemyPosition = adjacentRooms[random]
         self.adjacentRooms = map[self.enemyPosition]
         manager.updateEnemiesListenerPosition()
         println("\(self.botId) esta na sala \(self.enemyPosition)")

@@ -44,6 +44,16 @@ class GameManager {
         }
     }
     
+    func listenerAngularPosition(yaw: Float, pitch: Float, roll: Float){
+        enviroNode.listenerAngularOrientation = AVAudioMake3DAngularOrientation(yaw, pitch, roll)
+    }
+    
+    func listenerAngularPosition(yaw: Float) {
+        listenerAngularPosition(yaw,
+            pitch: enviroNode.listenerAngularOrientation.pitch,
+            roll: enviroNode.listenerAngularOrientation.roll)
+    }
+    
     func updateEnemiesListenerPosition(){
         for (var i = 0; i < self.enemies.count; i++){
             self.enemies[i].audio.enviroNode.listenerPosition = AVAudio3DPoint(x: 0, y: Float(playerPosition * 10), z: 0)

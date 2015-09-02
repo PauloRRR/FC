@@ -31,19 +31,11 @@
     },
     {
         "id": 1,
-        "background": "CorredorTeste",
+        "background": "CorredorTeste2",
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
                 "room": 0,
-                "failPrerequisite": [
-                    {
-                        "sound": "locked",
-                        "format": "wav",
-                        "x": -10.0,
-                        "y": 0.0
-                    }
-                ]
             },
 
             "swipeUp": {

@@ -22,7 +22,7 @@ class GameManager {
     
     // METHODS
     private init() {
-        self.playBGSound("background", frmt: "mp3")
+        self.playBGSound("storm", frmt: "mp3")
         self.initStoryArray()
     }
     
@@ -44,8 +44,14 @@ class GameManager {
     
     func playStorySound(){
         if (self.i < self.storyP.count){
-            self.storyP[self.i].play()
             self.i++
+            if (i-1 == 0){
+                self.storyP[self.i-1].play()
+            }else if (!storyP[i-2].storyPlayer.playing){
+                self.storyP[self.i-1].play()
+            }else{
+                self.i--
+            }
         }
     }
     
@@ -75,9 +81,12 @@ class GameManager {
     }
     
     func updateEnemiesListenerPosition(){
+        var coord = AudioCoordinate()
+        coord.pinpointListener(playerPosition)
         for (var i = 0; i < self.enemies.count; i++){
-            self.enemies[i].audio.enviroNode.listenerPosition = AVAudio3DPoint(x: 0, y: Float(playerPosition * 10), z: 0)
-            if(abs((self.enemies[i].enemyPosition - playerPosition)) <= 1){
+            coord.pinpointPlayer(self.enemies[i].enemyPosition)
+            self.enemies[i].audio.enviroNode.listenerPosition = AVAudio3DPoint(x: coord.coordX(playerPosition), y: coord.coordY(playerPosition), z: 0)
+            if(coord.distance() <= 15.0){
                 if(!self.isBreathing){
                    self.enemies[i].playBreath()
                     self.isBreathing = true

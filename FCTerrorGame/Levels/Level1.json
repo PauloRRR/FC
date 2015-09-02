@@ -3,6 +3,7 @@
         "id": 0,
         "background": "TESTE2",
         "listener" : "",
+        "hide": false,
         "events": {
             "swipeLeft": {
                 "action": "pickItem",
@@ -15,7 +16,7 @@
             "swipeRight": {
                 "prerequisite": "someKey",
                 "action": "gotoRoom",
-                "room": 1,    
+                "room": 1,
                 "failPrerequisite": [
                     {
                         "sound": "locked",
@@ -24,7 +25,7 @@
                         "y": 0.0
                     }
                 ]
-                
+
             }
         }
     },
@@ -89,14 +90,14 @@
         "id": 4,
         "background": "asylumCorridor",
         "playOnEnter": [
-            
+
                 {
                         "sound": "scream3",
                         "format": "mp3",
                         "x": 10.0,
                         "y": 0.0
                   }
-            
+
         ],
         "events": {
             "swipeUp": {
@@ -275,14 +276,14 @@
         "id": 15,
         "background": "asylumCorridor2",
         "playOnEnter": [
-            
+
                 {
                         "sound": "scream2",
                         "format": "mp3",
                         "x": -10.0,
                         "y": 0.0
                   }
-            
+
         ],
         "events": {
             "swipeUp": {
@@ -1580,14 +1581,14 @@
         "id": 94,
         "background": "asylumCorridor",
         "playOnEnter": [
-            
+
                 {
                         "sound": "scream4",
                         "format": "wav",
                         "x": 10.0,
                         "y": 0.0
                   }
-            
+
         ],
         "events": {
             "swipeUp": {
@@ -1638,14 +1639,14 @@
         "id": 97,
         "background": "asylumCorridor",
         "playOnEnter": [
-            
+
                 {
                         "sound": "scream5",
                         "format": "wav",
                         "x": -10.0,
                         "y": 0.0
                   }
-            
+
         ],
         "events": {
             "swipeUp": {

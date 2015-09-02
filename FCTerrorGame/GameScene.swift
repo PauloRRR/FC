@@ -14,6 +14,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var background: SKSpriteNode?
     var enemyControl = EnemyControl()
     var manager = GameManager.sharedInstance
+    
+    var playerHidden = false;
+    
     override func didMoveToView(view: SKView) {
         //self.manager.setPlayerPosition(0)
         if let filePath = NSBundle.mainBundle().pathForResource("Level1", ofType: "json") {
@@ -26,15 +29,22 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         var swipeUp      = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))
         var swipeRight   = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight:"))
         var swipeDown    = UISwipeGestureRecognizer(target: self, action: Selector("swipeDown:"))
+        var longPress    = UILongPressGestureRecognizer(target: self, action: Selector("longPress:"))
+        
         var alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
+        
+        
         
         swipeLeft.direction  = .Left
         swipeUp.direction    = .Up
         swipeRight.direction = .Right
         swipeDown.direction  = .Down
+        longPress.minimumPressDuration = 2.0;
         alternateTap.numberOfTapsRequired = 5;
         alternateTap.delegate = self
+        
         view.addGestureRecognizer(alternateTap)
+        view.addGestureRecognizer(longPress)
         view.addGestureRecognizer(swipeLeft)
         view.addGestureRecognizer(swipeUp)
         view.addGestureRecognizer(swipeRight)
@@ -109,10 +119,20 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         doAction("tap")
     }
     
+    func longPress(gesture: UILongPressGestureRecognizer) {
+        if (gesture.state == UIGestureRecognizerState.Began) {
+            doAction("longPress")
+        } else if (gesture.state == UIGestureRecognizerState.Ended) {
+            doAction("longPressEnded")
+        }
+    }
+    
     func alternateTapping(gesture: UITapGestureRecognizer) {
         doAction("alternateTap");
     
     }
+    
+    
     
     func doAction(name: String) {
         var newAction = name;
@@ -130,7 +150,18 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             case "swipeDown":
                 newAction = gameState.actions[(3+gameState.rotation)%4]
                 break;
+            case "longPress":
+                if let hideable = level[gameState.room]["hide"].bool {
+                    if (hideable) {
+                        playerHidden = true;
+                    }
+                }
+                break;
+            case "longPressEnded":
+                playerHidden = false;
+                break;
             default:
+                
                 break;
         }
         let event = level[gameState.room]["events"][newAction]

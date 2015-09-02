@@ -22,7 +22,7 @@ class GameManager {
     
     // METHODS
     private init() {
-        self.playBGSound("background", frmt: "mp3")
+        self.playBGSound("storm", frmt: "mp3")
         self.initStoryArray()
     }
     
@@ -44,8 +44,14 @@ class GameManager {
     
     func playStorySound(){
         if (self.i < self.storyP.count){
-            self.storyP[self.i].play()
             self.i++
+            if (i-1 == 0){
+                self.storyP[self.i-1].play()
+            }else if (!storyP[i-2].storyPlayer.playing){
+                self.storyP[self.i-1].play()
+            }else{
+                self.i--
+            }
         }
     }
     

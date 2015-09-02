@@ -122,7 +122,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 break;
             case "swipeUp":
                 newAction = gameState.actions[(1+gameState.rotation)%4]
-//                manager.playStorySound()
+                manager.playStorySound()
                 break;
             case "swipeRight":
                 newAction = gameState.actions[(2+gameState.rotation)%4]

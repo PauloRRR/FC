@@ -36,7 +36,7 @@ class GameManager {
     
     func initStoryArray(){
         for (var i = 0; i < 2; i++){
-            var audio = StorySoundNode(soundName: "scream\(i+2)", format: "mp3")
+            var audio = StorySoundNode(soundName: "story\(i)", format: "mp3")
             self.storyP.append(audio)
         }
         

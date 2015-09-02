@@ -77,6 +77,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             addChild(bg)
         }
         gameState.saveState()
+        manager.listenerAngularPosition(Float(gameState.rotation)*(-90.0));
         if let levelSounds = level[gameState.room]["playOnEnter"].array {
             println("locked")
             playSoundArray(levelSounds)
@@ -121,6 +122,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 break;
             case "swipeUp":
                 newAction = gameState.actions[(1+gameState.rotation)%4]
+                manager.playStorySound()
                 break;
             case "swipeRight":
                 newAction = gameState.actions[(2+gameState.rotation)%4]
@@ -245,14 +247,23 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     func playSound (action: [String: JSON]) {
         if let soundName = action["sound"]?.string {
             println(soundName)
-            if let format = action["format"]?.string{
-                var x = action["x"]?.float
-                var y = action["y"]?.float
-                var offset = action["offset"]?.float
+            if let format = action["format"]?.string {
+                var x:Float = 0.0;
+                var y:Float = 0.0;
+                if let offsetX = action["x"]?.float {
+                    x = offsetX;
+                }
+                if let offsetY = action["y"]?.float {
+                    y = offsetY;
+                }
+                var offset:Float = 0.0
+                if let newOffset = action["offset"]?.float {
+                    offset = newOffset;
+                }
                 runAction(
                     SKAction.sequence([
-                        //SKAction.waitForDuration(NSTimeInterval(offset!)),
-                        SKAction.runBlock({ GameManager.addSoundArray(soundName, frmt: format, x: x!, y: y!) })
+                        SKAction.waitForDuration(NSTimeInterval(offset)),
+                        SKAction.runBlock({ GameManager.addSoundArray(soundName, frmt: format, x: x, y: y) })
                         ])
                     )
             }

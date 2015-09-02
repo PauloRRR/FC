@@ -17,9 +17,13 @@ class GameManager {
     var playerPosition = 0
     var enemiesCreated = false
     var isBreathing = false
+    var storyP = [StorySoundNode]()
+    var i = 0
+    
     // METHODS
     private init() {
-       self.playBGSound("background", frmt: "mp3")
+        self.playBGSound("storm", frmt: "mp3")
+        self.initStoryArray()
     }
     
      func playBGSound(sndName:String, frmt:String){
@@ -27,6 +31,28 @@ class GameManager {
         self.backgroundPlayer.append(audio)
         self.backgroundPlayer[0].play()
         
+    }
+    
+    func initStoryArray(){
+        for (var i = 0; i < 2; i++){
+            var audio = StorySoundNode(soundName: "story\(i)", format: "mp3")
+            self.storyP.append(audio)
+        }
+        
+    }
+    
+    
+    func playStorySound(){
+        if (self.i < self.storyP.count){
+            self.i++
+            if (i-1 == 0){
+                self.storyP[self.i-1].play()
+            }else if (!storyP[i-2].storyPlayer.playing){
+                self.storyP[self.i-1].play()
+            }else{
+                self.i--
+            }
+        }
     }
     
     class func addSoundArray(sndName:String, frmt:String, x:Float, y:Float) {
@@ -42,6 +68,16 @@ class GameManager {
         for (var i = 0; i < self.audioArray.count; i++){
             self.audioArray[i].listener3DPosition(x, y: y, z: 0)
         }
+    }
+    
+    func listenerAngularPosition(yaw: Float, pitch: Float, roll: Float){
+        enviroNode.listenerAngularOrientation = AVAudioMake3DAngularOrientation(yaw, pitch, roll)
+    }
+    
+    func listenerAngularPosition(yaw: Float) {
+        listenerAngularPosition(yaw,
+            pitch: enviroNode.listenerAngularOrientation.pitch,
+            roll: enviroNode.listenerAngularOrientation.roll)
     }
     
     func updateEnemiesListenerPosition(){

@@ -17,10 +17,14 @@ class GameManager {
     var playerPosition = 0
     var enemiesCreated = false
     var isBreathing = false
-    var storyPlayer = [StorySoundNode]()
+    var storyP = [StorySoundNode]()
+    var i = 0
+    
     // METHODS
     private init() {
        self.playBGSound("background", frmt: "mp3")
+        self.initStoryArray()
+        //playStorySound()
     }
     
      func playBGSound(sndName:String, frmt:String){
@@ -31,9 +35,17 @@ class GameManager {
     }
     
     func initStoryArray(){
-        for (var i = 0; i < storyPlayer.count; i++){
-            //self.storyPlayer[i] =
+        for (var i = 0; i < 2; i++){
+            var audio = StorySoundNode(soundName: "scream\(i+2)", format: "mp3")
+            self.storyP.append(audio)
         }
+        
+    }
+    
+    
+    func playStorySound(){
+        self.storyP[self.i].play()
+        self.i++
     }
     
     class func addSoundArray(sndName:String, frmt:String, x:Float, y:Float) {

@@ -22,9 +22,8 @@ class GameManager {
     
     // METHODS
     private init() {
-       self.playBGSound("background", frmt: "mp3")
+        self.playBGSound("background", frmt: "mp3")
         self.initStoryArray()
-        //playStorySound()
     }
     
      func playBGSound(sndName:String, frmt:String){
@@ -44,8 +43,10 @@ class GameManager {
     
     
     func playStorySound(){
-        self.storyP[self.i].play()
-        self.i++
+        if (self.i < self.storyP.count){
+            self.storyP[self.i].play()
+            self.i++
+        }
     }
     
     class func addSoundArray(sndName:String, frmt:String, x:Float, y:Float) {

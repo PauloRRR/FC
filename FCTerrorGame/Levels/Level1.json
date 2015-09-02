@@ -30,7 +30,7 @@
     },
     {
         "id": 1,
-        "background": "asylumCorridor",
+        "background": "CorredorTeste",
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",

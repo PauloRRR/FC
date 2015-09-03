@@ -78,9 +78,10 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
         gameState.saveState()
         manager.listenerAngularPosition(Float(gameState.rotation)*(-90.0));
+        checkStoryRequisite(level[gameState.room])
         if let levelSounds = level[gameState.room]["playOnEnter"].array {
-            println("locked")
             playSoundArray(levelSounds)
+
         }
 
     }
@@ -122,7 +123,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 break;
             case "swipeUp":
                 newAction = gameState.actions[(1+gameState.rotation)%4]
-                manager.playStorySound()
+                //manager.playStorySound()
                 break;
             case "swipeRight":
                 newAction = gameState.actions[(2+gameState.rotation)%4]
@@ -151,6 +152,12 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
     }
     
+    func checkStoryRequisite (action: JSON) {
+        if let prerequisite = action["hasStory"].bool {
+            manager.playStorySound()
+        }
+    }
+    
     func checkPrerequisite (action: JSON) -> Bool {
         if let prerequisite = action["prerequisite"].string {
             var items = gameState.items.filter( {$0 == prerequisite } )
@@ -168,6 +175,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         } else {
             return true;
         }
+        
     }
     
     func checkItem (action: JSON) -> Bool {

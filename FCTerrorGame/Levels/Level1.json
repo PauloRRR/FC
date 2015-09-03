@@ -2,6 +2,7 @@
     {
         "id": 0,
         "background": "TESTE2",
+        "hasStory": true,
         "listener" : "",
         "events": {
             "swipeLeft": {
@@ -31,6 +32,7 @@
     {
         "id": 1,
         "background": "CorredorTeste2",
+        "hasStory": true,
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -85,7 +87,7 @@
                 {
                         "sound": "scream3",
                         "format": "mp3",
-                        "x": 10.0,
+                        "x": 100.0,
                         "y": 0.0
                   }
             

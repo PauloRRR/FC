@@ -204,6 +204,7 @@
     {
         "id": 11,
         "background": "asylumIntersection",
+        "crossingWay": 0,
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -435,7 +436,7 @@
         "background": "asylumIntersection2",
         "playOnEnter": [
                     {
-                        "sound": "crossroad",
+                        "sound": "hallway-direita_esquerda_frente_01",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -577,6 +578,7 @@
     {
         "id": 33,
         "background": "asylumIntersection",
+        "crossingWay": 2,
         "events": {
             "swipeDown": {
                 "action": "gotoRoom",
@@ -1002,6 +1004,7 @@
     {
         "id": 59,
         "background": "asylumIntersection2",
+        "crossingWay": 2,
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -1182,6 +1185,7 @@
     {
         "id": 70,
         "background": "asylumIntersection",
+        "crossingWay": 2,
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -1282,6 +1286,7 @@
     {
         "id": 76,
         "background": "asylumIntersection2",
+        "crossingWay": 2,
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -1366,6 +1371,7 @@
     {
         "id": 81,
         "background": "asylumIntersection",
+        "crossingWay": 2,
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -1706,6 +1712,7 @@
     {
         "id": 101,
         "background": "asylumIntersection2",
+        "crossingWay": 1,
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -1914,6 +1921,7 @@
     {
         "id": 114,
         "background": "asylumIntersection",
+        "crossingWay": 1,
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -1934,6 +1942,7 @@
     {
         "id": 115,
         "background": "asylumIntersection2",
+        "crossingWay": 0,
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -2050,6 +2059,7 @@
     {
         "id": 122,
         "background": "asylumIntersection2",
+        "crossingWay": 1,
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -2086,6 +2096,7 @@
     {
         "id": 124,
         "background": "asylumIntersection",
+        "crossingWay": 0,
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -2106,6 +2117,7 @@
     {
         "id": 125,
         "background": "asylumIntersection2",
+        "crossingWay": 1,
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -2394,6 +2406,7 @@
     {
         "id": 143,
         "background": "asylumIntersection2",
+        "crossingWay": 2,
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -2529,6 +2542,7 @@
     {
         "id": 151,
         "background": "asylumIntersection2",
+        "crossingWay": 3,
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -2641,6 +2655,7 @@
     {
         "id": 158,
         "background": "asylumIntersection",
+        "crossingWay": 2,
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",

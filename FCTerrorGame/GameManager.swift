@@ -18,6 +18,7 @@ class GameManager {
     var enemiesCreated = false
     var isBreathing = false
     var storyP = [StorySoundNode]()
+    var gameState = GameState.sharedInstance
     var i = 0
     
     // METHODS
@@ -87,13 +88,17 @@ class GameManager {
             coord.pinpointPlayer(self.enemies[i].enemyPosition)
             self.enemies[i].audio.enviroNode.listenerPosition = AVAudio3DPoint(x: coord.coordX(playerPosition), y: coord.coordY(playerPosition), z: 0)
             if(coord.distance() <= 15.0){
+                if (coord.distance() <= 0.0 && !gameState.playerHidden) {
+                    println("🍺 DEATH 🍺");
+                    NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: nil);
+                }
                 if(!self.isBreathing){
                    self.enemies[i].playBreath()
                     self.isBreathing = true
                 }else{
                     self.isBreathing = false
                 }
-            }else{
+            } else {
                 self.enemies[i].stopBreath()
             }
             

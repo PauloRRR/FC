@@ -126,6 +126,7 @@
     {
         "id": 6,
         "background": "asylumCorridor3",
+        "hide": true,
         "playOnEnter": [
 
                 {

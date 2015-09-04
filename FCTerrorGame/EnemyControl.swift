@@ -23,7 +23,7 @@ class EnemyControl{
     func createEnemies(){
         if let filePath = NSBundle.mainBundle().pathForResource("Enemy", ofType: "json") {
             enemiesJson =  JSON(data: NSData(contentsOfFile: filePath)!)
-            
+            manager.enemies = [EnemyBot]();
             for(var i = 0; i < enemiesJson.count; i++){
                 var id = enemiesJson[i]["id"].stringValue
                 var startRoom = enemiesJson[i]["startRoomPosition"].intValue

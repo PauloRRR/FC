@@ -190,9 +190,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                     //playSound Front or Right
                     if(gameState.rotation == 0){
                         //sound front right
-                        println("ANTES ANTES ANTES")
                         GameManager.addSoundArray("hallway-direita_frente_01", frmt: "mp3", x: 0.0, y: 0.0)
-                        println("DEPOIS DEPOIS DEPOIS")
                     }else if (gameState.rotation == 1){
                         //sound front left right
                         GameManager.addSoundArray("hallway-direita_esquerda_frente_01", frmt: "mp3", x: 0.0, y: 0.0)
@@ -236,7 +234,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                         GameManager.addSoundArray("hallway-esquerda_frente_01", frmt: "mp3", x: 0.0, y: 0.0)
                     }
                     break;
-                default:
+                case 3:
                     //playSound left right front
                     if(gameState.rotation == 0){
                         //sound right left front
@@ -251,7 +249,71 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                         //right front
                         GameManager.addSoundArray("hallway-direita_frente_01", frmt: "mp3", x: 0.0, y: 0.0)
                     }
-                break;
+                    break;
+                case 4:
+                    //right only
+                    if(gameState.rotation == 0){
+                        //sound right
+                        GameManager.addSoundArray("hallway-direita_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }else if (gameState.rotation == 1){
+                        //sound front right
+                        GameManager.addSoundArray("hallway-direita_frente_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }else if (gameState.rotation == 2){
+                        //front left
+                        GameManager.addSoundArray("hallway-esquerda_frente_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }else {
+                        //left
+                        GameManager.addSoundArray("hallway-esquerda_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }
+                    break;
+                case 5:
+                    //left only
+                    if(gameState.rotation == 0){
+                        //sound left
+                        GameManager.addSoundArray("hallway-esquerda_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }else if (gameState.rotation == 1){
+                        //sound right
+                        GameManager.addSoundArray("hallway-direita_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }else if (gameState.rotation == 2){
+                        //front front right
+                        GameManager.addSoundArray("hallway-direita_frente_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }else {
+                        //left front
+                        GameManager.addSoundArray("hallway-esquerda_frente_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }
+                    break;
+                case 6:
+                    //right front without back
+                    if(gameState.rotation == 0){
+                        //sound front right
+                        GameManager.addSoundArray("hallway-direita_frente_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }else if (gameState.rotation == 1){
+                        //sound left front
+                        GameManager.addSoundArray("hallway-esquerda_frente_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }else if (gameState.rotation == 2){
+                        //left
+                        GameManager.addSoundArray("hallway-esquerda_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }else {
+                        //right
+                        GameManager.addSoundArray("hallway-direita_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }
+                    break;
+                default:
+                    //front left without back
+                    if(gameState.rotation == 0){
+                        //sound front left
+                        GameManager.addSoundArray("hallway-esquerda_frente_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }else if (gameState.rotation == 1){
+                        //sound left
+                        GameManager.addSoundArray("hallway-esquerda_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }else if (gameState.rotation == 2){
+                        //right
+                        GameManager.addSoundArray("hallway-direita_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }else {
+                        //front right
+                        GameManager.addSoundArray("hallway-direita_frente_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    }
+                    break;
             }
         }
     }

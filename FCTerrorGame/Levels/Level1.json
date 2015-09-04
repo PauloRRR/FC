@@ -49,6 +49,7 @@
     {
         "id": 2,
         "background": "asylumCorridor2",
+        "hide": true,
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",

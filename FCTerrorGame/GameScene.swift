@@ -33,7 +33,10 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         
         var alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
         
-        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: Selector("presentGameOver"),
+            name: "gameOver",
+            object: nil)
         
         swipeLeft.direction  = .Left
         swipeUp.direction    = .Up
@@ -153,12 +156,12 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             case "longPress":
                 if let hideable = level[gameState.room]["hide"].bool {
                     if (hideable) {
-                        playerHidden = true;
+                        gameState.playerHidden = true;
                     }
                 }
                 break;
             case "longPressEnded":
-                playerHidden = false;
+                gameState.playerHidden = false;
                 break;
             default:
                 
@@ -222,8 +225,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     func goToRoom (action :JSON, swipeDirection: String) {
         if (checkPrerequisite(action)) {
             
-            
-            println("🍺 state was \(gameState.rotation)")
             switch swipeDirection {
             case "swipeRight":
                 gameState.rotation = 1;
@@ -240,7 +241,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             default:
                 break;
             }
-            println("🍺 state now is \(gameState.rotation)")
             gameState.room = action["room"].intValue
             self.manager.setPlayerPosition(gameState.room)
             self.manager.updateEnemiesListenerPosition()
@@ -254,10 +254,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             }
             
             self.view?.presentScene(scene, transition: transition)
-           
-
         }
-        
     }
     
     func pickItem (action :JSON) {
@@ -268,6 +265,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
     
     }
+    
     
     func playSoundArray (action : [JSON]) {
         for sound: JSON in action {
@@ -300,5 +298,18 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             }
         }
 
+    }
+    
+    func presentGameOver () {
+        var transition = SKTransition.fadeWithDuration(0)
+        var scene = GameOverScene(size: self.size)
+        if let recognizers = self.view?.gestureRecognizers {
+            for recognizer in recognizers {
+                self.view?.removeGestureRecognizer(recognizer as! UIGestureRecognizer)
+            }
+        }
+        
+        self.view?.presentScene(scene, transition: transition)
+    
     }
 }

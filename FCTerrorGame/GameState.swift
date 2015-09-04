@@ -17,6 +17,8 @@ class GameState {
     var json = JSON.nullJSON
     var debug = true;
     
+    var playerHidden = false;
+    
     var actions = ["swipeLeft", "swipeUp","swipeRight", "swipeDown"]
     
     

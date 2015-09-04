@@ -48,7 +48,8 @@ class GameManager {
             self.i++
             if (i-1 == 0){
                 self.storyP[self.i-1].play()
-            }else if (!storyP[i-2].storyPlayer.playing){
+            }else if (storyP[i-2].storyPlayer.playing){
+                self.storyP[i-2].storyPlayer.stop()
                 self.storyP[self.i-1].play()
             }else{
                 self.i--
@@ -62,7 +63,6 @@ class GameManager {
         self.sharedInstance.audioArray.append(audio)
         self.sharedInstance.audioArray[0].player3DPosition(x, y: y, z: 0.0)
         self.sharedInstance.audioArray[0].playOnce()
-        
     }
     
     func setListenerPosition(x:Float, y:Float){

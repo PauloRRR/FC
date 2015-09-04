@@ -408,6 +408,7 @@
     {
         "id": 22,
         "background": "asylumCorridor2",
+        "hide": true,
         "playOnEnter": [
 
                 {
@@ -562,6 +563,7 @@
     {
         "id": 30,
         "background": "asylumCorridor",
+        "hide": true,
         "playOnEnter": [
 
                 {
@@ -826,6 +828,7 @@
     {
         "id": 45,
         "background": "asylumCorridor",
+        "hide": true,
         "playOnEnter": [
 
                 {
@@ -1097,6 +1100,7 @@
     {
         "id": 61,
         "background": "asylumCorridor2",
+        "hide": true,
         "playOnEnter": [
 
                 {
@@ -1693,6 +1697,7 @@
     {
         "id": 96,
         "background": "asylumCorridor3",
+        "hide": true,
         "playOnEnter": [
 
                 {
@@ -2061,6 +2066,7 @@
     {
         "id": 117,
         "background": "asylumCorridor2",
+        "hide": true,
         "playOnEnter": [
 
                 {
@@ -2605,6 +2611,7 @@
     {
         "id": 149,
         "background": "asylumCorridor3",
+        "hide": true,
         "playOnEnter": [
 
                 {

@@ -117,7 +117,7 @@ class GameManager {
             if(coord.distance() <= 15.0){
                 if (coord.distance() <= 0.0 && !gameState.playerHidden) {
                     println("🍺 DEATH 🍺");
-                    NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: nil);
+                    //NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: nil);
                 }
                 if(!self.isBreathing){
                    self.enemies[i].playBreath()

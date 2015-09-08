@@ -96,12 +96,13 @@ class GameManager {
     
     func listenerAngularPosition(yaw: Float, pitch: Float, roll: Float){
         enviroNode.listenerAngularOrientation = AVAudioMake3DAngularOrientation(yaw, pitch, roll)
+        updateEnemiesListenerPosition()
     }
     
-    func listenerAngularPosition(yaw: Float) {
-        listenerAngularPosition(yaw,
+    func listenerAngularPosition(roll: Float) {
+        listenerAngularPosition(90.0,
             pitch: enviroNode.listenerAngularOrientation.pitch,
-            roll: enviroNode.listenerAngularOrientation.roll)
+            roll: roll)
     }
     
     func updateEnemiesListenerPosition(){
@@ -110,6 +111,9 @@ class GameManager {
         for (var i = 0; i < self.enemies.count; i++){
             coord.pinpointPlayer(self.enemies[i].enemyPosition)
             self.enemies[i].audio.enviroNode.listenerPosition = AVAudio3DPoint(x: coord.coordX(playerPosition), y: coord.coordY(playerPosition), z: 0)
+            self.enemies[i].audio.enviroNode.listenerAngularOrientation = enviroNode.listenerAngularOrientation
+
+            
             if(coord.distance() <= 15.0){
                 if (coord.distance() <= 0.0 && !gameState.playerHidden) {
                     println("🍺 DEATH 🍺");

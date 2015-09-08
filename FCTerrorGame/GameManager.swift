@@ -112,7 +112,7 @@ class GameManager {
             coord.pinpointPlayer(self.enemies[i].enemyPosition)
             self.enemies[i].audio.enviroNode.listenerPosition = AVAudio3DPoint(x: coord.coordX(playerPosition), y: coord.coordY(playerPosition), z: 0)
             self.enemies[i].audio.enviroNode.listenerAngularOrientation = enviroNode.listenerAngularOrientation
-            println(self.enemies[i].audio.enviroNode.listenerAngularOrientation.pitch)
+
             
             if(coord.distance() <= 15.0){
                 if (coord.distance() <= 0.0 && !gameState.playerHidden) {

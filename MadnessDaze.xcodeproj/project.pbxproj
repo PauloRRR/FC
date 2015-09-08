@@ -54,7 +54,6 @@
 		D4A0D3301B8F6D800004BB09 /* story1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D32E1B8F6D800004BB09 /* story1.mp3 */; };
 		D4A0D3311B8F6D800004BB09 /* crossroad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D32F1B8F6D800004BB09 /* crossroad.mp3 */; };
 		D4A0D3331B8F6F6E0004BB09 /* playerSteps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D3321B8F6F6E0004BB09 /* playerSteps.mp3 */; };
-		D4ECCEA51B9785B000638FAB /* StorySoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4ECCEA41B9785B000638FAB /* StorySoundNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,7 +118,6 @@
 		D4A0D32E1B8F6D800004BB09 /* story1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = story1.mp3; path = ../story1.mp3; sourceTree = "<group>"; };
 		D4A0D32F1B8F6D800004BB09 /* crossroad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = crossroad.mp3; path = ../crossroad.mp3; sourceTree = "<group>"; };
 		D4A0D3321B8F6F6E0004BB09 /* playerSteps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = playerSteps.mp3; path = ../playerSteps.mp3; sourceTree = "<group>"; };
-		D4ECCEA41B9785B000638FAB /* StorySoundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySoundNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,7 +141,6 @@
 		30FA89011B912CD000FE4700 /* AudioClasses */ = {
 			isa = PBXGroup;
 			children = (
-				D4ECCEA41B9785B000638FAB /* StorySoundNode.swift */,
 				306F7C721B7118A100E8501A /* AudioNode.swift */,
 				306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */,
 				30D6A01C1B976A3700A025D4 /* AudioCoordinate.swift */,

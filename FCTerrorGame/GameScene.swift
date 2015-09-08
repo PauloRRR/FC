@@ -323,13 +323,14 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                     }
                     break;
             }
-            GameManager.addRoomSoundArray(soundName, frmt: "mp3", x: 0.0, y: 0.0);
+            GameManager.addRoomSoundArray(soundName, frmt: "mp3", x: 0.0, y: 0.0)
         }
     }
     
     func checkStoryRequisite (action: JSON) {
         if let prerequisite = action["hasStory"].bool {
             manager.playStorySound()
+            println("STORY")
         }
     }
     

@@ -46,7 +46,7 @@ class AudioCoordinate{
     
     func distance()->Float{
         var dist = sqrt(powf(playerX - listenerX, 2) + powf(playerY - listenerY, 2))
-        println(dist)
+        //println("distancia entre jogador e player: \(dist)")
         return dist
     }
    

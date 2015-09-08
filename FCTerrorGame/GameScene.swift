@@ -94,7 +94,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             addChild(bg)
         }
         gameState.saveState()
-        manager.listenerAngularPosition(Float(gameState.rotation)*(-90.0));
+        manager.listenerAngularPosition(Float(gameState.rotation)*(90.0));
         checkStoryRequisite(level[gameState.room])
         checkDirectionSoundRequisite(level[gameState.room])
         if let levelSounds = level[gameState.room]["playOnEnter"].array {

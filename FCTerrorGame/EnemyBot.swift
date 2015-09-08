@@ -41,14 +41,14 @@ class EnemyBot: NSObject {
         self.enemyPosition = adjacentRooms[random]
         self.adjacentRooms = map[self.enemyPosition]
         manager.updateEnemiesListenerPosition()
-        println("player pos (\(self.audio.enviroNode.listenerPosition.x),\(self.audio.enviroNode.listenerPosition.y)) at room \(manager.returnPlayerPosition())")
+        //println("player pos (\(self.audio.enviroNode.listenerPosition.x),\(self.audio.enviroNode.listenerPosition.y)) at room \(manager.returnPlayerPosition())")
         return self.actualRoom()
     }
     
     func actualRoom()->Int{
         var coord = AudioCoordinate()
         self.audio.player3DPosition(coord.coordX(self.enemyPosition),y: coord.coordY(self.enemyPosition), z: 0)
-        println("enemy audio pos:(\(self.audio.getPlayer3DPosition().x),\(self.audio.getPlayer3DPosition().y)) at room \(self.enemyPosition)")
+        //println("enemy pos:(\(self.audio.getPlayer3DPosition().x),\(self.audio.getPlayer3DPosition().y)) at room \(self.enemyPosition)")
         return self.enemyPosition
         
     }

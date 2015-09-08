@@ -77,7 +77,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             addChild(bg)
         }
         gameState.saveState()
-        manager.listenerAngularPosition(Float(gameState.rotation)*(-90.0));
+        manager.listenerAngularPosition(Float(gameState.rotation)*(90.0));
         if let levelSounds = level[gameState.room]["playOnEnter"].array {
             println("locked")
             playSoundArray(levelSounds)

@@ -125,6 +125,7 @@
 			children = (
 				306F7C721B7118A100E8501A /* AudioNode.swift */,
 				306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */,
+				D4825C271B94DDBD008B27CE /* StorySoundNode.swift */,
 				30D6A01C1B976A3700A025D4 /* AudioCoordinate.swift */,
 			);
 			name = AudioClasses;

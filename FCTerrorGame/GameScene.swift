@@ -14,6 +14,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var background: SKSpriteNode?
     var enemyControl = EnemyControl()
     var manager = GameManager.sharedInstance
+    
+    var playerHidden = false;
+    
     override func didMoveToView(view: SKView) {
         //self.manager.setPlayerPosition(0)
         if let filePath = NSBundle.mainBundle().pathForResource("Level1", ofType: "json") {
@@ -26,20 +29,34 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         var swipeUp      = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))
         var swipeRight   = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight:"))
         var swipeDown    = UISwipeGestureRecognizer(target: self, action: Selector("swipeDown:"))
+        var longPress    = UILongPressGestureRecognizer(target: self, action: Selector("longPress:"))
+        
         var alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
+        
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: Selector("presentGameOver"),
+            name: "gameOver",
+            object: nil)
+        
+        GameManager.clearRoomSoundArray(); // Room sounds now stop playing on change room
+        manager.stopStorySound(); //StorySound now stop playing on change room
         
         swipeLeft.direction  = .Left
         swipeUp.direction    = .Up
         swipeRight.direction = .Right
         swipeDown.direction  = .Down
+        longPress.minimumPressDuration = 1.0;
         alternateTap.numberOfTapsRequired = 5;
         alternateTap.delegate = self
+        
         view.addGestureRecognizer(alternateTap)
+        view.addGestureRecognizer(longPress)
         view.addGestureRecognizer(swipeLeft)
         view.addGestureRecognizer(swipeUp)
         view.addGestureRecognizer(swipeRight)
         view.addGestureRecognizer(swipeDown)
         loadRoom()
+        
         
         
         self.runEnemyBehavior()
@@ -79,8 +96,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         gameState.saveState()
         manager.listenerAngularPosition(Float(gameState.rotation)*(90.0));
         if let levelSounds = level[gameState.room]["playOnEnter"].array {
-            println("locked")
             playSoundArray(levelSounds)
+
         }
 
     }
@@ -109,10 +126,20 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         doAction("tap")
     }
     
+    func longPress(gesture: UILongPressGestureRecognizer) {
+        if (gesture.state == UIGestureRecognizerState.Began) {
+            doAction("longPress")
+        } else if (gesture.state == UIGestureRecognizerState.Ended) {
+            doAction("longPressEnded")
+        }
+    }
+    
     func alternateTapping(gesture: UITapGestureRecognizer) {
         doAction("alternateTap");
     
     }
+    
+    
     
     func doAction(name: String) {
         var newAction = name;
@@ -122,7 +149,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 break;
             case "swipeUp":
                 newAction = gameState.actions[(1+gameState.rotation)%4]
-                manager.playStorySound()
                 break;
             case "swipeRight":
                 newAction = gameState.actions[(2+gameState.rotation)%4]
@@ -130,7 +156,18 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             case "swipeDown":
                 newAction = gameState.actions[(3+gameState.rotation)%4]
                 break;
+            case "longPress":
+                if let hideable = level[gameState.room]["hide"].bool {
+                    if (hideable) {
+                        gameState.playerHidden = true;
+                    }
+                }
+                break;
+            case "longPressEnded":
+                gameState.playerHidden = false;
+                break;
             default:
+                
                 break;
         }
         let event = level[gameState.room]["events"][newAction]
@@ -141,13 +178,156 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 break;
             case "gotoRoom":
                 goToRoom(event, swipeDirection: newAction)
-                GameManager.addSoundArray("playerSteps", frmt: "mp3", x: 0.0, y: 0.0)
+                //GameManager.addSoundArray("playerSteps", frmt: "mp3", x: 0.0, y: 0.0)
                 break;
             default:
                 break;
                 
             }
             
+        }
+    }
+    
+    func checkDirectionSoundRequisite(action: JSON){
+        if let prerequisite = action["crossingWay"].int {
+            var soundName = "";
+            switch prerequisite {
+                case 0:
+                    //playSound Front or Right
+                    if(gameState.rotation == 0){
+                        //sound front right
+                        soundName = "hallway-direita_frente_01"
+                    } else if (gameState.rotation == 1){
+                        //sound front left right
+                        soundName = "hallway-direita_esquerda_frente_01"
+                    } else if (gameState.rotation == 2){
+                        //front left
+                         soundName = "hallway-esquerda_frente_01"
+                    } else {
+                        //left right
+                         soundName = "hallway-direita_esquerda_01"
+                    }
+                    break;
+                case 1:
+                    //playSound front or Left
+                    if(gameState.rotation == 0){
+                        //sound front left
+                         soundName = "hallway-esquerda_frente_01"
+                    } else if (gameState.rotation == 1){
+                        //sound left right
+                         soundName = "hallway-direita_esquerda_01"
+                    } else if (gameState.rotation == 2){
+                        //front right
+                         soundName = "hallway-direita_frente_01"
+                    } else {
+                        //left right front
+                         soundName = "hallway-direita_esquerda_frente_01"
+                    }
+                    break;
+                case 2:
+                    //playSound left or right
+                    if(gameState.rotation == 0){
+                        //sound right left
+                         soundName = "hallway-direita_esquerda_01"
+                    }else if (gameState.rotation == 1){
+                        //sound front right
+                         soundName = "hallway-direita_frente_01"
+                    }else if (gameState.rotation == 2){
+                        //front right left
+                         soundName = "hallway-direita_esquerda_frente_01"
+                    }else {
+                        //left front
+                         soundName = "hallway-esquerda_frente_01"
+                    }
+                    break;
+                case 3:
+                    //playSound left right front
+                    if(gameState.rotation == 0){
+                        //sound right left front
+                         soundName = "hallway-direita_esquerda_frente_01"
+                    }else if (gameState.rotation == 1){
+                        //sound left front
+                         soundName = "hallway-esquerda_frente_01"
+                    }else if (gameState.rotation == 2){
+                        //right left
+                         soundName = "hallway-direita_esquerda_01"
+                    }else {
+                        //right front
+                         soundName = "hallway-direita_frente_01"
+                    }
+                    break;
+                case 4:
+                    //right only
+                    if(gameState.rotation == 0){
+                        //sound right
+                         soundName = "hallway-direita_01"
+                    }else if (gameState.rotation == 1){
+                        //sound front right
+                         soundName = "hallway-direita_frente_01"
+                    }else if (gameState.rotation == 2){
+                        //front left
+                         soundName = "hallway-esquerda_frente_01"
+                    }else {
+                        //left
+                         soundName = "hallway-esquerda_01"
+                    }
+                    break;
+                case 5:
+                    //left only
+                    if(gameState.rotation == 0){
+                        //sound left
+                         soundName = "hallway-esquerda_01"
+                    }else if (gameState.rotation == 1){
+                        //sound right
+                        soundName = "hallway-direita_01"
+                    }else if (gameState.rotation == 2){
+                        //front front right
+                         soundName = "hallway-direita_frente_01"
+                    }else {
+                        //left front
+                         soundName = "hallway-esquerda_frente_01"
+                    }
+                    break;
+                case 6:
+                    //right front without back
+                    if(gameState.rotation == 0){
+                        //sound front right
+                         soundName = "hallway-direita_frente_01"
+                    }else if (gameState.rotation == 1){
+                        //sound left front
+                         soundName = "hallway-esquerda_frente_01"
+                    }else if (gameState.rotation == 2){
+                        //left
+                         soundName = "hallway-esquerda_01"
+                    }else {
+                        //right
+                         soundName = "hallway-direita_01"
+                    }
+                    break;
+                default:
+                    //front left without back
+                    if(gameState.rotation == 0){
+                        //sound front left
+                         soundName = "hallway-esquerda_frente_01"
+                    }else if (gameState.rotation == 1){
+                        //sound left
+                         soundName = "hallway-esquerda_01"
+                    }else if (gameState.rotation == 2){
+                        //right
+                         soundName = "hallway-direita_01"
+                    }else {
+                        //front right
+                         soundName = "hallway-direita_frente_01"
+                    }
+                    break;
+            }
+            GameManager.addRoomSoundArray(soundName, frmt: "mp3", x: 0.0, y: 0.0);
+        }
+    }
+    
+    func checkStoryRequisite (action: JSON) {
+        if let prerequisite = action["hasStory"].bool {
+            manager.playStorySound()
         }
     }
     
@@ -168,6 +348,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         } else {
             return true;
         }
+        
     }
     
     func checkItem (action: JSON) -> Bool {
@@ -191,8 +372,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     func goToRoom (action :JSON, swipeDirection: String) {
         if (checkPrerequisite(action)) {
             
-            
-            println("🍺 state was \(gameState.rotation)")
             switch swipeDirection {
             case "swipeRight":
                 gameState.rotation = 1;
@@ -209,7 +388,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             default:
                 break;
             }
-            println("🍺 state now is \(gameState.rotation)")
             gameState.room = action["room"].intValue
             self.manager.setPlayerPosition(gameState.room)
             self.manager.updateEnemiesListenerPosition()
@@ -223,10 +401,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             }
             
             self.view?.presentScene(scene, transition: transition)
-           
-
         }
-        
     }
     
     func pickItem (action :JSON) {
@@ -237,6 +412,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
     
     }
+    
     
     func playSoundArray (action : [JSON]) {
         for sound: JSON in action {
@@ -269,5 +445,18 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             }
         }
 
+    }
+    
+    func presentGameOver () {
+        var transition = SKTransition.fadeWithDuration(0)
+        var scene = GameOverScene(size: self.size)
+        if let recognizers = self.view?.gestureRecognizers {
+            for recognizer in recognizers {
+                self.view?.removeGestureRecognizer(recognizer as! UIGestureRecognizer)
+            }
+        }
+        
+        self.view?.presentScene(scene, transition: transition)
+    
     }
 }

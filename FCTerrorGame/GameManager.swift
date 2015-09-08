@@ -10,6 +10,7 @@ import AVFoundation
 class GameManager {
     static let sharedInstance = GameManager()
     var audioArray = [AudioNode]()
+    var audioRoomArray = [AudioNode]()
     var backgroundPlayer = [BackGroundSoundNode]()
     var enviroNode = AVAudioEnvironmentNode()
     var enemies = [EnemyBot]()
@@ -18,6 +19,7 @@ class GameManager {
     var enemiesCreated = false
     var isBreathing = false
     var storyP = [StorySoundNode]()
+    var gameState = GameState.sharedInstance
     var i = 0
     
     // METHODS
@@ -47,12 +49,20 @@ class GameManager {
             self.i++
             if (i-1 == 0){
                 self.storyP[self.i-1].play()
-            }else if (!storyP[i-2].storyPlayer.playing){
+            }else if (storyP[i-2].storyPlayer.playing){
+                self.storyP[i-2].storyPlayer.stop()
                 self.storyP[self.i-1].play()
             }else{
                 self.i--
             }
         }
+    }
+    
+    func stopStorySound(){
+        for (var i = 0; i < self.i; i++) {
+            self.storyP[i].storyPlayer.stop()
+        }
+    
     }
     
     class func addSoundArray(sndName:String, frmt:String, x:Float, y:Float) {
@@ -61,8 +71,22 @@ class GameManager {
         self.sharedInstance.audioArray.append(audio)
         self.sharedInstance.audioArray[0].player3DPosition(x, y: y, z: 0.0)
         self.sharedInstance.audioArray[0].playOnce()
-        
     }
+    
+    class func addRoomSoundArray(sndName:String, frmt:String, x:Float, y:Float) {
+        self.sharedInstance.audioRoomArray.removeAll(keepCapacity: false)
+        var audio = AudioNode(soundName: sndName,format: frmt)
+        self.sharedInstance.audioRoomArray.append(audio)
+        self.sharedInstance.audioRoomArray[0].player3DPosition(x, y: y, z: 0.0)
+        self.sharedInstance.audioRoomArray[0].playOnce()
+    }
+    
+    class func clearRoomSoundArray() {
+        self.sharedInstance.audioRoomArray.removeAll(keepCapacity: false)
+    }
+    
+    
+    
     
     func setListenerPosition(x:Float, y:Float){
         for (var i = 0; i < self.audioArray.count; i++){
@@ -91,13 +115,17 @@ class GameManager {
             println(self.enemies[i].audio.enviroNode.listenerAngularOrientation.pitch)
             
             if(coord.distance() <= 15.0){
+                if (coord.distance() <= 0.0 && !gameState.playerHidden) {
+                    println("🍺 DEATH 🍺");
+                    NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: nil);
+                }
                 if(!self.isBreathing){
                    self.enemies[i].playBreath()
                     self.isBreathing = true
                 }else{
                     self.isBreathing = false
                 }
-            }else{
+            } else {
                 self.enemies[i].stopBreath()
             }
             

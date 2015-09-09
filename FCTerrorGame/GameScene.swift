@@ -38,8 +38,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             name: "gameOver",
             object: nil)
         
-        GameManager.clearRoomSoundArray(); // Room sounds now stop playing on change room
-        //manager.stopStorySound(); //StorySound now stop playing on change room
+        //GameManager.clearRoomSoundArray(); // Room sounds now stop playing on change room
+        manager.stopStorySound(); //StorySound now stop playing on change room
         
         swipeLeft.direction  = .Left
         swipeUp.direction    = .Up
@@ -70,7 +70,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             SKAction.sequence([
                 SKAction.waitForDuration(2.0),
                 SKAction.runBlock({
-                    self.enemyControl.updateEnemiesPosition()
+                    if (!self.manager.storyP[self.manager.i-1].storyPlayer.playing){
+                        self.enemyControl.updateEnemiesPosition()
+                    }
                 })
                 ])
             ))
@@ -172,8 +174,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 
                 break;
         }
+        //&& !manager.storyP[manager.i-1].storyPlayer.playing == no swipe until speech is over
         let event = level[gameState.room]["events"][newAction]
-        if (event.description != "null") {
+        if (event.description != "null" && !manager.storyP[manager.i-1].storyPlayer.playing) {
             switch event["action"].stringValue {
             case "pickItem":
                 pickItem(event)
@@ -329,8 +332,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     func checkStoryRequisite (action: JSON) {
         if let prerequisite = action["hasStory"].bool {
-            manager.playStorySound()
-            println("STORY")
+            if (!manager.storyP[action["storyNumber"].intValue].played){
+                manager.playStorySound()
+            }
         }
     }
     

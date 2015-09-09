@@ -3,6 +3,7 @@
         "id": 0,
         "background": "TESTE2",
         "hasStory": true,
+        "storyNumber": 0,
         "listener" : "",
         "hide": false,
         "events": {
@@ -52,6 +53,7 @@
         "id": 2,
         "background": "asylumCorridor2",
         "hasStory": true,
+        "storyNumber": 1,
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",

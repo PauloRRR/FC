@@ -46,15 +46,9 @@ class GameManager {
     
     func playStorySound(){
         if (self.i < self.storyP.count){
+            self.storyP[self.i].play()
+            self.storyP[self.i].played = true
             self.i++
-            if (i-1 == 0){
-                self.storyP[self.i-1].play()
-            }else if (storyP[i-2].storyPlayer.playing){
-                self.storyP[i-2].storyPlayer.stop()
-                self.storyP[self.i-1].play()
-            }else{
-                self.i--
-            }
         }
     }
     
@@ -117,7 +111,7 @@ class GameManager {
             if(coord.distance() <= 15.0){
                 if (coord.distance() <= 0.0 && !gameState.playerHidden) {
                     println("🍺 DEATH 🍺");
-                    //NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: nil);
+                    NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: nil);
                 }
                 if(!self.isBreathing){
                    self.enemies[i].playBreath()

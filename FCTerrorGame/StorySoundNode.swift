@@ -11,6 +11,7 @@ import AVFoundation
 class StorySoundNode {
     
     var storyPlayer = AVAudioPlayer()
+    var played = false
     
     init(soundName:String,format:String) {
         

@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "background": "TESTE2",
+        "background": "room0",
         "hasStory": true,
         "storyNumber": 0,
         "listener" : "",
@@ -33,7 +33,7 @@
     },
     {
         "id": 1,
-        "background": "CorredorTeste2",
+        "background": "room1",
         "crossingWay": 7,
         "events": {
             "swipeLeft": {
@@ -51,7 +51,7 @@
 
     {
         "id": 2,
-        "background": "asylumCorridor2",
+        "background": "room2",
         "hasStory": true,
         "storyNumber": 1,
         "events": {

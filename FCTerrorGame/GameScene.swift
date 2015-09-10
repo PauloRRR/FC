@@ -89,12 +89,26 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     // MARK: Level Functions
     
     func loadRoom () {
-        background = SKSpriteNode(imageNamed: level[gameState.room]["background"].stringValue)
-        background?.position = CGPoint(x: frame.midX, y: frame.midY)
-        
-        if let bg = background {
-            addChild(bg)
+        var tex = SKTexture(imageNamed: level[gameState.room]["background"].stringValue + "-" + gameState.rotation.description)
+        println(tex.description);
+        if (tex.size().width != 128) {
+            background = SKSpriteNode(texture: tex);
+            background?.position = CGPoint(x: frame.midX, y: frame.midY)
+            addChild(background!)
+        } else {
+            tex = SKTexture(imageNamed: level[gameState.room]["background"].stringValue)
+            if (tex.size().width != 128) {
+                background = SKSpriteNode(texture: tex);
+                background?.position = CGPoint(x: frame.midX, y: frame.midY)
+                addChild(background!)
+            } else {
+                background = SKSpriteNode(imageNamed: "asylumRoom2")
+                background?.position = CGPoint(x: frame.midX, y: frame.midY)
+                addChild(background!)
+            }
+            
         }
+
         gameState.saveState()
         manager.listenerAngularPosition(Float(gameState.rotation)*(90.0));
         checkStoryRequisite(level[gameState.room])
@@ -176,7 +190,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
         //&& !manager.storyP[manager.i-1].storyPlayer.playing == no swipe until speech is over
         let event = level[gameState.room]["events"][newAction]
-        if (event.description != "null" && !manager.storyP[manager.i-1].storyPlayer.playing) {
+        if (event.description != "null" && ( !manager.storyP[manager.i-1].storyPlayer.playing || gameState.debug) ) {
             switch event["action"].stringValue {
             case "pickItem":
                 pickItem(event)

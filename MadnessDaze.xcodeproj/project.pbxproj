@@ -36,7 +36,6 @@
 		D411D91A1B9A0B630020689E /* hallway-esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D411D9181B9A0B630020689E /* hallway-esquerda_01.mp3 */; };
 		D411D91C1B9A106C0020689E /* hallway-finalCorredor_voltar_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D411D91B1B9A106C0020689E /* hallway-finalCorredor_voltar_01.mp3 */; };
 		D411D91E1B9A10FC0020689E /* equipamentosCorredor_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D411D91D1B9A10FC0020689E /* equipamentosCorredor_01.mp3 */; };
-		D41D57091B90C99F0067B6C8 /* storm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41D57081B90C99F0067B6C8 /* storm.mp3 */; };
 		D4491CD01B8F9BAE009FE55B /* scream3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4491CCF1B8F9BAE009FE55B /* scream3.mp3 */; };
 		D4491CD21B8F9C41009FE55B /* scream2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4491CD11B8F9C41009FE55B /* scream2.mp3 */; };
 		D4491CD51B8FA1CA009FE55B /* scream4.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4491CD31B8FA1CA009FE55B /* scream4.wav */; };
@@ -51,6 +50,7 @@
 		D471FDD91B6FD3B000D80921 /* FCTerrorGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDD81B6FD3B000D80921 /* FCTerrorGameTests.swift */; };
 		D49F5E4B1B9F5CE70023174A /* story0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D49F5E491B9F5CE60023174A /* story0.mp3 */; };
 		D49F5E4C1B9F5CE70023174A /* story1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D49F5E4A1B9F5CE60023174A /* story1.mp3 */; };
+		D49F5E4E1BA1F08E0023174A /* storm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D49F5E4D1BA1F08E0023174A /* storm.mp3 */; };
 		D4A0D32B1B8E3B440004BB09 /* crossroad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D32A1B8E3B440004BB09 /* crossroad.mp3 */; };
 		D4A0D3311B8F6D800004BB09 /* crossroad.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D32F1B8F6D800004BB09 /* crossroad.mp3 */; };
 		D4A0D3331B8F6F6E0004BB09 /* playerSteps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D3321B8F6F6E0004BB09 /* playerSteps.mp3 */; };
@@ -96,7 +96,6 @@
 		D411D9181B9A0B630020689E /* hallway-esquerda_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hallway-esquerda_01.mp3"; sourceTree = "<group>"; };
 		D411D91B1B9A106C0020689E /* hallway-finalCorredor_voltar_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hallway-finalCorredor_voltar_01.mp3"; sourceTree = "<group>"; };
 		D411D91D1B9A10FC0020689E /* equipamentosCorredor_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = equipamentosCorredor_01.mp3; sourceTree = "<group>"; };
-		D41D57081B90C99F0067B6C8 /* storm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = storm.mp3; sourceTree = "<group>"; };
 		D4491CCF1B8F9BAE009FE55B /* scream3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = scream3.mp3; path = ../scream3.mp3; sourceTree = "<group>"; };
 		D4491CD11B8F9C41009FE55B /* scream2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = scream2.mp3; path = ../scream2.mp3; sourceTree = "<group>"; };
 		D4491CD31B8FA1CA009FE55B /* scream4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = scream4.wav; path = ../scream4.wav; sourceTree = "<group>"; };
@@ -115,6 +114,7 @@
 		D471FDD81B6FD3B000D80921 /* FCTerrorGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCTerrorGameTests.swift; sourceTree = "<group>"; };
 		D49F5E491B9F5CE60023174A /* story0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = story0.mp3; sourceTree = "<group>"; };
 		D49F5E4A1B9F5CE60023174A /* story1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = story1.mp3; sourceTree = "<group>"; };
+		D49F5E4D1BA1F08E0023174A /* storm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = storm.mp3; sourceTree = "<group>"; };
 		D4A0D32A1B8E3B440004BB09 /* crossroad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = crossroad.mp3; sourceTree = "<group>"; };
 		D4A0D32F1B8F6D800004BB09 /* crossroad.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = crossroad.mp3; path = ../crossroad.mp3; sourceTree = "<group>"; };
 		D4A0D3321B8F6F6E0004BB09 /* playerSteps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = playerSteps.mp3; path = ../playerSteps.mp3; sourceTree = "<group>"; };
@@ -143,7 +143,6 @@
 			children = (
 				306F7C721B7118A100E8501A /* AudioNode.swift */,
 				306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */,
-				D4825C271B94DDBD008B27CE /* StorySoundNode.swift */,
 				30D6A01C1B976A3700A025D4 /* AudioCoordinate.swift */,
 				B974A8DC1B98B9BC004DFE75 /* StorySoundNode.swift */,
 			);
@@ -163,9 +162,9 @@
 				D411D9101B98C81A0020689E /* hallway-direita_esquerda_frente_01.mp3 */,
 				D411D9111B98C81A0020689E /* hallway-direita_frente_01.mp3 */,
 				D411D9121B98C81A0020689E /* hallway-esquerda_frente_01.mp3 */,
-				D41D57081B90C99F0067B6C8 /* storm.mp3 */,
 				30FA88F91B8D049200FE4700 /* background.mp3 */,
 				30FA88FB1B8E1C2700FE4700 /* AudioSingleton.swift */,
+				D49F5E4D1BA1F08E0023174A /* storm.mp3 */,
 				306F7C7C1B7D023700E8501A /* asylum.mp3 */,
 				305224081B8CD44800AD7A98 /* footsteps.mp3 */,
 				306F7C761B7274F900E8501A /* helicopterMono.mp3 */,
@@ -381,10 +380,10 @@
 				D411D9161B98C81A0020689E /* hallway-esquerda_frente_01.mp3 in Resources */,
 				D49F5E4C1B9F5CE70023174A /* story1.mp3 in Resources */,
 				D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */,
+				D49F5E4E1BA1F08E0023174A /* storm.mp3 in Resources */,
 				D471FDC11B6FD3B000D80921 /* GameScene.sks in Resources */,
 				B985E0761B75300200CBAC43 /* Level1.json in Resources */,
 				D411D9151B98C81A0020689E /* hallway-direita_frente_01.mp3 in Resources */,
-				D41D57091B90C99F0067B6C8 /* storm.mp3 in Resources */,
 				30F181971B96040200C2C2C5 /* roomMapping.json in Resources */,
 				D4A0D3311B8F6D800004BB09 /* crossroad.mp3 in Resources */,
 				305224091B8CD44800AD7A98 /* footsteps.mp3 in Resources */,

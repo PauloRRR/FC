@@ -37,6 +37,11 @@ class GameOverScene: SKScene {
     func retry () {
         var transition = SKTransition.fadeWithDuration(0)
         var scene = GameScene(size: self.size)
+        var state = GameState()
+        state.room = 0
+        state.rotation = 1
+        //scene.loadRoom()
+        
         if let recognizers = self.view?.gestureRecognizers {
             for recognizer in recognizers {
                 self.view?.removeGestureRecognizer(recognizer as! UIGestureRecognizer)

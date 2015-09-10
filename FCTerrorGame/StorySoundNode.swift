@@ -19,7 +19,7 @@ class StorySoundNode {
         storyPlayer = AVAudioPlayer(contentsOfURL: bgMusicURL, error: nil)
         storyPlayer.numberOfLoops = 0
         storyPlayer.prepareToPlay()
-        storyPlayer.volume = 0.05
+        storyPlayer.volume = 1
     }
     
     func play(){

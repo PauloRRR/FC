@@ -12,6 +12,7 @@ import SpriteKit
 
 class GameOverScene: SKScene {
     var manager = GameManager.sharedInstance;
+    var state = GameState.sharedInstance;
     
     
     override func didMoveToView(view: SKView) {
@@ -36,7 +37,12 @@ class GameOverScene: SKScene {
     
     func retry () {
         var transition = SKTransition.fadeWithDuration(0)
+        self.state.room = 0
+        self.manager.playerPosition = 0
+        self.state.rotation = 1
+        
         var scene = GameScene(size: self.size)
+        
         if let recognizers = self.view?.gestureRecognizers {
             for recognizer in recognizers {
                 self.view?.removeGestureRecognizer(recognizer as! UIGestureRecognizer)

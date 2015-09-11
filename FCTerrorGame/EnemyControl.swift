@@ -44,6 +44,17 @@ class EnemyControl{
         }
     }
     
+    func stopEnemiesPosition(){
+        for(var i = 0; i < manager.enemies.count; i++){
+            manager.enemies[i].stopFootsteps()
+        }
+    }
+    func playEnemiesPosition(){
+        for(var i = 0; i < manager.enemies.count; i++){
+            manager.enemies[i].playFootsteps()
+        }
+    }
+    
     func returnEnemiesPosition()->[Int]{
         return manager.enemiesPosition
     }

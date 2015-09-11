@@ -28,7 +28,7 @@ class EnemyBot: NSObject {
         self.adjacentRooms = map[self.enemyPosition]
         self.lastRoom = self.enemyPosition
         println("\(adjacentRooms)")
-        self.audio.setVolume(1.0)
+        self.audio.setVolume(3.0)
         self.audio.player3DPosition(coord.coordX(self.enemyPosition),y: coord.coordY(self.enemyPosition), z: 0)
         self.audio.playLoop()
 
@@ -54,11 +54,20 @@ class EnemyBot: NSObject {
     }
     
     func playBreath(){
-        self.breath.backgroundPlayer.volume = Float(1.0)
+        self.breath.backgroundPlayer.volume = Float(3.0)
         self.breath.play()
     }
     func stopBreath(){
         self.breath.backgroundPlayer.stop()
+    }
+    
+    func stopFootsteps(){
+        self.audio.stopPlayer()
+    }
+    func playFootsteps(){
+        if (!self.audio.player.playing){
+            self.audio.playLoop()
+        }
     }
    
     

@@ -72,6 +72,10 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 SKAction.runBlock({
                     if (!self.manager.storyP[self.manager.i-1].storyPlayer.playing){
                         self.enemyControl.updateEnemiesPosition()
+                        self.enemyControl.playEnemiesPosition()
+                    }else{
+                        self.enemyControl.stopEnemiesPosition()
+                        
                     }
                 })
                 ])
@@ -91,6 +95,16 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     func loadRoom () {
         var tex = SKTexture(imageNamed: level[gameState.room]["background"].stringValue + "-" + gameState.rotation.description)
         println(tex.description);
+//        if (tex == "room0-1"){
+//            println("FADE IN")
+//            UIView.animateWithDuration(1, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+//                
+//                self.background = SKSpriteNode(texture: tex);
+//                self.background?.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+//                self.addChild(self.background!)
+//                
+//                }, completion: nil)
+//        }else
         if (tex.size().width != 128) {
             background = SKSpriteNode(texture: tex);
             background?.position = CGPoint(x: frame.midX, y: frame.midY)
@@ -161,6 +175,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     func doAction(name: String) {
         var newAction = name;
+        var tapNumber = 0
         switch name {
             case "swipeLeft":
                 newAction = gameState.actions[(0+gameState.rotation)%4]
@@ -184,8 +199,17 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             case "longPressEnded":
                 gameState.playerHidden = false;
                 break;
+//            case "alternateTap":
+//                if (!manager.storyP[manager.i-1].storyPlayer.playing || gameState.debug){
+//                    
+//                    var alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
+//                    tapNumber++
+//                    if (tapNumber >= alternateTap.numberOfTapsRequired){
+//                        println("YAY IM FREE!!!!!!!")
+//                        }
+//                }
+//                break;
             default:
-                
                 break;
         }
         //&& !manager.storyP[manager.i-1].storyPlayer.playing == no swipe until speech is over

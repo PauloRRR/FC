@@ -70,6 +70,16 @@
     {
         "id": 3,
         "background": "asylumCorridor3",
+        "playOnEnter": [
+
+                {
+                        "sound": "scream3",
+                        "format": "mp3",
+                        "x": 100.0,
+                        "y": 0.0
+                  }
+
+        ],
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -86,16 +96,8 @@
     {
         "id": 4,
         "background": "asylumCorridor",
-        "playOnEnter": [
-
-                {
-                        "sound": "scream3",
-                        "format": "mp3",
-                        "x": 100.0,
-                        "y": 0.0
-                  }
-
-        ],
+        "hasStory": true,
+        "storyNumber": 2,
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",

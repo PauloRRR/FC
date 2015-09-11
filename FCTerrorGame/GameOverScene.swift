@@ -13,12 +13,21 @@ import SpriteKit
 class GameOverScene: SKScene {
     var manager = GameManager.sharedInstance;
     var state = GameState.sharedInstance;
-    
+    var background: SKSpriteNode?
     
     override func didMoveToView(view: SKView) {
         manager.enemiesCreated = false;
         var tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("retry"))
         self.view?.addGestureRecognizer(tapRecognizer);
+        
+        
+        self.runAction(SKAction.playSoundFileNamed("scream2.mp3", waitForCompletion: false))
+        
+        var img = SKTexture(imageNamed: "game-over")
+        background = SKSpriteNode(texture: img)
+        background?.position = CGPoint(x: frame.midX, y: frame.midY)
+        
+        addChild(background!)
         
     }
     

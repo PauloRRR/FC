@@ -24,7 +24,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         } else {
             level = JSON.nullJSON
         }
-        
         var swipeLeft    = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft:"))
         var swipeUp      = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))
         var swipeRight   = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight:"))
@@ -167,7 +166,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     }
     
     func alternateTapping(gesture: UITapGestureRecognizer) {
-        doAction("alternateTap");
+        //doAction("alternateTap");
     
     }
     
@@ -493,6 +492,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     }
     
     func presentGameOver () {
+        
         var transition = SKTransition.fadeWithDuration(0)
         var scene = GameOverScene(size: self.size)
         if let recognizers = self.view?.gestureRecognizers {

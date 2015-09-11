@@ -16,7 +16,7 @@
                 ]
             },
             "swipeRight": {
-                "prerequisite": "someKey",
+
                 "action": "gotoRoom",
                 "room": 1,
                 "failPrerequisite": [
@@ -286,16 +286,6 @@
     {
         "id": 15,
         "background": "asylumCorridor2",
-        "playOnEnter": [
-
-                {
-                        "sound": "scream2",
-                        "format": "mp3",
-                        "x": -10.0,
-                        "y": 0.0
-                  }
-
-        ],
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",

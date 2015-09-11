@@ -62,6 +62,7 @@ class GameManager {
     class func addSoundArray(sndName:String, frmt:String, x:Float, y:Float) {
         self.sharedInstance.audioArray.removeAll(keepCapacity: false)
         var audio = AudioNode(soundName: sndName,format: frmt)
+        audio.setVolume(5.0)
         self.sharedInstance.audioArray.append(audio)
         self.sharedInstance.audioArray[0].player3DPosition(x, y: y, z: 0.0)
         self.sharedInstance.audioArray[0].playOnce()

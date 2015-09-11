@@ -30,9 +30,15 @@ class StartMenuScene: SKScene {
         state.rotation = 1
         //scene.loadRoom()
         
+        if let recognizers = self.view?.gestureRecognizers {
+            for recognizer in recognizers {
+                self.view?.removeGestureRecognizer(recognizer as! UIGestureRecognizer)
+            }
+        }
         
         
         self.view?.presentScene(scene, transition: transition)
+        
         
     }
 }

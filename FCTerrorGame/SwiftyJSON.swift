@@ -747,7 +747,8 @@ extension JSON {
         get {
             switch self.type {
             case .String:
-                if let encodedString_ = self.object.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding) {
+                if let encodedString_ = self.object.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet()) {
+                //if let encodedString_ = self.object.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding) { (METHOD DEPRECATED IN IOS 9.0)
                     return NSURL(string: encodedString_)
                 } else {
                     return nil

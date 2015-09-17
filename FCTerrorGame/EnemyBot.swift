@@ -14,18 +14,21 @@ class EnemyBot: NSObject {
     var enemyPosition: Int
     var lastRoom: Int
     var adjacentRooms = [Int]()
-    var map = [[Int]]()
+    var map = [Int]()
+    var arrayPosition: Int
     var manager = GameManager.sharedInstance
     var audio = AudioNode(soundName: "footsteps", format: "mp3")
     var breath =  BackGroundSoundNode(soundName: "breathing", format: "mp3")
     var isBreathing = false
-    init(botId: String, startRoom: Int, map: [[Int]])
+    var going = true
+    init(botId: String, startRoom: Int, map: [Int])
     {
         var coord = AudioCoordinate()
         self.botId = botId
-        self.enemyPosition = startRoom
+        self.arrayPosition = startRoom
         self.map = map
-        self.adjacentRooms = map[self.enemyPosition]
+        self.enemyPosition = map[startRoom]
+        //self.adjacentRooms = map[self.enemyPosition]
         self.lastRoom = self.enemyPosition
         println("\(adjacentRooms)")
         self.audio.setVolume(3.0)
@@ -35,14 +38,36 @@ class EnemyBot: NSObject {
     }
     
     func moveToAdjacentRoom()->Int{
+        if(self.going){
+            
+            if(self.arrayPosition == self.map.count - 1){
+                going = false
+                self.arrayPosition--
+            }
+            else{
+                self.arrayPosition++
+            }
+        }
+        else{
+            if(self.arrayPosition == 0){
+                going = true
+                self.arrayPosition++
+            }
+            else{
+                self.arrayPosition--
+            }
+            
+        }
+        
         
         self.lastRoom = self.enemyPosition
         let random = Int(arc4random_uniform(UInt32(adjacentRooms.count)))
-        self.enemyPosition = adjacentRooms[random]
-        self.adjacentRooms = map[self.enemyPosition]
+        self.enemyPosition = map[self.arrayPosition]
+        //self.adjacentRooms = map[self.enemyPosition]
         manager.updateEnemiesListenerPosition()
         println("player pos (\(self.audio.enviroNode.listenerPosition.x),\(self.audio.enviroNode.listenerPosition.y)) at room \(manager.returnPlayerPosition())")
         return self.actualRoom()
+        
     }
     
     func actualRoom()->Int{

@@ -29,7 +29,7 @@ class EnemyControl{
                 var startRoom = enemiesJson[i]["startRoomPosition"].intValue
                 var map = enemiesJson[i]["map"].arrayObject
                 //println("\(map)")
-                var enemy = EnemyBot(botId: id, startRoom: startRoom, map: map as! [[Int]] )
+                var enemy = EnemyBot(botId: id, startRoom: startRoom, map: map as! [Int] )
                 manager.enemies.append(enemy)
                 manager.enemiesPosition.append(enemy.actualRoom())
             }

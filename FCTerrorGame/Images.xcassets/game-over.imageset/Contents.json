@@ -6,12 +6,12 @@
     },
     {
       "idiom" : "universal",
+      "filename" : "game-over.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "game-over.png"
+      "scale" : "3x"
     }
   ],
   "info" : {

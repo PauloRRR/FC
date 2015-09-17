@@ -24,20 +24,22 @@ class GameOverScene: SKScene {
         //self.view?.addGestureRecognizer(tapRecognizer);
         
         
-        self.runAction(SKAction.playSoundFileNamed("scream2.mp3", waitForCompletion: false))
+        //self.runAction(SKAction.playSoundFileNamed("scream2.mp3", waitForCompletion: false))
         
         
-        self.background = SKSpriteNode(imageNamed: "game-over")
+        self.background = SKSpriteNode(imageNamed: "gameOver")
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)
+        self.background.xScale -= 0.5
+        self.background.yScale -= 0.65
         
         addChild(background)
         
-        self.tryAgain = SKSpriteNode(imageNamed: "iniciar")
+        self.tryAgain = SKSpriteNode(imageNamed: "restart")
         self.tryAgain.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
         self.tryAgain.name = "tryAgain"
         addChild(tryAgain)
         
-        self.backToMenu = SKSpriteNode(imageNamed: "capitulos")
+        self.backToMenu = SKSpriteNode(imageNamed: "exit")
         self.backToMenu.position = CGPoint(x: self.tryAgain.position.x, y: self.tryAgain.position.y/2.5)
         self.backToMenu.name = "backToMenu"
         addChild(backToMenu)
@@ -48,11 +50,22 @@ class GameOverScene: SKScene {
     
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let touch = touches
+        let location = touch.first!.locationInNode(self)
+        let node = self.nodeAtPoint(location)
         
+        if (node.name == "restart"){
+            print("restart")
+            self.retry()
+        }else if (node.name == "exit"){
+            print("exit")
+            self.mainMenu()
+        }
     }
     
-    
-    
+
+
+
     func mainMenu () {
         
     }

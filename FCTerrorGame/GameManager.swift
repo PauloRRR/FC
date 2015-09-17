@@ -29,7 +29,7 @@ class GameManager {
     }
     
      func playBGSound(sndName:String, frmt:String){
-        var audio = BackGroundSoundNode(soundName: sndName, format: frmt)
+        let audio = BackGroundSoundNode(soundName: sndName, format: frmt)
         self.backgroundPlayer.append(audio)
         self.backgroundPlayer[0].play()
         
@@ -37,7 +37,7 @@ class GameManager {
     
     func initStoryArray(){
         for (var i = 0; i < 3; i++){
-            var audio = StorySoundNode(soundName: "story\(i)", format: "mp3")
+            let audio = StorySoundNode(soundName: "story\(i)", format: "mp3")
             self.storyP.append(audio)
         }
         
@@ -61,7 +61,7 @@ class GameManager {
     
     class func addSoundArray(sndName:String, frmt:String, x:Float, y:Float) {
         self.sharedInstance.audioArray.removeAll(keepCapacity: false)
-        var audio = AudioNode(soundName: sndName,format: frmt)
+        let audio = AudioNode(soundName: sndName,format: frmt)
         audio.setVolume(5.0)
         self.sharedInstance.audioArray.append(audio)
         self.sharedInstance.audioArray[0].player3DPosition(x, y: y, z: 0.0)
@@ -70,7 +70,7 @@ class GameManager {
     
     class func addRoomSoundArray(sndName:String, frmt:String, x:Float, y:Float) {
         self.sharedInstance.audioRoomArray.removeAll(keepCapacity: false)
-        var audio = AudioNode(soundName: sndName,format: frmt)
+        let audio = AudioNode(soundName: sndName,format: frmt)
         self.sharedInstance.audioRoomArray.append(audio)
         self.sharedInstance.audioRoomArray[0].player3DPosition(x, y: y, z: 0.0)
         self.sharedInstance.audioRoomArray[0].playOnce()
@@ -101,7 +101,7 @@ class GameManager {
     }
     
     func updateEnemiesListenerPosition(){
-        var coord = AudioCoordinate()
+        let coord = AudioCoordinate()
         coord.pinpointListener(playerPosition)
         for (var i = 0; i < self.enemies.count; i++){
             coord.pinpointPlayer(self.enemies[i].enemyPosition)
@@ -111,7 +111,7 @@ class GameManager {
             
             if(coord.distance() <= 15.0){
                 if (coord.distance() <= 0.0 && !gameState.playerHidden) {
-                    println("🍺 DEATH 🍺");
+                    print("🍺 DEATH 🍺");
                     NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: nil);
                 }
                 if(!self.isBreathing){
@@ -131,8 +131,8 @@ class GameManager {
     
     func setPlayerPosition(room: Int){
         self.enviroNode.listenerPosition = AVAudio3DPoint(x: 0, y: Float(room * 10), z: 0)
-        println(self.enviroNode.listenerPosition.y)
-        println("sala \(room)")
+        print(self.enviroNode.listenerPosition.y)
+        print("sala \(room)")
         playerPosition = room
     }
     

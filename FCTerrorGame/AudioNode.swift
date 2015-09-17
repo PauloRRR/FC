@@ -25,27 +25,36 @@ class AudioNode: NSObject {
         //GameManager.sharedInstance.enviroNode.listenerPosition = AVAudioMake3DPoint(0.0, 0.0, 0.0);
         enviroNode.listenerPosition = gameManager.enviroNode.listenerPosition
         let filePath: String = NSBundle.mainBundle().pathForResource(soundName, ofType: format)!
-        let fileURL: NSURL = NSURL(fileURLWithPath: filePath)!
-        let audioFile = AVAudioFile(forReading: fileURL, error: nil)
-        let audioFormat = audioFile.processingFormat
-        let audioFrameCount = UInt32(audioFile.length)
+        let fileURL: NSURL = NSURL(fileURLWithPath: filePath)
+        let audioFile = try? AVAudioFile(forReading: fileURL)
+        let audioFormat = audioFile!.processingFormat
+        let audioFrameCount = UInt32(audioFile!.length)
         
         self.audioFileBuffer = AVAudioPCMBuffer(PCMFormat: audioFormat, frameCapacity: audioFrameCount)
-        audioFile.readIntoBuffer(audioFileBuffer, error: nil)
-        var mainMixer = audioEngine.mainMixerNode
+        do {
+            try audioFile!.readIntoBuffer(audioFileBuffer)
+        } catch _ {
+        }
+        let mainMixer = audioEngine.mainMixerNode
         
         //timePitch.pitch = 1000
         audioEngine.attachNode(enviroNode)
         audioEngine.attachNode(player)
         audioEngine.attachNode(timePitch)
        
-        audioEngine.connect(player, to: timePitch, format: audioFile.processingFormat)
+        audioEngine.connect(player, to: timePitch, format: audioFile!.processingFormat)
         audioEngine.connect(timePitch, to:enviroNode, format: audioFileBuffer.format)
         audioEngine.connect(enviroNode, to:mainMixer, format: nil)
-        audioEngine.startAndReturnError(nil)
         
         
-        var  dap = enviroNode.distanceAttenuationParameters as AVAudioEnvironmentDistanceAttenuationParameters
+        //audioEngine.startAndReturnError(nil)
+        do {
+            try audioEngine.start()
+        } catch _ {
+        }
+
+        
+        let  dap = enviroNode.distanceAttenuationParameters as AVAudioEnvironmentDistanceAttenuationParameters
         dap.distanceAttenuationModel =  AVAudioEnvironmentDistanceAttenuationModel.Inverse
         dap.referenceDistance = 5.0;
         dap.maximumDistance = 100.0;
@@ -60,7 +69,7 @@ class AudioNode: NSObject {
     }
     
     func playOnce(){
-        self.player.scheduleBuffer(audioFileBuffer, atTime: nil, options: nil, completionHandler: nil)
+        self.player.scheduleBuffer(audioFileBuffer, atTime: nil, options: [], completionHandler: nil)
         self.player.play()
     }
     

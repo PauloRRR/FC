@@ -25,11 +25,11 @@ class EnemyControl{
             enemiesJson =  JSON(data: NSData(contentsOfFile: filePath)!)
             manager.enemies = [EnemyBot]();
             for(var i = 0; i < enemiesJson.count; i++){
-                var id = enemiesJson[i]["id"].stringValue
-                var startRoom = enemiesJson[i]["startRoomPosition"].intValue
-                var map = enemiesJson[i]["map"].arrayObject
+                let id = enemiesJson[i]["id"].stringValue
+                let startRoom = enemiesJson[i]["startRoomPosition"].intValue
+                let map = enemiesJson[i]["map"].arrayObject
                 //println("\(map)")
-                var enemy = EnemyBot(botId: id, startRoom: startRoom, map: map as! [[Int]] )
+                let enemy = EnemyBot(botId: id, startRoom: startRoom, map: map as! [[Int]] )
                 manager.enemies.append(enemy)
                 manager.enemiesPosition.append(enemy.actualRoom())
             }

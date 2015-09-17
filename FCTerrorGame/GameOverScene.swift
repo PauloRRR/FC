@@ -13,28 +13,41 @@ import SpriteKit
 class GameOverScene: SKScene {
     var manager = GameManager.sharedInstance;
     var state = GameState.sharedInstance;
-    var background: SKSpriteNode?
+    
+    var background = SKSpriteNode()
+    var tryAgain = SKSpriteNode()
+    var backToMenu = SKSpriteNode()
     
     override func didMoveToView(view: SKView) {
         manager.enemiesCreated = false;
-        var tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("retry"))
-        self.view?.addGestureRecognizer(tapRecognizer);
+        //var tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("retry"))
+        //self.view?.addGestureRecognizer(tapRecognizer);
         
         
         self.runAction(SKAction.playSoundFileNamed("scream2.mp3", waitForCompletion: false))
         
-        var img = SKTexture(imageNamed: "game-over")
-        background = SKSpriteNode(texture: img)
-        background?.position = CGPoint(x: frame.midX, y: frame.midY)
         
-        addChild(background!)
+        self.background = SKSpriteNode(imageNamed: "game-over")
+        self.background.position = CGPoint(x: frame.midX, y: frame.midY)
+        
+        addChild(background)
+        
+        self.tryAgain = SKSpriteNode(imageNamed: "iniciar")
+        self.tryAgain.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
+        self.tryAgain.name = "tryAgain"
+        addChild(tryAgain)
+        
+        self.backToMenu = SKSpriteNode(imageNamed: "capitulos")
+        self.backToMenu.position = CGPoint(x: self.tryAgain.position.x, y: self.tryAgain.position.y/2.5)
+        self.backToMenu.name = "backToMenu"
+        addChild(backToMenu)
         
     }
     
     
     
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
     }
     
@@ -45,16 +58,16 @@ class GameOverScene: SKScene {
     }
     
     func retry () {
-        var transition = SKTransition.fadeWithDuration(0)
+        let transition = SKTransition.fadeWithDuration(0)
         self.state.room = 0
         self.manager.playerPosition = 0
         self.state.rotation = 1
         
-        var scene = GameScene(size: self.size)
+        let scene = GameScene(size: self.size)
         
         if let recognizers = self.view?.gestureRecognizers {
             for recognizer in recognizers {
-                self.view?.removeGestureRecognizer(recognizer as! UIGestureRecognizer)
+                self.view?.removeGestureRecognizer(recognizer )
             }
         }
         

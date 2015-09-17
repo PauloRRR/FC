@@ -19,23 +19,23 @@ class UIAlternateTapGestureRecognizer: UIGestureRecognizer {
     var numberOfTapsRequired = 1;
     var lastTouchPosition: CGPoint?
     
-    override func touchesBegan(touches: Set<NSObject>!, withEvent event: UIEvent!) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent) {
         super.touchesBegan(touches, withEvent: event);
 
     }
     
-    override func touchesMoved(touches: Set<NSObject>!, withEvent event: UIEvent!) {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent) {
         super.touchesMoved(touches, withEvent: event);
 
     }
 
-    override func touchesCancelled(touches: Set<NSObject>!, withEvent event: UIEvent!) {
+    override func touchesCancelled(touches: Set<UITouch>, withEvent event: UIEvent) {
         super.touchesCancelled(touches, withEvent: event);
         reset();
 
     }
     
-    override func touchesEnded(touches: Set<NSObject>!, withEvent event: UIEvent!) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent) {
         super.touchesEnded(touches, withEvent: event);
         tapCount++;
         if let delegate = self.delegate {

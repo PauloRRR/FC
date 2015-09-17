@@ -21,13 +21,13 @@ class EnemyBot: NSObject {
     var isBreathing = false
     init(botId: String, startRoom: Int, map: [[Int]])
     {
-        var coord = AudioCoordinate()
+        let coord = AudioCoordinate()
         self.botId = botId
         self.enemyPosition = startRoom
         self.map = map
         self.adjacentRooms = map[self.enemyPosition]
         self.lastRoom = self.enemyPosition
-        println("\(adjacentRooms)")
+        print("\(adjacentRooms)")
         self.audio.setVolume(3.0)
         self.audio.player3DPosition(coord.coordX(self.enemyPosition),y: coord.coordY(self.enemyPosition), z: 0)
         self.audio.playLoop()
@@ -41,14 +41,14 @@ class EnemyBot: NSObject {
         self.enemyPosition = adjacentRooms[random]
         self.adjacentRooms = map[self.enemyPosition]
         manager.updateEnemiesListenerPosition()
-        println("player pos (\(self.audio.enviroNode.listenerPosition.x),\(self.audio.enviroNode.listenerPosition.y)) at room \(manager.returnPlayerPosition())")
+        print("player pos (\(self.audio.enviroNode.listenerPosition.x),\(self.audio.enviroNode.listenerPosition.y)) at room \(manager.returnPlayerPosition())")
         return self.actualRoom()
     }
     
     func actualRoom()->Int{
-        var coord = AudioCoordinate()
+        let coord = AudioCoordinate()
         self.audio.player3DPosition(coord.coordX(self.enemyPosition),y: coord.coordY(self.enemyPosition), z: 0)
-        println("enemy pos:(\(self.audio.getPlayer3DPosition().x),\(self.audio.getPlayer3DPosition().y)) at room \(self.enemyPosition)")
+        print("enemy pos:(\(self.audio.getPlayer3DPosition().x),\(self.audio.getPlayer3DPosition().y)) at room \(self.enemyPosition)")
         return self.enemyPosition
         
     }

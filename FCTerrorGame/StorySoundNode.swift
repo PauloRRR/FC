@@ -16,7 +16,7 @@ class StorySoundNode {
     init(soundName:String,format:String) {
         
         let bgMusicURL = NSBundle.mainBundle().URLForResource(soundName, withExtension: format)
-        storyPlayer = AVAudioPlayer(contentsOfURL: bgMusicURL, error: nil)
+        storyPlayer = try! AVAudioPlayer(contentsOfURL: bgMusicURL!)
         storyPlayer.numberOfLoops = 0
         storyPlayer.prepareToPlay()
         storyPlayer.volume = 1

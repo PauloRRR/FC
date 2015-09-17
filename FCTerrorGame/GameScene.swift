@@ -24,13 +24,13 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         } else {
             level = JSON.nullJSON
         }
-        var swipeLeft    = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft:"))
-        var swipeUp      = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))
-        var swipeRight   = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight:"))
-        var swipeDown    = UISwipeGestureRecognizer(target: self, action: Selector("swipeDown:"))
-        var longPress    = UILongPressGestureRecognizer(target: self, action: Selector("longPress:"))
+        let swipeLeft    = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft:"))
+        let swipeUp      = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))
+        let swipeRight   = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight:"))
+        let swipeDown    = UISwipeGestureRecognizer(target: self, action: Selector("swipeDown:"))
+        let longPress    = UILongPressGestureRecognizer(target: self, action: Selector("longPress:"))
         
-        var alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
+        let alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
         
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: Selector("presentGameOver"),
@@ -81,7 +81,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             ))
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
     
     }
    
@@ -93,7 +93,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     func loadRoom () {
         var tex = SKTexture(imageNamed: level[gameState.room]["background"].stringValue + "-" + gameState.rotation.description)
-        println(tex.description);
+        print(tex.description);
 //        if (tex == "room0-1"){
 //            println("FADE IN")
 //            UIView.animateWithDuration(1, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
@@ -174,7 +174,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     func doAction(name: String) {
         var newAction = name;
-        var tapNumber = 0
+        _ = 0
         switch name {
             case "swipeLeft":
                 newAction = gameState.actions[(0+gameState.rotation)%4]
@@ -368,7 +368,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     }
     
     func checkStoryRequisite (action: JSON) {
-        if let prerequisite = action["hasStory"].bool {
+        if let _ = action["hasStory"].bool {
             if (!manager.storyP[action["storyNumber"].intValue].played){
                 manager.playStorySound()
             }
@@ -377,12 +377,12 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     func checkPrerequisite (action: JSON) -> Bool {
         if let prerequisite = action["prerequisite"].string {
-            var items = gameState.items.filter( {$0 == prerequisite } )
+            let items = gameState.items.filter( {$0 == prerequisite } )
             if (items.count > 0) {
                 return true;
             } else {
                 if let failPrerequisite = action["failPrerequisite"].array {
-                    println("locked")
+                    print("locked")
                     playSoundArray(failPrerequisite)
                 }
                 
@@ -397,10 +397,10 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     func checkItem (action: JSON) -> Bool {
         if let item = action["item"].string {
-            var items = gameState.items.filter( {$0 == item } )
+            let items = gameState.items.filter( {$0 == item } )
             if (items.count > 0) {
                 if let hasItem = action["hasItem"].array {
-                    println("hasItem")
+                    print("hasItem")
                     playSoundArray(hasItem)
                 }
                 return false;
@@ -436,11 +436,11 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             self.manager.setPlayerPosition(gameState.room)
             self.manager.updateEnemiesListenerPosition()
             gameState.updateState()
-            var transition = SKTransition.fadeWithDuration(0)
-            var scene = GameScene(size: self.size)
+            let transition = SKTransition.fadeWithDuration(0)
+            let scene = GameScene(size: self.size)
             if let recognizers = self.view?.gestureRecognizers {
                 for recognizer in recognizers {
-                    self.view?.removeGestureRecognizer(recognizer as! UIGestureRecognizer)
+                    self.view?.removeGestureRecognizer(recognizer )
                 }
             }
             
@@ -466,7 +466,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     func playSound (action: [String: JSON]) {
         if let soundName = action["sound"]?.string {
-            println(soundName)
+            print(soundName)
             if let format = action["format"]?.string {
                 var x:Float = 0.0;
                 var y:Float = 0.0;
@@ -493,11 +493,11 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     func presentGameOver () {
         
-        var transition = SKTransition.fadeWithDuration(0)
-        var scene = GameOverScene(size: self.size)
+        let transition = SKTransition.fadeWithDuration(0)
+        let scene = GameOverScene(size: self.size)
         if let recognizers = self.view?.gestureRecognizers {
             for recognizer in recognizers {
-                self.view?.removeGestureRecognizer(recognizer as! UIGestureRecognizer)
+                self.view?.removeGestureRecognizer(recognizer )
             }
         }
         

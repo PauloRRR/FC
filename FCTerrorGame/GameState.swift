@@ -28,9 +28,9 @@ class GameState {
     
     init () {
         
-        let documentDirectoryURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! as! NSURL
+        let documentDirectoryURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! 
         let fileDestinationUrl = documentDirectoryURL.URLByAppendingPathComponent("gameState.json")
-        if let data = String(contentsOfURL: fileDestinationUrl, encoding: NSUTF8StringEncoding, error: nil) {
+        if let data = try? String(contentsOfURL: fileDestinationUrl, encoding: NSUTF8StringEncoding) {
             json = JSON(data: data.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!)
             if (json == JSON.nullJSON || debug) {
                 defaultJson();
@@ -72,10 +72,13 @@ class GameState {
     
     func saveState() {
         
-        let documentDirectoryURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! as! NSURL
+        let documentDirectoryURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! 
         let fileDestinationUrl = documentDirectoryURL.URLByAppendingPathComponent("gameState.json")
-        var state = json.description
-        state.writeToURL(fileDestinationUrl, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
+        let state = json.description
+        do {
+            try state.writeToURL(fileDestinationUrl, atomically: true, encoding: NSUTF8StringEncoding)
+        } catch _ {
+        }
     }
     
     

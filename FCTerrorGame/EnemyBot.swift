@@ -38,30 +38,33 @@ class EnemyBot: NSObject {
     }
     
     func moveToAdjacentRoom()->Int{
-        if(self.going){
-            
-            if(self.arrayPosition == self.map.count - 1){
-                going = false
-                self.arrayPosition--
-            }
-            else{
-                self.arrayPosition++
-            }
-        }
-        else{
-            if(self.arrayPosition == 0){
-                going = true
-                self.arrayPosition++
-            }
-            else{
-                self.arrayPosition--
-            }
-            
-        }
         
+        if( map.count > 1){
+        
+            if(self.going){
+            
+                if(self.arrayPosition == self.map.count - 1){
+                    going = false
+                    self.arrayPosition--
+                }
+                else{
+                    self.arrayPosition++
+                }
+            }
+            else{
+                if(self.arrayPosition == 0){
+                    going = true
+                    self.arrayPosition++
+                }
+                else{
+                    self.arrayPosition--
+                }
+            
+            }
+        }
         
         self.lastRoom = self.enemyPosition
-        _ = Int(arc4random_uniform(UInt32(adjacentRooms.count)))
+        
         self.enemyPosition = map[self.arrayPosition]
         //self.adjacentRooms = map[self.enemyPosition]
         manager.updateEnemiesListenerPosition()

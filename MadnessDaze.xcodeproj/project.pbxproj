@@ -48,6 +48,8 @@
 		D471FDC81B6FD3B000D80921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D471FDC61B6FD3B000D80921 /* Main.storyboard */; };
 		D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D471FDC91B6FD3B000D80921 /* Images.xcassets */; };
 		D471FDCD1B6FD3B000D80921 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D471FDCB1B6FD3B000D80921 /* LaunchScreen.xib */; };
+		D485B1D51BB07213005C423D /* futura-condensed-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D485B1961BB06AD7005C423D /* futura-condensed-normal.ttf */; settings = {ASSET_TAGS = (); }; };
+		D485B1D71BB072F8005C423D /* futura-condensed-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D485B1D61BB072F8005C423D /* futura-condensed-bold.ttf */; settings = {ASSET_TAGS = (); }; };
 		D49F5E4C1B9F5CE70023174A /* story1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D49F5E4A1B9F5CE60023174A /* story1.mp3 */; };
 		D49F5E4F1BA1FAA40023174A /* storm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D49F5E4D1BA1F08E0023174A /* storm.mp3 */; };
 		D49F5E511BA208E50023174A /* StartMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F5E501BA208E50023174A /* StartMenuScene.swift */; };
@@ -115,6 +117,8 @@
 		D471FDCC1B6FD3B000D80921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D471FDD71B6FD3B000D80921 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D471FDD81B6FD3B000D80921 /* FCTerrorGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCTerrorGameTests.swift; sourceTree = "<group>"; };
+		D485B1961BB06AD7005C423D /* futura-condensed-normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "futura-condensed-normal.ttf"; sourceTree = "<group>"; };
+		D485B1D61BB072F8005C423D /* futura-condensed-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "futura-condensed-bold.ttf"; sourceTree = "<group>"; };
 		D49F5E4A1B9F5CE60023174A /* story1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = story1.mp3; sourceTree = "<group>"; };
 		D49F5E4D1BA1F08E0023174A /* storm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = storm.mp3; sourceTree = "<group>"; };
 		D49F5E501BA208E50023174A /* StartMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartMenuScene.swift; sourceTree = "<group>"; };
@@ -260,6 +264,8 @@
 				D471FDC21B6FD3B000D80921 /* GameScene.swift */,
 				B97F78BA1B98CDDD00232E98 /* GameOverScene.swift */,
 				D49F5E501BA208E50023174A /* StartMenuScene.swift */,
+				D485B1961BB06AD7005C423D /* futura-condensed-normal.ttf */,
+				D485B1D61BB072F8005C423D /* futura-condensed-bold.ttf */,
 				D471FDC61B6FD3B000D80921 /* Main.storyboard */,
 				D471FDC91B6FD3B000D80921 /* Images.xcassets */,
 				D471FDCB1B6FD3B000D80921 /* LaunchScreen.xib */,
@@ -391,6 +397,7 @@
 				D4A0D3331B8F6F6E0004BB09 /* playerSteps.mp3 in Resources */,
 				D4491CD61B8FA1CA009FE55B /* scream5.wav in Resources */,
 				306F7C811B7D1BF500E8501A /* locked.wav in Resources */,
+				D485B1D51BB07213005C423D /* futura-condensed-normal.ttf in Resources */,
 				306F7C771B7274F900E8501A /* helicopterMono.mp3 in Resources */,
 				D471FDCD1B6FD3B000D80921 /* LaunchScreen.xib in Resources */,
 				30FA89001B90C9EE00FE4700 /* breathing.mp3 in Resources */,
@@ -410,6 +417,7 @@
 				B985E0761B75300200CBAC43 /* Level1.json in Resources */,
 				D411D9151B98C81A0020689E /* hallway-direita_frente_01.mp3 in Resources */,
 				30F181971B96040200C2C2C5 /* roomMapping.json in Resources */,
+				D485B1D71BB072F8005C423D /* futura-condensed-bold.ttf in Resources */,
 				D4A0D3311B8F6D800004BB09 /* crossroad.mp3 in Resources */,
 				305224091B8CD44800AD7A98 /* footsteps.mp3 in Resources */,
 				D411D91C1B9A106C0020689E /* hallway-finalCorredor_voltar_01.mp3 in Resources */,

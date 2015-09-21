@@ -11,9 +11,9 @@ import SpriteKit
 class StartMenuScene: SKScene {
     
     var manager = GameManager.sharedInstance;
-    var newGame = SKSpriteNode()
-    var loadGame = SKSpriteNode()
-    var chapterSelect = SKSpriteNode()
+    var newGame = SKLabelNode()
+    var loadGame = SKLabelNode()
+    var tutorial = SKLabelNode()
     var background = SKSpriteNode()
     
     
@@ -24,19 +24,34 @@ class StartMenuScene: SKScene {
         
         self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
-        self.background.xScale -= 0.5
-        self.background.yScale -= 0.65
-        addChild(background)
+        self.background.size = self.frame.size
+//        self.background.xScale -= 0.5
+//        self.background.yScale -= 0.65
+        addChild(self.background)
         
-        self.newGame = SKSpriteNode(imageNamed: "iniciar")
+        self.newGame = SKLabelNode(fontNamed: "futura-condensed-normal")
         self.newGame.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
+        self.newGame.text = "INICIAR"
         self.newGame.name = "newGame"
-        addChild(newGame)
+        self.newGame.fontSize = 30
+        self.newGame.fontColor = UIColor.whiteColor()
+        addChild(self.newGame)
         
-        self.chapterSelect = SKSpriteNode(imageNamed: "capitulos")
-        self.chapterSelect.position = CGPoint(x: self.newGame.position.x, y: self.newGame.position.y/2.5)
-        self.chapterSelect.name = "chapterSelect"
-        addChild(chapterSelect)
+        self.tutorial = SKLabelNode(fontNamed: "futura-condensed-normal")
+        self.tutorial.position = CGPoint(x: self.newGame.position.x, y: self.newGame.position.y/2.5)
+        self.tutorial.name = "tutorial"
+        self.tutorial.text = "TUTORIAL"
+        self.tutorial.fontSize = 30
+        self.tutorial.fontColor = UIColor.whiteColor()
+        addChild(self.tutorial)
+        
+        self.loadGame = SKLabelNode(fontNamed: "futura-condensed-normal")
+        self.loadGame.position = CGPoint(x: self.newGame.position.x, y: self.newGame.position.y * 1.5)
+        self.loadGame.name = "loadGame"
+        self.loadGame.text = "CONTINUAR"
+        self.loadGame.fontSize = 30
+        self.loadGame.fontColor = UIColor.whiteColor()
+        addChild(self.loadGame)
         
     }
     
@@ -48,11 +63,13 @@ class StartMenuScene: SKScene {
         let state = GameState()
         state.room = 0
         state.rotation = 1
+        self.manager.playerPosition = 0
+
         //scene.loadRoom()
         
         if let recognizers = self.view?.gestureRecognizers {
             for recognizer in recognizers {
-                self.view?.removeGestureRecognizer(recognizer )
+                self.view?.removeGestureRecognizer(recognizer)
             }
         }
         
@@ -69,9 +86,11 @@ class StartMenuScene: SKScene {
         if (node.name == "newGame"){
                 print("NEWGAME")
                 self.start()
-            }else if (node.name == "chapterSelect"){
-                print("CHAPTERSELECT")
-            }
+            }else if (node.name == "tutorial"){
+                print("TUTORIAL")
+                }else if (node.name == "loadGame"){
+                    print("LOADGAME")
+                }
         }
     
 }

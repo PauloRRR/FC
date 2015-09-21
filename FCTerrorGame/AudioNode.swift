@@ -56,8 +56,8 @@ class AudioNode: NSObject {
         
         let  dap = enviroNode.distanceAttenuationParameters as AVAudioEnvironmentDistanceAttenuationParameters
         dap.distanceAttenuationModel =  AVAudioEnvironmentDistanceAttenuationModel.Inverse
-        dap.referenceDistance = 5.0;
-        dap.maximumDistance = 100.0;
+        dap.referenceDistance = 10.0;
+        dap.maximumDistance = 300.0;
         dap.rolloffFactor = 1.5;
 
 

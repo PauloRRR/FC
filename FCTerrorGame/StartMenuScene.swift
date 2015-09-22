@@ -15,6 +15,13 @@ class StartMenuScene: SKScene {
     var loadGame = SKLabelNode()
     var tutorial = SKLabelNode()
     var background = SKSpriteNode()
+    var newGameYes = SKLabelNode()
+    var newGameNo = SKLabelNode()
+    var newGameTouch = 0
+    var loadGameTouch = 0
+    var tutorialTouch = 0
+    var yesTouch = 0
+    var noTouch = 0
     
     
     override func didMoveToView(view: SKView) {
@@ -22,12 +29,17 @@ class StartMenuScene: SKScene {
         //self.view?.addGestureRecognizer(tapRecognizer);
         //self.view?.scene?.backgroundColor = UIColor.blackColor()
         
+        self.startMenuOptions()
+        
+    }
+    
+    func startMenuOptions(){
         self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
         self.background.size = self.frame.size
         self.background.zPosition = 0
-//        self.background.xScale -= 0.5
-//        self.background.yScale -= 0.65
+        //        self.background.xScale -= 0.5
+        //        self.background.yScale -= 0.65
         addChild(self.background)
         
         self.newGame = SKLabelNode(fontNamed: "futura-condensed-normal")
@@ -56,7 +68,31 @@ class StartMenuScene: SKScene {
         self.loadGame.fontColor = UIColor.whiteColor()
         self.loadGame.zPosition = 1
         addChild(self.loadGame)
+    }
+    
+    func newGameScreen(){
+        self.newGame.removeFromParent()
+        self.tutorial.removeFromParent()
+        self.loadGame.removeFromParent()
         
+        
+        self.newGameYes = SKLabelNode(fontNamed: "futura-condensed-normal")
+        self.newGameYes.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/1.5)
+        self.newGameYes.name = "newGameYes"
+        self.newGameYes.text = "SIM"
+        self.newGameYes.fontSize = 0.1 * self.frame.size.width
+        self.newGameYes.fontColor = UIColor.whiteColor()
+        self.newGameYes.zPosition = 1
+        addChild(self.newGameYes)
+        
+        self.newGameNo = SKLabelNode(fontNamed: "futura-condensed-normal")
+        self.newGameNo.position = CGPoint(x: self.newGameYes.position.x, y: self.newGameYes.position.y/2.5)
+        self.newGameNo.name = "newGameNo"
+        self.newGameNo.text = "NÃO"
+        self.newGameNo.fontSize = 0.1 * self.frame.size.width
+        self.newGameNo.fontColor = UIColor.whiteColor()
+        self.newGameNo.zPosition = 1
+        addChild(self.newGameNo)
     }
     
     
@@ -87,14 +123,63 @@ class StartMenuScene: SKScene {
         let location = touch.first!.locationInNode(self)
         let node = self.nodeAtPoint(location)
         
+        
+        
         if (node.name == "newGame"){
+                newGameTouch++
+                loadGameTouch = 0
+                tutorialTouch = 0
                 print("NEWGAME")
-                self.start()
+            
             }else if (node.name == "tutorial"){
                 print("TUTORIAL")
+                tutorialTouch++
+                newGameTouch = 0
+                loadGameTouch = 0
                 }else if (node.name == "loadGame"){
+                    loadGameTouch++
+                    newGameTouch = 0
+                    tutorialTouch = 0
                     print("LOADGAME")
                 }
+        
+        if (node.name == "newGame" && newGameTouch > 1){
+            self.newGameScreen()
+        } else if (node.name == "tutorial" && tutorialTouch > 1){
+            print("PLAY TUTORIAL")
+        }else if (node.name == "loadGame" && loadGameTouch > 1){
+            print("NOW LOADING GAME")
         }
+        
+        if (node.name == "newGameNo"){
+            noTouch++
+            yesTouch = 0
+            print("NO")
+        }else if (node.name == "newGameYes"){
+            yesTouch++
+            noTouch = 0
+            print("YES")
+        }
+        
+        
+        
+        if (node.name == "newGameNo" && noTouch > 1){
+            self.newGameNo.removeFromParent()
+            self.newGameYes.removeFromParent()
+            newGameTouch = 0
+            loadGameTouch = 0
+            tutorialTouch = 0
+            noTouch = 0
+            yesTouch = 0
+            self.startMenuOptions()
+        }else if (node.name == "newGameYes" && yesTouch > 1){
+            manager.gameState.eraseJson()
+            self.start()
+        }
+        
+        
+        }
+    
+    
     
 }

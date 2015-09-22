@@ -17,6 +17,8 @@ class GameOverScene: SKScene {
     var background = SKSpriteNode()
     var tryAgain = SKLabelNode()
     var backToMenu = SKLabelNode()
+    var tryAgainTouch = 0
+    var backToMenuTouch = 0
     
     override func didMoveToView(view: SKView) {
         manager.enemiesCreated = false;
@@ -88,10 +90,22 @@ class GameOverScene: SKScene {
         let node = self.nodeAtPoint(location)
         
         if (node.name == "tryAgain"){
+            tryAgainTouch++
+            backToMenuTouch = 0
             print("restart")
-            self.retry()
         }else if (node.name == "backToMenu"){
+            backToMenuTouch++
+            tryAgainTouch = 0
             print("exit")
+        }
+        
+        if (node.name == "tryAgain" && tryAgainTouch > 1){
+            tryAgainTouch = 0
+            backToMenuTouch = 0
+            self.retry()
+        }else if (node.name == "backToMenu" && backToMenuTouch > 1){
+            tryAgainTouch = 0
+            backToMenuTouch = 0
             self.mainMenu()
         }
     }

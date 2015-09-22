@@ -70,6 +70,15 @@ class GameState {
         saveState();
     }
     
+    func eraseJson(){
+        json = JSON([
+            "level": 1,
+            "room": 0,
+            "items": [String]()
+        ])
+        saveState()
+    }
+    
     func saveState() {
         
         let documentDirectoryURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! 
@@ -80,6 +89,8 @@ class GameState {
         } catch _ {
         }
     }
+    
+    
     
     
 }

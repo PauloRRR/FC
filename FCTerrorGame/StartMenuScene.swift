@@ -25,32 +25,36 @@ class StartMenuScene: SKScene {
         self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
         self.background.size = self.frame.size
+        self.background.zPosition = 0
 //        self.background.xScale -= 0.5
 //        self.background.yScale -= 0.65
         addChild(self.background)
         
         self.newGame = SKLabelNode(fontNamed: "futura-condensed-normal")
-        self.newGame.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
+        self.newGame.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2.1)
         self.newGame.text = "INICIAR"
         self.newGame.name = "newGame"
-        self.newGame.fontSize = 30
+        self.newGame.fontSize = 0.1 * self.frame.size.width
         self.newGame.fontColor = UIColor.whiteColor()
+        self.newGame.zPosition = 1
         addChild(self.newGame)
         
         self.tutorial = SKLabelNode(fontNamed: "futura-condensed-normal")
-        self.tutorial.position = CGPoint(x: self.newGame.position.x, y: self.newGame.position.y/2.5)
+        self.tutorial.position = CGPoint(x: self.newGame.position.x, y: self.newGame.position.y/2.6)
         self.tutorial.name = "tutorial"
         self.tutorial.text = "TUTORIAL"
-        self.tutorial.fontSize = 30
+        self.tutorial.fontSize = 0.1 * self.frame.size.width
         self.tutorial.fontColor = UIColor.whiteColor()
+        self.tutorial.zPosition = 1
         addChild(self.tutorial)
         
         self.loadGame = SKLabelNode(fontNamed: "futura-condensed-normal")
-        self.loadGame.position = CGPoint(x: self.newGame.position.x, y: self.newGame.position.y * 1.5)
+        self.loadGame.position = CGPoint(x: self.newGame.position.x, y: self.newGame.position.y * 1.6)
         self.loadGame.name = "loadGame"
         self.loadGame.text = "CONTINUAR"
-        self.loadGame.fontSize = 30
+        self.loadGame.fontSize = 0.1 * self.frame.size.width
         self.loadGame.fontColor = UIColor.whiteColor()
+        self.loadGame.zPosition = 1
         addChild(self.loadGame)
         
     }

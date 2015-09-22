@@ -27,8 +27,8 @@ class GameOverScene: SKScene {
         //self.runAction(SKAction.playSoundFileNamed("scream2.mp3", waitForCompletion: false))
         
         self.gameOverScreen()
-        self.view?.scene?.runAction(SKAction.waitForDuration(5.0))
-        self.gameOverOptions()
+        
+        //self.gameOverOptions()
 
     }
     
@@ -36,20 +36,27 @@ class GameOverScene: SKScene {
         self.background = SKSpriteNode(imageNamed: "gameOver")
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)
         self.background.size = self.frame.size
+        self.background.zPosition = 0
 //        self.background.xScale -= 0.5
 //        self.background.yScale -= 0.65
         
         addChild(self.background)
+        self.runAction(SKAction.waitForDuration(5.0), completion: {
+            self.background.removeFromParent()
+            self.gameOverOptions()
+            })
+        //self.view?.scene?.runAction(SKAction.waitForDuration(5.0))
         
-        
-        //self.background.removeFromParent()
+
     }
     
     func gameOverOptions(){
         self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)
-        self.background.xScale -= 0.5
-        self.background.yScale -= 0.65
+        self.background.size = self.frame.size
+        self.background.zPosition = 0
+//        self.background.xScale -= 0.5
+//        self.background.yScale -= 0.65
         
         addChild(self.background)
         
@@ -59,7 +66,8 @@ class GameOverScene: SKScene {
         self.tryAgain.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/1.5)
         self.tryAgain.text = "TENTAR NOVAMENTE"
         self.tryAgain.name = "tryAgain"
-        self.tryAgain.fontSize = 30
+        self.tryAgain.fontSize = 0.1 * self.frame.size.width
+        self.tryAgain.zPosition = 1
         self.tryAgain.fontColor = UIColor.whiteColor()
         addChild(self.tryAgain)
         
@@ -67,7 +75,8 @@ class GameOverScene: SKScene {
         self.backToMenu.position = CGPoint(x: self.tryAgain.position.x, y: self.tryAgain.position.y/2.5)
         self.backToMenu.name = "backToMenu"
         self.backToMenu.text = "VOLTAR AO MENU"
-        self.backToMenu.fontSize = 30
+        self.backToMenu.fontSize = 0.1 * self.frame.size.width
+        self.backToMenu.zPosition = 1
         self.backToMenu.fontColor = UIColor.whiteColor()
         addChild(self.backToMenu)
     }

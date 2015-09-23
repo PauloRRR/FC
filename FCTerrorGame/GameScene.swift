@@ -14,11 +14,11 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var background: SKSpriteNode?
     var enemyControl = EnemyControl()
     var manager = GameManager.sharedInstance
-    
     var playerHidden = false;
     
     override func didMoveToView(view: SKView) {
         //self.manager.setPlayerPosition(0)
+        manager.firstPlay = false
         if let filePath = NSBundle.mainBundle().pathForResource("Level1", ofType: "json") {
             level =  JSON(data: NSData(contentsOfFile: filePath)!)
         } else {
@@ -56,7 +56,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         view.addGestureRecognizer(swipeDown)
         loadRoom()
         
-        
+        manager.playBGSound("storm", frmt: "mp3")
         
         self.runEnemyBehavior()
         
@@ -74,7 +74,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                         self.enemyControl.playEnemiesPosition()
                     }else{
                         self.enemyControl.stopEnemiesPosition()
-                        
                     }
                 })
                 ])

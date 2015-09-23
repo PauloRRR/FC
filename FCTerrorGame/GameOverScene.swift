@@ -35,6 +35,8 @@ class GameOverScene: SKScene {
     }
     
     func gameOverScreen(){
+        
+        
         self.background = SKSpriteNode(imageNamed: "gameOver")
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)
         self.background.size = self.frame.size
@@ -53,6 +55,9 @@ class GameOverScene: SKScene {
     }
     
     func gameOverOptions(){
+        
+        GameManager.addSoundArray("gameOverTela_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+        
         self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)
         self.background.size = self.frame.size

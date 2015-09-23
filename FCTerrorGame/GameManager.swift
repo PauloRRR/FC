@@ -22,9 +22,11 @@ class GameManager {
     var gameState = GameState.sharedInstance
     var i = 0
     
+    var firstPlay = Bool()
+    
     // METHODS
     private init() {
-        self.playBGSound("storm", frmt: "mp3")
+        firstPlay = true
         self.initStoryArray()
     }
     
@@ -41,6 +43,10 @@ class GameManager {
             self.storyP.append(audio)
         }
         
+    }
+    
+    func removeStoryArray(){
+        self.storyP.removeAll(keepCapacity: true)
     }
     
     

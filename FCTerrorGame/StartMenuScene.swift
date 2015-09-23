@@ -34,6 +34,9 @@ class StartMenuScene: SKScene {
     }
     
     func startMenuOptions(){
+        
+        GameManager.addSoundArray("menu_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+        
         self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
         self.background.size = self.frame.size
@@ -118,6 +121,25 @@ class StartMenuScene: SKScene {
         
         
     }
+    
+    func continueGame(){
+        let transition = SKTransition.fadeWithDuration(0)
+//        manager.gameState.room = 0
+//        self.manager.playerPosition = 0
+//        self.manager.gameState.rotation = 1
+        
+        let scene = GameScene(size: self.size)
+        
+        if let recognizers = self.view?.gestureRecognizers {
+            for recognizer in recognizers {
+                self.view?.removeGestureRecognizer(recognizer )
+            }
+        }
+        
+        self.view?.presentScene(scene, transition: transition)
+
+    }
+    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = touches 
         let location = touch.first!.locationInNode(self)
@@ -129,6 +151,7 @@ class StartMenuScene: SKScene {
                 newGameTouch++
                 loadGameTouch = 0
                 tutorialTouch = 0
+                GameManager.addSoundArray("iniciar_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
                 print("NEWGAME")
             
             }else if (node.name == "tutorial"){
@@ -136,29 +159,43 @@ class StartMenuScene: SKScene {
                 tutorialTouch++
                 newGameTouch = 0
                 loadGameTouch = 0
+                GameManager.addSoundArray("tutorial_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
                 }else if (node.name == "loadGame"){
                     loadGameTouch++
                     newGameTouch = 0
                     tutorialTouch = 0
                     print("LOADGAME")
+                    GameManager.addSoundArray("continuar_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
                 }
         
-        if (node.name == "newGame" && newGameTouch > 1){
+        if (node.name == "newGame" && newGameTouch > 1 && !manager.firstPlay){
+            GameManager.addSoundArray("novoJogoConfirma_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
             self.newGameScreen()
-        } else if (node.name == "tutorial" && tutorialTouch > 1){
+        } else if (node.name == "newGame" && newGameTouch > 1 && manager.firstPlay){
+            self.start()
+        }
+            
+            
+        if (node.name == "tutorial" && tutorialTouch > 1){
             print("PLAY TUTORIAL")
-        }else if (node.name == "loadGame" && loadGameTouch > 1){
+            
+        }
+        
+        if (node.name == "loadGame" && loadGameTouch > 1 && !manager.firstPlay){
             print("NOW LOADING GAME")
+            continueGame()
         }
         
         if (node.name == "newGameNo"){
             noTouch++
             yesTouch = 0
             print("NO")
+            GameManager.addSoundArray("nao_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
         }else if (node.name == "newGameYes"){
             yesTouch++
             noTouch = 0
             print("YES")
+            GameManager.addSoundArray("sim_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
         }
         
         
@@ -173,11 +210,11 @@ class StartMenuScene: SKScene {
             yesTouch = 0
             self.startMenuOptions()
         }else if (node.name == "newGameYes" && yesTouch > 1){
-            manager.gameState.eraseJson()
-            self.start()
-        }
-        
-        
+                manager.gameState.eraseJson()
+                manager.playerPosition = 0
+                manager.i = 0
+                self.start()
+            }
         }
     
     

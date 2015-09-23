@@ -40,6 +40,8 @@ class GameState {
         } else {
            defaultJson();
         }
+        
+        
     
     
     }
@@ -71,11 +73,17 @@ class GameState {
     }
     
     func eraseJson(){
+        level = 1
+        room  = 0
+        items = [String]()
+        rotation = 1
+        
         json = JSON([
-            "level": 1,
-            "room": 0,
-            "items": [String]()
+            "level": level,
+            "room": room,
+            "items": items
         ])
+        
         saveState()
     }
     

@@ -25,15 +25,14 @@ class StartMenuScene: SKScene {
     
     
     override func didMoveToView(view: SKView) {
-        //var tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("start"))
-        //self.view?.addGestureRecognizer(tapRecognizer);
-        //self.view?.scene?.backgroundColor = UIColor.blackColor()
         
         self.startMenuOptions()
         
     }
     
     func startMenuOptions(){
+        
+        manager.playBGSound("menuMusic", frmt: "wav")
         
         GameManager.addSoundArray("menu_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
         
@@ -100,15 +99,15 @@ class StartMenuScene: SKScene {
     
     
     func start () {
+        
         _ = NSTimeInterval()
-        let transition = SKTransition.crossFadeWithDuration(5.0)
+        let transition = SKTransition.fadeWithDuration(5.0)
         let scene = GameScene(size: self.size)
         let state = GameState()
         state.room = 0
         state.rotation = 1
         self.manager.playerPosition = 0
 
-        //scene.loadRoom()
         
         if let recognizers = self.view?.gestureRecognizers {
             for recognizer in recognizers {
@@ -124,9 +123,7 @@ class StartMenuScene: SKScene {
     
     func continueGame(){
         let transition = SKTransition.fadeWithDuration(0)
-//        manager.gameState.room = 0
-//        self.manager.playerPosition = 0
-//        self.manager.gameState.rotation = 1
+
         
         let scene = GameScene(size: self.size)
         
@@ -178,7 +175,10 @@ class StartMenuScene: SKScene {
             
         if (node.name == "tutorial" && tutorialTouch > 1){
             print("PLAY TUTORIAL")
-            
+            GameManager.addSoundArray("tutorialFull_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+            self.tutorialTouch = 0
+            self.newGameTouch = 0
+            self.loadGameTouch = 0
         }
         
         if (node.name == "loadGame" && loadGameTouch > 1 && !manager.firstPlay){

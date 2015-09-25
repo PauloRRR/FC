@@ -69,17 +69,7 @@
 
     {
         "id": 3,
-        "background": "asylumCorridor3",
-        "playOnEnter": [
-
-                {
-                        "sound": "scream3",
-                        "format": "mp3",
-                        "x": 100.0,
-                        "y": 0.0
-                  }
-
-        ],
+        "background": "room3",
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -95,7 +85,7 @@
 
     {
         "id": 4,
-        "background": "asylumCorridor",
+        "background": "room4",
         "hasStory": true,
         "storyNumber": 2,
         "events": {
@@ -113,7 +103,7 @@
 
     {
         "id": 5,
-        "background": "asylumCorridor2",
+        "background": "room5",
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -129,7 +119,7 @@
 
     {
         "id": 6,
-        "background": "asylumCorridor3",
+        "background": "room6",
         "hide": true,
         "playOnEnter": [
 
@@ -156,7 +146,7 @@
 
     {
         "id": 7,
-        "background": "asylumCorridor",
+        "background": "room7",
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -172,7 +162,7 @@
 
     {
         "id": 8,
-        "background": "asylumCorridor2",
+        "background": "room8",
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -188,7 +178,7 @@
 
     {
         "id": 9,
-        "background": "asylumCorridor3",
+        "background": "room9",
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -204,7 +194,7 @@
 
     {
         "id": 10,
-        "background": "asylumCorridor",
+        "background": "room10",
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -219,7 +209,7 @@
 
     {
         "id": 11,
-        "background": "asylumIntersection",
+        "background": "room11",
         "crossingWay": 0,
         "events": {
             "swipeUp": {
@@ -239,7 +229,7 @@
 
     {
         "id": 12,
-        "background": "asylumCorridor2",
+        "background": "room12",
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -255,7 +245,7 @@
 
     {
         "id": 13,
-        "background": "asylumCorridor3",
+        "background": "room13",
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -270,7 +260,7 @@
 
     {
         "id": 14,
-        "background": "asylumCorridor",
+        "background": "room14",
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -285,7 +275,7 @@
 
     {
         "id": 15,
-        "background": "asylumCorridor2",
+        "background": "room15",
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -300,7 +290,7 @@
 
     {
         "id": 16,
-        "background": "asylumCorridor3",
+        "background": "room16",
         "playOnEnter": [
 
                 {
@@ -321,7 +311,7 @@
 
     {
         "id": 17,
-        "background": "asylumCorridor3",
+        "background": "room17",
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -337,7 +327,7 @@
 
     {
         "id": 18,
-        "background": "asylumCorridor",
+        "background": "room18",
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -353,7 +343,7 @@
 
     {
         "id": 19,
-        "background": "asylumCorridor2",
+        "background": "room19",
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -369,7 +359,7 @@
 
     {
         "id": 20,
-        "background": "asylumCorridor3",
+        "background": "room20",
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -385,7 +375,7 @@
 
     {
         "id": 21,
-        "background": "asylumCorridor",
+        "background": "room21",
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -401,7 +391,7 @@
 
     {
         "id": 22,
-        "background": "asylumCorridor2",
+        "background": "room22",
         "hide": true,
         "playOnEnter": [
 
@@ -428,7 +418,7 @@
 
     {
         "id": 23,
-        "background": "asylumCorridor3",
+        "background": "room23",
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -444,7 +434,7 @@
 
     {
         "id": 24,
-        "background": "asylumCorridor",
+        "background": "room24",
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -460,7 +450,7 @@
 
     {
         "id": 25,
-        "background": "asylumIntersection2",
+        "background": "room25",
         "playOnEnter": [
                     {
                         "sound": "hallway-direita_esquerda_frente_01",
@@ -492,7 +482,7 @@
 
     {
         "id": 26,
-        "background": "asylumCorridor3",
+        "background": "room26",
         "events": {
             "swipeDown": {
                 "action": "gotoRoom",

@@ -22,15 +22,11 @@ class GameOverScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         manager.enemiesCreated = false;
-        //var tapRecognizer = UITapGestureRecognizer(target: self, action: Selector("retry"))
-        //self.view?.addGestureRecognizer(tapRecognizer);
         
-        
-        //self.runAction(SKAction.playSoundFileNamed("scream2.mp3", waitForCompletion: false))
+        self.runAction(SKAction.playSoundFileNamed("scream2.mp3", waitForCompletion: false))
         
         self.gameOverScreen()
         
-        //self.gameOverOptions()
 
     }
     
@@ -41,15 +37,13 @@ class GameOverScene: SKScene {
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)
         self.background.size = self.frame.size
         self.background.zPosition = 0
-//        self.background.xScale -= 0.5
-//        self.background.yScale -= 0.65
+
         
         addChild(self.background)
         self.runAction(SKAction.waitForDuration(5.0), completion: {
             self.background.removeFromParent()
             self.gameOverOptions()
             })
-        //self.view?.scene?.runAction(SKAction.waitForDuration(5.0))
         
 
     }
@@ -62,8 +56,7 @@ class GameOverScene: SKScene {
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)
         self.background.size = self.frame.size
         self.background.zPosition = 0
-//        self.background.xScale -= 0.5
-//        self.background.yScale -= 0.65
+
         
         addChild(self.background)
         
@@ -94,14 +87,18 @@ class GameOverScene: SKScene {
         let location = touch.first!.locationInNode(self)
         let node = self.nodeAtPoint(location)
         
+        
+        
         if (node.name == "tryAgain"){
             tryAgainTouch++
             backToMenuTouch = 0
             print("restart")
+            GameManager.addSoundArray("tentarNovamente_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
         }else if (node.name == "backToMenu"){
             backToMenuTouch++
             tryAgainTouch = 0
             print("exit")
+            GameManager.addSoundArray("voltarMenu_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
         }
         
         if (node.name == "tryAgain" && tryAgainTouch > 1){
@@ -113,13 +110,15 @@ class GameOverScene: SKScene {
             backToMenuTouch = 0
             self.mainMenu()
         }
+        
+        
     }
     
 
 
 
     func mainMenu () {
-        let transition = SKTransition.crossFadeWithDuration(0)
+        let transition = SKTransition.fadeWithDuration(0)
         let scene = StartMenuScene(size: self.size)
         let state = GameState()
         state.room = 0
@@ -128,7 +127,7 @@ class GameOverScene: SKScene {
         
         if let recognizers = self.view?.gestureRecognizers {
             for recognizer in recognizers {
-                self.view?.removeGestureRecognizer(recognizer )
+                self.view?.removeGestureRecognizer(recognizer)
             }
         }
         

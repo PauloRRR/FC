@@ -93,16 +93,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     func loadRoom () {
         var tex = SKTexture(imageNamed: level[gameState.room]["background"].stringValue + "-" + gameState.rotation.description)
         print(tex.description);
-//        if (tex == "room0-1"){
-//            println("FADE IN")
-//            UIView.animateWithDuration(1, delay: 0.5, options: UIViewAnimationOptions.CurveEaseOut, animations: {
-//                
-//                self.background = SKSpriteNode(texture: tex);
-//                self.background?.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-//                self.addChild(self.background!)
-//                
-//                }, completion: nil)
-//        }else
+
         if (tex.size().width != 128) {
             background = SKSpriteNode(texture: tex);
             background?.position = CGPoint(x: frame.midX, y: frame.midY)
@@ -212,7 +203,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
         //&& !manager.storyP[manager.i-1].storyPlayer.playing == no swipe until speech is over
         let event = level[gameState.room]["events"][newAction]
-        if (event.description != "null" && ( !manager.storyP[manager.i-1].storyPlayer.playing || gameState.debug) ) {
+        if ((event.description != "null" &&  !manager.storyP[manager.i-1].storyPlayer.playing) || gameState.debug) {
             switch event["action"].stringValue {
             case "pickItem":
                 pickItem(event)

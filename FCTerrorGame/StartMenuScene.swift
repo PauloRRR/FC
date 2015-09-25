@@ -7,6 +7,7 @@
 //
 
 import SpriteKit
+import AVFoundation
 
 class StartMenuScene: SKScene {
     
@@ -23,6 +24,8 @@ class StartMenuScene: SKScene {
     var yesTouch = 0
     var noTouch = 0
     
+    var musicPlayer = AVAudioPlayer()
+    
     
     override func didMoveToView(view: SKView) {
         
@@ -32,7 +35,17 @@ class StartMenuScene: SKScene {
     
     func startMenuOptions(){
         
-        manager.playBGSound("menuMusic", frmt: "wav")
+        //manager.playBGSound("menuMusic", frmt: "wav")
+        
+        let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("menuMusic", ofType: "wav")!)
+        
+        self.musicPlayer = try! AVAudioPlayer(contentsOfURL: url)
+        
+        self.musicPlayer.prepareToPlay()
+        self.musicPlayer.volume = 0.5
+        self.musicPlayer.play()
+        
+        //self.runAction(SKAction.playSoundFileNamed("menuMusic", waitForCompletion: false))
         
         GameManager.addSoundArray("menu_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
         
@@ -100,6 +113,8 @@ class StartMenuScene: SKScene {
     
     func start () {
         
+        self.musicPlayer.stop()
+        
         _ = NSTimeInterval()
         let transition = SKTransition.fadeWithDuration(5.0)
         let scene = GameScene(size: self.size)
@@ -123,7 +138,7 @@ class StartMenuScene: SKScene {
     
     func continueGame(){
         let transition = SKTransition.fadeWithDuration(0)
-
+        self.musicPlayer.stop()
         
         let scene = GameScene(size: self.size)
         

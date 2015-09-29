@@ -75,8 +75,10 @@ class GameState {
     func eraseJson(){
         level = 1
         room  = 0
-        items = [String]()
+        self.items.removeAll()
         rotation = 1
+        
+        
         
         json = JSON([
             "level": level,

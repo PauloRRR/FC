@@ -67,7 +67,7 @@ class EnemyBot: NSObject {
         
         self.enemyPosition = map[self.arrayPosition]
         //self.adjacentRooms = map[self.enemyPosition]
-        manager.updateEnemiesListenerPosition()
+        //manager.updateEnemiesListenerPosition()
         print("player pos (\(self.audio.enviroNode.listenerPosition.x),\(self.audio.enviroNode.listenerPosition.y)) at room \(manager.returnPlayerPosition())")
         return self.actualRoom()
         

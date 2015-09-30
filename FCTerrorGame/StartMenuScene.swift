@@ -136,17 +136,34 @@ class StartMenuScene: SKScene {
         
     }
     
+    func restartGame(){
+        self.musicPlayer.stop()
+        
+        let transition = SKTransition.fadeWithDuration(5.0)
+        let scene = GameScene(size: self.size)
+        let state = GameState()
+        state.room = 0
+        state.rotation = 1
+        self.manager.playerPosition = 0
+        
+        
+       self.manager.initStoryArray()
+        
+        
+        self.view?.presentScene(scene, transition: transition)
+    }
+    
+    
+    
     func continueGame(){
         let transition = SKTransition.fadeWithDuration(0)
         self.musicPlayer.stop()
         
         let scene = GameScene(size: self.size)
         
-        if let recognizers = self.view?.gestureRecognizers {
-            for recognizer in recognizers {
-                self.view?.removeGestureRecognizer(recognizer )
-            }
-        }
+        self.manager.gameState.room = 0
+        self.manager.playerPosition = 0
+        self.manager.gameState.rotation = 1
         
         self.view?.presentScene(scene, transition: transition)
 
@@ -184,6 +201,7 @@ class StartMenuScene: SKScene {
             GameManager.addSoundArray("novoJogoConfirma_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
             self.newGameScreen()
         } else if (node.name == "newGame" && newGameTouch > 1 && manager.firstPlay){
+
             self.start()
         }
             
@@ -226,8 +244,8 @@ class StartMenuScene: SKScene {
             self.startMenuOptions()
         }else if (node.name == "newGameYes" && yesTouch > 1){
                 manager.gameState.eraseJson()
-                manager.playerPosition = 0
-                manager.i = 0
+                manager.eraseManager()
+                self.manager.initStoryArray()
                 self.start()
             }
         }

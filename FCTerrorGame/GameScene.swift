@@ -72,6 +72,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                     if (!self.manager.storyP[self.manager.i-1].storyPlayer.playing){
                         self.enemyControl.updateEnemiesPosition()
                         self.enemyControl.playEnemiesPosition()
+                        self.manager.updateEnemiesListenerPosition()
                     }else{
                         self.enemyControl.stopEnemiesPosition()
                     }
@@ -482,7 +483,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     }
     
     func presentGameOver () {
-        
+        self.enemyControl.gameOver()
         let transition = SKTransition.fadeWithDuration(0)
         let scene = GameOverScene(size: self.size)
         if let recognizers = self.view?.gestureRecognizers {

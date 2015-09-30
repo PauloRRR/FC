@@ -30,6 +30,20 @@ class GameManager {
         self.initStoryArray()
     }
     
+    func eraseManager(){
+        self.i = 0
+        self.playerPosition = 0
+        self.storyP.removeAll()
+        self.isBreathing = false
+        self.enemiesCreated = false
+        self.enemiesPosition.removeAll()
+        self.enemies.removeAll()
+        self.backgroundPlayer.removeAll()
+        self.audioRoomArray.removeAll()
+        self.audioArray.removeAll()
+    }
+    
+    
      func playBGSound(sndName:String, frmt:String){
         let audio = BackGroundSoundNode(soundName: sndName, format: frmt)
         self.backgroundPlayer.append(audio)

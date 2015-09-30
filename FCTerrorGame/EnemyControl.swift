@@ -43,12 +43,14 @@ class EnemyControl{
     func updateEnemiesPosition(){
         for(var i = 0; i < manager.enemies.count; i++){
            manager.enemiesPosition[i] = manager.enemies[i].moveToAdjacentRoom()
+           //manager.updateEnemiesListenerPosition()
         }
     }
     
     func stopEnemiesPosition(){
         for(var i = 0; i < manager.enemies.count; i++){
             manager.enemies[i].stopFootsteps()
+            manager.enemies[i].stopBreath()
         }
     }
     func playEnemiesPosition(){
@@ -59,6 +61,12 @@ class EnemyControl{
     
     func returnEnemiesPosition()->[Int]{
         return manager.enemiesPosition
+    }
+    
+    func gameOver(){
+        self.stopEnemiesPosition()
+        self.manager.enemiesCreated = false
+        self.enemies.removeAll()
     }
   
     

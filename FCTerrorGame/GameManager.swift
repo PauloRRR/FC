@@ -65,6 +65,7 @@ class GameManager {
     
     
     func playStorySound(){
+        
         if (self.i < self.storyP.count){
             self.storyP[self.i].play()
             self.storyP[self.i].played = true

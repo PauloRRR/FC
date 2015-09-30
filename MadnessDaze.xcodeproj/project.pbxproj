@@ -69,6 +69,14 @@
 		D4ADD3591BB32F59000CF6DB /* tutorial_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4ADD3581BB32F59000CF6DB /* tutorial_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D4ADD35F1BB32FF7000CF6DB /* novoJogoConfirma_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4ADD35E1BB32FF7000CF6DB /* novoJogoConfirma_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D4ADD3611BB33513000CF6DB /* gameOverTela_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4ADD3601BB33513000CF6DB /* gameOverTela_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
+		E3E2B7C71BBB06A2002B587F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E2B7C51BBB06A2002B587F /* Interface.storyboard */; };
+		E3E2B7C91BBB06A2002B587F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E2B7C81BBB06A2002B587F /* Assets.xcassets */; };
+		E3E2B7D01BBB06A2002B587F /* Madness's Daze Watch App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3E2B7CF1BBB06A2002B587F /* Madness's Daze Watch App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E3E2B7D71BBB06A2002B587F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E2B7D61BBB06A2002B587F /* InterfaceController.swift */; };
+		E3E2B7D91BBB06A2002B587F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E2B7D81BBB06A2002B587F /* ExtensionDelegate.swift */; };
+		E3E2B7DB1BBB06A2002B587F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E2B7DA1BBB06A2002B587F /* NotificationController.swift */; };
+		E3E2B7DD1BBB06A2002B587F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E2B7DC1BBB06A2002B587F /* Assets.xcassets */; };
+		E3E2B7E11BBB06A2002B587F /* Madness's Daze Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E3E2B7C31BBB06A2002B587F /* Madness's Daze Watch App.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +87,46 @@
 			remoteGlobalIDString = D471FDB81B6FD3B000D80921;
 			remoteInfo = MadnessDaze;
 		};
+		E3E2B7D11BBB06A2002B587F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D471FDB11B6FD3B000D80921 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3E2B7CE1BBB06A2002B587F;
+			remoteInfo = "Madness's Daze Watch App Extension";
+		};
+		E3E2B7DF1BBB06A2002B587F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D471FDB11B6FD3B000D80921 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3E2B7C21BBB06A2002B587F;
+			remoteInfo = "Madness's Daze Watch App";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E3E2B7E71BBB06A2002B587F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E3E2B7D01BBB06A2002B587F /* Madness's Daze Watch App Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3E2B7E91BBB06A2002B587F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E3E2B7E11BBB06A2002B587F /* Madness's Daze Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		305224021B84F42C00AD7A98 /* EnemyBot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyBot.swift; sourceTree = "<group>"; };
@@ -150,6 +197,17 @@
 		D4ADD3581BB32F59000CF6DB /* tutorial_PT-BR_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "tutorial_PT-BR_01.mp3"; sourceTree = "<group>"; };
 		D4ADD35E1BB32FF7000CF6DB /* novoJogoConfirma_PT-BR_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "novoJogoConfirma_PT-BR_01.mp3"; sourceTree = "<group>"; };
 		D4ADD3601BB33513000CF6DB /* gameOverTela_PT-BR_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "gameOverTela_PT-BR_01.mp3"; sourceTree = "<group>"; };
+		E3E2B7C31BBB06A2002B587F /* Madness's Daze Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Madness's Daze Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3E2B7C61BBB06A2002B587F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		E3E2B7C81BBB06A2002B587F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3E2B7CA1BBB06A2002B587F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3E2B7CF1BBB06A2002B587F /* Madness's Daze Watch App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Madness's Daze Watch App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3E2B7D51BBB06A2002B587F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		E3E2B7D61BBB06A2002B587F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		E3E2B7D81BBB06A2002B587F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		E3E2B7DA1BBB06A2002B587F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		E3E2B7DC1BBB06A2002B587F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3E2B7DE1BBB06A2002B587F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +219,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D471FDB61B6FD3B000D80921 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3E2B7CC1BBB06A2002B587F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -265,6 +330,8 @@
 				D471FDBB1B6FD3B000D80921 /* FCTerrorGame */,
 				D471FDD51B6FD3B000D80921 /* FCTerrorGameTests */,
 				D42953CA1BAB2F5F00ABB43E /* MadnessDazeTests */,
+				E3E2B7C41BBB06A2002B587F /* Madness's Daze Watch App */,
+				E3E2B7D31BBB06A2002B587F /* Madness's Daze Watch App Extension */,
 				D471FDBA1B6FD3B000D80921 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -274,6 +341,8 @@
 			children = (
 				D471FDB91B6FD3B000D80921 /* MadnessDaze.app */,
 				D42953C91BAB2F5F00ABB43E /* MadnessDazeTests.xctest */,
+				E3E2B7C31BBB06A2002B587F /* Madness's Daze Watch App.app */,
+				E3E2B7CF1BBB06A2002B587F /* Madness's Daze Watch App Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -364,6 +433,37 @@
 			name = GameOverMenu;
 			sourceTree = "<group>";
 		};
+		E3E2B7C41BBB06A2002B587F /* Madness's Daze Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				E3E2B7C51BBB06A2002B587F /* Interface.storyboard */,
+				E3E2B7C81BBB06A2002B587F /* Assets.xcassets */,
+				E3E2B7CA1BBB06A2002B587F /* Info.plist */,
+			);
+			path = "Madness's Daze Watch App";
+			sourceTree = "<group>";
+		};
+		E3E2B7D31BBB06A2002B587F /* Madness's Daze Watch App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E3E2B7D61BBB06A2002B587F /* InterfaceController.swift */,
+				E3E2B7D81BBB06A2002B587F /* ExtensionDelegate.swift */,
+				E3E2B7DA1BBB06A2002B587F /* NotificationController.swift */,
+				E3E2B7DC1BBB06A2002B587F /* Assets.xcassets */,
+				E3E2B7DE1BBB06A2002B587F /* Info.plist */,
+				E3E2B7D41BBB06A2002B587F /* Supporting Files */,
+			);
+			path = "Madness's Daze Watch App Extension";
+			sourceTree = "<group>";
+		};
+		E3E2B7D41BBB06A2002B587F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3E2B7D51BBB06A2002B587F /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -392,15 +492,51 @@
 				D471FDB51B6FD3B000D80921 /* Sources */,
 				D471FDB61B6FD3B000D80921 /* Frameworks */,
 				D471FDB71B6FD3B000D80921 /* Resources */,
+				E3E2B7E91BBB06A2002B587F /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E3E2B7E01BBB06A2002B587F /* PBXTargetDependency */,
 			);
 			name = MadnessDaze;
 			productName = FCTerrorGame;
 			productReference = D471FDB91B6FD3B000D80921 /* MadnessDaze.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E3E2B7C21BBB06A2002B587F /* Madness's Daze Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3E2B7E81BBB06A2002B587F /* Build configuration list for PBXNativeTarget "Madness's Daze Watch App" */;
+			buildPhases = (
+				E3E2B7C11BBB06A2002B587F /* Resources */,
+				E3E2B7E71BBB06A2002B587F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3E2B7D21BBB06A2002B587F /* PBXTargetDependency */,
+			);
+			name = "Madness's Daze Watch App";
+			productName = "Madness's Daze Watch App";
+			productReference = E3E2B7C31BBB06A2002B587F /* Madness's Daze Watch App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		E3E2B7CE1BBB06A2002B587F /* Madness's Daze Watch App Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3E2B7E61BBB06A2002B587F /* Build configuration list for PBXNativeTarget "Madness's Daze Watch App Extension" */;
+			buildPhases = (
+				E3E2B7CB1BBB06A2002B587F /* Sources */,
+				E3E2B7CC1BBB06A2002B587F /* Frameworks */,
+				E3E2B7CD1BBB06A2002B587F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Madness's Daze Watch App Extension";
+			productName = "Madness's Daze Watch App Extension";
+			productReference = E3E2B7CF1BBB06A2002B587F /* Madness's Daze Watch App Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -420,6 +556,12 @@
 					D471FDB81B6FD3B000D80921 = {
 						CreatedOnToolsVersion = 6.4;
 					};
+					E3E2B7C21BBB06A2002B587F = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					E3E2B7CE1BBB06A2002B587F = {
+						CreatedOnToolsVersion = 7.0;
+					};
 				};
 			};
 			buildConfigurationList = D471FDB41B6FD3B000D80921 /* Build configuration list for PBXProject "MadnessDaze" */;
@@ -437,6 +579,8 @@
 			targets = (
 				D471FDB81B6FD3B000D80921 /* MadnessDaze */,
 				D42953C81BAB2F5F00ABB43E /* MadnessDazeTests */,
+				E3E2B7C21BBB06A2002B587F /* Madness's Daze Watch App */,
+				E3E2B7CE1BBB06A2002B587F /* Madness's Daze Watch App Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -501,6 +645,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3E2B7C11BBB06A2002B587F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3E2B7C91BBB06A2002B587F /* Assets.xcassets in Resources */,
+				E3E2B7C71BBB06A2002B587F /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3E2B7CD1BBB06A2002B587F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3E2B7DD1BBB06A2002B587F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -535,6 +696,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3E2B7CB1BBB06A2002B587F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3E2B7DB1BBB06A2002B587F /* NotificationController.swift in Sources */,
+				E3E2B7D91BBB06A2002B587F /* ExtensionDelegate.swift in Sources */,
+				E3E2B7D71BBB06A2002B587F /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -542,6 +713,16 @@
 			isa = PBXTargetDependency;
 			target = D471FDB81B6FD3B000D80921 /* MadnessDaze */;
 			targetProxy = D42953CE1BAB2F5F00ABB43E /* PBXContainerItemProxy */;
+		};
+		E3E2B7D21BBB06A2002B587F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3E2B7CE1BBB06A2002B587F /* Madness's Daze Watch App Extension */;
+			targetProxy = E3E2B7D11BBB06A2002B587F /* PBXContainerItemProxy */;
+		};
+		E3E2B7E01BBB06A2002B587F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3E2B7C21BBB06A2002B587F /* Madness's Daze Watch App */;
+			targetProxy = E3E2B7DF1BBB06A2002B587F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -560,6 +741,14 @@
 				D471FDCC1B6FD3B000D80921 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		E3E2B7C51BBB06A2002B587F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3E2B7C61BBB06A2002B587F /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -702,6 +891,70 @@
 			};
 			name = Release;
 		};
+		E3E2B7E21BBB06A2002B587F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Madness_s_Daze_Watch_App_Extension;
+				INFOPLIST_FILE = "Madness's Daze Watch App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		E3E2B7E31BBB06A2002B587F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Madness_s_Daze_Watch_App_Extension;
+				INFOPLIST_FILE = "Madness's Daze Watch App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		E3E2B7E41BBB06A2002B587F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "Madness's Daze Watch App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		E3E2B7E51BBB06A2002B587F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Madness's Daze Watch App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -731,6 +984,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		E3E2B7E61BBB06A2002B587F /* Build configuration list for PBXNativeTarget "Madness's Daze Watch App Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3E2B7E41BBB06A2002B587F /* Debug */,
+				E3E2B7E51BBB06A2002B587F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E3E2B7E81BBB06A2002B587F /* Build configuration list for PBXNativeTarget "Madness's Daze Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3E2B7E21BBB06A2002B587F /* Debug */,
+				E3E2B7E31BBB06A2002B587F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

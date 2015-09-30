@@ -11,7 +11,7 @@ class GameManager {
     static let sharedInstance = GameManager()
     var audioArray = [AudioNode]()
     var audioRoomArray = [AudioNode]()
-    var backgroundPlayer = [BackGroundSoundNode]()
+    var backgroundPlayer = [BackGround3dAudio]()
     var enviroNode = AVAudioEnvironmentNode()
     var enemies = [EnemyBot]()
     var enemiesPosition = [Int]()
@@ -45,10 +45,14 @@ class GameManager {
     
     
      func playBGSound(sndName:String, frmt:String){
-        let audio = BackGroundSoundNode(soundName: sndName, format: frmt)
+        let audio = BackGround3dAudio(soundName: sndName, format: frmt)
         self.backgroundPlayer.append(audio)
-        self.backgroundPlayer[0].play()
+        self.backgroundPlayer[0].playLoop()
         
+    }
+    
+    func stopBGSound(){
+        self.backgroundPlayer[0].stopPlayer()
     }
     
     func initStoryArray(){

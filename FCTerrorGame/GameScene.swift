@@ -180,6 +180,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 newAction = gameState.actions[(3+gameState.rotation)%4]
                 break;
             case "longPress":
+                NSNotificationCenter.defaultCenter().postNotificationName("muffle", object: self)
                 if let hideable = level[gameState.room]["hide"].bool {
                     if (hideable) {
                         gameState.playerHidden = true;
@@ -187,6 +188,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 }
                 break;
             case "longPressEnded":
+                NSNotificationCenter.defaultCenter().postNotificationName("unmuffle", object: self)
                 gameState.playerHidden = false;
                 break;
 //            case "alternateTap":
@@ -484,6 +486,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     func presentGameOver () {
         self.enemyControl.gameOver()
+        self.manager.stopBGSound()
         let transition = SKTransition.fadeWithDuration(0)
         let scene = GameOverScene(size: self.size)
         if let recognizers = self.view?.gestureRecognizers {

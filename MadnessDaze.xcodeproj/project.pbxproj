@@ -17,6 +17,7 @@
 		306F7C7D1B7D023700E8501A /* asylum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C7C1B7D023700E8501A /* asylum.mp3 */; };
 		306F7C7F1B7D113600E8501A /* BackGroundSoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */; };
 		306F7C811B7D1BF500E8501A /* locked.wav in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C801B7D1BF500E8501A /* locked.wav */; };
+		30CC7B7B1BBC53B500782856 /* BackGround3dAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CC7B7A1BBC53B500782856 /* BackGround3dAudio.swift */; settings = {ASSET_TAGS = (); }; };
 		30D6A01D1B976A3700A025D4 /* AudioCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D6A01C1B976A3700A025D4 /* AudioCoordinate.swift */; };
 		30F181971B96040200C2C2C5 /* roomMapping.json in Resources */ = {isa = PBXBuildFile; fileRef = 30F181961B96040200C2C2C5 /* roomMapping.json */; };
 		30FA88FA1B8D049200FE4700 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA88F91B8D049200FE4700 /* background.mp3 */; };
@@ -92,6 +93,7 @@
 		306F7C7C1B7D023700E8501A /* asylum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = asylum.mp3; path = ../asylum.mp3; sourceTree = "<group>"; };
 		306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGroundSoundNode.swift; sourceTree = "<group>"; };
 		306F7C801B7D1BF500E8501A /* locked.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = locked.wav; path = ../locked.wav; sourceTree = "<group>"; };
+		30CC7B7A1BBC53B500782856 /* BackGround3dAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGround3dAudio.swift; sourceTree = "<group>"; };
 		30D6A01C1B976A3700A025D4 /* AudioCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioCoordinate.swift; sourceTree = "<group>"; };
 		30F181961B96040200C2C2C5 /* roomMapping.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = roomMapping.json; sourceTree = "<group>"; };
 		30FA88F91B8D049200FE4700 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */,
 				30D6A01C1B976A3700A025D4 /* AudioCoordinate.swift */,
 				B974A8DC1B98B9BC004DFE75 /* StorySoundNode.swift */,
+				30CC7B7A1BBC53B500782856 /* BackGround3dAudio.swift */,
 			);
 			name = AudioClasses;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 			files = (
 				D49F5E511BA208E50023174A /* StartMenuScene.swift in Sources */,
 				B974A8DD1B98B9BC004DFE75 /* StorySoundNode.swift in Sources */,
+				30CC7B7B1BBC53B500782856 /* BackGround3dAudio.swift in Sources */,
 				30D6A01D1B976A3700A025D4 /* AudioCoordinate.swift in Sources */,
 				30FA88FC1B8E1C2700FE4700 /* AudioSingleton.swift in Sources */,
 				D471FDC31B6FD3B000D80921 /* GameScene.swift in Sources */,

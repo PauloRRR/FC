@@ -18,6 +18,8 @@
 		306F7C7F1B7D113600E8501A /* BackGroundSoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */; };
 		306F7C811B7D1BF500E8501A /* locked.wav in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C801B7D1BF500E8501A /* locked.wav */; };
 		30CC7B7B1BBC53B500782856 /* BackGround3dAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CC7B7A1BBC53B500782856 /* BackGround3dAudio.swift */; settings = {ASSET_TAGS = (); }; };
+		30CC7B7D1BBDA46700782856 /* woosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B7C1BBDA46700782856 /* woosh.wav */; settings = {ASSET_TAGS = (); }; };
+		30CC7B7F1BBDA78E00782856 /* zombi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B7E1BBDA78E00782856 /* zombi.mp3 */; settings = {ASSET_TAGS = (); }; };
 		30D6A01D1B976A3700A025D4 /* AudioCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D6A01C1B976A3700A025D4 /* AudioCoordinate.swift */; };
 		30F181971B96040200C2C2C5 /* roomMapping.json in Resources */ = {isa = PBXBuildFile; fileRef = 30F181961B96040200C2C2C5 /* roomMapping.json */; };
 		30FA88FA1B8D049200FE4700 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA88F91B8D049200FE4700 /* background.mp3 */; };
@@ -141,6 +143,8 @@
 		306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGroundSoundNode.swift; sourceTree = "<group>"; };
 		306F7C801B7D1BF500E8501A /* locked.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = locked.wav; path = ../locked.wav; sourceTree = "<group>"; };
 		30CC7B7A1BBC53B500782856 /* BackGround3dAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGround3dAudio.swift; sourceTree = "<group>"; };
+		30CC7B7C1BBDA46700782856 /* woosh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = woosh.wav; sourceTree = "<group>"; };
+		30CC7B7E1BBDA78E00782856 /* zombi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zombi.mp3; sourceTree = "<group>"; };
 		30D6A01C1B976A3700A025D4 /* AudioCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioCoordinate.swift; sourceTree = "<group>"; };
 		30F181961B96040200C2C2C5 /* roomMapping.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = roomMapping.json; sourceTree = "<group>"; };
 		30FA88F91B8D049200FE4700 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
@@ -276,8 +280,10 @@
 				D4A0D3321B8F6F6E0004BB09 /* playerSteps.mp3 */,
 				D4491CD11B8F9C41009FE55B /* scream2.mp3 */,
 				D4491CCF1B8F9BAE009FE55B /* scream3.mp3 */,
+				30CC7B7E1BBDA78E00782856 /* zombi.mp3 */,
 				D4491CD31B8FA1CA009FE55B /* scream4.wav */,
 				D4491CD41B8FA1CA009FE55B /* scream5.wav */,
+				30CC7B7C1BBDA46700782856 /* woosh.wav */,
 			);
 			name = AudioLibrary;
 			sourceTree = "<group>";
@@ -623,10 +629,12 @@
 				30FA88FA1B8D049200FE4700 /* background.mp3 in Resources */,
 				305224071B863F2400AD7A98 /* Enemy.json in Resources */,
 				D411D9161B98C81A0020689E /* hallway-esquerda_frente_01.mp3 in Resources */,
+				30CC7B7D1BBDA46700782856 /* woosh.wav in Resources */,
 				D469BFA11BB45E5800EF1D95 /* tutorialFull_PT-BR_01.mp3 in Resources */,
 				D49F5E4C1B9F5CE70023174A /* story1.mp3 in Resources */,
 				D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */,
 				D471FDC11B6FD3B000D80921 /* GameScene.sks in Resources */,
+				30CC7B7F1BBDA78E00782856 /* zombi.mp3 in Resources */,
 				B985E0761B75300200CBAC43 /* Level1.json in Resources */,
 				D411D9151B98C81A0020689E /* hallway-direita_frente_01.mp3 in Resources */,
 				30F181971B96040200C2C2C5 /* roomMapping.json in Resources */,
@@ -996,6 +1004,7 @@
 				E3E2B7E51BBB06A2002B587F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E3E2B7E81BBB06A2002B587F /* Build configuration list for PBXNativeTarget "Madness's Daze Watch App" */ = {
 			isa = XCConfigurationList;
@@ -1004,6 +1013,7 @@
 				E3E2B7E31BBB06A2002B587F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

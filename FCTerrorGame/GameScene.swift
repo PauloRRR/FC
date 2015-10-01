@@ -213,7 +213,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 break;
             case "gotoRoom":
                 goToRoom(event, swipeDirection: newAction)
-                GameManager.addSoundArray("woosh", frmt: "mp3", x: 0.0, y: 0.0)
+                GameManager.addSoundArray("woosh", frmt: "wav", x: 0.0, y: 0.0)
                 break;
             default:
                 break;

@@ -16,15 +16,16 @@ class BackGroundSoundNode {
     
     init(soundName:String,format:String) {
     
-        let bgMusicURL = NSBundle.mainBundle().URLForResource(soundName, withExtension: format)
-        backgroundPlayer = try! AVAudioPlayer(contentsOfURL: bgMusicURL!)
-        backgroundPlayer.numberOfLoops = -1
+        let bgMusicURL = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource(soundName, ofType: format)!)
+        backgroundPlayer = try! AVAudioPlayer(contentsOfURL: bgMusicURL)
+        backgroundPlayer.numberOfLoops = 0
         backgroundPlayer.prepareToPlay()
         backgroundPlayer.volume = 1
     }
     
     func play(){
         backgroundPlayer.play()
+        print("TOCANDO AUDIO")
     }
    
 }

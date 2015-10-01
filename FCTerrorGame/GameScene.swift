@@ -16,6 +16,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var manager = GameManager.sharedInstance
     var playerHidden = false;
     
+    
     override func didMoveToView(view: SKView) {
         //self.manager.setPlayerPosition(0)
         manager.firstPlay = false
@@ -356,7 +357,11 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                     }
                     break;
             }
-            GameManager.addRoomSoundArray(soundName, frmt: "mp3", x: 0.0, y: 0.0)
+//            print("\(soundName)")
+//            let soundPlay = BackGroundSoundNode(soundName: soundName, format: "mp3")
+//            soundPlay.play()
+            manager.playDirectionNarration(soundName, frmt: "mp3")
+            //GameManager.addRoomSoundArray(soundName, frmt: "mp3", x: 0.0, y: 0.0)
         }
     }
     

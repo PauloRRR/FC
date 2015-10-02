@@ -83,6 +83,7 @@ class EnemyBot: NSObject {
     
     func playBreath(){
         self.breath.backgroundPlayer.volume = Float(3.0)
+        self.breath.backgroundPlayer.numberOfLoops = -1
         self.breath.play()
     }
     func stopBreath(){

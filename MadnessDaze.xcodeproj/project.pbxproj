@@ -575,6 +575,7 @@
 					};
 					E3E2B7CE1BBB06A2002B587F = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = Z83BJJ28JR;
 					};
 				};
 			};
@@ -639,13 +640,9 @@
 				B985E0761B75300200CBAC43 /* Level1.json in Resources */,
 				D41C34911BBDAF1400200105 /* hallway-finalCorredor_voltar_01.mp3 in Resources */,
 				30F181971B96040200C2C2C5 /* roomMapping.json in Resources */,
-				D4ADD3551BB32F3D000CF6DB /* nao_PT-BR_01.mp3 in Resources */,
 				30CC7B811BBDAFD800782856 /* gunshot.mp3 in Resources */,
 				D485B1D71BB072F8005C423D /* futura-condensed-bold.ttf in Resources */,
-				D4ADD3591BB32F59000CF6DB /* tutorial_PT-BR_01.mp3 in Resources */,
 				30CC7B831BBDB77E00782856 /* zombihoar.wav in Resources */,
-				D4A0D3311B8F6D800004BB09 /* crossroad.mp3 in Resources */,
-				D4ADD3531BB32F2F000CF6DB /* menu_PT-BR_01.mp3 in Resources */,
 				D41C34971BBDB23100200105 /* gameOverTela_PT-BR_01.mp3 in Resources */,
 				D41C348D1BBDAF1400200105 /* hallway-direita_esquerda_01.mp3 in Resources */,
 				D41C34A61BBDB2AD00200105 /* sim_PT-BR_01.mp3 in Resources */,
@@ -951,6 +948,7 @@
 		E3E2B7E41BBB06A2002B587F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = "Madness's Daze Watch App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -966,6 +964,7 @@
 		E3E2B7E51BBB06A2002B587F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Madness's Daze Watch App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze.watchkitapp.watchkitextension;

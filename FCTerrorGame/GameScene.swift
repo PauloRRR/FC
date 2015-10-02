@@ -40,7 +40,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             object: nil)
         
         //GameManager.clearRoomSoundArray(); // Room sounds now stop playing on change room
-        manager.stopStorySound(); //StorySound now stop playing on change room
+       
         
         swipeLeft.direction  = .Left
         swipeUp.direction    = .Up
@@ -96,6 +96,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     // MARK: Level Functions
     
     func loadRoom () {
+        manager.stopStorySound(); //StorySound now stop playing on change room
+        background?.removeFromParent();
         var tex = SKTexture(imageNamed: level[gameState.room]["background"].stringValue + "-" + gameState.rotation.description)
         print(tex.description);
 
@@ -447,6 +449,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             self.manager.setPlayerPosition(gameState.room)
             self.manager.updateEnemiesListenerPosition()
             gameState.updateState()
+            /*
             let transition = SKTransition.fadeWithDuration(0)
             let scene = GameScene(size: self.size)
             if let recognizers = self.view?.gestureRecognizers {
@@ -456,6 +459,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             }
             
             self.view?.presentScene(scene, transition: transition)
+            */
+            loadRoom()
         }
     }
     

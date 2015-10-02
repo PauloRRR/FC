@@ -22,7 +22,8 @@ class GameManager {
     var directionNarration = [BackGroundSoundNode]()
     var gameState = GameState.sharedInstance
     var i = 0
-    
+    var shot = BackGroundSoundNode(soundName: "gunshot", format: "mp3")
+    var moan = BackGroundSoundNode(soundName: "zombihoar", format: "wav")
     var firstPlay = Bool()
     
     // METHODS
@@ -56,6 +57,26 @@ class GameManager {
         self.backgroundPlayer.append(audio)
         self.backgroundPlayer[0].playLoop()
         
+    }
+    
+    func gunshot(){
+        self.shot.play()
+        var zed = -1
+        let coord = AudioCoordinate()
+        coord.pinpointListener(playerPosition)
+        for (var i = 0; i < self.enemies.count; i++){
+            coord.pinpointPlayer(self.enemies[i].enemyPosition)
+            if(coord.distance() <= 30.0){
+                zed = i
+                moan.play()
+            }
+            
+        }
+        if(zed != -1){
+            enemies.removeAtIndex(zed)
+            zed = -1
+        }
+
     }
     
     func stopBGSound(){

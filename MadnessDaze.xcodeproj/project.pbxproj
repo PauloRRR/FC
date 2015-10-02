@@ -34,7 +34,6 @@
 		D41C348D1BBDAF1400200105 /* hallway-direita_esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34851BBDAF1400200105 /* hallway-direita_esquerda_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41C348E1BBDAF1400200105 /* hallway-direita_esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34861BBDAF1400200105 /* hallway-direita_esquerda_frente_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41C348F1BBDAF1400200105 /* hallway-direita_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34871BBDAF1400200105 /* hallway-direita_frente_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34901BBDAF1400200105 /* hallway-esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34881BBDAF1400200105 /* hallway-esquerda_frente_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41C34911BBDAF1400200105 /* hallway-finalCorredor_voltar_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34891BBDAF1400200105 /* hallway-finalCorredor_voltar_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41C34921BBDAF1400200105 /* hallway-direita_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C348A1BBDAF1400200105 /* hallway-direita_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41C34931BBDAF1400200105 /* hallway-esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C348B1BBDAF1400200105 /* hallway-esquerda_01.mp3 */; settings = {ASSET_TAGS = (); }; };
@@ -48,6 +47,7 @@
 		D41C34A51BBDB2AD00200105 /* novoJogoConfirma_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349E1BBDB2AD00200105 /* novoJogoConfirma_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41C34A61BBDB2AD00200105 /* sim_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349F1BBDB2AD00200105 /* sim_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41C34A71BBDB2AD00200105 /* tutorial_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34A01BBDB2AD00200105 /* tutorial_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D41C34A91BBF080B00200105 /* hallway-esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34A81BBF080B00200105 /* hallway-esquerda_frente_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D42953CC1BAB2F5F00ABB43E /* MadnessDazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42953CB1BAB2F5F00ABB43E /* MadnessDazeTests.swift */; };
 		D4491CD01B8F9BAE009FE55B /* scream3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4491CCF1B8F9BAE009FE55B /* scream3.mp3 */; };
 		D4491CD21B8F9C41009FE55B /* scream2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4491CD11B8F9C41009FE55B /* scream2.mp3 */; };
@@ -158,7 +158,6 @@
 		D41C34851BBDAF1400200105 /* hallway-direita_esquerda_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hallway-direita_esquerda_01.mp3"; sourceTree = "<group>"; };
 		D41C34861BBDAF1400200105 /* hallway-direita_esquerda_frente_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hallway-direita_esquerda_frente_01.mp3"; sourceTree = "<group>"; };
 		D41C34871BBDAF1400200105 /* hallway-direita_frente_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hallway-direita_frente_01.mp3"; sourceTree = "<group>"; };
-		D41C34881BBDAF1400200105 /* hallway-esquerda_frente_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hallway-esquerda_frente_01.mp3"; sourceTree = "<group>"; };
 		D41C34891BBDAF1400200105 /* hallway-finalCorredor_voltar_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hallway-finalCorredor_voltar_01.mp3"; sourceTree = "<group>"; };
 		D41C348A1BBDAF1400200105 /* hallway-direita_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hallway-direita_01.mp3"; sourceTree = "<group>"; };
 		D41C348B1BBDAF1400200105 /* hallway-esquerda_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hallway-esquerda_01.mp3"; sourceTree = "<group>"; };
@@ -172,6 +171,7 @@
 		D41C349E1BBDB2AD00200105 /* novoJogoConfirma_PT-BR_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "novoJogoConfirma_PT-BR_01.mp3"; sourceTree = "<group>"; };
 		D41C349F1BBDB2AD00200105 /* sim_PT-BR_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sim_PT-BR_01.mp3"; sourceTree = "<group>"; };
 		D41C34A01BBDB2AD00200105 /* tutorial_PT-BR_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "tutorial_PT-BR_01.mp3"; sourceTree = "<group>"; };
+		D41C34A81BBF080B00200105 /* hallway-esquerda_frente_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hallway-esquerda_frente_01.mp3"; sourceTree = "<group>"; };
 		D42953C91BAB2F5F00ABB43E /* MadnessDazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadnessDazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42953CB1BAB2F5F00ABB43E /* MadnessDazeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadnessDazeTests.swift; sourceTree = "<group>"; };
 		D42953CD1BAB2F5F00ABB43E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -262,9 +262,9 @@
 				D41C34851BBDAF1400200105 /* hallway-direita_esquerda_01.mp3 */,
 				D41C34861BBDAF1400200105 /* hallway-direita_esquerda_frente_01.mp3 */,
 				D41C34871BBDAF1400200105 /* hallway-direita_frente_01.mp3 */,
-				D41C34881BBDAF1400200105 /* hallway-esquerda_frente_01.mp3 */,
 				D41C34891BBDAF1400200105 /* hallway-finalCorredor_voltar_01.mp3 */,
 				D41C348A1BBDAF1400200105 /* hallway-direita_01.mp3 */,
+				D41C34A81BBF080B00200105 /* hallway-esquerda_frente_01.mp3 */,
 				D41C348B1BBDAF1400200105 /* hallway-esquerda_01.mp3 */,
 				30FA88F91B8D049200FE4700 /* background.mp3 */,
 				D4A3C9B91BBC5D1D00426CCE /* 011_hallway-guardExitToxin_PT-BR_01.mp3 */,
@@ -561,9 +561,11 @@
 					};
 					D471FDB81B6FD3B000D80921 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = Z83BJJ28JR;
 					};
 					E3E2B7C21BBB06A2002B587F = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = Z83BJJ28JR;
 					};
 					E3E2B7CE1BBB06A2002B587F = {
 						CreatedOnToolsVersion = 7.0;
@@ -584,8 +586,8 @@
 			projectRoot = "";
 			targets = (
 				D471FDB81B6FD3B000D80921 /* MadnessDaze */,
-				D42953C81BAB2F5F00ABB43E /* MadnessDazeTests */,
 				E3E2B7C21BBB06A2002B587F /* Madness's Daze Watch App */,
+				D42953C81BAB2F5F00ABB43E /* MadnessDazeTests */,
 				E3E2B7CE1BBB06A2002B587F /* Madness's Daze Watch App Extension */,
 			);
 		};
@@ -622,7 +624,6 @@
 				D41C34A31BBDB2AD00200105 /* menu_PT-BR_01.mp3 in Resources */,
 				D41C34931BBDAF1400200105 /* hallway-esquerda_01.mp3 in Resources */,
 				305224071B863F2400AD7A98 /* Enemy.json in Resources */,
-				D411D9161B98C81A0020689E /* hallway-esquerda_frente_01.mp3 in Resources */,
 				30CC7B7D1BBDA46700782856 /* woosh.wav in Resources */,
 				D469BFA11BB45E5800EF1D95 /* tutorialFull_PT-BR_01.mp3 in Resources */,
 				D49F5E4C1B9F5CE70023174A /* story1.mp3 in Resources */,
@@ -638,6 +639,7 @@
 				D41C34A61BBDB2AD00200105 /* sim_PT-BR_01.mp3 in Resources */,
 				D4A3C9BA1BBC5D1D00426CCE /* 011_hallway-guardExitToxin_PT-BR_01.mp3 in Resources */,
 				305224091B8CD44800AD7A98 /* footsteps.mp3 in Resources */,
+				D41C34A91BBF080B00200105 /* hallway-esquerda_frente_01.mp3 in Resources */,
 				D41C34981BBDB23100200105 /* tentarNovamente_PT-BR_01.mp3 in Resources */,
 				D471FDC81B6FD3B000D80921 /* Main.storyboard in Resources */,
 				D49F5E551BA216800023174A /* story2.mp3 in Resources */,
@@ -882,7 +884,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FCTerrorGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.project.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze;
 				PRODUCT_NAME = MadnessDaze;
 			};
 			name = Debug;
@@ -894,7 +896,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FCTerrorGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.project.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze;
 				PRODUCT_NAME = MadnessDaze;
 			};
 			name = Release;

@@ -716,7 +716,7 @@
 
     {
         "id": 39,
-        "background": "asylumRoom2",
+        "background": "room39",
         "events": {
             "swipeDown": {
                 "action": "gotoRoom",
@@ -941,7 +941,7 @@
 
     {
         "id": 52,
-        "background": "asylumRoom2",
+        "background": "room52",
         "events": {
             "swipeRight": {
                 "action": "gotoRoom",
@@ -1002,7 +1002,7 @@
 
     {
         "id": 56,
-        "background": "asylumRoom2",
+        "background": "room56",
         "events": {
             "swipeRight": {
                 "action": "gotoRoom",
@@ -1549,7 +1549,7 @@
 
     {
         "id": 88,
-        "background": "asylumRoom2",
+        "background": "room88",
         "events": {
             "swipeLeft":{
                 "action": "gotoRoom",
@@ -1610,7 +1610,7 @@
 
     {
         "id": 92,
-        "background": "asylumRoom2",
+        "background": "room92",
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",
@@ -2718,7 +2718,7 @@
 
     {
         "id": 155,
-        "background": "asylumRoom2",
+        "background": "room155",
         "events": {
             "swipeUp":{
                 "action": "gotoRoom",

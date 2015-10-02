@@ -20,6 +20,8 @@
 		30CC7B7B1BBC53B500782856 /* BackGround3dAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CC7B7A1BBC53B500782856 /* BackGround3dAudio.swift */; settings = {ASSET_TAGS = (); }; };
 		30CC7B7D1BBDA46700782856 /* woosh.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B7C1BBDA46700782856 /* woosh.wav */; settings = {ASSET_TAGS = (); }; };
 		30CC7B7F1BBDA78E00782856 /* zombi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B7E1BBDA78E00782856 /* zombi.mp3 */; settings = {ASSET_TAGS = (); }; };
+		30CC7B811BBDAFD800782856 /* gunshot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B801BBDAFD800782856 /* gunshot.mp3 */; settings = {ASSET_TAGS = (); }; };
+		30CC7B831BBDB77E00782856 /* zombihoar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B821BBDB77E00782856 /* zombihoar.wav */; settings = {ASSET_TAGS = (); }; };
 		30D6A01D1B976A3700A025D4 /* AudioCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D6A01C1B976A3700A025D4 /* AudioCoordinate.swift */; };
 		30F181971B96040200C2C2C5 /* roomMapping.json in Resources */ = {isa = PBXBuildFile; fileRef = 30F181961B96040200C2C2C5 /* roomMapping.json */; };
 		30FA88FA1B8D049200FE4700 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA88F91B8D049200FE4700 /* background.mp3 */; };
@@ -145,6 +147,8 @@
 		30CC7B7A1BBC53B500782856 /* BackGround3dAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackGround3dAudio.swift; sourceTree = "<group>"; };
 		30CC7B7C1BBDA46700782856 /* woosh.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = woosh.wav; sourceTree = "<group>"; };
 		30CC7B7E1BBDA78E00782856 /* zombi.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zombi.mp3; sourceTree = "<group>"; };
+		30CC7B801BBDAFD800782856 /* gunshot.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gunshot.mp3; sourceTree = "<group>"; };
+		30CC7B821BBDB77E00782856 /* zombihoar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zombihoar.wav; sourceTree = "<group>"; };
 		30D6A01C1B976A3700A025D4 /* AudioCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioCoordinate.swift; sourceTree = "<group>"; };
 		30F181961B96040200C2C2C5 /* roomMapping.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = roomMapping.json; sourceTree = "<group>"; };
 		30FA88F91B8D049200FE4700 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
@@ -280,7 +284,9 @@
 				D4A0D3321B8F6F6E0004BB09 /* playerSteps.mp3 */,
 				D4491CD11B8F9C41009FE55B /* scream2.mp3 */,
 				D4491CCF1B8F9BAE009FE55B /* scream3.mp3 */,
+				30CC7B821BBDB77E00782856 /* zombihoar.wav */,
 				30CC7B7E1BBDA78E00782856 /* zombi.mp3 */,
+				30CC7B801BBDAFD800782856 /* gunshot.mp3 */,
 				D4491CD31B8FA1CA009FE55B /* scream4.wav */,
 				D4491CD41B8FA1CA009FE55B /* scream5.wav */,
 				30CC7B7C1BBDA46700782856 /* woosh.wav */,
@@ -639,8 +645,10 @@
 				D411D9151B98C81A0020689E /* hallway-direita_frente_01.mp3 in Resources */,
 				30F181971B96040200C2C2C5 /* roomMapping.json in Resources */,
 				D4ADD3551BB32F3D000CF6DB /* nao_PT-BR_01.mp3 in Resources */,
+				30CC7B811BBDAFD800782856 /* gunshot.mp3 in Resources */,
 				D485B1D71BB072F8005C423D /* futura-condensed-bold.ttf in Resources */,
 				D4ADD3591BB32F59000CF6DB /* tutorial_PT-BR_01.mp3 in Resources */,
+				30CC7B831BBDB77E00782856 /* zombihoar.wav in Resources */,
 				D4A0D3311B8F6D800004BB09 /* crossroad.mp3 in Resources */,
 				D4ADD3531BB32F2F000CF6DB /* menu_PT-BR_01.mp3 in Resources */,
 				305224091B8CD44800AD7A98 /* footsteps.mp3 in Resources */,

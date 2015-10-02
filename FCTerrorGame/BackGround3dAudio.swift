@@ -61,7 +61,8 @@ class BackGround3dAudio: NSObject {
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("muffleSound"), name: "muffle", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("unmuffleSound"), name: "unmuffle", object: nil)
-
+        self.player.volume = 0.6
+        self.player.rate = -0.5
         self.player.scheduleBuffer(audioFileBuffer, atTime: nil, options:.Loops, completionHandler: nil)
         self.player.play()
     }
@@ -82,7 +83,7 @@ class BackGround3dAudio: NSObject {
     }
 
     func unmuffleSound(){
-        self.player.rate = 1.0
+        self.player.rate = -0.5
         
     }
 

@@ -18,7 +18,7 @@ class BackGroundSoundNode {
     
         let bgMusicURL = NSBundle.mainBundle().URLForResource(soundName, withExtension: format)
         backgroundPlayer = try! AVAudioPlayer(contentsOfURL: bgMusicURL!)
-        backgroundPlayer.numberOfLoops = -1
+//        backgroundPlayer.numberOfLoops = -1
         backgroundPlayer.prepareToPlay()
         backgroundPlayer.volume = 1
     }

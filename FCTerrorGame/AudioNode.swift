@@ -23,7 +23,7 @@ class AudioNode: NSObject {
         self.player.renderingAlgorithm = AVAudio3DMixingRenderingAlgorithm.HRTF
         //self.player.position = AVAudioMake3DPoint(0.0, 0.0, 0.0);
         //GameManager.sharedInstance.enviroNode.listenerPosition = AVAudioMake3DPoint(0.0, 0.0, 0.0);
-        enviroNode.listenerPosition = gameManager.enviroNode.listenerPosition
+        //enviroNode.listenerPosition = gameManager.enviroNode.listenerPosition
         let filePath: String = NSBundle.mainBundle().pathForResource(soundName, ofType: format)!
         let fileURL: NSURL = NSURL(fileURLWithPath: filePath)
         let audioFile = try? AVAudioFile(forReading: fileURL)

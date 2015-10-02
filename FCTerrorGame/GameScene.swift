@@ -370,7 +370,11 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                     }
                     break;
             }
-            GameManager.addRoomSoundArray(soundName, frmt: "mp3", x: 0.0, y: 0.0)
+//            print("\(soundName)")
+//            let soundPlay = BackGroundSoundNode(soundName: soundName, format: "mp3")
+//            soundPlay.play()
+            manager.playDirectionNarration(soundName, frmt: "mp3")
+            //GameManager.addRoomSoundArray(soundName, frmt: "mp3", x: 0.0, y: 0.0)
         }
     }
     

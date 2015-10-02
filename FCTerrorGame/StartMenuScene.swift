@@ -35,7 +35,6 @@ class StartMenuScene: SKScene {
     
     func startMenuOptions(){
         
-        //manager.playBGSound("menuMusic", frmt: "wav")
         
         let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("menuMusic", ofType: "wav")!)
         
@@ -45,7 +44,6 @@ class StartMenuScene: SKScene {
         self.musicPlayer.volume = 0.5
         self.musicPlayer.play()
         
-        //self.runAction(SKAction.playSoundFileNamed("menuMusic", waitForCompletion: false))
         
         GameManager.addSoundArray("menu_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
         
@@ -53,8 +51,6 @@ class StartMenuScene: SKScene {
         self.background.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
         self.background.size = self.frame.size
         self.background.zPosition = 0
-        //        self.background.xScale -= 0.5
-        //        self.background.yScale -= 0.65
         addChild(self.background)
         
         self.newGame = SKLabelNode(fontNamed: "futura-condensed-normal")
@@ -201,7 +197,9 @@ class StartMenuScene: SKScene {
             GameManager.addSoundArray("novoJogoConfirma_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
             self.newGameScreen()
         } else if (node.name == "newGame" && newGameTouch > 1 && manager.firstPlay){
-
+            manager.gameState.eraseJson()
+            manager.eraseManager()
+            self.manager.initStoryArray()
             self.start()
         }
             

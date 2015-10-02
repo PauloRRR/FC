@@ -25,6 +25,7 @@ class BackGroundSoundNode {
     
     func play(){
         backgroundPlayer.play()
+        print("TOCANDO AUDIO")
     }
    
 }

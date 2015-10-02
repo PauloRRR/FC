@@ -19,6 +19,7 @@ class GameManager {
     var enemiesCreated = false
     var isBreathing = false
     var storyP = [StorySoundNode]()
+    var directionNarration = [BackGroundSoundNode]()
     var gameState = GameState.sharedInstance
     var i = 0
     var shot = BackGroundSoundNode(soundName: "gunshot", format: "mp3")
@@ -44,6 +45,12 @@ class GameManager {
         self.audioArray.removeAll()
     }
     
+    func playDirectionNarration(sndName: String, frmt: String){
+        self.directionNarration.removeAll()
+        let audio = BackGroundSoundNode(soundName: sndName, format: frmt)
+        self.directionNarration.append(audio)
+        self.directionNarration[0].play()
+    }
     
      func playBGSound(sndName:String, frmt:String){
         let audio = BackGround3dAudio(soundName: sndName, format: frmt)
@@ -90,6 +97,7 @@ class GameManager {
     
     
     func playStorySound(){
+        
         if (self.i < self.storyP.count){
             self.storyP[self.i].play()
             self.storyP[self.i].played = true
@@ -105,7 +113,7 @@ class GameManager {
     }
     
     class func addSoundArray(sndName:String, frmt:String, x:Float, y:Float) {
-        self.sharedInstance.audioArray.removeAll(keepCapacity: false)
+        self.sharedInstance.audioArray.removeAll()
         let audio = AudioNode(soundName: sndName,format: frmt)
         audio.setVolume(5.0)
         self.sharedInstance.audioArray.append(audio)
@@ -116,6 +124,7 @@ class GameManager {
     class func addRoomSoundArray(sndName:String, frmt:String, x:Float, y:Float) {
         self.sharedInstance.audioRoomArray.removeAll(keepCapacity: false)
         let audio = AudioNode(soundName: sndName,format: frmt)
+        audio.player.volume = 5.0
         self.sharedInstance.audioRoomArray.append(audio)
         self.sharedInstance.audioRoomArray[0].player3DPosition(x, y: y, z: 0.0)
         self.sharedInstance.audioRoomArray[0].playOnce()

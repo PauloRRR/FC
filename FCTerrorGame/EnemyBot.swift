@@ -31,7 +31,7 @@ class EnemyBot: NSObject {
         //self.adjacentRooms = map[self.enemyPosition]
         self.lastRoom = self.enemyPosition
         print("\(adjacentRooms)")
-        self.audio.setVolume(3.0)
+        self.audio.setVolume(2.0)
         self.audio.player3DPosition(coord.coordX(self.enemyPosition),y: coord.coordY(self.enemyPosition), z: 0)
         self.audio.playLoop()
 

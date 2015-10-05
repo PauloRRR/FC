@@ -25,11 +25,13 @@ class GameManager {
     var shot = BackGroundSoundNode(soundName: "gunshot", format: "mp3")
     var moan = BackGroundSoundNode(soundName: "zombihoar", format: "wav")
     var firstPlay = Bool()
-    
+    var heartBeat = HeartBeatSoundControl(soundName: "heartbeat", format: "mp3")
     // METHODS
     private init() {
         firstPlay = true
         self.initStoryArray()
+        
+        
     }
     
     func eraseManager(){
@@ -56,6 +58,7 @@ class GameManager {
         let audio = BackGround3dAudio(soundName: sndName, format: frmt)
         self.backgroundPlayer.append(audio)
         self.backgroundPlayer[0].playLoop()
+        self.heartBeat.playLoop()
         
     }
     
@@ -81,6 +84,7 @@ class GameManager {
     
     func stopBGSound(){
         self.backgroundPlayer[0].stopPlayer()
+        self.heartBeat.stopPlayer()
     }
     
     func initStoryArray(){
@@ -156,6 +160,7 @@ class GameManager {
     
     func updateEnemiesListenerPosition(){
         let coord = AudioCoordinate()
+        var nearCount = 0
         coord.pinpointListener(playerPosition)
         for (var i = 0; i < self.enemies.count; i++){
             coord.pinpointPlayer(self.enemies[i].enemyPosition)
@@ -164,18 +169,22 @@ class GameManager {
 
             
             if(coord.distance() <= 15.0){
+                nearCount++
+                
+                
                 if (coord.distance() <= 0.0 && !gameState.playerHidden) {
                     print("🍺 DEATH 🍺");
                     NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: nil);
                 }
-                if(!self.isBreathing){
-                   self.enemies[i].playBreath()
-                    self.isBreathing = true
-                }else{
-                    self.isBreathing = false
-                }
-            } else {
-                self.enemies[i].stopBreath()
+                
+            }
+            if(nearCount > 0){
+                self.heartBeat.speedBeat()
+                print(self.heartBeat.player.rate)
+            }
+            else {
+                self.heartBeat.normalBeat()
+                print(self.heartBeat.player.rate)
             }
             
         }

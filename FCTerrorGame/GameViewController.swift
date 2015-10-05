@@ -33,8 +33,8 @@ class GameViewController: UIViewController {
         if let scene = StartMenuScene.unarchiveFromFile("GameScene") as? StartMenuScene {
             // Configure the view.
             let skView = self.view as! SKView
-            skView.showsFPS = true
-            skView.showsNodeCount = true
+            //skView.showsFPS = true
+            //skView.showsNodeCount = true
             
             addParallaxToView(skView)
             
@@ -51,7 +51,7 @@ class GameViewController: UIViewController {
     }
 
     func addParallaxToView(vw: UIView) {
-        let amount = 20
+        let amount = 25
         
         let horizontal = UIInterpolatingMotionEffect(keyPath: "center.x", type: .TiltAlongHorizontalAxis)
         horizontal.minimumRelativeValue = -amount

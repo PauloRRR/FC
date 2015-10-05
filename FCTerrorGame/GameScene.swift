@@ -15,7 +15,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var enemyControl = EnemyControl()
     var manager = GameManager.sharedInstance
     var playerHidden = false;
-    
+    var hasGun = false
     override func didMoveToView(view: SKView) {
         //self.manager.setPlayerPosition(0)
         manager.firstPlay = false
@@ -32,13 +32,15 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         
         let alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: Selector("tapping:"))
+        
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: Selector("presentGameOver"),
             name: "gameOver",
             object: nil)
         
         //GameManager.clearRoomSoundArray(); // Room sounds now stop playing on change room
-        manager.stopStorySound(); //StorySound now stop playing on change room
+       
         
         swipeLeft.direction  = .Left
         swipeUp.direction    = .Up
@@ -47,6 +49,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         longPress.minimumPressDuration = 1.0;
         alternateTap.numberOfTapsRequired = 5;
         alternateTap.delegate = self
+        tapGesture.delegate = self
         
         view.addGestureRecognizer(alternateTap)
         view.addGestureRecognizer(longPress)
@@ -54,6 +57,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         view.addGestureRecognizer(swipeUp)
         view.addGestureRecognizer(swipeRight)
         view.addGestureRecognizer(swipeDown)
+        view.addGestureRecognizer(tapGesture)
         loadRoom()
         
         manager.playBGSound("storm", frmt: "mp3")
@@ -92,6 +96,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     // MARK: Level Functions
     
     func loadRoom () {
+        manager.stopStorySound(); //StorySound now stop playing on change room
+        background?.removeFromParent();
         var tex = SKTexture(imageNamed: level[gameState.room]["background"].stringValue + "-" + gameState.rotation.description)
         print(tex.description);
 
@@ -145,7 +151,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     }
     
     func didTap(gesture: UIAlternateTapGestureRecognizer) {
-        doAction("tap")
     }
     
     func longPress(gesture: UILongPressGestureRecognizer) {
@@ -159,6 +164,11 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     func alternateTapping(gesture: UITapGestureRecognizer) {
         //doAction("alternateTap");
     
+    }
+    
+    func tapping(gesture: UITapGestureRecognizer){
+        doAction("tap")
+        print("tap")
     }
     
     
@@ -179,6 +189,12 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             case "swipeDown":
                 newAction = gameState.actions[(3+gameState.rotation)%4]
                 break;
+            case "tap":
+                if(hasGun){
+                    manager.gunshot()
+                }
+                break;
+
             case "longPress":
                 NSNotificationCenter.defaultCenter().postNotificationName("muffle", object: self)
                 if let hideable = level[gameState.room]["hide"].bool {
@@ -356,7 +372,11 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                     }
                     break;
             }
-            GameManager.addRoomSoundArray(soundName, frmt: "mp3", x: 0.0, y: 0.0)
+//            print("\(soundName)")
+//            let soundPlay = BackGroundSoundNode(soundName: soundName, format: "mp3")
+//            soundPlay.play()
+            manager.playDirectionNarration(soundName, frmt: "mp3")
+            //GameManager.addRoomSoundArray(soundName, frmt: "mp3", x: 0.0, y: 0.0)
         }
     }
     
@@ -429,6 +449,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             self.manager.setPlayerPosition(gameState.room)
             self.manager.updateEnemiesListenerPosition()
             gameState.updateState()
+            /*
             let transition = SKTransition.fadeWithDuration(0)
             let scene = GameScene(size: self.size)
             if let recognizers = self.view?.gestureRecognizers {
@@ -438,6 +459,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             }
             
             self.view?.presentScene(scene, transition: transition)
+            */
+            loadRoom()
         }
     }
     

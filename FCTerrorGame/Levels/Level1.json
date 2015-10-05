@@ -709,7 +709,9 @@
             "swipeUp": {
                 "action": "gotoRoom",
                 "room": 39
+
             }
+
         }
 
     },
@@ -717,10 +719,33 @@
     {
         "id": 39,
         "background": "room39",
+        "playOnEnter": [
+
+                {
+                        "sound": "narrativa-salaPertences_PT-BR",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                  }
+
+        ],
         "events": {
             "swipeDown": {
                 "action": "gotoRoom",
                 "room": 38
+            },
+            "swipeRight": {
+                "action": "pickItem",
+                "item": "tombKey",
+                "prerequisite": "lockerKey",
+                "failPrerequisite":[
+                    { 
+                        "sound": "lockedLockers",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                    }
+                ],
             }
         }
 
@@ -2375,11 +2400,34 @@
 
     {
         "id": 135,
-        "background": "asylumRoom2",
+        "background": "room135",
+        "playOnEnter": [
+
+                {
+                        "sound": "narrativa-escritorioAdm001_PT-BR",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                  }
+
+        ],
         "events": {
             "swipeRight":{
                 "action": "gotoRoom",
                 "room": 134
+            },
+            "swipeDown":{
+                "action": "pickItem",
+                "item": "lockerKey",
+                "prerequisite": "watchedLockersRoom",
+                "failPrerequisite":[
+                    { 
+                        "sound": "nothingInteresting",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                    }
+                ],
             }
         }
 

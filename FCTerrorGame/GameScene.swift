@@ -16,7 +16,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var manager = GameManager.sharedInstance
     var playerHidden = false;
     var hasGun = false
-    var watched39 = false
     override func didMoveToView(view: SKView) {
         //self.manager.setPlayerPosition(0)
         manager.firstPlay = false
@@ -449,11 +448,21 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             
             gameState.room = action["room"].intValue
             print("\(gameState.room)")
-            if (gameState.room == 39 && !watched39){
+            if (gameState.room == 39 && !manager.watched39){
                 gameState.items.append("watchedLockersRoom")
-                print("OLHEI A SALA 39")
-                watched39 = true
+                manager.watched39 = true
                 gameState.updateState()
+            }
+            if (gameState.room == 128 && !manager.watched128){
+                gameState.items.append("foundGuard")
+                manager.watched128 = true
+                gameState.updateState()
+            }
+            if (gameState.room == 129){
+                if (gameState.items.count >= 5){
+                    gameState.items.append("allItems")
+                    gameState.updateState()
+                }
             }
             self.manager.setPlayerPosition(gameState.room)
             self.manager.updateEnemiesListenerPosition()

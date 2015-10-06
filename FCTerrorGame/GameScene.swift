@@ -446,7 +446,25 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             default:
                 break;
             }
+            
             gameState.room = action["room"].intValue
+            print("\(gameState.room)")
+            if (gameState.room == 39 && !manager.watched39){
+                gameState.items.append("watchedLockersRoom")
+                manager.watched39 = true
+                gameState.updateState()
+            }
+            if (gameState.room == 128 && !manager.watched128){
+                gameState.items.append("foundGuard")
+                manager.watched128 = true
+                gameState.updateState()
+            }
+            if (gameState.room == 129){
+                if (gameState.items.count >= 5){
+                    gameState.items.append("allItems")
+                    gameState.updateState()
+                }
+            }
             self.manager.setPlayerPosition(gameState.room)
             self.manager.updateEnemiesListenerPosition()
             gameState.updateState()

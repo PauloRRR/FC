@@ -53,6 +53,11 @@
 		D41C34A61BBDB2AD00200105 /* sim_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349F1BBDB2AD00200105 /* sim_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41C34A71BBDB2AD00200105 /* tutorial_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34A01BBDB2AD00200105 /* tutorial_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41C34A91BBF080B00200105 /* hallway-esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34A81BBF080B00200105 /* hallway-esquerda_frente_01.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D41C34AB1BC2DE0F00200105 /* lockedLockers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AA1BC2DE0F00200105 /* lockedLockers.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D41C34AD1BC2DE6800200105 /* narrativa-salaPertences_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AC1BC2DE6800200105 /* narrativa-salaPertences_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D41C34AF1BC2E1C900200105 /* nothingInteresting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AE1BC2E1C900200105 /* nothingInteresting.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D41C34B11BC2E23000200105 /* narrativa-escritorioAdm001_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34B01BC2E23000200105 /* narrativa-escritorioAdm001_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D41C34B31BC2FC6900200105 /* nothingInteresting2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34B21BC2FC6900200105 /* nothingInteresting2.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D42953CC1BAB2F5F00ABB43E /* MadnessDazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42953CB1BAB2F5F00ABB43E /* MadnessDazeTests.swift */; };
 		D4491CD01B8F9BAE009FE55B /* scream3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4491CCF1B8F9BAE009FE55B /* scream3.mp3 */; };
 		D4491CD21B8F9C41009FE55B /* scream2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4491CD11B8F9C41009FE55B /* scream2.mp3 */; };
@@ -182,6 +187,11 @@
 		D41C349F1BBDB2AD00200105 /* sim_PT-BR_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sim_PT-BR_01.mp3"; sourceTree = "<group>"; };
 		D41C34A01BBDB2AD00200105 /* tutorial_PT-BR_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "tutorial_PT-BR_01.mp3"; sourceTree = "<group>"; };
 		D41C34A81BBF080B00200105 /* hallway-esquerda_frente_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hallway-esquerda_frente_01.mp3"; sourceTree = "<group>"; };
+		D41C34AA1BC2DE0F00200105 /* lockedLockers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lockedLockers.mp3; sourceTree = "<group>"; };
+		D41C34AC1BC2DE6800200105 /* narrativa-salaPertences_PT-BR.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "narrativa-salaPertences_PT-BR.mp3"; sourceTree = "<group>"; };
+		D41C34AE1BC2E1C900200105 /* nothingInteresting.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nothingInteresting.mp3; sourceTree = "<group>"; };
+		D41C34B01BC2E23000200105 /* narrativa-escritorioAdm001_PT-BR.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "narrativa-escritorioAdm001_PT-BR.mp3"; sourceTree = "<group>"; };
+		D41C34B21BC2FC6900200105 /* nothingInteresting2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = nothingInteresting2.mp3; sourceTree = "<group>"; };
 		D42953C91BAB2F5F00ABB43E /* MadnessDazeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MadnessDazeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42953CB1BAB2F5F00ABB43E /* MadnessDazeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadnessDazeTests.swift; sourceTree = "<group>"; };
 		D42953CD1BAB2F5F00ABB43E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -296,6 +306,11 @@
 				D4491CD31B8FA1CA009FE55B /* scream4.wav */,
 				D4491CD41B8FA1CA009FE55B /* scream5.wav */,
 				30CC7B7C1BBDA46700782856 /* woosh.wav */,
+				D41C34AA1BC2DE0F00200105 /* lockedLockers.mp3 */,
+				D41C34AE1BC2E1C900200105 /* nothingInteresting.mp3 */,
+				D41C34B21BC2FC6900200105 /* nothingInteresting2.mp3 */,
+				D41C34B01BC2E23000200105 /* narrativa-escritorioAdm001_PT-BR.mp3 */,
+				D41C34AC1BC2DE6800200105 /* narrativa-salaPertences_PT-BR.mp3 */,
 			);
 			name = AudioLibrary;
 			sourceTree = "<group>";
@@ -647,6 +662,8 @@
 				D471FDC11B6FD3B000D80921 /* GameScene.sks in Resources */,
 				30CC7B7F1BBDA78E00782856 /* zombi.mp3 in Resources */,
 				B985E0761B75300200CBAC43 /* Level1.json in Resources */,
+				D41C34AD1BC2DE6800200105 /* narrativa-salaPertences_PT-BR.mp3 in Resources */,
+				D41C34AB1BC2DE0F00200105 /* lockedLockers.mp3 in Resources */,
 				D41C34911BBDAF1400200105 /* hallway-finalCorredor_voltar_01.mp3 in Resources */,
 				30F181971B96040200C2C2C5 /* roomMapping.json in Resources */,
 				30CC7B811BBDAFD800782856 /* gunshot.mp3 in Resources */,
@@ -656,6 +673,7 @@
 				D41C348D1BBDAF1400200105 /* hallway-direita_esquerda_01.mp3 in Resources */,
 				D41C34A61BBDB2AD00200105 /* sim_PT-BR_01.mp3 in Resources */,
 				D4A3C9BA1BBC5D1D00426CCE /* 011_hallway-guardExitToxin_PT-BR_01.mp3 in Resources */,
+				D41C34B31BC2FC6900200105 /* nothingInteresting2.mp3 in Resources */,
 				30FA96491BC2EEED00D80032 /* playerSteps2.mp3 in Resources */,
 				305224091B8CD44800AD7A98 /* footsteps.mp3 in Resources */,
 				D41C34A91BBF080B00200105 /* hallway-esquerda_frente_01.mp3 in Resources */,
@@ -665,8 +683,10 @@
 				D41C34A41BBDB2AD00200105 /* nao_PT-BR_01.mp3 in Resources */,
 				D41C34A11BBDB2AD00200105 /* continuar_PT-BR_01.mp3 in Resources */,
 				D41C34A21BBDB2AD00200105 /* iniciar_PT-BR_01.mp3 in Resources */,
+				D41C34B11BC2E23000200105 /* narrativa-escritorioAdm001_PT-BR.mp3 in Resources */,
 				D4491CD21B8F9C41009FE55B /* scream2.mp3 in Resources */,
 				D4491CD01B8F9BAE009FE55B /* scream3.mp3 in Resources */,
+				D41C34AF1BC2E1C900200105 /* nothingInteresting.mp3 in Resources */,
 				D41C348E1BBDAF1400200105 /* hallway-direita_esquerda_frente_01.mp3 in Resources */,
 				D41C34991BBDB23100200105 /* voltarMenu_PT-BR_01.mp3 in Resources */,
 				D41C34A51BBDB2AD00200105 /* novoJogoConfirma_PT-BR_01.mp3 in Resources */,

@@ -25,7 +25,10 @@ class GameManager {
     var shot = BackGroundSoundNode(soundName: "gunshot", format: "mp3")
     var moan = BackGroundSoundNode(soundName: "zombihoar", format: "wav")
     var firstPlay = Bool()
+    var watched39 = false
+    var watched128 = false
     var heartBeat = HeartBeatSoundControl(soundName: "heartbeat", format: "mp3")
+    
     // METHODS
     private init() {
         firstPlay = true
@@ -35,6 +38,8 @@ class GameManager {
     }
     
     func eraseManager(){
+        self.watched39 = false
+        self.watched128 = false
         self.i = 0
         self.playerPosition = 0
         self.storyP.removeAll()

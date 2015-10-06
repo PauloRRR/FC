@@ -1733,16 +1733,6 @@
     {
         "id": 97,
         "background": "room97",
-        "playOnEnter": [
-
-                {
-                        "sound": "scream5",
-                        "format": "wav",
-                        "x": -10.0,
-                        "y": 0.0
-                  }
-
-        ],
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",

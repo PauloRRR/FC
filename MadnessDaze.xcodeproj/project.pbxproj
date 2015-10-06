@@ -26,6 +26,9 @@
 		30FA88FA1B8D049200FE4700 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA88F91B8D049200FE4700 /* background.mp3 */; };
 		30FA88FC1B8E1C2700FE4700 /* AudioSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA88FB1B8E1C2700FE4700 /* AudioSingleton.swift */; };
 		30FA89001B90C9EE00FE4700 /* breathing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA88FF1B90C9EE00FE4700 /* breathing.mp3 */; };
+		30FA96451BC2DCA000D80032 /* heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA96441BC2DCA000D80032 /* heartbeat.mp3 */; settings = {ASSET_TAGS = (); }; };
+		30FA96471BC2E83500D80032 /* HeartBeatSoundControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA96461BC2E83500D80032 /* HeartBeatSoundControl.swift */; settings = {ASSET_TAGS = (); }; };
+		30FA96491BC2EEED00D80032 /* playerSteps2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA96481BC2EEED00D80032 /* playerSteps2.mp3 */; settings = {ASSET_TAGS = (); }; };
 		B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B36A91B71181F00B1BE78 /* GameState.swift */; };
 		B91B8A781B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */; };
 		B974A8DD1B98B9BC004DFE75 /* StorySoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B974A8DC1B98B9BC004DFE75 /* StorySoundNode.swift */; };
@@ -157,6 +160,9 @@
 		30FA88F91B8D049200FE4700 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		30FA88FB1B8E1C2700FE4700 /* AudioSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioSingleton.swift; sourceTree = "<group>"; };
 		30FA88FF1B90C9EE00FE4700 /* breathing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = breathing.mp3; path = ../breathing.mp3; sourceTree = "<group>"; };
+		30FA96441BC2DCA000D80032 /* heartbeat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartbeat.mp3; sourceTree = "<group>"; };
+		30FA96461BC2E83500D80032 /* HeartBeatSoundControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartBeatSoundControl.swift; sourceTree = "<group>"; };
+		30FA96481BC2EEED00D80032 /* playerSteps2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playerSteps2.mp3; sourceTree = "<group>"; };
 		B91B36A91B71181F00B1BE78 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlternateTapGestureRecognizer.swift; path = Subclass/UIAlternateTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		B974A8DC1B98B9BC004DFE75 /* StorySoundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySoundNode.swift; sourceTree = "<group>"; };
@@ -261,6 +267,7 @@
 				30D6A01C1B976A3700A025D4 /* AudioCoordinate.swift */,
 				B974A8DC1B98B9BC004DFE75 /* StorySoundNode.swift */,
 				30CC7B7A1BBC53B500782856 /* BackGround3dAudio.swift */,
+				30FA96461BC2E83500D80032 /* HeartBeatSoundControl.swift */,
 			);
 			name = AudioClasses;
 			sourceTree = "<group>";
@@ -288,12 +295,14 @@
 				305224081B8CD44800AD7A98 /* footsteps.mp3 */,
 				306F7C801B7D1BF500E8501A /* locked.wav */,
 				30FA88FF1B90C9EE00FE4700 /* breathing.mp3 */,
+				30FA96481BC2EEED00D80032 /* playerSteps2.mp3 */,
 				D4A0D3321B8F6F6E0004BB09 /* playerSteps.mp3 */,
 				D4491CD11B8F9C41009FE55B /* scream2.mp3 */,
 				D4491CCF1B8F9BAE009FE55B /* scream3.mp3 */,
 				30CC7B821BBDB77E00782856 /* zombihoar.wav */,
 				30CC7B7E1BBDA78E00782856 /* zombi.mp3 */,
 				30CC7B801BBDAFD800782856 /* gunshot.mp3 */,
+				30FA96441BC2DCA000D80032 /* heartbeat.mp3 */,
 				D4491CD31B8FA1CA009FE55B /* scream4.wav */,
 				D4491CD41B8FA1CA009FE55B /* scream5.wav */,
 				30CC7B7C1BBDA46700782856 /* woosh.wav */,
@@ -582,15 +591,15 @@
 					};
 					D471FDB81B6FD3B000D80921 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = Z83BJJ28JR;
+						DevelopmentTeam = 7UUT6QRU26;
 					};
 					E3E2B7C21BBB06A2002B587F = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = Z83BJJ28JR;
+						DevelopmentTeam = 7UUT6QRU26;
 					};
 					E3E2B7CE1BBB06A2002B587F = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = Z83BJJ28JR;
+						DevelopmentTeam = 7UUT6QRU26;
 					};
 				};
 			};
@@ -646,6 +655,7 @@
 				D41C34A31BBDB2AD00200105 /* menu_PT-BR_01.mp3 in Resources */,
 				D41C34931BBDAF1400200105 /* hallway-esquerda_01.mp3 in Resources */,
 				305224071B863F2400AD7A98 /* Enemy.json in Resources */,
+				30FA96451BC2DCA000D80032 /* heartbeat.mp3 in Resources */,
 				30CC7B7D1BBDA46700782856 /* woosh.wav in Resources */,
 				D469BFA11BB45E5800EF1D95 /* tutorialFull_PT-BR_01.mp3 in Resources */,
 				D49F5E4C1B9F5CE70023174A /* story1.mp3 in Resources */,
@@ -665,6 +675,7 @@
 				D41C34A61BBDB2AD00200105 /* sim_PT-BR_01.mp3 in Resources */,
 				D4A3C9BA1BBC5D1D00426CCE /* 011_hallway-guardExitToxin_PT-BR_01.mp3 in Resources */,
 				D41C34B31BC2FC6900200105 /* nothingInteresting2.mp3 in Resources */,
+				30FA96491BC2EEED00D80032 /* playerSteps2.mp3 in Resources */,
 				305224091B8CD44800AD7A98 /* footsteps.mp3 in Resources */,
 				D41C34A91BBF080B00200105 /* hallway-esquerda_frente_01.mp3 in Resources */,
 				D41C34981BBDB23100200105 /* tentarNovamente_PT-BR_01.mp3 in Resources */,
@@ -731,6 +742,7 @@
 				B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */,
 				306F7C731B7118A100E8501A /* AudioNode.swift in Sources */,
 				D471FDBF1B6FD3B000D80921 /* AppDelegate.swift in Sources */,
+				30FA96471BC2E83500D80032 /* HeartBeatSoundControl.swift in Sources */,
 				B91B8A781B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -935,12 +947,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = Madness_s_Daze_Watch_App_Extension;
 				INFOPLIST_FILE = "Madness's Daze Watch App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -953,11 +967,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = Madness_s_Daze_Watch_App_Extension;
 				INFOPLIST_FILE = "Madness's Daze Watch App/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -969,11 +985,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = "Madness's Daze Watch App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -985,10 +1003,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Madness's Daze Watch App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;

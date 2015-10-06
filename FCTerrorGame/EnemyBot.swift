@@ -17,7 +17,7 @@ class EnemyBot: NSObject {
     var map = [Int]()
     var arrayPosition: Int
     var manager = GameManager.sharedInstance
-    var audio = AudioNode(soundName: "zombi", format: "mp3")
+    var audio = AudioNode(soundName: "footsteps", format: "mp3")
     var breath =  BackGroundSoundNode(soundName: "breathing", format: "mp3")
     var isBreathing = false
     var going = true
@@ -31,7 +31,7 @@ class EnemyBot: NSObject {
         //self.adjacentRooms = map[self.enemyPosition]
         self.lastRoom = self.enemyPosition
         print("\(adjacentRooms)")
-        self.audio.setVolume(3.0)
+        self.audio.setVolume(2.0)
         self.audio.player3DPosition(coord.coordX(self.enemyPosition),y: coord.coordY(self.enemyPosition), z: 0)
         self.audio.playLoop()
 

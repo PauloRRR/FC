@@ -37,11 +37,13 @@ class AudioCoordinate{
     func pinpointPlayer(position: Int){
         playerX = self.coordX(position)
         playerY = self.coordY(position)
+        roomsJson = JSON.nullJSON;
     }
     
     func pinpointListener(position: Int){
         listenerX = self.coordX(position)
         listenerY = self.coordY(position)
+        roomsJson = JSON.nullJSON;
     }
     
     func distance()->Float{

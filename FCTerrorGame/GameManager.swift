@@ -172,7 +172,7 @@ class GameManager {
                 nearCount++
                 
                 
-                if (coord.distance() <= 0.0 && !gameState.playerHidden) {
+                if (coord.distance() <= 0.0 && (!gameState.playerHidden && !gameState.godMode) ) {
                     print("🍺 DEATH 🍺");
                     NSNotificationCenter.defaultCenter().postNotificationName("gameOver", object: nil);
                 }

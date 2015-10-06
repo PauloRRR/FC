@@ -97,6 +97,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     func loadRoom () {
         manager.stopStorySound(); //StorySound now stop playing on change room
+        background?.texture = nil;
         background?.removeFromParent();
         var tex = SKTexture(imageNamed: level[gameState.room]["background"].stringValue + "-" + gameState.rotation.description)
         print(tex.description);

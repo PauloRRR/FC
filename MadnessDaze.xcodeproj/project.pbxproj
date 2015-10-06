@@ -576,15 +576,14 @@
 					};
 					D471FDB81B6FD3B000D80921 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 7UUT6QRU26;
 					};
 					E3E2B7C21BBB06A2002B587F = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 7UUT6QRU26;
+						DevelopmentTeam = M7SM6673Q8;
 					};
 					E3E2B7CE1BBB06A2002B587F = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = 7UUT6QRU26;
+						DevelopmentTeam = M7SM6673Q8;
 					};
 				};
 			};

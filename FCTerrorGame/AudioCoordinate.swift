@@ -10,40 +10,50 @@ import UIKit
 
 class AudioCoordinate{
     
-    var roomsJson: JSON!
+    
+    
+    static var roomsJson: JSON?
     
     var playerX = Float()
     var playerY =  Float()
     var listenerX = Float()
     var listenerY = Float()
     
-    func coordX(position: Int)-> Float{
-        
-        if let filePath = NSBundle.mainBundle().pathForResource("roomMapping", ofType: "json") {
-            self.roomsJson =  JSON(data: NSData(contentsOfFile: filePath)!)
+    init () {
+        if AudioCoordinate.roomsJson == nil {
+            if let filePath = NSBundle.mainBundle().pathForResource("roomMapping", ofType: "json") {
+                AudioCoordinate.roomsJson =  JSON(data: NSData(contentsOfFile: filePath)!)
+            }
         }
-        return self.roomsJson["rooms"][position]["x"].floatValue * 10.0
+
+    
+    }
+    
+    func coordX(position: Int)-> Float{
+        var val: Float = 0.0;
+        if let json = AudioCoordinate.roomsJson {
+            val = json["rooms"][position]["x"].floatValue * 10.0
+        }
+        return val
     }
     
     
     func coordY(position: Int)-> Float{
-        
-        if let filePath = NSBundle.mainBundle().pathForResource("roomMapping", ofType: "json") {
-            self.roomsJson =  JSON(data: NSData(contentsOfFile: filePath)!)
+        var val: Float = 0.0;
+        if let json = AudioCoordinate.roomsJson {
+            val = json["rooms"][position]["y"].floatValue * 10.0
         }
-        return self.roomsJson["rooms"][position]["y"].floatValue * 10.0
+        return val
     }
     
     func pinpointPlayer(position: Int){
         playerX = self.coordX(position)
         playerY = self.coordY(position)
-        roomsJson = JSON.nullJSON;
     }
     
     func pinpointListener(position: Int){
         listenerX = self.coordX(position)
         listenerY = self.coordY(position)
-        roomsJson = JSON.nullJSON;
     }
     
     func distance()->Float{

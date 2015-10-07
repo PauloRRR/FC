@@ -594,11 +594,11 @@
 					};
 					E3E2B7C21BBB06A2002B587F = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = M7SM6673Q8;
+						DevelopmentTeam = 6W5C2N8Y53;
 					};
 					E3E2B7CE1BBB06A2002B587F = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = M7SM6673Q8;
+						DevelopmentTeam = 6W5C2N8Y53;
 					};
 				};
 			};

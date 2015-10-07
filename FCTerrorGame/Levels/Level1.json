@@ -2289,7 +2289,7 @@
                 "prerequisite" : "needle",
                 "failPrerequisite": [
                     {
-                        "sound": "011_hallway-guardExitToxin_PT-BR_01",
+                        "sound": "narrativa_naoPossoPassar_PT-BR_01",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2332,7 +2332,7 @@
                 "prerequisite" : "allItems",
                 "failPrerequisite": [
                     {
-                        "sound": "011_hallway-guardExitToxin_PT-BR_01",
+                        "sound": "narrativa_naoPossoSair_PT-BR_01",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2419,7 +2419,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "narrativa-escritorioAdm001_PT-BR",
+                        "sound": "narrativa-escritorioAdm_PT-BR_01",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0

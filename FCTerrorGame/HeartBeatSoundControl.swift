@@ -60,7 +60,7 @@ class HeartBeatSoundControl: NSObject {
     func playLoop(){
         
         self.player.scheduleBuffer(audioFileBuffer, atTime: nil, options:.Loops, completionHandler: nil)
-        self.player.volume = 2.0
+        self.player.volume = 0.7
         self.player.rate = 0.8
         self.player.play()
     }

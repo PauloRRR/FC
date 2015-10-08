@@ -259,6 +259,11 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                         //left right
                          soundName = "hallway-direita_esquerda_01"
                     }
+                    if(gameState.rotation == 2 && gameState.room == 87){
+                        soundName = "narrativa-salaRecreacaoEsquerda_PT-BR"
+                    }else if(gameState.rotation == 0 && gameState.room == 87){
+                        soundName = "narrativa-salaRecreacaoDireita_PT-BR"
+                    }
                     break;
                 case 1:
                     //playSound front or Left
@@ -275,6 +280,15 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                         //left right front
                          soundName = "hallway-direita_esquerda_frente_01"
                     }
+                    if(gameState.rotation == 0 && gameState.room == 51){
+                        soundName = "narrativa-salaRecreacaoEsquerda_PT-BR"
+                    }else if(gameState.rotation == 2 && gameState.room == 51){
+                            soundName = "narrativa-salaRecreacaoDireita_PT-BR"
+                        }else if (gameState.rotation == 0 && gameState.room == 134){
+                                soundName = "narrativa-escritorioAdmEsquerda_PT-BR"
+                            }else if (gameState.rotation == 2 && gameState.room == 134){
+                                    soundName = "narrativa-escritorioAdmDireita_PT-BR"
+                                }
                     break;
                 case 2:
                     //playSound left or right
@@ -306,6 +320,11 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                     }else {
                         //right front
                          soundName = "hallway-direita_frente_01"
+                    }
+                    if(gameState.rotation == 1 && gameState.room == 38){
+                        soundName = "narrativa-salaPertencesEsquerda_PT-BR"
+                    }else if(gameState.rotation == 3 && gameState.room == 38){
+                        soundName = "narrativa-salaPertencesDireita_PT-BR"
                     }
                     break;
                 case 4:
@@ -339,6 +358,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                         //left front
                          soundName = "hallway-esquerda_frente_01"
                     }
+                    if(gameState.rotation == 1 && gameState.room == 154){
+                        soundName = "narrativa-salaEnfermariaDireita_PT-BR"
+                    }
                     break;
                 case 6:
                     //right front without back
@@ -355,8 +377,12 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                         //right
                          soundName = "hallway-direita_01"
                     }
+                    if(gameState.rotation == 2 && gameState.room == 91){
+                        soundName = "narrativa-banheiroMasculinoEsquerda_PT-BR"
+                    }
+                    
                     break;
-                default:
+                case 7:
                     //front left without back
                     if(gameState.rotation == 0){
                         //sound front left
@@ -371,6 +397,17 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                         //front right
                          soundName = "hallway-direita_frente_01"
                     }
+                    if(gameState.rotation == 2 && gameState.room == 55){
+                        soundName = "narrativa-banheiroFemininoDireita_PT-BR"
+                    }
+                    break;
+                case 8:
+                    if(gameState.rotation == 3 && gameState.room == 0){
+                        soundName = "narrativa-deVoltaQuarto_PT-BR"
+                    }
+                break;
+                default:
+                    
                     break;
             }
 //            print("\(soundName)")

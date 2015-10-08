@@ -29,7 +29,8 @@ class StartMenuScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         
-        self.startScreen()
+        //self.startScreen()
+        self.startMenuOptions()
         
     }
     

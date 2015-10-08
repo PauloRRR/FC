@@ -7,27 +7,9 @@
         "listener" : "",
         "hide": false,
         "events": {
-            "swipeLeft": {
-                "action": "pickItem",
-                "item": "someKey",
-                "hasItem": [
-
-
-                ]
-            },
             "swipeRight": {
-
                 "action": "gotoRoom",
                 "room": 1,
-                "failPrerequisite": [
-                    {
-                        "sound": "locked",
-                        "format": "wav",
-                        "x": 0.0,
-                        "y": 0.0
-                    }
-                ]
-
             }
         }
     },
@@ -3101,7 +3083,7 @@
 
     {
         "id": 174,
-        "background": "asylumCorridor3",
+        "background": "room174",
     }
 
 ]

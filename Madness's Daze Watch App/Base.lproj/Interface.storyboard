@@ -10,18 +10,15 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Madness_s_Daze_Watch_App" customModuleProvider="target">
                     <items>
-                        <imageView alignment="center" image="roundedIcon2" id="BMf-j9-qAy"/>
-                        <label alignment="center" text="Jogue agora!" textAlignment="center" id="BrS-bl-V5w">
+                        <imageView width="88" height="88" alignment="center" image="roundedIcon2" id="BMf-j9-qAy"/>
+                        <label alignment="center" text="Jogue agora e desvende as loucuras de Madness's Daze!" textAlignment="center" numberOfLines="4" id="BrS-bl-V5w">
                             <color key="textColor" red="0.62745098039215685" green="0.86274509803921573" blue="0.80392156862745101" alpha="1" colorSpace="calibratedRGB"/>
                             <fontDescription key="font" style="UICTFontTextStyleBody"/>
-                        </label>
-                        <label height="19.5" alignment="center" text="Madness's Daze" id="8hT-MJ-Qgh">
-                            <color key="textColor" red="0.62745098040000002" green="0.86274509799999999" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                         </label>
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="346"/>
+            <point key="canvasLocation" x="220" y="354"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

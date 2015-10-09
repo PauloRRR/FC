@@ -29,9 +29,40 @@ class StartMenuScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         
+        //self.startScreen()
         self.startMenuOptions()
         
     }
+    
+    func startScreen(){
+        
+        
+        self.background = SKSpriteNode(imageNamed: "splashScreen")
+        self.background.position = CGPoint(x: frame.midX, y: frame.midY)
+        self.background.size = self.frame.size
+        self.background.zPosition = 0
+        
+        addChild(self.background)
+        
+        let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("tutorialFull_PT-BR_01", ofType: "mp3")!)
+        
+        self.musicPlayer = try! AVAudioPlayer(contentsOfURL: url)
+        
+        self.musicPlayer.prepareToPlay()
+        self.musicPlayer.volume = 0.5
+        self.musicPlayer.play()
+        while(self.musicPlayer.playing){}
+        
+            if (!self.musicPlayer.playing){
+                    self.background.removeFromParent()
+                    self.startMenuOptions()
+            }
+        
+        
+        
+    }
+    
+    
     
     func startMenuOptions(){
         

@@ -15,8 +15,8 @@ class GameState {
     var room = 0
     var rotation = 1
     var json = JSON.nullJSON
-    var debug = true;
-    var godMode = true;
+    var debug = false;
+    var godMode = false;
     
     var playerHidden = false;
     

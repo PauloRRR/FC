@@ -36,7 +36,10 @@ class GameViewController: UIViewController {
             //skView.showsFPS = true
             //skView.showsNodeCount = true
             
-            addParallaxToView(skView)
+            
+            #if os(iOS)
+                addParallaxToView(skView)
+            #endif
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
@@ -65,25 +68,10 @@ class GameViewController: UIViewController {
         group.motionEffects = [horizontal, vertical]
         vw.addMotionEffect(group)
     }
-    
-    override func shouldAutorotate() -> Bool {
-        return true
-    }
-
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return UIInterfaceOrientationMask.AllButUpsideDown
-        } else {
-            return UIInterfaceOrientationMask.All
-        }
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
 
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
 }

@@ -20,12 +20,18 @@ class GameOverScene: SKScene {
     var tryAgainTouch = 0
     var backToMenuTouch = 0
     
+    
+    var labels: [SKLabelNode] = []
+    var selected = 0;
+    
     override func didMoveToView(view: SKView) {
         manager.enemiesCreated = false;
         
         self.runAction(SKAction.playSoundFileNamed("scream2.mp3", waitForCompletion: false))
         
         self.gameOverScreen()
+        
+
         
 
     }
@@ -43,6 +49,9 @@ class GameOverScene: SKScene {
         self.runAction(SKAction.waitForDuration(5.0), completion: {
             self.background.removeFromParent()
             self.gameOverOptions()
+            #if os(tvOS)
+                self.setupGestureRecognizerTV();
+            #endif
             })
         
 
@@ -80,40 +89,6 @@ class GameOverScene: SKScene {
         self.backToMenu.fontColor = UIColor.whiteColor()
         addChild(self.backToMenu)
     }
-    
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch = touches
-        let location = touch.first!.locationInNode(self)
-        let node = self.nodeAtPoint(location)
-        
-        
-        
-        if (node.name == "tryAgain"){
-            tryAgainTouch++
-            backToMenuTouch = 0
-            print("restart")
-            GameManager.addSoundArray("tentarNovamente_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
-        }else if (node.name == "backToMenu"){
-            backToMenuTouch++
-            tryAgainTouch = 0
-            print("exit")
-            GameManager.addSoundArray("voltarMenu_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
-        }
-        
-        if (node.name == "tryAgain" && tryAgainTouch > 1){
-            tryAgainTouch = 0
-            backToMenuTouch = 0
-            self.retry()
-        }else if (node.name == "backToMenu" && backToMenuTouch > 1){
-            tryAgainTouch = 0
-            backToMenuTouch = 0
-            self.mainMenu()
-        }
-        
-        
-    }
-    
 
 
 

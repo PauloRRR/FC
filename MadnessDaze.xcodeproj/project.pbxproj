@@ -76,7 +76,7 @@
 		B92E34F51BC59B9F00ED27E2 /* lockedLockers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AA1BC2DE0F00200105 /* lockedLockers.mp3 */; };
 		B92E34F61BC59B9F00ED27E2 /* nothingInteresting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AE1BC2E1C900200105 /* nothingInteresting.mp3 */; };
 		B92E34F71BC59B9F00ED27E2 /* nothingInteresting2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34B21BC2FC6900200105 /* nothingInteresting2.mp3 */; };
-		B92E34F81BC59B9F00ED27E2 /* narrativa-escritorioAdm001_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34B01BC2E23000200105 /* narrativa-escritorioAdm001_PT-BR.mp3 */; };
+		B92E34F81BC59B9F00ED27E2 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		B92E34F91BC59B9F00ED27E2 /* narrativa-salaPertences_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AC1BC2DE6800200105 /* narrativa-salaPertences_PT-BR.mp3 */; };
 		B92E34FA1BC59BAD00ED27E2 /* gameOverTela_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34941BBDB23100200105 /* gameOverTela_PT-BR_01.mp3 */; };
 		B92E34FB1BC59BAD00ED27E2 /* tentarNovamente_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34951BBDB23100200105 /* tentarNovamente_PT-BR_01.mp3 */; };
@@ -108,32 +108,34 @@
 		B92E35191BC5A80E00ED27E2 /* GameViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E35171BC5A7B500ED27E2 /* GameViewControllerExtension.swift */; };
 		B92E35221BC6CE5900ED27E2 /* StartMenuScene+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E35211BC6CE5900ED27E2 /* StartMenuScene+iOS.swift */; };
 		B92E35241BC6D0DE00ED27E2 /* StartMenuScene+tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E35231BC6D0DE00ED27E2 /* StartMenuScene+tvOS.swift */; };
+		B94C73761BCED604001F0323 /* GameOverScene+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C73751BCED604001F0323 /* GameOverScene+iOS.swift */; };
+		B94C73781BCED63A001F0323 /* GameOverScene+tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C73771BCED63A001F0323 /* GameOverScene+tvOS.swift */; };
 		B974A8DD1B98B9BC004DFE75 /* StorySoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B974A8DC1B98B9BC004DFE75 /* StorySoundNode.swift */; };
 		B97F78BB1B98CDDD00232E98 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F78BA1B98CDDD00232E98 /* GameOverScene.swift */; };
 		B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */; };
 		B985E0761B75300200CBAC43 /* Level1.json in Resources */ = {isa = PBXBuildFile; fileRef = B985E0751B75300200CBAC43 /* Level1.json */; };
-		D41C348C1BBDAF1400200105 /* equipamentosCorredor_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34841BBDAF1400200105 /* equipamentosCorredor_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C348D1BBDAF1400200105 /* hallway-direita_esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34851BBDAF1400200105 /* hallway-direita_esquerda_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C348E1BBDAF1400200105 /* hallway-direita_esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34861BBDAF1400200105 /* hallway-direita_esquerda_frente_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C348F1BBDAF1400200105 /* hallway-direita_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34871BBDAF1400200105 /* hallway-direita_frente_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34911BBDAF1400200105 /* hallway-finalCorredor_voltar_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34891BBDAF1400200105 /* hallway-finalCorredor_voltar_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34921BBDAF1400200105 /* hallway-direita_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C348A1BBDAF1400200105 /* hallway-direita_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34931BBDAF1400200105 /* hallway-esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C348B1BBDAF1400200105 /* hallway-esquerda_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34971BBDB23100200105 /* gameOverTela_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34941BBDB23100200105 /* gameOverTela_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34981BBDB23100200105 /* tentarNovamente_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34951BBDB23100200105 /* tentarNovamente_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34991BBDB23100200105 /* voltarMenu_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34961BBDB23100200105 /* voltarMenu_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34A11BBDB2AD00200105 /* continuar_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349A1BBDB2AD00200105 /* continuar_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34A21BBDB2AD00200105 /* iniciar_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349B1BBDB2AD00200105 /* iniciar_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34A31BBDB2AD00200105 /* menu_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349C1BBDB2AD00200105 /* menu_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34A41BBDB2AD00200105 /* nao_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349D1BBDB2AD00200105 /* nao_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34A51BBDB2AD00200105 /* novoJogoConfirma_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349E1BBDB2AD00200105 /* novoJogoConfirma_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34A61BBDB2AD00200105 /* sim_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349F1BBDB2AD00200105 /* sim_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34A71BBDB2AD00200105 /* tutorial_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34A01BBDB2AD00200105 /* tutorial_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34A91BBF080B00200105 /* hallway-esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34A81BBF080B00200105 /* hallway-esquerda_frente_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34AB1BC2DE0F00200105 /* lockedLockers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AA1BC2DE0F00200105 /* lockedLockers.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34AD1BC2DE6800200105 /* narrativa-salaPertences_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AC1BC2DE6800200105 /* narrativa-salaPertences_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34AF1BC2E1C900200105 /* nothingInteresting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AE1BC2E1C900200105 /* nothingInteresting.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41C34B31BC2FC6900200105 /* nothingInteresting2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34B21BC2FC6900200105 /* nothingInteresting2.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D41C348C1BBDAF1400200105 /* equipamentosCorredor_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34841BBDAF1400200105 /* equipamentosCorredor_01.mp3 */; };
+		D41C348D1BBDAF1400200105 /* hallway-direita_esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34851BBDAF1400200105 /* hallway-direita_esquerda_01.mp3 */; };
+		D41C348E1BBDAF1400200105 /* hallway-direita_esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34861BBDAF1400200105 /* hallway-direita_esquerda_frente_01.mp3 */; };
+		D41C348F1BBDAF1400200105 /* hallway-direita_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34871BBDAF1400200105 /* hallway-direita_frente_01.mp3 */; };
+		D41C34911BBDAF1400200105 /* hallway-finalCorredor_voltar_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34891BBDAF1400200105 /* hallway-finalCorredor_voltar_01.mp3 */; };
+		D41C34921BBDAF1400200105 /* hallway-direita_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C348A1BBDAF1400200105 /* hallway-direita_01.mp3 */; };
+		D41C34931BBDAF1400200105 /* hallway-esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C348B1BBDAF1400200105 /* hallway-esquerda_01.mp3 */; };
+		D41C34971BBDB23100200105 /* gameOverTela_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34941BBDB23100200105 /* gameOverTela_PT-BR_01.mp3 */; };
+		D41C34981BBDB23100200105 /* tentarNovamente_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34951BBDB23100200105 /* tentarNovamente_PT-BR_01.mp3 */; };
+		D41C34991BBDB23100200105 /* voltarMenu_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34961BBDB23100200105 /* voltarMenu_PT-BR_01.mp3 */; };
+		D41C34A11BBDB2AD00200105 /* continuar_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349A1BBDB2AD00200105 /* continuar_PT-BR_01.mp3 */; };
+		D41C34A21BBDB2AD00200105 /* iniciar_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349B1BBDB2AD00200105 /* iniciar_PT-BR_01.mp3 */; };
+		D41C34A31BBDB2AD00200105 /* menu_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349C1BBDB2AD00200105 /* menu_PT-BR_01.mp3 */; };
+		D41C34A41BBDB2AD00200105 /* nao_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349D1BBDB2AD00200105 /* nao_PT-BR_01.mp3 */; };
+		D41C34A51BBDB2AD00200105 /* novoJogoConfirma_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349E1BBDB2AD00200105 /* novoJogoConfirma_PT-BR_01.mp3 */; };
+		D41C34A61BBDB2AD00200105 /* sim_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349F1BBDB2AD00200105 /* sim_PT-BR_01.mp3 */; };
+		D41C34A71BBDB2AD00200105 /* tutorial_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34A01BBDB2AD00200105 /* tutorial_PT-BR_01.mp3 */; };
+		D41C34A91BBF080B00200105 /* hallway-esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34A81BBF080B00200105 /* hallway-esquerda_frente_01.mp3 */; };
+		D41C34AB1BC2DE0F00200105 /* lockedLockers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AA1BC2DE0F00200105 /* lockedLockers.mp3 */; };
+		D41C34AD1BC2DE6800200105 /* narrativa-salaPertences_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AC1BC2DE6800200105 /* narrativa-salaPertences_PT-BR.mp3 */; };
+		D41C34AF1BC2E1C900200105 /* nothingInteresting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AE1BC2E1C900200105 /* nothingInteresting.mp3 */; };
+		D41C34B31BC2FC6900200105 /* nothingInteresting2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34B21BC2FC6900200105 /* nothingInteresting2.mp3 */; };
 		D42953CC1BAB2F5F00ABB43E /* MadnessDazeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42953CB1BAB2F5F00ABB43E /* MadnessDazeTests.swift */; };
 		D4491CD01B8F9BAE009FE55B /* scream3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4491CCF1B8F9BAE009FE55B /* scream3.mp3 */; };
 		D4491CD21B8F9C41009FE55B /* scream2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4491CD11B8F9C41009FE55B /* scream2.mp3 */; };
@@ -156,20 +158,20 @@
 		D49F5E531BA213330023174A /* story0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D49F5E521BA213330023174A /* story0.mp3 */; };
 		D49F5E551BA216800023174A /* story2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D49F5E541BA216800023174A /* story2.mp3 */; };
 		D4A0D3331B8F6F6E0004BB09 /* playerSteps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D3321B8F6F6E0004BB09 /* playerSteps.mp3 */; };
-		D4A3C9BA1BBC5D1D00426CCE /* 011_hallway-guardExitToxin_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A3C9B91BBC5D1D00426CCE /* 011_hallway-guardExitToxin_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD784A1BC4548300AE2765 /* narrativa_naoPossoPassar_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78491BC4548300AE2765 /* narrativa_naoPossoPassar_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD784C1BC454BA00AE2765 /* narrativa_naoPossoSair_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD784B1BC454BA00AE2765 /* narrativa_naoPossoSair_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD784E1BC5816100AE2765 /* narrativa_escritorioAdm_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD784D1BC5816100AE2765 /* narrativa_escritorioAdm_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD78521BC59F6A00AE2765 /* narrativa-banheiroFemininoDireita_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78511BC59F6A00AE2765 /* narrativa-banheiroFemininoDireita_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD78541BC5A46F00AE2765 /* narrativa-salaRecreacaoEsquerda_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78531BC5A46F00AE2765 /* narrativa-salaRecreacaoEsquerda_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD78561BC5A60F00AE2765 /* narrativa-salaRecreacaoDireita_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78551BC5A60F00AE2765 /* narrativa-salaRecreacaoDireita_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD78581BC5AB2A00AE2765 /* narrativa-salaPertencesDireita_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78571BC5AB2A00AE2765 /* narrativa-salaPertencesDireita_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD785A1BC5AC1500AE2765 /* narrativa-salaPertencesEsquerda_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78591BC5AC1500AE2765 /* narrativa-salaPertencesEsquerda_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD785E1BC6E73000AE2765 /* narrativa-escritorioAdmEsquerda_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD785D1BC6E73000AE2765 /* narrativa-escritorioAdmEsquerda_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD78601BC6E85300AE2765 /* narrativa-escritorioAdmDireita_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD785F1BC6E85300AE2765 /* narrativa-escritorioAdmDireita_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD78621BC6E9DF00AE2765 /* narrativa-salaEnfermariaDireita_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78611BC6E9DF00AE2765 /* narrativa-salaEnfermariaDireita_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD78641BC6EAD500AE2765 /* narrativa-deVoltaQuarto_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78631BC6EAD500AE2765 /* narrativa-deVoltaQuarto_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD78661BC6ED4500AE2765 /* narrativa-banheiroMasculinoEsquerda_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78651BC6ED4500AE2765 /* narrativa-banheiroMasculinoEsquerda_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4A3C9BA1BBC5D1D00426CCE /* 011_hallway-guardExitToxin_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A3C9B91BBC5D1D00426CCE /* 011_hallway-guardExitToxin_PT-BR_01.mp3 */; };
+		D4BD784A1BC4548300AE2765 /* narrativa_naoPossoPassar_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78491BC4548300AE2765 /* narrativa_naoPossoPassar_PT-BR_01.mp3 */; };
+		D4BD784C1BC454BA00AE2765 /* narrativa_naoPossoSair_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD784B1BC454BA00AE2765 /* narrativa_naoPossoSair_PT-BR_01.mp3 */; };
+		D4BD784E1BC5816100AE2765 /* narrativa_escritorioAdm_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD784D1BC5816100AE2765 /* narrativa_escritorioAdm_PT-BR_01.mp3 */; };
+		D4BD78521BC59F6A00AE2765 /* narrativa-banheiroFemininoDireita_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78511BC59F6A00AE2765 /* narrativa-banheiroFemininoDireita_PT-BR.mp3 */; };
+		D4BD78541BC5A46F00AE2765 /* narrativa-salaRecreacaoEsquerda_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78531BC5A46F00AE2765 /* narrativa-salaRecreacaoEsquerda_PT-BR.mp3 */; };
+		D4BD78561BC5A60F00AE2765 /* narrativa-salaRecreacaoDireita_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78551BC5A60F00AE2765 /* narrativa-salaRecreacaoDireita_PT-BR.mp3 */; };
+		D4BD78581BC5AB2A00AE2765 /* narrativa-salaPertencesDireita_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78571BC5AB2A00AE2765 /* narrativa-salaPertencesDireita_PT-BR.mp3 */; };
+		D4BD785A1BC5AC1500AE2765 /* narrativa-salaPertencesEsquerda_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78591BC5AC1500AE2765 /* narrativa-salaPertencesEsquerda_PT-BR.mp3 */; };
+		D4BD785E1BC6E73000AE2765 /* narrativa-escritorioAdmEsquerda_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD785D1BC6E73000AE2765 /* narrativa-escritorioAdmEsquerda_PT-BR.mp3 */; };
+		D4BD78601BC6E85300AE2765 /* narrativa-escritorioAdmDireita_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD785F1BC6E85300AE2765 /* narrativa-escritorioAdmDireita_PT-BR.mp3 */; };
+		D4BD78621BC6E9DF00AE2765 /* narrativa-salaEnfermariaDireita_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78611BC6E9DF00AE2765 /* narrativa-salaEnfermariaDireita_PT-BR.mp3 */; };
+		D4BD78641BC6EAD500AE2765 /* narrativa-deVoltaQuarto_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78631BC6EAD500AE2765 /* narrativa-deVoltaQuarto_PT-BR.mp3 */; };
+		D4BD78661BC6ED4500AE2765 /* narrativa-banheiroMasculinoEsquerda_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78651BC6ED4500AE2765 /* narrativa-banheiroMasculinoEsquerda_PT-BR.mp3 */; };
 		E3E2B7C71BBB06A2002B587F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E2B7C51BBB06A2002B587F /* Interface.storyboard */; };
 		E3E2B7C91BBB06A2002B587F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E2B7C81BBB06A2002B587F /* Assets.xcassets */; };
 		E3E2B7D01BBB06A2002B587F /* Madness's Daze Watch App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3E2B7CF1BBB06A2002B587F /* Madness's Daze Watch App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -264,6 +266,8 @@
 		B92E35171BC5A7B500ED27E2 /* GameViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewControllerExtension.swift; sourceTree = "<group>"; };
 		B92E35211BC6CE5900ED27E2 /* StartMenuScene+iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartMenuScene+iOS.swift"; sourceTree = "<group>"; };
 		B92E35231BC6D0DE00ED27E2 /* StartMenuScene+tvOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartMenuScene+tvOS.swift"; sourceTree = "<group>"; };
+		B94C73751BCED604001F0323 /* GameOverScene+iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameOverScene+iOS.swift"; sourceTree = "<group>"; };
+		B94C73771BCED63A001F0323 /* GameOverScene+tvOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameOverScene+tvOS.swift"; sourceTree = "<group>"; };
 		B974A8DC1B98B9BC004DFE75 /* StorySoundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySoundNode.swift; sourceTree = "<group>"; };
 		B97F78BA1B98CDDD00232E98 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -491,6 +495,7 @@
 				B92E34C91BC5986200ED27E2 /* Assets.xcassets */,
 				B92E34CB1BC5986200ED27E2 /* Info.plist */,
 				B92E35231BC6D0DE00ED27E2 /* StartMenuScene+tvOS.swift */,
+				B94C73771BCED63A001F0323 /* GameOverScene+tvOS.swift */,
 			);
 			path = "MadnessDaze tvOS";
 			sourceTree = "<group>";
@@ -541,6 +546,7 @@
 				B97F78BA1B98CDDD00232E98 /* GameOverScene.swift */,
 				D49F5E501BA208E50023174A /* StartMenuScene.swift */,
 				B92E35211BC6CE5900ED27E2 /* StartMenuScene+iOS.swift */,
+				B94C73751BCED604001F0323 /* GameOverScene+iOS.swift */,
 				D485B1961BB06AD7005C423D /* futura-condensed-normal.ttf */,
 				D485B1D61BB072F8005C423D /* futura-condensed-bold.ttf */,
 				D471FDC61B6FD3B000D80921 /* Main.storyboard */,
@@ -772,7 +778,6 @@
 					E3E2B7CE1BBB06A2002B587F = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = Z83BJJ28JR;
-
 					};
 				};
 			};
@@ -824,7 +829,7 @@
 				B92E34F71BC59B9F00ED27E2 /* nothingInteresting2.mp3 in Resources */,
 				B92E34F41BC59B9F00ED27E2 /* woosh.wav in Resources */,
 				B92E34E31BC59B9F00ED27E2 /* 011_hallway-guardExitToxin_PT-BR_01.mp3 in Resources */,
-				B92E34F81BC59B9F00ED27E2 /* narrativa-escritorioAdm001_PT-BR.mp3 in Resources */,
+				B92E34F81BC59B9F00ED27E2 /* (null) in Resources */,
 				B92E34D41BC59B8600ED27E2 /* roomMapping.json in Resources */,
 				B92E35051BC59BB400ED27E2 /* tutorialFull_PT-BR_01.mp3 in Resources */,
 				B92E34F31BC59B9F00ED27E2 /* scream5.wav in Resources */,
@@ -981,6 +986,7 @@
 				B92E35091BC59BBF00ED27E2 /* StorySoundNode.swift in Sources */,
 				B92E35081BC59BBF00ED27E2 /* AudioCoordinate.swift in Sources */,
 				B92E34D31BC59B7600ED27E2 /* EnemyBot.swift in Sources */,
+				B94C73781BCED63A001F0323 /* GameOverScene+tvOS.swift in Sources */,
 				B92E35061BC59BBF00ED27E2 /* AudioNode.swift in Sources */,
 				B92E34D11BC59B5000ED27E2 /* EnemyControl.swift in Sources */,
 				B92E34D21BC59B6100ED27E2 /* SwiftyJSON.swift in Sources */,
@@ -1008,6 +1014,7 @@
 				30FA88FC1B8E1C2700FE4700 /* AudioSingleton.swift in Sources */,
 				D471FDC31B6FD3B000D80921 /* GameScene.swift in Sources */,
 				B92E35221BC6CE5900ED27E2 /* StartMenuScene+iOS.swift in Sources */,
+				B94C73761BCED604001F0323 /* GameOverScene+iOS.swift in Sources */,
 				306F7C7B1B7D014C00E8501A /* GameManager.swift in Sources */,
 				305224031B84F42C00AD7A98 /* EnemyBot.swift in Sources */,
 				B92E35191BC5A80E00ED27E2 /* GameViewControllerExtension.swift in Sources */,
@@ -1343,6 +1350,7 @@
 				B92E34CD1BC5986200ED27E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D42953D01BAB2F5F00ABB43E /* Build configuration list for PBXNativeTarget "MadnessDazeTests" */ = {
 			isa = XCConfigurationList;

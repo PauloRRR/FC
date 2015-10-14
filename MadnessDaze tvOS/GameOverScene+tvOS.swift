@@ -1,19 +1,15 @@
 //
-//  StartMenuScene+tvOS.swift
+//  GameOverScene+tvOS.swift
 //  MadnessDaze
 //
-//  Created by Adriano Soares on 08/10/15.
+//  Created by Adriano Soares on 14/10/15.
 //  Copyright © 2015 Paulo Ricardo Ramos da Rosa. All rights reserved.
 //
 
 import Foundation
-import Foundation
 import SpriteKit
 
-
-extension StartMenuScene {
-    
-    
+extension GameOverScene {
     func setupGestureRecognizerTV () {
         let tapRecognizerUp     = UITapGestureRecognizer(target: self, action: Selector("tappedUp:"))
         let tapRecognizerRight  = UITapGestureRecognizer(target: self, action: Selector("tappedRight:"))
@@ -33,9 +29,8 @@ extension StartMenuScene {
         view!.addGestureRecognizer(tapRecognizerLeft);
         view!.addGestureRecognizer(tapRecognizerSelect);
         
-        labels.append(loadGame)
-        labels.append(newGame)
-        labels.append(tutorial)
+        labels.append(tryAgain)
+        labels.append(backToMenu)
         
         updateColor();
     }
@@ -90,16 +85,16 @@ extension StartMenuScene {
     }
     
     func selectClick(gesture: UITapGestureRecognizer) {
+        
         if (selected == 0) {
-            continueGame();
+            self.retry()
         } else if (selected == 1) {
-            manager.gameState.eraseJson()
-            manager.eraseManager()
-            self.manager.initStoryArray()
-            self.start()
-        
+            self.mainMenu()
+            
         }
-        
         print("selectClick")
     }
+    
+    
+    
 }

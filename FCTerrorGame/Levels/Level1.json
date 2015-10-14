@@ -2401,7 +2401,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "narrativa-escritorioAdm_PT-BR_01",
+                        "sound": "narrativa_escritorioAdm_PT-BR_01",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0

@@ -9,6 +9,7 @@
 import UIKit
 import SpriteKit
 
+
 extension SKNode {
     class func unarchiveFromFile(file : String) -> SKNode? {
         if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
@@ -32,6 +33,7 @@ class GameViewController: UIViewController {
 
         if let scene = StartMenuScene.unarchiveFromFile("GameScene") as? StartMenuScene {
             // Configure the view.
+            //self.view.isAccessibilityElement = false
             let skView = self.view as! SKView
             //skView.showsFPS = true
             //skView.showsNodeCount = true
@@ -40,6 +42,9 @@ class GameViewController: UIViewController {
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
+            
+            skView.accessibilityTraits = UIAccessibilityTraitAllowsDirectInteraction
+            skView.isAccessibilityElement = true
             
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
@@ -65,6 +70,7 @@ class GameViewController: UIViewController {
         group.motionEffects = [horizontal, vertical]
         vw.addMotionEffect(group)
     }
+    
     
     override func shouldAutorotate() -> Bool {
         return true

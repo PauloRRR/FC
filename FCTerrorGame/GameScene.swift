@@ -223,7 +223,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
         //&& !manager.storyP[manager.i-1].storyPlayer.playing == no swipe until speech is over
         let event = level[gameState.room]["events"][newAction]
-        if ((event.description != "null" &&  !manager.storyP[manager.i-1].storyPlayer.playing) && !gameState.debug) {
+        if ((event.description != "null" &&  !manager.storyP[manager.i-1].storyPlayer.playing) || gameState.debug) {
             switch event["action"].stringValue {
             case "pickItem":
                 pickItem(event)

@@ -110,6 +110,7 @@ class StartMenuScene: SKScene {
         self.loadGame.fontColor = UIColor.whiteColor()
         self.loadGame.zPosition = 1
         addChild(self.loadGame)
+        
     }
     
     func newGameScreen(){
@@ -201,7 +202,9 @@ class StartMenuScene: SKScene {
         let location = touch.first!.locationInNode(self)
         let node = self.nodeAtPoint(location)
         
-        
+        if(node.name == "testeNode"){
+            self.start()
+        }
         
         if (node.name == "newGame"){
                 newGameTouch++

@@ -2,7 +2,6 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "background-1.png",
       "scale" : "1x"
     },
     {
@@ -16,6 +15,7 @@
     },
     {
       "idiom" : "tv",
+      "filename" : "background-1.png",
       "scale" : "1x"
     }
   ],

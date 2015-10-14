@@ -12,6 +12,11 @@
     {
       "idiom" : "universal",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "tv",
+      "filename" : "room157-3.jpg",
+      "scale" : "1x"
     }
   ],
   "info" : {

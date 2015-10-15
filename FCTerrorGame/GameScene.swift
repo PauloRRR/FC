@@ -509,7 +509,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             let scene = GameScene(size: self.size)
             if let recognizers = self.view?.gestureRecognizers {
                 for recognizer in recognizers {
-                    self.view?.removeGestureRecognizer(recognizer )
+                    self.view?.removeGestureRecognizer(recognizer)
                 }
             }
             
@@ -527,7 +527,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             if(action["item"].stringValue == "lockerKey"){
                 soundName = "narrativa_encontreiChave_escritorioAdm_PT-BR_01"
             }else if(action["item"].stringValue == "needle"){
-                
+                soundName = "narrativa_sonifero_enfermaria_PT-BR_01"
             }
             
             manager.playDirectionNarration(soundName, frmt: "mp3")

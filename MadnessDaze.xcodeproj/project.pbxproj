@@ -97,6 +97,7 @@
 		D4E074871BD02082001B3F72 /* narrativa-salaRecreacao_PT-BR.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4E074861BD02082001B3F72 /* narrativa-salaRecreacao_PT-BR.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D4E074891BD0239C001B3F72 /* narrativa_encontreiChave_escritorioAdm_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4E074881BD0239C001B3F72 /* narrativa_encontreiChave_escritorioAdm_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D4E0748B1BD023FA001B3F72 /* narrativa_descricao_salaRecreacao_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4E0748A1BD023FA001B3F72 /* narrativa_descricao_salaRecreacao_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4E0748D1BD02AD9001B3F72 /* narrativa_sonifero_enfermaria_PT-BR_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4E0748C1BD02AD9001B3F72 /* narrativa_sonifero_enfermaria_PT-BR_01.mp3 */; settings = {ASSET_TAGS = (); }; };
 		E3E2B7C71BBB06A2002B587F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E2B7C51BBB06A2002B587F /* Interface.storyboard */; };
 		E3E2B7C91BBB06A2002B587F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E2B7C81BBB06A2002B587F /* Assets.xcassets */; };
 		E3E2B7D01BBB06A2002B587F /* Madness's Daze Watch App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3E2B7CF1BBB06A2002B587F /* Madness's Daze Watch App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -253,6 +254,7 @@
 		D4E074861BD02082001B3F72 /* narrativa-salaRecreacao_PT-BR.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "narrativa-salaRecreacao_PT-BR.mp3"; sourceTree = "<group>"; };
 		D4E074881BD0239C001B3F72 /* narrativa_encontreiChave_escritorioAdm_PT-BR_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "narrativa_encontreiChave_escritorioAdm_PT-BR_01.mp3"; sourceTree = "<group>"; };
 		D4E0748A1BD023FA001B3F72 /* narrativa_descricao_salaRecreacao_PT-BR_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "narrativa_descricao_salaRecreacao_PT-BR_01.mp3"; sourceTree = "<group>"; };
+		D4E0748C1BD02AD9001B3F72 /* narrativa_sonifero_enfermaria_PT-BR_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "narrativa_sonifero_enfermaria_PT-BR_01.mp3"; sourceTree = "<group>"; };
 		E3E2B7C31BBB06A2002B587F /* Madness's Daze Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Madness's Daze Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E2B7C61BBB06A2002B587F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		E3E2B7C81BBB06A2002B587F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 				D4E074821BD01645001B3F72 /* narrativa-enfermaria_PT-BR.mp3 */,
 				D4E074881BD0239C001B3F72 /* narrativa_encontreiChave_escritorioAdm_PT-BR_01.mp3 */,
 				D4E074861BD02082001B3F72 /* narrativa-salaRecreacao_PT-BR.mp3 */,
+				D4E0748C1BD02AD9001B3F72 /* narrativa_sonifero_enfermaria_PT-BR_01.mp3 */,
 				D4E0748A1BD023FA001B3F72 /* narrativa_descricao_salaRecreacao_PT-BR_01.mp3 */,
 				D4BD784B1BC454BA00AE2765 /* narrativa_naoPossoSair_PT-BR_01.mp3 */,
 			);
@@ -685,6 +688,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D49F5E4F1BA1FAA40023174A /* storm.mp3 in Resources */,
+				D4E0748D1BD02AD9001B3F72 /* narrativa_sonifero_enfermaria_PT-BR_01.mp3 in Resources */,
 				D4A0D3331B8F6F6E0004BB09 /* playerSteps.mp3 in Resources */,
 				D4BD784A1BC4548300AE2765 /* narrativa_naoPossoPassar_PT-BR_01.mp3 in Resources */,
 				D4BD784C1BC454BA00AE2765 /* narrativa_naoPossoSair_PT-BR_01.mp3 in Resources */,

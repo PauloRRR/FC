@@ -22,6 +22,7 @@ class GameManager {
     var directionNarration = [BackGroundSoundNode]()
     var gameState = GameState.sharedInstance
     var i = 0
+    var language = "en-US"
     var shot = BackGroundSoundNode(soundName: "gunshot", format: "mp3")
     var moan = BackGroundSoundNode(soundName: "zombihoar", format: "wav")
     var firstPlay = Bool()
@@ -53,8 +54,10 @@ class GameManager {
     }
     
     func playDirectionNarration(sndName: String, frmt: String){
+        let str =  sndName.stringByReplacingOccurrencesOfString("LANG", withString: self.language)
+
         self.directionNarration.removeAll()
-        let audio = BackGroundSoundNode(soundName: sndName, format: frmt)
+        let audio = BackGroundSoundNode(soundName: str, format: frmt)
         self.directionNarration.append(audio)
         self.directionNarration[0].play()
     }
@@ -94,7 +97,7 @@ class GameManager {
     
     func initStoryArray(){
         for (var i = 0; i < 3; i++){
-            let audio = StorySoundNode(soundName: "story\(i)", format: "mp3")
+            let audio = StorySoundNode(soundName: "\(language)-story\(i)", format: "mp3")
             self.storyP.append(audio)
         }
         
@@ -158,9 +161,8 @@ class GameManager {
     }
     
     func listenerAngularPosition(roll: Float) {
-        listenerAngularPosition(90.0,
-            pitch: enviroNode.listenerAngularOrientation.pitch,
-            roll: roll)
+        listenerAngularPosition(roll, pitch: 0, roll: 0)
+        
     }
     
     func updateEnemiesListenerPosition(){
@@ -171,8 +173,6 @@ class GameManager {
             coord.pinpointPlayer(self.enemies[i].enemyPosition)
             self.enemies[i].audio.enviroNode.listenerPosition = AVAudio3DPoint(x: coord.coordX(playerPosition), y: coord.coordY(playerPosition), z: 0)
             self.enemies[i].audio.enviroNode.listenerAngularOrientation = enviroNode.listenerAngularOrientation
-
-            
             if(coord.distance() <= 15.0){
                 nearCount++
                 
@@ -185,11 +185,11 @@ class GameManager {
             }
             if(nearCount > 0){
                 self.heartBeat.speedBeat()
-                print(self.heartBeat.player.rate)
+               //print(self.heartBeat.player.rate)
             }
             else {
                 self.heartBeat.normalBeat()
-                print(self.heartBeat.player.rate)
+                //print(self.heartBeat.player.rate)
             }
             
         }

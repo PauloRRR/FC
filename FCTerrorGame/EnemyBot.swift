@@ -34,6 +34,7 @@ class EnemyBot: NSObject {
         self.audio.setVolume(2.0)
         self.audio.player3DPosition(coord.coordX(self.enemyPosition),y: coord.coordY(self.enemyPosition), z: 0)
         self.audio.playLoop()
+        self.audio.player.obstruction = -0.5
 
     }
     
@@ -69,8 +70,10 @@ class EnemyBot: NSObject {
         //self.adjacentRooms = map[self.enemyPosition]
         //manager.updateEnemiesListenerPosition()
         print("player pos (\(self.audio.enviroNode.listenerPosition.x),\(self.audio.enviroNode.listenerPosition.y)) at room \(manager.returnPlayerPosition())")
-        return self.actualRoom()
         
+        print("\(self.audio.enviroNode.listenerAngularOrientation.roll)")
+        print("\(self.audio.enviroNode.listenerAngularOrientation.yaw)")
+        return self.actualRoom()
     }
     
     func actualRoom()->Int{

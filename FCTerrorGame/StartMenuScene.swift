@@ -76,7 +76,7 @@ class StartMenuScene: SKScene {
         self.musicPlayer.play()
         
         
-        GameManager.addSoundArray("menu_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+        GameManager.addSoundArray("\(manager.language)-menu", frmt: "mp3", x: 0.0, y: 0.0)
         
         self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
@@ -210,7 +210,7 @@ class StartMenuScene: SKScene {
                 newGameTouch++
                 loadGameTouch = 0
                 tutorialTouch = 0
-                GameManager.addSoundArray("iniciar_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+                GameManager.addSoundArray("\(manager.language)-iniciar", frmt: "mp3", x: 0.0, y: 0.0)
                 print("NEWGAME")
             
             }else if (node.name == "tutorial"){
@@ -218,17 +218,17 @@ class StartMenuScene: SKScene {
                 tutorialTouch++
                 newGameTouch = 0
                 loadGameTouch = 0
-                GameManager.addSoundArray("tutorial_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+                GameManager.addSoundArray("\(manager.language)-tutorial", frmt: "mp3", x: 0.0, y: 0.0)
                 }else if (node.name == "loadGame"){
                     loadGameTouch++
                     newGameTouch = 0
                     tutorialTouch = 0
                     print("LOADGAME")
-                    GameManager.addSoundArray("continuar_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+                    GameManager.addSoundArray("\(manager.language)-continuar", frmt: "mp3", x: 0.0, y: 0.0)
                 }
         
         if (node.name == "newGame" && newGameTouch > 1 && !manager.firstPlay){
-            GameManager.addSoundArray("novoJogoConfirma_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+            GameManager.addSoundArray("\(manager.language)-novoJogoConfirma", frmt: "mp3", x: 0.0, y: 0.0)
             self.newGameScreen()
         } else if (node.name == "newGame" && newGameTouch > 1 && manager.firstPlay){
             manager.gameState.eraseJson()
@@ -255,12 +255,12 @@ class StartMenuScene: SKScene {
             noTouch++
             yesTouch = 0
             print("NO")
-            GameManager.addSoundArray("nao_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+            GameManager.addSoundArray("\(manager.language)-nao", frmt: "mp3", x: 0.0, y: 0.0)
         }else if (node.name == "newGameYes"){
             yesTouch++
             noTouch = 0
             print("YES")
-            GameManager.addSoundArray("sim_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+            GameManager.addSoundArray("\(manager.language)-sim", frmt: "mp3", x: 0.0, y: 0.0)
         }
         
         

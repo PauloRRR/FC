@@ -106,7 +106,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -276,7 +276,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "hallway-finalCorredor_voltar_01",
+                        "sound": "LANG-hallway-finalCorredor_voltar_01",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -378,7 +378,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -435,7 +435,7 @@
         "background": "room25",
         "playOnEnter": [
                     {
-                        "sound": "hallway-direita_esquerda_frente_01",
+                        "sound": "LANG-hallway-direita_esquerda_frente_01",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -533,7 +533,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -704,7 +704,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "narrativa-salaPertences_PT-BR",
+                        "sound": "LANG-narrativa-salaPertences_PT-BR",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -823,7 +823,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -1105,7 +1105,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -1702,7 +1702,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2071,7 +2071,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2272,7 +2272,7 @@
         "background": "room128",
         "playOnEnter": [
             {
-                "sound": "011_hallway-guardExitToxin_PT-BR_01",
+                "sound": "LANG-hallway-guardExitToxin",
                 "format": "mp3",
                 "x": 0.0,
                 "y": 0.0
@@ -2291,7 +2291,7 @@
                 "prerequisite" : "needle",
                 "failPrerequisite": [
                     {
-                        "sound": "narrativa_naoPossoPassar_PT-BR_01",
+                        "sound": "LANG-narrativa_naoPossoPassar",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2334,7 +2334,7 @@
                 "prerequisite" : "allItems",
                 "failPrerequisite": [
                     {
-                        "sound": "narrativa_naoPossoSair_PT-BR_01",
+                        "sound": "LANG-narrativa_naoPossoSair",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2421,7 +2421,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "narrativa_escritorioAdm_PT-BR_01",
+                        "sound": "LANG-narrativa-escritorioAdm",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2673,7 +2673,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2804,7 +2804,7 @@
                 "prerequisite": "foundGuard",
                 "failPrerequisite": [
                     {
-                        "sound": "nothingInteresting2",
+                        "sound": "LANG-nothingInteresting2",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0

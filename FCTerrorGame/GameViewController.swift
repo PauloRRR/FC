@@ -11,6 +11,9 @@ import SpriteKit
 
 
 extension SKNode {
+    
+    
+    
     class func unarchiveFromFile(file : String) -> SKNode? {
         if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
             let sceneData = try! NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
@@ -27,7 +30,7 @@ extension SKNode {
 }
 
 class GameViewController: UIViewController {
-
+    var manager = GameManager.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,7 +53,11 @@ class GameViewController: UIViewController {
             scene.scaleMode = .AspectFill
             //scene.size = skView.bounds.size
             skView.presentScene(scene)
-           
+           let language = NSLocale.preferredLanguages()[0]
+            if(language == "pt-BR"){
+                manager.language = language
+            }
+            print(language)
             
         }
     }

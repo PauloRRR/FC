@@ -223,7 +223,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
         //&& !manager.storyP[manager.i-1].storyPlayer.playing == no swipe until speech is over
         let event = level[gameState.room]["events"][newAction]
-        if ((event.description != "null" &&  !manager.storyP[manager.i-1].storyPlayer.playing) && !gameState.debug) {
+        if ((event.description != "null" &&  !manager.storyP[manager.i-1].storyPlayer.playing) || gameState.debug) {
             switch event["action"].stringValue {
             case "pickItem":
                 pickItem(event)
@@ -248,137 +248,137 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                     //playSound Front or Right
                     if(gameState.rotation == 0){
                         //sound front right
-                        soundName = "hallway-direita_frente_01"
+                        soundName = "LANG-hallway-direita_frente_01"
                     } else if (gameState.rotation == 1){
                         //sound front left right
-                        soundName = "hallway-direita_esquerda_frente_01"
+                        soundName = "LANG-hallway-direita_esquerda_frente_01"
                     } else if (gameState.rotation == 2){
                         //front left
-                         soundName = "hallway-esquerda_frente_01"
+                         soundName = "LANG-hallway-esquerda_frente_01"
                     } else {
                         //left right
-                         soundName = "hallway-direita_esquerda_01"
+                         soundName = "LANG-hallway-direita_esquerda_01"
                     }
                     if(gameState.rotation == 2 && gameState.room == 87){
-                        soundName = "narrativa-salaRecreacaoEsquerda_PT-BR"
+                        soundName = "LANG-narrativa-salaRecreacaoEsquerda"
                     }else if(gameState.rotation == 0 && gameState.room == 87){
-                        soundName = "narrativa-salaRecreacaoDireita_PT-BR"
+                        soundName = "LANG-narrativa-salaRecreacaoDireita"
                     }
                     break;
                 case 1:
                     //playSound front or Left
                     if(gameState.rotation == 0){
                         //sound front left
-                         soundName = "hallway-esquerda_frente_01"
+                         soundName = "LANG-hallway-esquerda_frente_01"
                     } else if (gameState.rotation == 1){
                         //sound left right
-                         soundName = "hallway-direita_esquerda_01"
+                         soundName = "LANG-hallway-direita_esquerda_01"
                     } else if (gameState.rotation == 2){
                         //front right
-                         soundName = "hallway-direita_frente_01"
+                         soundName = "LANG-hallway-direita_frente_01"
                     } else {
                         //left right front
-                         soundName = "hallway-direita_esquerda_frente_01"
+                         soundName = "LANG-hallway-direita_esquerda_frente_01"
                     }
                     if(gameState.rotation == 0 && gameState.room == 51){
-                        soundName = "narrativa-salaRecreacaoEsquerda_PT-BR"
+                        soundName = "LANG-narrativa-salaRecreacaoEsquerda"
                     }else if(gameState.rotation == 2 && gameState.room == 51){
-                            soundName = "narrativa-salaRecreacaoDireita_PT-BR"
+                            soundName = "LANG-narrativa-salaRecreacaoDireita"
                         }else if (gameState.rotation == 0 && gameState.room == 134){
-                                soundName = "narrativa-escritorioAdmEsquerda_PT-BR"
+                                soundName = "LANG-narrativa-escritorioAdmEsquerda"
                             }else if (gameState.rotation == 2 && gameState.room == 134){
-                                    soundName = "narrativa-escritorioAdmDireita_PT-BR"
+                                    soundName = "LANG-narrativa-escritorioAdmDireita"
                                 }
                     break;
                 case 2:
                     //playSound left or right
                     if(gameState.rotation == 0){
                         //sound right left
-                         soundName = "hallway-direita_esquerda_01"
+                         soundName = "LANG-hallway-direita_esquerda_01"
                     }else if (gameState.rotation == 1){
                         //sound front right
-                         soundName = "hallway-direita_frente_01"
+                         soundName = "LANG-hallway-direita_frente_01"
                     }else if (gameState.rotation == 2){
                         //front right left
-                         soundName = "hallway-direita_esquerda_frente_01"
+                         soundName = "LANG-hallway-direita_esquerda_frente_01"
                     }else {
                         //left front
-                         soundName = "hallway-esquerda_frente_01"
+                         soundName = "LANG-hallway-esquerda_frente_01"
                     }
                     break;
                 case 3:
                     //playSound left right front
                     if(gameState.rotation == 0){
                         //sound right left front
-                         soundName = "hallway-direita_esquerda_frente_01"
+                         soundName = "LANG-hallway-direita_esquerda_frente_01"
                     }else if (gameState.rotation == 1){
                         //sound left front
-                         soundName = "hallway-esquerda_frente_01"
+                         soundName = "LANG-hallway-esquerda_frente_01"
                     }else if (gameState.rotation == 2){
                         //right left
-                         soundName = "hallway-direita_esquerda_01"
+                         soundName = "LANG-hallway-direita_esquerda_01"
                     }else {
                         //right front
-                         soundName = "hallway-direita_frente_01"
+                         soundName = "LANG-hallway-direita_frente_01"
                     }
                     if(gameState.rotation == 1 && gameState.room == 38){
-                        soundName = "narrativa-salaPertencesEsquerda_PT-BR"
+                        soundName = "LANG-narrativa-salaPertencesEsquerda"
                     }else if(gameState.rotation == 3 && gameState.room == 38){
-                        soundName = "narrativa-salaPertencesDireita_PT-BR"
+                        soundName = "LANG-narrativa-salaPertencesDireita"
                     }
                     break;
                 case 4:
                     //right only
                     if(gameState.rotation == 0){
                         //sound right
-                         soundName = "hallway-direita_01"
+                         soundName = "LANG-hallway-direita_01"
                     }else if (gameState.rotation == 1){
                         //sound front right
-                         soundName = "hallway-direita_frente_01"
+                         soundName = "LANG-hallway-direita_frente_01"
                     }else if (gameState.rotation == 2){
                         //front left
-                         soundName = "hallway-esquerda_frente_01"
+                         soundName = "LANG-hallway-esquerda_frente_01"
                     }else {
                         //left
-                         soundName = "hallway-esquerda_01"
+                         soundName = "LANG-hallway-esquerda_01"
                     }
                     break;
                 case 5:
                     //left only
                     if(gameState.rotation == 0){
                         //sound left
-                         soundName = "hallway-esquerda_01"
+                         soundName = "LANG-hallway-esquerda_01"
                     }else if (gameState.rotation == 1){
                         //sound right
-                        soundName = "hallway-direita_01"
+                        soundName = "LANG-hallway-direita_01"
                     }else if (gameState.rotation == 2){
                         //front front right
-                         soundName = "hallway-direita_frente_01"
+                         soundName = "LANG-hallway-direita_frente_01"
                     }else {
                         //left front
-                         soundName = "hallway-esquerda_frente_01"
+                         soundName = "LANG-hallway-esquerda_frente_01"
                     }
                     if(gameState.rotation == 1 && gameState.room == 154){
-                        soundName = "narrativa-salaEnfermariaDireita_PT-BR"
+                        soundName = "LANG-narrativa-salaEnfermariaDireita"
                     }
                     break;
                 case 6:
                     //right front without back
                     if(gameState.rotation == 0){
                         //sound front right
-                         soundName = "hallway-direita_frente_01"
+                         soundName = "LANG-hallway-direita_frente_01"
                     }else if (gameState.rotation == 1){
                         //sound left front
-                         soundName = "hallway-esquerda_frente_01"
+                         soundName = "LANG-hallway-esquerda_frente_01"
                     }else if (gameState.rotation == 2){
                         //left
-                         soundName = "hallway-esquerda_01"
+                         soundName = "LANG-hallway-esquerda_01"
                     }else {
                         //right
-                         soundName = "hallway-direita_01"
+                         soundName = "LANG-hallway-direita_01"
                     }
                     if(gameState.rotation == 2 && gameState.room == 91){
-                        soundName = "narrativa-banheiroMasculinoEsquerda_PT-BR"
+                        soundName = "LANG-narrativa-banheiroMasculinoEsquerda"
                     }
                     
                     break;
@@ -386,19 +386,19 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                     //front left without back
                     if(gameState.rotation == 0){
                         //sound front left
-                         soundName = "hallway-esquerda_frente_01"
+                         soundName = "LANG-hallway-esquerda_frente_01"
                     }else if (gameState.rotation == 1){
                         //sound left
-                         soundName = "hallway-esquerda_01"
+                         soundName = "LANG-hallway-esquerda_01"
                     }else if (gameState.rotation == 2){
                         //right
-                         soundName = "hallway-direita_01"
+                         soundName = "LANG-hallway-direita_01"
                     }else {
                         //front right
-                         soundName = "hallway-direita_frente_01"
+                         soundName = "LANG-hallway-direita_frente_01"
                     }
                     if(gameState.rotation == 2 && gameState.room == 55){
-                        soundName = "narrativa-banheiroFemininoDireita_PT-BR"
+                        soundName = "LANG-narrativa-banheiroFemininoDireita"
                     }
                     break;
 //                case 8:

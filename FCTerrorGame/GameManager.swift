@@ -54,8 +54,10 @@ class GameManager {
     }
     
     func playDirectionNarration(sndName: String, frmt: String){
+        let str =  sndName.stringByReplacingOccurrencesOfString("LANG", withString: self.language)
+
         self.directionNarration.removeAll()
-        let audio = BackGroundSoundNode(soundName: sndName, format: frmt)
+        let audio = BackGroundSoundNode(soundName: str, format: frmt)
         self.directionNarration.append(audio)
         self.directionNarration[0].play()
     }

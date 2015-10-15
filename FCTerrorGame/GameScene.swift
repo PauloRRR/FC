@@ -520,9 +520,17 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     }
     
     func pickItem (action :JSON) {
+        var soundName = ""
         if (checkPrerequisite(action) && checkItem(action)) {
             gameState.items.append(action["item"].stringValue)
             gameState.updateState()
+            if(action["item"].stringValue == "lockerKey"){
+                soundName = "narrativa_encontreiChave_escritorioAdm_PT-BR_01"
+            }else if(action["item"].stringValue == "needle"){
+                
+            }
+            
+            manager.playDirectionNarration(soundName, frmt: "mp3")
             
         }
     

@@ -949,6 +949,16 @@
     {
         "id": 52,
         "background": "room52",
+        "playOnEnter": [
+
+                {
+                        "sound": "narrativa_descricao_salaRecreacao_PT-BR_01",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                }
+
+        ],
         "events": {
             "swipeRight": {
                 "action": "gotoRoom",
@@ -1929,6 +1939,16 @@
     {
         "id": 110,
         "background": "room110",
+        "playOnEnter": [
+
+                {
+                        "sound": "narrativa-salaRecreacao_PT-BR",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                }
+
+        ],
         "events": {
             "swipeLeft":{
                 "action": "gotoRoom",
@@ -2763,6 +2783,16 @@
     {
         "id": 155,
         "background": "room155",
+        "playOnEnter": [
+
+                {
+                        "sound": "narrativa-enfermaria_PT-BR",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                  }
+
+        ],
         "events": {
             "swipeUp":{
                 "action": "gotoRoom",

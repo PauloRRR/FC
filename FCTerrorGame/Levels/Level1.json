@@ -722,7 +722,7 @@
                 "prerequisite": "lockerKey",
                 "failPrerequisite":[
                     { 
-                        "sound": "lockedLockers",
+                        "sound": "LANG-lockedLockers",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -952,7 +952,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "narrativa_descricao_salaRecreacao_PT-BR_01",
+                        "sound": "LANG-narrativa_descricao_salaRecreacao",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -1942,7 +1942,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "narrativa-salaRecreacao_PT-BR",
+                        "sound": "LANG-narrativa-salaRecreacao",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2439,7 +2439,7 @@
                 "prerequisite": "watchedLockersRoom",
                 "failPrerequisite":[
                     { 
-                        "sound": "nothingInteresting",
+                        "sound": "LANG-nothingInteresting",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2786,7 +2786,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "narrativa-enfermaria_PT-BR",
+                        "sound": "LANG-narrativa-enfermaria",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0

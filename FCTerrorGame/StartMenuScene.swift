@@ -73,6 +73,7 @@ class StartMenuScene: SKScene {
         
         self.musicPlayer.prepareToPlay()
         self.musicPlayer.volume = 0.5
+        self.musicPlayer.numberOfLoops = -1
         self.musicPlayer.play()
         
         

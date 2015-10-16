@@ -99,7 +99,7 @@
 		D4A3C9BA1BBC5D1D00426CCE /* pt-BR-hallway-guardExitToxin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A3C9B91BBC5D1D00426CCE /* pt-BR-hallway-guardExitToxin.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D4BD784A1BC4548300AE2765 /* pt-BR-narrativa_naoPossoPassar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78491BC4548300AE2765 /* pt-BR-narrativa_naoPossoPassar.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D4BD784C1BC454BA00AE2765 /* pt-BR-narrativa_naoPossoSair.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD784B1BC454BA00AE2765 /* pt-BR-narrativa_naoPossoSair.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D4BD784E1BC5816100AE2765 /* pt-BR-narrativa_escritorioAdm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD784D1BC5816100AE2765 /* pt-BR-narrativa_escritorioAdm.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4BD784E1BC5816100AE2765 /* pt-BR-narrativa-escritorioAdm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD784D1BC5816100AE2765 /* pt-BR-narrativa-escritorioAdm.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D4BD78521BC59F6A00AE2765 /* pt-BR-narrativa-banheiroFemininoDireita.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78511BC59F6A00AE2765 /* pt-BR-narrativa-banheiroFemininoDireita.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D4BD78541BC5A46F00AE2765 /* pt-BR-narrativa-salaRecreacaoEsquerda.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78531BC5A46F00AE2765 /* pt-BR-narrativa-salaRecreacaoEsquerda.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D4BD78561BC5A60F00AE2765 /* pt-BR-narrativa-salaRecreacaoDireita.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BD78551BC5A60F00AE2765 /* pt-BR-narrativa-salaRecreacaoDireita.mp3 */; settings = {ASSET_TAGS = (); }; };
@@ -274,7 +274,7 @@
 		D4A3C9B91BBC5D1D00426CCE /* pt-BR-hallway-guardExitToxin.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-hallway-guardExitToxin.mp3"; sourceTree = "<group>"; };
 		D4BD78491BC4548300AE2765 /* pt-BR-narrativa_naoPossoPassar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-narrativa_naoPossoPassar.mp3"; sourceTree = "<group>"; };
 		D4BD784B1BC454BA00AE2765 /* pt-BR-narrativa_naoPossoSair.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-narrativa_naoPossoSair.mp3"; sourceTree = "<group>"; };
-		D4BD784D1BC5816100AE2765 /* pt-BR-narrativa_escritorioAdm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-narrativa_escritorioAdm.mp3"; sourceTree = "<group>"; };
+		D4BD784D1BC5816100AE2765 /* pt-BR-narrativa-escritorioAdm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-narrativa-escritorioAdm.mp3"; sourceTree = "<group>"; };
 		D4BD78511BC59F6A00AE2765 /* pt-BR-narrativa-banheiroFemininoDireita.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-narrativa-banheiroFemininoDireita.mp3"; sourceTree = "<group>"; };
 		D4BD78531BC5A46F00AE2765 /* pt-BR-narrativa-salaRecreacaoEsquerda.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-narrativa-salaRecreacaoEsquerda.mp3"; sourceTree = "<group>"; };
 		D4BD78551BC5A60F00AE2765 /* pt-BR-narrativa-salaRecreacaoDireita.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-narrativa-salaRecreacaoDireita.mp3"; sourceTree = "<group>"; };
@@ -659,7 +659,7 @@
 			children = (
 				D41C34AC1BC2DE6800200105 /* pt-BR-narrativa-salaPertences.mp3 */,
 				D4BD78491BC4548300AE2765 /* pt-BR-narrativa_naoPossoPassar.mp3 */,
-				D4BD784D1BC5816100AE2765 /* pt-BR-narrativa_escritorioAdm.mp3 */,
+				D4BD784D1BC5816100AE2765 /* pt-BR-narrativa-escritorioAdm.mp3 */,
 				D4BD78511BC59F6A00AE2765 /* pt-BR-narrativa-banheiroFemininoDireita.mp3 */,
 				D4BD78531BC5A46F00AE2765 /* pt-BR-narrativa-salaRecreacaoEsquerda.mp3 */,
 				D4BD78551BC5A60F00AE2765 /* pt-BR-narrativa-salaRecreacaoDireita.mp3 */,
@@ -892,7 +892,7 @@
 				D41C34A31BBDB2AD00200105 /* pt-BR-menu.mp3 in Resources */,
 				D4BD78541BC5A46F00AE2765 /* pt-BR-narrativa-salaRecreacaoEsquerda.mp3 in Resources */,
 				D41C34931BBDAF1400200105 /* pt-BR-hallway-esquerda_01.mp3 in Resources */,
-				D4BD784E1BC5816100AE2765 /* pt-BR-narrativa_escritorioAdm.mp3 in Resources */,
+				D4BD784E1BC5816100AE2765 /* pt-BR-narrativa-escritorioAdm.mp3 in Resources */,
 				305224071B863F2400AD7A98 /* Enemy.json in Resources */,
 				30765DD21BCED4ED00DFB9C2 /* en-US-hallway-esquerda_01.mp3 in Resources */,
 				30FA96451BC2DCA000D80032 /* heartbeat.mp3 in Resources */,

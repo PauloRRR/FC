@@ -527,7 +527,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             if(action["item"].stringValue == "lockerKey"){
                 soundName = "LANG-narrativa_encontreiChave_escritorioAdm"
             }else if(action["item"].stringValue == "needle"){
-                    soundName = "LANG-narrativa_sonifero_enfermaria_PT-BR_01"
+                    soundName = "LANG-narrativa_sonifero_enfermaria"
                 }
             
             manager.playDirectionNarration(soundName, frmt: "mp3")

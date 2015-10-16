@@ -86,7 +86,14 @@ class StartMenuScene: SKScene {
         
         self.newGame = SKLabelNode(fontNamed: "futura-condensed-normal")
         self.newGame.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2.1)
-        self.newGame.text = "INICIAR"
+        
+        if(manager.language == "pt-BR"){
+            self.newGame.text = "INICIAR"
+        }else{
+            self.newGame.text = "START"
+        }
+    
+    
         self.newGame.name = "newGame"
         self.newGame.fontSize = 0.1 * self.frame.size.width
         self.newGame.fontColor = UIColor.whiteColor()
@@ -105,7 +112,12 @@ class StartMenuScene: SKScene {
         self.loadGame = SKLabelNode(fontNamed: "futura-condensed-normal")
         self.loadGame.position = CGPoint(x: self.newGame.position.x, y: self.newGame.position.y * 1.6)
         self.loadGame.name = "loadGame"
-        self.loadGame.text = "CONTINUAR"
+        if(manager.language == "pt-BR"){
+             self.loadGame.text = "CONTINUAR"
+        }else{
+             self.loadGame.text = "CONTINUE"
+        }
+       
         self.loadGame.fontSize = 0.1 * self.frame.size.width
         self.loadGame.fontColor = UIColor.whiteColor()
         self.loadGame.zPosition = 1
@@ -122,7 +134,13 @@ class StartMenuScene: SKScene {
         self.newGameYes = SKLabelNode(fontNamed: "futura-condensed-normal")
         self.newGameYes.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/1.5)
         self.newGameYes.name = "newGameYes"
-        self.newGameYes.text = "SIM"
+        if(manager.language == "pt-BR"){
+            self.newGameYes.text = "SIM"
+        }else{
+            self.newGameYes.text = "YES"
+        }
+        
+        
         self.newGameYes.fontSize = 0.1 * self.frame.size.width
         self.newGameYes.fontColor = UIColor.whiteColor()
         self.newGameYes.zPosition = 1
@@ -131,7 +149,12 @@ class StartMenuScene: SKScene {
         self.newGameNo = SKLabelNode(fontNamed: "futura-condensed-normal")
         self.newGameNo.position = CGPoint(x: self.newGameYes.position.x, y: self.newGameYes.position.y/2.5)
         self.newGameNo.name = "newGameNo"
-        self.newGameNo.text = "NÃO"
+        if(manager.language == "pt-BR"){
+            self.newGameNo.text = "NÃO"
+        }else{
+            self.newGameNo.text = "NO"
+        }
+        
         self.newGameNo.fontSize = 0.1 * self.frame.size.width
         self.newGameNo.fontColor = UIColor.whiteColor()
         self.newGameNo.zPosition = 1

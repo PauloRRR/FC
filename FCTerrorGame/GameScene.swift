@@ -509,7 +509,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             let scene = GameScene(size: self.size)
             if let recognizers = self.view?.gestureRecognizers {
                 for recognizer in recognizers {
-                    self.view?.removeGestureRecognizer(recognizer )
+                    self.view?.removeGestureRecognizer(recognizer)
                 }
             }
             
@@ -520,9 +520,17 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     }
     
     func pickItem (action :JSON) {
+        var soundName = ""
         if (checkPrerequisite(action) && checkItem(action)) {
             gameState.items.append(action["item"].stringValue)
             gameState.updateState()
+            if(action["item"].stringValue == "lockerKey"){
+                soundName = "LANG-narrativa_encontreiChave_escritorioAdm"
+            }else if(action["item"].stringValue == "needle"){
+                    soundName = "LANG-narrativa_sonifero_enfermaria_PT-BR_01"
+                }
+            
+            manager.playDirectionNarration(soundName, frmt: "mp3")
             
         }
     

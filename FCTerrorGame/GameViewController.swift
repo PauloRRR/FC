@@ -33,7 +33,11 @@ class GameViewController: UIViewController {
     var manager = GameManager.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let language = NSLocale.preferredLanguages()[0]
+        if(language == "pt-BR"){
+            manager.language = language
+        }
+        print(language)
         if let scene = StartMenuScene.unarchiveFromFile("GameScene") as? StartMenuScene {
             // Configure the view.
             //self.view.isAccessibilityElement = false
@@ -53,11 +57,7 @@ class GameViewController: UIViewController {
             scene.scaleMode = .AspectFill
             //scene.size = skView.bounds.size
             skView.presentScene(scene)
-           let language = NSLocale.preferredLanguages()[0]
-            if(language == "pt-BR"){
-                manager.language = language
-            }
-            print(language)
+           
             
         }
     }

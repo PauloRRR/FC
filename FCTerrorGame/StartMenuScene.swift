@@ -77,7 +77,7 @@ class StartMenuScene: SKScene {
         self.musicPlayer.play()
         
         
-        GameManager.addSoundArray("\(manager.language)-menu", frmt: "mp3", x: 0.0, y: 0.0)
+        GameManager.addSoundArray("LANG-menu", frmt: "mp3", x: 0.0, y: 0.0)
         
         self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)

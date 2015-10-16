@@ -24,7 +24,7 @@ class AudioNode: NSObject {
         //self.player.position = AVAudioMake3DPoint(0.0, 0.0, 0.0);
         //GameManager.sharedInstance.enviroNode.listenerPosition = AVAudioMake3DPoint(0.0, 0.0, 0.0);
         //enviroNode.listenerPosition = gameManager.enviroNode.listenerPosition
-        print(soundName)
+        print("init\(soundName)")
         
            let str =  soundName.stringByReplacingOccurrencesOfString("LANG", withString: gameManager.language)
             

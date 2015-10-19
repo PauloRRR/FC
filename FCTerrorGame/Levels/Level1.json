@@ -106,7 +106,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -276,7 +276,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "hallway-finalCorredor_voltar_01",
+                        "sound": "LANG-hallway-finalCorredor_voltar_01",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -378,7 +378,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -435,7 +435,7 @@
         "background": "room25",
         "playOnEnter": [
                     {
-                        "sound": "hallway-direita_esquerda_frente_01",
+                        "sound": "LANG-hallway-direita_esquerda_frente_01",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -533,7 +533,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -704,7 +704,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "narrativa-salaPertences_PT-BR",
+                        "sound": "LANG-narrativa-salaPertences",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -722,7 +722,7 @@
                 "prerequisite": "lockerKey",
                 "failPrerequisite":[
                     { 
-                        "sound": "lockedLockers",
+                        "sound": "LANG-lockedLockers",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -823,7 +823,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -949,6 +949,16 @@
     {
         "id": 52,
         "background": "room52",
+        "playOnEnter": [
+
+                {
+                        "sound": "LANG-narrativa_descricao_salaRecreacao",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                }
+
+        ],
         "events": {
             "swipeRight": {
                 "action": "gotoRoom",
@@ -1095,7 +1105,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -1557,6 +1567,16 @@
     {
         "id": 88,
         "background": "room88",
+        "playOnEnter": [
+
+                {
+                        "sound": "LANG-narrativa_descricao_salaRecreacao",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                }
+
+        ],
         "events": {
             "swipeLeft":{
                 "action": "gotoRoom",
@@ -1692,7 +1712,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -1929,6 +1949,16 @@
     {
         "id": 110,
         "background": "room110",
+        "playOnEnter": [
+
+                {
+                        "sound": "LANG-narrativa-salaRecreacao",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                }
+
+        ],
         "events": {
             "swipeLeft":{
                 "action": "gotoRoom",
@@ -2051,7 +2081,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2252,7 +2282,7 @@
         "background": "room128",
         "playOnEnter": [
             {
-                "sound": "011_hallway-guardExitToxin_PT-BR_01",
+                "sound": "LANG-hallway-guardExitToxin",
                 "format": "mp3",
                 "x": 0.0,
                 "y": 0.0
@@ -2271,7 +2301,7 @@
                 "prerequisite" : "needle",
                 "failPrerequisite": [
                     {
-                        "sound": "narrativa_naoPossoPassar_PT-BR_01",
+                        "sound": "LANG-narrativa_naoPossoPassar",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2314,7 +2344,7 @@
                 "prerequisite" : "allItems",
                 "failPrerequisite": [
                     {
-                        "sound": "narrativa_naoPossoSair_PT-BR_01",
+                        "sound": "LANG-narrativa_naoPossoSair",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2401,7 +2431,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "narrativa-escritorioAdm_PT-BR_01",
+                        "sound": "LANG-narrativa-escritorioAdm",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2413,13 +2443,13 @@
                 "action": "gotoRoom",
                 "room": 134
             },
-            "swipeDown":{
+            "swipeUp":{
                 "action": "pickItem",
                 "item": "lockerKey",
                 "prerequisite": "watchedLockersRoom",
                 "failPrerequisite":[
                     { 
-                        "sound": "nothingInteresting",
+                        "sound": "LANG-nothingInteresting",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2653,7 +2683,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "equipamentosCorredor_01",
+                        "sound": "LANG-equipamentosCorredor",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -2763,6 +2793,16 @@
     {
         "id": 155,
         "background": "room155",
+        "playOnEnter": [
+
+                {
+                        "sound": "LANG-narrativa-enfermaria",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                  }
+
+        ],
         "events": {
             "swipeUp":{
                 "action": "gotoRoom",
@@ -2774,7 +2814,7 @@
                 "prerequisite": "foundGuard",
                 "failPrerequisite": [
                     {
-                        "sound": "nothingInteresting2",
+                        "sound": "LANG-nothingInteresting2",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0

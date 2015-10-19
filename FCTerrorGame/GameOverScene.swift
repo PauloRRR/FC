@@ -59,7 +59,7 @@ class GameOverScene: SKScene {
     
     func gameOverOptions(){
         
-        GameManager.addSoundArray("gameOverTela_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+        GameManager.addSoundArray("LANG-gameOverTela", frmt: "mp3", x: 0.0, y: 0.0)
         
         self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)
@@ -73,7 +73,13 @@ class GameOverScene: SKScene {
         
         self.tryAgain = SKLabelNode(fontNamed: "futura-condensed-normal")
         self.tryAgain.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/1.5)
-        self.tryAgain.text = "TENTAR NOVAMENTE"
+        
+        if(manager.language == "pt-BR"){
+            self.tryAgain.text = "TENTAR NOVAMENTE"
+        }else{
+            self.tryAgain.text = "TRY AGAIN"
+        }
+        
         self.tryAgain.name = "tryAgain"
         self.tryAgain.fontSize = 0.1 * self.frame.size.width
         self.tryAgain.zPosition = 1
@@ -83,7 +89,12 @@ class GameOverScene: SKScene {
         self.backToMenu = SKLabelNode(fontNamed: "futura-condensed-normal")
         self.backToMenu.position = CGPoint(x: self.tryAgain.position.x, y: self.tryAgain.position.y/2.5)
         self.backToMenu.name = "backToMenu"
-        self.backToMenu.text = "VOLTAR AO MENU"
+        if(manager.language == "pt-BR"){
+            self.backToMenu.text = "VOLTAR AO MENU"
+        }else{
+            self.backToMenu.text = "BACK TO MENU"
+        }
+        
         self.backToMenu.fontSize = 0.1 * self.frame.size.width
         self.backToMenu.zPosition = 1
         self.backToMenu.fontColor = UIColor.whiteColor()

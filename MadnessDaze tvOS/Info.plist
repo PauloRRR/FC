@@ -28,5 +28,10 @@
 	<array>
 		<string>arm64</string>
 	</array>
+    <key>UIAppFonts</key>
+    <array>
+        <string>futura-condensed-normal.ttf</string>
+        <string>futura-condensed-bold.ttf</string>
+    </array>
 </dict>
 </plist>

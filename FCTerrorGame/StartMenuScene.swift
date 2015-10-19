@@ -29,7 +29,9 @@ class StartMenuScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         
-        //self.startScreen()
+        if (!NSUserDefaults.standardUserDefaults().boolForKey("FirstPlay")){
+            self.startScreen()
+        }
         self.startMenuOptions()
         
     }
@@ -44,7 +46,7 @@ class StartMenuScene: SKScene {
         
         addChild(self.background)
         
-        let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("tutorialFull_PT-BR_01", ofType: "mp3")!)
+        let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(manager.language)-tutorialFull", ofType: "mp3")!)
         
         self.musicPlayer = try! AVAudioPlayer(contentsOfURL: url)
         
@@ -55,6 +57,8 @@ class StartMenuScene: SKScene {
         
             if (!self.musicPlayer.playing){
                     self.background.removeFromParent()
+                    NSUserDefaults.standardUserDefaults().setBool(true , forKey: "FirstPlay")
+                    NSUserDefaults.standardUserDefaults().synchronize()
                     self.startMenuOptions()
             }
         
@@ -264,7 +268,7 @@ class StartMenuScene: SKScene {
             
         if (node.name == "tutorial" && tutorialTouch > 1){
             print("PLAY TUTORIAL")
-            GameManager.addSoundArray("tutorialFull_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+            GameManager.addSoundArray("LANG-tutorialFull", frmt: "mp3", x: 0.0, y: 0.0)
             self.tutorialTouch = 0
             self.newGameTouch = 0
             self.loadGameTouch = 0

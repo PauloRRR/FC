@@ -130,6 +130,7 @@
 		B97F78BB1B98CDDD00232E98 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F78BA1B98CDDD00232E98 /* GameOverScene.swift */; };
 		B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */; };
 		B985E0761B75300200CBAC43 /* Level1.json in Resources */ = {isa = PBXBuildFile; fileRef = B985E0751B75300200CBAC43 /* Level1.json */; };
+		B9A21BC81BD5992C00410B17 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90BC8C71BD01F75002816D3 /* Images.xcassets */; };
 		B9E6D4271BD55897006AF89F /* en-US-hallway-direita_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DC71BCED4ED00DFB9C2 /* en-US-hallway-direita_01.mp3 */; };
 		B9E6D4281BD55897006AF89F /* en-US-hallway-direita_esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DC81BCED4ED00DFB9C2 /* en-US-hallway-direita_esquerda_01.mp3 */; };
 		B9E6D4291BD55897006AF89F /* en-US-hallway-direita_esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DC91BCED4ED00DFB9C2 /* en-US-hallway-direita_esquerda_frente_01.mp3 */; };
@@ -1345,6 +1346,7 @@
 				D41C34991BBDB23100200105 /* pt-BR-voltarMenu.mp3 in Resources */,
 				30765DEA1BCEDEC600DFB9C2 /* en-US-continuar.mp3 in Resources */,
 				D41C34A51BBDB2AD00200105 /* pt-BR-novoJogoConfirma.mp3 in Resources */,
+				B9A21BC81BD5992C00410B17 /* Images.xcassets in Resources */,
 				D41ADB3C1BD53FC8000F6549 /* en-US-hallway-guardExitToxin.mp3 in Resources */,
 				D4BD78641BC6EAD500AE2765 /* pt-BR-narrativa-deVoltaQuarto.mp3 in Resources */,
 			);

@@ -30,6 +30,7 @@
 		30FA96471BC2E83500D80032 /* HeartBeatSoundControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA96461BC2E83500D80032 /* HeartBeatSoundControl.swift */; };
 		30FA96491BC2EEED00D80032 /* playerSteps2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA96481BC2EEED00D80032 /* playerSteps2.mp3 */; };
 		B90BC8C81BD01F75002816D3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90BC8C71BD01F75002816D3 /* Images.xcassets */; };
+		B9115F181BD165C1000C93A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90BC8C71BD01F75002816D3 /* Images.xcassets */; };
 		B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B36A91B71181F00B1BE78 /* GameState.swift */; };
 		B91B8A781B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */; };
 		B92E34BD1BC5986100ED27E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E34BC1BC5986100ED27E2 /* AppDelegate.swift */; };
@@ -816,6 +817,7 @@
 				B92E34F51BC59B9F00ED27E2 /* lockedLockers.mp3 in Resources */,
 				B92E34C81BC5986200ED27E2 /* Main.storyboard in Resources */,
 				B92E34DD1BC59B9F00ED27E2 /* hallway-direita_frente_01.mp3 in Resources */,
+				B9115F181BD165C1000C93A1 /* Images.xcassets in Resources */,
 				B92E35031BC59BB400ED27E2 /* tutorial_PT-BR_01.mp3 in Resources */,
 				B92E34F21BC59B9F00ED27E2 /* scream4.wav in Resources */,
 				B92E34D91BC59B9F00ED27E2 /* story2.mp3 in Resources */,
@@ -1104,7 +1106,7 @@
 				INFOPLIST_FILE = "MadnessDaze tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.project.MadnessDaze.tvOS.MadnessDaze-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
@@ -1120,7 +1122,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "MadnessDaze tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.project.MadnessDaze.tvOS.MadnessDaze-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;

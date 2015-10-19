@@ -704,7 +704,7 @@
         "playOnEnter": [
 
                 {
-                        "sound": "LANG-narrativa-salaPertences_PT-BR",
+                        "sound": "LANG-narrativa-salaPertences",
                         "format": "mp3",
                         "x": 0.0,
                         "y": 0.0
@@ -1567,6 +1567,16 @@
     {
         "id": 88,
         "background": "room88",
+        "playOnEnter": [
+
+                {
+                        "sound": "LANG-narrativa_descricao_salaRecreacao",
+                        "format": "mp3",
+                        "x": 0.0,
+                        "y": 0.0
+                }
+
+        ],
         "events": {
             "swipeLeft":{
                 "action": "gotoRoom",
@@ -2433,7 +2443,7 @@
                 "action": "gotoRoom",
                 "room": 134
             },
-            "swipeDown":{
+            "swipeUp":{
                 "action": "pickItem",
                 "item": "lockerKey",
                 "prerequisite": "watchedLockersRoom",

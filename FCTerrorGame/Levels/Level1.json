@@ -433,14 +433,7 @@
     {
         "id": 25,
         "background": "room25",
-        "playOnEnter": [
-                    {
-                        "sound": "LANG-hallway-direita_esquerda_frente_01",
-                        "format": "mp3",
-                        "x": 0.0,
-                        "y": 0.0
-                    }
-        ],
+        "crossingWay": 8,
         "events": {
             "swipeLeft": {
                 "action": "gotoRoom",

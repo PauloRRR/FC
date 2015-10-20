@@ -401,11 +401,11 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                         soundName = "LANG-narrativa-banheiroFemininoDireita"
                     }
                     break;
-//                case 8:
-//                    if(gameState.rotation == 3 && gameState.room == 0){
-//                        soundName = "narrativa-deVoltaQuarto_PT-BR"
-//                    }
-//                break;
+                case 8:
+                    
+                        soundName = "LANG-hallway-direita_esquerda_frente_01"
+                    
+                break;
                 default:
                     break;
             }

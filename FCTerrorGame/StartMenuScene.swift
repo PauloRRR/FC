@@ -90,9 +90,9 @@ class StartMenuScene: SKScene {
         self.musicPlayer.numberOfLoops = -1
         self.musicPlayer.play()
         
-        
-        GameManager.addSoundArray("LANG-menu", frmt: "mp3", x: 0.0, y: 0.0)
-        
+        if(UIAccessibilityIsVoiceOverRunning()){
+            GameManager.addSoundArray("LANG-menu", frmt: "mp3", x: 0.0, y: 0.0)
+        }
         self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
         self.background.size = self.frame.size

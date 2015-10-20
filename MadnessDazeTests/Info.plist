@@ -20,5 +20,10 @@
 	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+    <key>UIAppFonts</key>
+    <array>
+        <string>futura-condensed-normal.ttf</string>
+        <string>futura-condensed-bold.ttf</string>
+    </array>
 </dict>
 </plist>

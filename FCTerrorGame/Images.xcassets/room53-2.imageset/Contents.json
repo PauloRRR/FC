@@ -12,6 +12,11 @@
     {
       "idiom" : "universal",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "tv",
+      "filename" : "room53-2.jpg",
+      "scale" : "1x"
     }
   ],
   "info" : {

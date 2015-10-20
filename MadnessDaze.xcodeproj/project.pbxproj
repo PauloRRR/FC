@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		301915401BC6EB72002DA5BE /* en-US-story0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3019153F1BC6EB72002DA5BE /* en-US-story0.mp3 */; settings = {ASSET_TAGS = (); }; };
-		301915441BC6F41D002DA5BE /* en-US-story1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 301915431BC6F41D002DA5BE /* en-US-story1.mp3 */; settings = {ASSET_TAGS = (); }; };
+		301915401BC6EB72002DA5BE /* en-US-story0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3019153F1BC6EB72002DA5BE /* en-US-story0.mp3 */; };
+		301915441BC6F41D002DA5BE /* en-US-story1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 301915431BC6F41D002DA5BE /* en-US-story1.mp3 */; };
 		305224031B84F42C00AD7A98 /* EnemyBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305224021B84F42C00AD7A98 /* EnemyBot.swift */; };
 		305224051B86380300AD7A98 /* EnemyControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305224041B86380300AD7A98 /* EnemyControl.swift */; };
 		305224071B863F2400AD7A98 /* Enemy.json in Resources */ = {isa = PBXBuildFile; fileRef = 305224061B863F2400AD7A98 /* Enemy.json */; };
@@ -18,37 +18,114 @@
 		306F7C7D1B7D023700E8501A /* asylum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C7C1B7D023700E8501A /* asylum.mp3 */; };
 		306F7C7F1B7D113600E8501A /* BackGroundSoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */; };
 		306F7C811B7D1BF500E8501A /* locked.wav in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C801B7D1BF500E8501A /* locked.wav */; };
-		30765DC61BCEC3D600DFB9C2 /* en-US-equipamentosCorredor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DC51BCEC3D600DFB9C2 /* en-US-equipamentosCorredor.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DCE1BCED4ED00DFB9C2 /* en-US-hallway-direita_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DC71BCED4ED00DFB9C2 /* en-US-hallway-direita_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DCF1BCED4ED00DFB9C2 /* en-US-hallway-direita_esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DC81BCED4ED00DFB9C2 /* en-US-hallway-direita_esquerda_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DD01BCED4ED00DFB9C2 /* en-US-hallway-direita_esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DC91BCED4ED00DFB9C2 /* en-US-hallway-direita_esquerda_frente_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DD11BCED4ED00DFB9C2 /* en-US-hallway-direita_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DCA1BCED4ED00DFB9C2 /* en-US-hallway-direita_frente_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DD21BCED4ED00DFB9C2 /* en-US-hallway-esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DCB1BCED4ED00DFB9C2 /* en-US-hallway-esquerda_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DD31BCED4ED00DFB9C2 /* en-US-hallway-esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DCC1BCED4ED00DFB9C2 /* en-US-hallway-esquerda_frente_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DD41BCED4ED00DFB9C2 /* en-US-hallway-finalCorredor_voltar_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DCD1BCED4ED00DFB9C2 /* en-US-hallway-finalCorredor_voltar_01.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DEA1BCEDEC600DFB9C2 /* en-US-continuar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE31BCEDEC600DFB9C2 /* en-US-continuar.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DEB1BCEDEC600DFB9C2 /* en-US-iniciar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE41BCEDEC600DFB9C2 /* en-US-iniciar.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DEC1BCEDEC600DFB9C2 /* en-US-menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE51BCEDEC600DFB9C2 /* en-US-menu.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DED1BCEDEC600DFB9C2 /* en-US-nao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE61BCEDEC600DFB9C2 /* en-US-nao.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DEE1BCEDEC600DFB9C2 /* en-US-novoJogoConfirma.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE71BCEDEC600DFB9C2 /* en-US-novoJogoConfirma.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DEF1BCEDEC600DFB9C2 /* en-US-sim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE81BCEDEC600DFB9C2 /* en-US-sim.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DF01BCEDEC600DFB9C2 /* en-US-tutorial.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE91BCEDEC600DFB9C2 /* en-US-tutorial.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30765DF21BD158FF00DFB9C2 /* pt-BR-story0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DF11BD158FF00DFB9C2 /* pt-BR-story0.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30CC7B7B1BBC53B500782856 /* BackGround3dAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CC7B7A1BBC53B500782856 /* BackGround3dAudio.swift */; settings = {ASSET_TAGS = (); }; };
-		30CC7B7F1BBDA78E00782856 /* zombi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B7E1BBDA78E00782856 /* zombi.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30CC7B811BBDAFD800782856 /* gunshot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B801BBDAFD800782856 /* gunshot.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30CC7B831BBDB77E00782856 /* zombihoar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B821BBDB77E00782856 /* zombihoar.wav */; settings = {ASSET_TAGS = (); }; };
+		30765DC61BCEC3D600DFB9C2 /* en-US-equipamentosCorredor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DC51BCEC3D600DFB9C2 /* en-US-equipamentosCorredor.mp3 */; };
+		30765DCE1BCED4ED00DFB9C2 /* en-US-hallway-direita_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DC71BCED4ED00DFB9C2 /* en-US-hallway-direita_01.mp3 */; };
+		30765DCF1BCED4ED00DFB9C2 /* en-US-hallway-direita_esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DC81BCED4ED00DFB9C2 /* en-US-hallway-direita_esquerda_01.mp3 */; };
+		30765DD01BCED4ED00DFB9C2 /* en-US-hallway-direita_esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DC91BCED4ED00DFB9C2 /* en-US-hallway-direita_esquerda_frente_01.mp3 */; };
+		30765DD11BCED4ED00DFB9C2 /* en-US-hallway-direita_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DCA1BCED4ED00DFB9C2 /* en-US-hallway-direita_frente_01.mp3 */; };
+		30765DD21BCED4ED00DFB9C2 /* en-US-hallway-esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DCB1BCED4ED00DFB9C2 /* en-US-hallway-esquerda_01.mp3 */; };
+		30765DD31BCED4ED00DFB9C2 /* en-US-hallway-esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DCC1BCED4ED00DFB9C2 /* en-US-hallway-esquerda_frente_01.mp3 */; };
+		30765DD41BCED4ED00DFB9C2 /* en-US-hallway-finalCorredor_voltar_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DCD1BCED4ED00DFB9C2 /* en-US-hallway-finalCorredor_voltar_01.mp3 */; };
+		30765DEA1BCEDEC600DFB9C2 /* en-US-continuar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE31BCEDEC600DFB9C2 /* en-US-continuar.mp3 */; };
+		30765DEB1BCEDEC600DFB9C2 /* en-US-iniciar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE41BCEDEC600DFB9C2 /* en-US-iniciar.mp3 */; };
+		30765DEC1BCEDEC600DFB9C2 /* en-US-menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE51BCEDEC600DFB9C2 /* en-US-menu.mp3 */; };
+		30765DED1BCEDEC600DFB9C2 /* en-US-nao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE61BCEDEC600DFB9C2 /* en-US-nao.mp3 */; };
+		30765DEE1BCEDEC600DFB9C2 /* en-US-novoJogoConfirma.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE71BCEDEC600DFB9C2 /* en-US-novoJogoConfirma.mp3 */; };
+		30765DEF1BCEDEC600DFB9C2 /* en-US-sim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE81BCEDEC600DFB9C2 /* en-US-sim.mp3 */; };
+		30765DF01BCEDEC600DFB9C2 /* en-US-tutorial.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DE91BCEDEC600DFB9C2 /* en-US-tutorial.mp3 */; };
+		30765DF21BD158FF00DFB9C2 /* pt-BR-story0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30765DF11BD158FF00DFB9C2 /* pt-BR-story0.mp3 */; };
+		30CC7B7B1BBC53B500782856 /* BackGround3dAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CC7B7A1BBC53B500782856 /* BackGround3dAudio.swift */; };
+		30CC7B7F1BBDA78E00782856 /* zombi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B7E1BBDA78E00782856 /* zombi.mp3 */; };
+		30CC7B811BBDAFD800782856 /* gunshot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B801BBDAFD800782856 /* gunshot.mp3 */; };
+		30CC7B831BBDB77E00782856 /* zombihoar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B821BBDB77E00782856 /* zombihoar.wav */; };
 		30D6A01D1B976A3700A025D4 /* AudioCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D6A01C1B976A3700A025D4 /* AudioCoordinate.swift */; };
-		30EA50EB1BC6FC01008E5D55 /* en-US-story2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30EA50EA1BC6FC01008E5D55 /* en-US-story2.mp3 */; settings = {ASSET_TAGS = (); }; };
+		30EA50EB1BC6FC01008E5D55 /* en-US-story2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30EA50EA1BC6FC01008E5D55 /* en-US-story2.mp3 */; };
 		30F181971B96040200C2C2C5 /* roomMapping.json in Resources */ = {isa = PBXBuildFile; fileRef = 30F181961B96040200C2C2C5 /* roomMapping.json */; };
 		30FA88FA1B8D049200FE4700 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA88F91B8D049200FE4700 /* background.mp3 */; };
 		30FA88FC1B8E1C2700FE4700 /* AudioSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA88FB1B8E1C2700FE4700 /* AudioSingleton.swift */; };
 		30FA89001B90C9EE00FE4700 /* breathing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA88FF1B90C9EE00FE4700 /* breathing.mp3 */; };
-		30FA96451BC2DCA000D80032 /* heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA96441BC2DCA000D80032 /* heartbeat.mp3 */; settings = {ASSET_TAGS = (); }; };
-		30FA96471BC2E83500D80032 /* HeartBeatSoundControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA96461BC2E83500D80032 /* HeartBeatSoundControl.swift */; settings = {ASSET_TAGS = (); }; };
-		30FA96491BC2EEED00D80032 /* playerSteps2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA96481BC2EEED00D80032 /* playerSteps2.mp3 */; settings = {ASSET_TAGS = (); }; };
+		30FA96451BC2DCA000D80032 /* heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA96441BC2DCA000D80032 /* heartbeat.mp3 */; };
+		30FA96471BC2E83500D80032 /* HeartBeatSoundControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA96461BC2E83500D80032 /* HeartBeatSoundControl.swift */; };
+		30FA96491BC2EEED00D80032 /* playerSteps2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA96481BC2EEED00D80032 /* playerSteps2.mp3 */; };
+		B90FFFB51BD69B4C00DD3D2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90BC8C71BD01F75002816D3 /* Images.xcassets */; };
 		B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B36A91B71181F00B1BE78 /* GameState.swift */; };
 		B91B8A781B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */; };
+		B92E34BD1BC5986100ED27E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E34BC1BC5986100ED27E2 /* AppDelegate.swift */; };
+		B92E34C51BC5986200ED27E2 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B92E34C41BC5986200ED27E2 /* Game.xcassets */; };
+		B92E34C81BC5986200ED27E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B92E34C61BC5986200ED27E2 /* Main.storyboard */; };
+		B92E34CA1BC5986200ED27E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B92E34C91BC5986200ED27E2 /* Assets.xcassets */; };
+		B92E34CF1BC59B1D00ED27E2 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F7C7A1B7D014C00E8501A /* GameManager.swift */; };
+		B92E34D01BC59B2800ED27E2 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B36A91B71181F00B1BE78 /* GameState.swift */; };
+		B92E34D11BC59B5000ED27E2 /* EnemyControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305224041B86380300AD7A98 /* EnemyControl.swift */; };
+		B92E34D21BC59B6100ED27E2 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */; };
+		B92E34D31BC59B7600ED27E2 /* EnemyBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305224021B84F42C00AD7A98 /* EnemyBot.swift */; };
+		B92E34D41BC59B8600ED27E2 /* roomMapping.json in Resources */ = {isa = PBXBuildFile; fileRef = 30F181961B96040200C2C2C5 /* roomMapping.json */; };
+		B92E34D51BC59B8900ED27E2 /* Level1.json in Resources */ = {isa = PBXBuildFile; fileRef = B985E0751B75300200CBAC43 /* Level1.json */; };
+		B92E34D61BC59B8E00ED27E2 /* Enemy.json in Resources */ = {isa = PBXBuildFile; fileRef = 305224061B863F2400AD7A98 /* Enemy.json */; };
+		B92E34D71BC59B9F00ED27E2 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		B92E34DA1BC59B9F00ED27E2 /* pt-BR-equipamentosCorredor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34841BBDAF1400200105 /* pt-BR-equipamentosCorredor.mp3 */; };
+		B92E34DB1BC59B9F00ED27E2 /* pt-BR-hallway-direita_esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34851BBDAF1400200105 /* pt-BR-hallway-direita_esquerda_01.mp3 */; };
+		B92E34DC1BC59B9F00ED27E2 /* pt-BR-hallway-direita_esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34861BBDAF1400200105 /* pt-BR-hallway-direita_esquerda_frente_01.mp3 */; };
+		B92E34DD1BC59B9F00ED27E2 /* pt-BR-hallway-direita_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34871BBDAF1400200105 /* pt-BR-hallway-direita_frente_01.mp3 */; };
+		B92E34DE1BC59B9F00ED27E2 /* pt-BR-hallway-finalCorredor_voltar_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34891BBDAF1400200105 /* pt-BR-hallway-finalCorredor_voltar_01.mp3 */; };
+		B92E34DF1BC59B9F00ED27E2 /* pt-BR-hallway-direita_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C348A1BBDAF1400200105 /* pt-BR-hallway-direita_01.mp3 */; };
+		B92E34E01BC59B9F00ED27E2 /* pt-BR-hallway-esquerda_frente_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34A81BBF080B00200105 /* pt-BR-hallway-esquerda_frente_01.mp3 */; };
+		B92E34E11BC59B9F00ED27E2 /* pt-BR-hallway-esquerda_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C348B1BBDAF1400200105 /* pt-BR-hallway-esquerda_01.mp3 */; };
+		B92E34E21BC59B9F00ED27E2 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA88F91B8D049200FE4700 /* background.mp3 */; };
+		B92E34E31BC59B9F00ED27E2 /* pt-BR-hallway-guardExitToxin.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A3C9B91BBC5D1D00426CCE /* pt-BR-hallway-guardExitToxin.mp3 */; };
+		B92E34E41BC59B9F00ED27E2 /* AudioSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA88FB1B8E1C2700FE4700 /* AudioSingleton.swift */; };
+		B92E34E51BC59B9F00ED27E2 /* storm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D49F5E4D1BA1F08E0023174A /* storm.mp3 */; };
+		B92E34E61BC59B9F00ED27E2 /* asylum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C7C1B7D023700E8501A /* asylum.mp3 */; };
+		B92E34E71BC59B9F00ED27E2 /* footsteps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 305224081B8CD44800AD7A98 /* footsteps.mp3 */; };
+		B92E34E81BC59B9F00ED27E2 /* locked.wav in Resources */ = {isa = PBXBuildFile; fileRef = 306F7C801B7D1BF500E8501A /* locked.wav */; };
+		B92E34E91BC59B9F00ED27E2 /* breathing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA88FF1B90C9EE00FE4700 /* breathing.mp3 */; };
+		B92E34EA1BC59B9F00ED27E2 /* playerSteps2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA96481BC2EEED00D80032 /* playerSteps2.mp3 */; };
+		B92E34EB1BC59B9F00ED27E2 /* playerSteps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D3321B8F6F6E0004BB09 /* playerSteps.mp3 */; };
+		B92E34EC1BC59B9F00ED27E2 /* scream2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4491CD11B8F9C41009FE55B /* scream2.mp3 */; };
+		B92E34ED1BC59B9F00ED27E2 /* scream3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4491CCF1B8F9BAE009FE55B /* scream3.mp3 */; };
+		B92E34EE1BC59B9F00ED27E2 /* zombihoar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B821BBDB77E00782856 /* zombihoar.wav */; };
+		B92E34EF1BC59B9F00ED27E2 /* zombi.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B7E1BBDA78E00782856 /* zombi.mp3 */; };
+		B92E34F01BC59B9F00ED27E2 /* gunshot.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30CC7B801BBDAFD800782856 /* gunshot.mp3 */; };
+		B92E34F11BC59B9F00ED27E2 /* heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA96441BC2DCA000D80032 /* heartbeat.mp3 */; };
+		B92E34F21BC59B9F00ED27E2 /* scream4.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4491CD31B8FA1CA009FE55B /* scream4.wav */; };
+		B92E34F31BC59B9F00ED27E2 /* scream5.wav in Resources */ = {isa = PBXBuildFile; fileRef = D4491CD41B8FA1CA009FE55B /* scream5.wav */; };
+		B92E34F41BC59B9F00ED27E2 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		B92E34F51BC59B9F00ED27E2 /* pt-BR-lockedLockers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AA1BC2DE0F00200105 /* pt-BR-lockedLockers.mp3 */; };
+		B92E34F61BC59B9F00ED27E2 /* pt-BR-nothingInteresting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AE1BC2E1C900200105 /* pt-BR-nothingInteresting.mp3 */; };
+		B92E34F71BC59B9F00ED27E2 /* pt-BR-nothingInteresting2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34B21BC2FC6900200105 /* pt-BR-nothingInteresting2.mp3 */; };
+		B92E34F81BC59B9F00ED27E2 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		B92E34F91BC59B9F00ED27E2 /* pt-BR-narrativa-salaPertences.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34AC1BC2DE6800200105 /* pt-BR-narrativa-salaPertences.mp3 */; };
+		B92E34FA1BC59BAD00ED27E2 /* pt-BR-gameOverTela.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34941BBDB23100200105 /* pt-BR-gameOverTela.mp3 */; };
+		B92E34FB1BC59BAD00ED27E2 /* pt-BR-tentarNovamente.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34951BBDB23100200105 /* pt-BR-tentarNovamente.mp3 */; };
+		B92E34FC1BC59BAD00ED27E2 /* pt-BR-voltarMenu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34961BBDB23100200105 /* pt-BR-voltarMenu.mp3 */; };
+		B92E34FD1BC59BB400ED27E2 /* pt-BR-continuar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349A1BBDB2AD00200105 /* pt-BR-continuar.mp3 */; };
+		B92E34FE1BC59BB400ED27E2 /* pt-BR-iniciar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349B1BBDB2AD00200105 /* pt-BR-iniciar.mp3 */; };
+		B92E34FF1BC59BB400ED27E2 /* pt-BR-menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349C1BBDB2AD00200105 /* pt-BR-menu.mp3 */; };
+		B92E35001BC59BB400ED27E2 /* pt-BR-nao.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349D1BBDB2AD00200105 /* pt-BR-nao.mp3 */; };
+		B92E35011BC59BB400ED27E2 /* pt-BR-novoJogoConfirma.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349E1BBDB2AD00200105 /* pt-BR-novoJogoConfirma.mp3 */; };
+		B92E35021BC59BB400ED27E2 /* pt-BR-sim.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C349F1BBDB2AD00200105 /* pt-BR-sim.mp3 */; };
+		B92E35031BC59BB400ED27E2 /* pt-BR-tutorial.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41C34A01BBDB2AD00200105 /* pt-BR-tutorial.mp3 */; };
+		B92E35041BC59BB400ED27E2 /* menuMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = D469BFA61BB481ED00EF1D95 /* menuMusic.wav */; };
+		B92E35051BC59BB400ED27E2 /* pt-BR-tutorialFull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D469BFA01BB45E5800EF1D95 /* pt-BR-tutorialFull.mp3 */; };
+		B92E35061BC59BBF00ED27E2 /* AudioNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F7C721B7118A100E8501A /* AudioNode.swift */; };
+		B92E35071BC59BBF00ED27E2 /* BackGroundSoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F7C7E1B7D113600E8501A /* BackGroundSoundNode.swift */; };
+		B92E35081BC59BBF00ED27E2 /* AudioCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D6A01C1B976A3700A025D4 /* AudioCoordinate.swift */; };
+		B92E35091BC59BBF00ED27E2 /* StorySoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B974A8DC1B98B9BC004DFE75 /* StorySoundNode.swift */; };
+		B92E350A1BC59BBF00ED27E2 /* BackGround3dAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30CC7B7A1BBC53B500782856 /* BackGround3dAudio.swift */; };
+		B92E350B1BC59BBF00ED27E2 /* HeartBeatSoundControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA96461BC2E83500D80032 /* HeartBeatSoundControl.swift */; };
+		B92E350D1BC59BF400ED27E2 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDC41B6FD3B000D80921 /* GameViewController.swift */; };
+		B92E350F1BC59C2700ED27E2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDC21B6FD3B000D80921 /* GameScene.swift */; };
+		B92E35101BC59C2700ED27E2 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F78BA1B98CDDD00232E98 /* GameOverScene.swift */; };
+		B92E35111BC59C2700ED27E2 /* StartMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F5E501BA208E50023174A /* StartMenuScene.swift */; };
+		B92E35121BC59C2700ED27E2 /* futura-condensed-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D485B1961BB06AD7005C423D /* futura-condensed-normal.ttf */; };
+		B92E35131BC59C2700ED27E2 /* futura-condensed-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D485B1D61BB072F8005C423D /* futura-condensed-bold.ttf */; };
+		B92E35141BC59C3300ED27E2 /* UIAlternateTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */; };
+		B92E35161BC5A49B00ED27E2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B92E35151BC5A49B00ED27E2 /* GameScene.sks */; };
+		B92E35191BC5A80E00ED27E2 /* GameViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E35171BC5A7B500ED27E2 /* GameViewControllerExtension.swift */; };
+		B92E35221BC6CE5900ED27E2 /* StartMenuScene+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E35211BC6CE5900ED27E2 /* StartMenuScene+iOS.swift */; };
+		B92E35241BC6D0DE00ED27E2 /* StartMenuScene+tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E35231BC6D0DE00ED27E2 /* StartMenuScene+tvOS.swift */; };
+		B94C73761BCED604001F0323 /* GameOverScene+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C73751BCED604001F0323 /* GameOverScene+iOS.swift */; };
+		B94C73781BCED63A001F0323 /* GameOverScene+tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C73771BCED63A001F0323 /* GameOverScene+tvOS.swift */; };
 		B974A8DD1B98B9BC004DFE75 /* StorySoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B974A8DC1B98B9BC004DFE75 /* StorySoundNode.swift */; };
 		B97F78BB1B98CDDD00232E98 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F78BA1B98CDDD00232E98 /* GameOverScene.swift */; };
 		B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */; };
@@ -91,10 +168,9 @@
 		D471FDC31B6FD3B000D80921 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDC21B6FD3B000D80921 /* GameScene.swift */; };
 		D471FDC51B6FD3B000D80921 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D471FDC41B6FD3B000D80921 /* GameViewController.swift */; };
 		D471FDC81B6FD3B000D80921 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D471FDC61B6FD3B000D80921 /* Main.storyboard */; };
-		D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D471FDC91B6FD3B000D80921 /* Images.xcassets */; };
 		D471FDCD1B6FD3B000D80921 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D471FDCB1B6FD3B000D80921 /* LaunchScreen.xib */; };
-		D485B1D51BB07213005C423D /* futura-condensed-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D485B1961BB06AD7005C423D /* futura-condensed-normal.ttf */; settings = {ASSET_TAGS = (); }; };
-		D485B1D71BB072F8005C423D /* futura-condensed-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D485B1D61BB072F8005C423D /* futura-condensed-bold.ttf */; settings = {ASSET_TAGS = (); }; };
+		D485B1D51BB07213005C423D /* futura-condensed-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D485B1961BB06AD7005C423D /* futura-condensed-normal.ttf */; };
+		D485B1D71BB072F8005C423D /* futura-condensed-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D485B1D61BB072F8005C423D /* futura-condensed-bold.ttf */; };
 		D49F5E4C1B9F5CE70023174A /* pt-BR-story1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D49F5E4A1B9F5CE60023174A /* pt-BR-story1.mp3 */; };
 		D49F5E4F1BA1FAA40023174A /* storm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D49F5E4D1BA1F08E0023174A /* storm.mp3 */; };
 		D49F5E511BA208E50023174A /* StartMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F5E501BA208E50023174A /* StartMenuScene.swift */; };
@@ -243,8 +319,21 @@
 		30FA96441BC2DCA000D80032 /* heartbeat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = heartbeat.mp3; sourceTree = "<group>"; };
 		30FA96461BC2E83500D80032 /* HeartBeatSoundControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeartBeatSoundControl.swift; sourceTree = "<group>"; };
 		30FA96481BC2EEED00D80032 /* playerSteps2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playerSteps2.mp3; sourceTree = "<group>"; };
+		B90BC8C71BD01F75002816D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B91B36A91B71181F00B1BE78 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlternateTapGestureRecognizer.swift; path = Subclass/UIAlternateTapGestureRecognizer.swift; sourceTree = "<group>"; };
+		B92E34BA1BC5986100ED27E2 /* MadnessDaze tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MadnessDaze tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B92E34BC1BC5986100ED27E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B92E34C41BC5986200ED27E2 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Game.xcassets; sourceTree = "<group>"; };
+		B92E34C71BC5986200ED27E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B92E34C91BC5986200ED27E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B92E34CB1BC5986200ED27E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B92E35151BC5A49B00ED27E2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		B92E35171BC5A7B500ED27E2 /* GameViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewControllerExtension.swift; sourceTree = "<group>"; };
+		B92E35211BC6CE5900ED27E2 /* StartMenuScene+iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartMenuScene+iOS.swift"; sourceTree = "<group>"; };
+		B92E35231BC6D0DE00ED27E2 /* StartMenuScene+tvOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartMenuScene+tvOS.swift"; sourceTree = "<group>"; };
+		B94C73751BCED604001F0323 /* GameOverScene+iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameOverScene+iOS.swift"; sourceTree = "<group>"; };
+		B94C73771BCED63A001F0323 /* GameOverScene+tvOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameOverScene+tvOS.swift"; sourceTree = "<group>"; };
 		B974A8DC1B98B9BC004DFE75 /* StorySoundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySoundNode.swift; sourceTree = "<group>"; };
 		B97F78BA1B98CDDD00232E98 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -291,7 +380,6 @@
 		D471FDC21B6FD3B000D80921 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		D471FDC41B6FD3B000D80921 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		D471FDC71B6FD3B000D80921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D471FDC91B6FD3B000D80921 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D471FDCC1B6FD3B000D80921 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D485B1961BB06AD7005C423D /* futura-condensed-normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "futura-condensed-normal.ttf"; sourceTree = "<group>"; };
 		D485B1D61BB072F8005C423D /* futura-condensed-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "futura-condensed-bold.ttf"; sourceTree = "<group>"; };
@@ -355,6 +443,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B92E34B71BC5986100ED27E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D42953C61BAB2F5F00ABB43E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -540,6 +635,21 @@
 			name = Subclass;
 			sourceTree = "<group>";
 		};
+		B92E34BB1BC5986100ED27E2 /* MadnessDaze tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				B92E34BC1BC5986100ED27E2 /* AppDelegate.swift */,
+				B92E34C41BC5986200ED27E2 /* Game.xcassets */,
+				B92E35151BC5A49B00ED27E2 /* GameScene.sks */,
+				B92E34C61BC5986200ED27E2 /* Main.storyboard */,
+				B92E34C91BC5986200ED27E2 /* Assets.xcassets */,
+				B92E34CB1BC5986200ED27E2 /* Info.plist */,
+				B92E35231BC6D0DE00ED27E2 /* StartMenuScene+tvOS.swift */,
+				B94C73771BCED63A001F0323 /* GameOverScene+tvOS.swift */,
+			);
+			path = "MadnessDaze tvOS";
+			sourceTree = "<group>";
+		};
 		D42953CA1BAB2F5F00ABB43E /* MadnessDazeTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -556,6 +666,7 @@
 				D42953CA1BAB2F5F00ABB43E /* MadnessDazeTests */,
 				E3E2B7C41BBB06A2002B587F /* Madness's Daze Watch App */,
 				E3E2B7D31BBB06A2002B587F /* Madness's Daze Watch App Extension */,
+				B92E34BB1BC5986100ED27E2 /* MadnessDaze tvOS */,
 				D471FDBA1B6FD3B000D80921 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -567,6 +678,7 @@
 				D42953C91BAB2F5F00ABB43E /* MadnessDazeTests.xctest */,
 				E3E2B7C31BBB06A2002B587F /* Madness's Daze Watch App.app */,
 				E3E2B7CF1BBB06A2002B587F /* Madness's Daze Watch App Extension.appex */,
+				B92E34BA1BC5986100ED27E2 /* MadnessDaze tvOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -582,10 +694,12 @@
 				D471FDC21B6FD3B000D80921 /* GameScene.swift */,
 				B97F78BA1B98CDDD00232E98 /* GameOverScene.swift */,
 				D49F5E501BA208E50023174A /* StartMenuScene.swift */,
+				B92E35211BC6CE5900ED27E2 /* StartMenuScene+iOS.swift */,
+				B94C73751BCED604001F0323 /* GameOverScene+iOS.swift */,
 				D485B1961BB06AD7005C423D /* futura-condensed-normal.ttf */,
 				D485B1D61BB072F8005C423D /* futura-condensed-bold.ttf */,
 				D471FDC61B6FD3B000D80921 /* Main.storyboard */,
-				D471FDC91B6FD3B000D80921 /* Images.xcassets */,
+				B90BC8C71BD01F75002816D3 /* Images.xcassets */,
 				D471FDCB1B6FD3B000D80921 /* LaunchScreen.xib */,
 				D471FDBC1B6FD3B000D80921 /* Supporting Files */,
 			);
@@ -601,6 +715,7 @@
 				D471FDC41B6FD3B000D80921 /* GameViewController.swift */,
 				B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */,
 				D471FDBD1B6FD3B000D80921 /* Info.plist */,
+				B92E35171BC5A7B500ED27E2 /* GameViewControllerExtension.swift */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -802,6 +917,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B92E34B91BC5986100ED27E2 /* MadnessDaze tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B92E34CE1BC5986200ED27E2 /* Build configuration list for PBXNativeTarget "MadnessDaze tvOS" */;
+			buildPhases = (
+				B92E34B61BC5986100ED27E2 /* Sources */,
+				B92E34B71BC5986100ED27E2 /* Frameworks */,
+				B92E34B81BC5986100ED27E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MadnessDaze tvOS";
+			productName = "MadnessDaze tvOS";
+			productReference = B92E34BA1BC5986100ED27E2 /* MadnessDaze tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		D42953C81BAB2F5F00ABB43E /* MadnessDazeTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D42953D01BAB2F5F00ABB43E /* Build configuration list for PBXNativeTarget "MadnessDazeTests" */;
@@ -879,26 +1011,33 @@
 		D471FDB11B6FD3B000D80921 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					New,
+				);
 				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Paulo Ricardo Ramos da Rosa";
 				TargetAttributes = {
+					B92E34B91BC5986100ED27E2 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = M7SM6673Q8;
+					};
 					D42953C81BAB2F5F00ABB43E = {
 						CreatedOnToolsVersion = 7.0;
 						TestTargetID = D471FDB81B6FD3B000D80921;
 					};
 					D471FDB81B6FD3B000D80921 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = Z83BJJ28JR;
+						DevelopmentTeam = M7SM6673Q8;
 					};
 					E3E2B7C21BBB06A2002B587F = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = Z83BJJ28JR;
+						DevelopmentTeam = M7SM6673Q8;
 					};
 					E3E2B7CE1BBB06A2002B587F = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = Z83BJJ28JR;
+						DevelopmentTeam = M7SM6673Q8;
 					};
 				};
 			};
@@ -919,11 +1058,121 @@
 				E3E2B7C21BBB06A2002B587F /* Madness's Daze Watch App */,
 				D42953C81BAB2F5F00ABB43E /* MadnessDazeTests */,
 				E3E2B7CE1BBB06A2002B587F /* Madness's Daze Watch App Extension */,
+				B92E34B91BC5986100ED27E2 /* MadnessDaze tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B92E34B81BC5986100ED27E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92E35001BC59BB400ED27E2 /* pt-BR-nao.mp3 in Resources */,
+				B9E6D42C1BD55897006AF89F /* en-US-hallway-esquerda_frente_01.mp3 in Resources */,
+				B9E6D44C1BD558F6006AF89F /* pt-BR-story0.mp3 in Resources */,
+				B92E34D51BC59B8900ED27E2 /* Level1.json in Resources */,
+				B92E34E91BC59B9F00ED27E2 /* breathing.mp3 in Resources */,
+				B9E6D4451BD558E4006AF89F /* en-US-equipamentosCorredor.mp3 in Resources */,
+				B9E6D42B1BD55897006AF89F /* en-US-hallway-esquerda_01.mp3 in Resources */,
+				B9E6D4511BD5590B006AF89F /* en-US-tentarNovamente.mp3 in Resources */,
+				B92E34EA1BC59B9F00ED27E2 /* playerSteps2.mp3 in Resources */,
+				B92E35161BC5A49B00ED27E2 /* GameScene.sks in Resources */,
+				B9E6D42E1BD558E4006AF89F /* en-US-hallway-guardExitToxin.mp3 in Resources */,
+				B9E6D44D1BD558F6006AF89F /* pt-BR-story1.mp3 in Resources */,
+				B92E34D71BC59B9F00ED27E2 /* (null) in Resources */,
+				B9E6D4501BD5590B006AF89F /* en-US-voltarMenu.mp3 in Resources */,
+				B92E34F51BC59B9F00ED27E2 /* pt-BR-lockedLockers.mp3 in Resources */,
+				B92E34C81BC5986200ED27E2 /* Main.storyboard in Resources */,
+				B92E34DD1BC59B9F00ED27E2 /* pt-BR-hallway-direita_frente_01.mp3 in Resources */,
+				B9E6D4331BD558E4006AF89F /* en-US-narrativa-escritorioAdmDireita.mp3 in Resources */,
+				B92E35031BC59BB400ED27E2 /* pt-BR-tutorial.mp3 in Resources */,
+				B9E6D4541BD55921006AF89F /* en-US-iniciar.mp3 in Resources */,
+				B92E34F21BC59B9F00ED27E2 /* scream4.wav in Resources */,
+				B92E34ED1BC59B9F00ED27E2 /* scream3.mp3 in Resources */,
+				B9E6D4521BD5590B006AF89F /* en-US-gameOverTela.mp3 in Resources */,
+				B9E6D44E1BD558F6006AF89F /* pt-BR-story2.mp3 in Resources */,
+				B9E6D4351BD558E4006AF89F /* en-US-narrativa-banheiroMasculinoEsquerda.mp3 in Resources */,
+				B9E6D4531BD55921006AF89F /* en-US-continuar.mp3 in Resources */,
+				B92E34E21BC59B9F00ED27E2 /* background.mp3 in Resources */,
+				B92E34DF1BC59B9F00ED27E2 /* pt-BR-hallway-direita_01.mp3 in Resources */,
+				B9E6D4391BD558E4006AF89F /* en-US-narrativa-salaRecreacaoEsquerda.mp3 in Resources */,
+				B9E6D4401BD558E4006AF89F /* en-US-narrativa-deVoltaQuarto.mp3 in Resources */,
+				B9E6D42F1BD558E4006AF89F /* en-US-nothingInteresting2.mp3 in Resources */,
+				B92E34E71BC59B9F00ED27E2 /* footsteps.mp3 in Resources */,
+				B9E6D43A1BD558E4006AF89F /* en-US-narrativa-banheiroFemininoDireita.mp3 in Resources */,
+				B92E34FE1BC59BB400ED27E2 /* pt-BR-iniciar.mp3 in Resources */,
+				B9E6D4371BD558E4006AF89F /* en-US-narrativa-salaPertencesDireita.mp3 in Resources */,
+				B92E34F71BC59B9F00ED27E2 /* pt-BR-nothingInteresting2.mp3 in Resources */,
+				B9E6D42A1BD55897006AF89F /* en-US-hallway-direita_frente_01.mp3 in Resources */,
+				B9E6D4421BD558E4006AF89F /* en-US-narrativa-salaRecreacao.mp3 in Resources */,
+				B9E6D4341BD558E4006AF89F /* en-US-narrativa-escritorioAdmEsquerda.mp3 in Resources */,
+				B92E34F41BC59B9F00ED27E2 /* (null) in Resources */,
+				B9E6D4591BD55921006AF89F /* en-US-tutorial.mp3 in Resources */,
+				B9E6D43D1BD558E4006AF89F /* en-US-lockedLockers.mp3 in Resources */,
+				B92E34E31BC59B9F00ED27E2 /* pt-BR-hallway-guardExitToxin.mp3 in Resources */,
+				B9E6D43B1BD558E4006AF89F /* en-US-narrativa-escritorioAdm.mp3 in Resources */,
+				B92E34F81BC59B9F00ED27E2 /* (null) in Resources */,
+				B90FFFB51BD69B4C00DD3D2F /* Images.xcassets in Resources */,
+				B9E6D4271BD55897006AF89F /* en-US-hallway-direita_01.mp3 in Resources */,
+				B92E34D41BC59B8600ED27E2 /* roomMapping.json in Resources */,
+				B9E6D4491BD558EF006AF89F /* en-US-story1.mp3 in Resources */,
+				B92E35051BC59BB400ED27E2 /* pt-BR-tutorialFull.mp3 in Resources */,
+				B9E6D44F1BD558FE006AF89F /* en-US-tutorialFull.mp3 in Resources */,
+				B9E6D42D1BD55897006AF89F /* en-US-hallway-finalCorredor_voltar_01.mp3 in Resources */,
+				B92E34F31BC59B9F00ED27E2 /* scream5.wav in Resources */,
+				B9E6D44A1BD558EF006AF89F /* en-US-story2.mp3 in Resources */,
+				B92E34E51BC59B9F00ED27E2 /* storm.mp3 in Resources */,
+				B92E34EC1BC59B9F00ED27E2 /* scream2.mp3 in Resources */,
+				B9E6D43C1BD558E4006AF89F /* en-US-narrativa_naoPossoPassar.mp3 in Resources */,
+				B9E6D4361BD558E4006AF89F /* en-US-narrativa-salaPertencesEsquerda.mp3 in Resources */,
+				B92E34E11BC59B9F00ED27E2 /* pt-BR-hallway-esquerda_01.mp3 in Resources */,
+				B9E6D4431BD558E4006AF89F /* en-US-narrativa_descricao_salaRecreacao.mp3 in Resources */,
+				B92E34F01BC59B9F00ED27E2 /* gunshot.mp3 in Resources */,
+				B92E35121BC59C2700ED27E2 /* futura-condensed-normal.ttf in Resources */,
+				B9E6D4301BD558E4006AF89F /* en-US-narrativa_sonifero_enfermaria.mp3 in Resources */,
+				B92E34DB1BC59B9F00ED27E2 /* pt-BR-hallway-direita_esquerda_01.mp3 in Resources */,
+				B92E34FD1BC59BB400ED27E2 /* pt-BR-continuar.mp3 in Resources */,
+				B92E34DA1BC59B9F00ED27E2 /* pt-BR-equipamentosCorredor.mp3 in Resources */,
+				B9E6D4281BD55897006AF89F /* en-US-hallway-direita_esquerda_01.mp3 in Resources */,
+				B9E6D4291BD55897006AF89F /* en-US-hallway-direita_esquerda_frente_01.mp3 in Resources */,
+				B9E6D43F1BD558E4006AF89F /* en-US-narrativa-salaEnfermariaDireita.mp3 in Resources */,
+				B9E6D4411BD558E4006AF89F /* en-US-narrativa_encontreiChave_escritorioAdm.mp3 in Resources */,
+				B92E34FF1BC59BB400ED27E2 /* pt-BR-menu.mp3 in Resources */,
+				B92E35021BC59BB400ED27E2 /* pt-BR-sim.mp3 in Resources */,
+				B92E34EE1BC59B9F00ED27E2 /* zombihoar.wav in Resources */,
+				B9E6D4551BD55921006AF89F /* en-US-menu.mp3 in Resources */,
+				B92E34E81BC59B9F00ED27E2 /* locked.wav in Resources */,
+				B92E34DE1BC59B9F00ED27E2 /* pt-BR-hallway-finalCorredor_voltar_01.mp3 in Resources */,
+				B92E35011BC59BB400ED27E2 /* pt-BR-novoJogoConfirma.mp3 in Resources */,
+				B92E34CA1BC5986200ED27E2 /* Assets.xcassets in Resources */,
+				B92E34FA1BC59BAD00ED27E2 /* pt-BR-gameOverTela.mp3 in Resources */,
+				B9E6D4481BD558EF006AF89F /* en-US-story0.mp3 in Resources */,
+				B9E6D4561BD55921006AF89F /* en-US-nao.mp3 in Resources */,
+				B92E34E61BC59B9F00ED27E2 /* asylum.mp3 in Resources */,
+				B92E34C51BC5986200ED27E2 /* Game.xcassets in Resources */,
+				B92E34EF1BC59B9F00ED27E2 /* zombi.mp3 in Resources */,
+				B92E34E01BC59B9F00ED27E2 /* pt-BR-hallway-esquerda_frente_01.mp3 in Resources */,
+				B92E34FB1BC59BAD00ED27E2 /* pt-BR-tentarNovamente.mp3 in Resources */,
+				B9E6D4581BD55921006AF89F /* en-US-sim.mp3 in Resources */,
+				B92E34DC1BC59B9F00ED27E2 /* pt-BR-hallway-direita_esquerda_frente_01.mp3 in Resources */,
+				B92E34F91BC59B9F00ED27E2 /* pt-BR-narrativa-salaPertences.mp3 in Resources */,
+				B92E34EB1BC59B9F00ED27E2 /* playerSteps.mp3 in Resources */,
+				B9E6D43E1BD558E4006AF89F /* en-US-narrativa-salaPertences.mp3 in Resources */,
+				B92E35131BC59C2700ED27E2 /* futura-condensed-bold.ttf in Resources */,
+				B92E34F61BC59B9F00ED27E2 /* pt-BR-nothingInteresting.mp3 in Resources */,
+				B92E34D61BC59B8E00ED27E2 /* Enemy.json in Resources */,
+				B9E6D4311BD558E4006AF89F /* en-US-narrativa-enfermaria.mp3 in Resources */,
+				B9E6D4441BD558E4006AF89F /* en-US-narrativa_naoPossoSair.mp3 in Resources */,
+				B92E34FC1BC59BAD00ED27E2 /* pt-BR-voltarMenu.mp3 in Resources */,
+				B9E6D4381BD558E4006AF89F /* en-US-narrativa-salaRecreacaoDireita.mp3 in Resources */,
+				B9E6D4321BD558E4006AF89F /* en-US-nothingInteresting.mp3 in Resources */,
+				B9E6D4571BD55921006AF89F /* en-US-novoJogoConfirma.mp3 in Resources */,
+				B92E34F11BC59B9F00ED27E2 /* heartbeat.mp3 in Resources */,
+				B92E35041BC59BB400ED27E2 /* menuMusic.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D42953C71BAB2F5F00ABB43E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -988,7 +1237,6 @@
 				30765DEF1BCEDEC600DFB9C2 /* en-US-sim.mp3 in Resources */,
 				30765DED1BCEDEC600DFB9C2 /* en-US-nao.mp3 in Resources */,
 				D49F5E4C1B9F5CE70023174A /* pt-BR-story1.mp3 in Resources */,
-				D471FDCA1B6FD3B000D80921 /* Images.xcassets in Resources */,
 				30765DCF1BCED4ED00DFB9C2 /* en-US-hallway-direita_esquerda_01.mp3 in Resources */,
 				D4BD78621BC6E9DF00AE2765 /* pt-BR-narrativa-salaEnfermariaDireita.mp3 in Resources */,
 				D4E0749E1BD17A87001B3F72 /* en-US-narrativa-banheiroFemininoDireita.mp3 in Resources */,
@@ -1074,6 +1322,33 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B92E34B61BC5986100ED27E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B92E350F1BC59C2700ED27E2 /* GameScene.swift in Sources */,
+				B92E35111BC59C2700ED27E2 /* StartMenuScene.swift in Sources */,
+				B92E350D1BC59BF400ED27E2 /* GameViewController.swift in Sources */,
+				B92E35241BC6D0DE00ED27E2 /* StartMenuScene+tvOS.swift in Sources */,
+				B92E35101BC59C2700ED27E2 /* GameOverScene.swift in Sources */,
+				B92E35071BC59BBF00ED27E2 /* BackGroundSoundNode.swift in Sources */,
+				B92E34CF1BC59B1D00ED27E2 /* GameManager.swift in Sources */,
+				B92E34D01BC59B2800ED27E2 /* GameState.swift in Sources */,
+				B92E34E41BC59B9F00ED27E2 /* AudioSingleton.swift in Sources */,
+				B92E35141BC59C3300ED27E2 /* UIAlternateTapGestureRecognizer.swift in Sources */,
+				B92E350A1BC59BBF00ED27E2 /* BackGround3dAudio.swift in Sources */,
+				B92E35091BC59BBF00ED27E2 /* StorySoundNode.swift in Sources */,
+				B92E35081BC59BBF00ED27E2 /* AudioCoordinate.swift in Sources */,
+				B92E34D31BC59B7600ED27E2 /* EnemyBot.swift in Sources */,
+				B94C73781BCED63A001F0323 /* GameOverScene+tvOS.swift in Sources */,
+				B92E35061BC59BBF00ED27E2 /* AudioNode.swift in Sources */,
+				B92E34D11BC59B5000ED27E2 /* EnemyControl.swift in Sources */,
+				B92E34D21BC59B6100ED27E2 /* SwiftyJSON.swift in Sources */,
+				B92E350B1BC59BBF00ED27E2 /* HeartBeatSoundControl.swift in Sources */,
+				B92E34BD1BC5986100ED27E2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D42953C51BAB2F5F00ABB43E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1092,8 +1367,11 @@
 				30D6A01D1B976A3700A025D4 /* AudioCoordinate.swift in Sources */,
 				30FA88FC1B8E1C2700FE4700 /* AudioSingleton.swift in Sources */,
 				D471FDC31B6FD3B000D80921 /* GameScene.swift in Sources */,
+				B92E35221BC6CE5900ED27E2 /* StartMenuScene+iOS.swift in Sources */,
+				B94C73761BCED604001F0323 /* GameOverScene+iOS.swift in Sources */,
 				306F7C7B1B7D014C00E8501A /* GameManager.swift in Sources */,
 				305224031B84F42C00AD7A98 /* EnemyBot.swift in Sources */,
+				B92E35191BC5A80E00ED27E2 /* GameViewControllerExtension.swift in Sources */,
 				B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */,
 				305224051B86380300AD7A98 /* EnemyControl.swift in Sources */,
 				306F7C7F1B7D113600E8501A /* BackGroundSoundNode.swift in Sources */,
@@ -1138,6 +1416,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		B92E34C61BC5986200ED27E2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B92E34C71BC5986200ED27E2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		D471FDC61B6FD3B000D80921 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1165,6 +1451,39 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B92E34CC1BC5986200ED27E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "MadnessDaze tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		B92E34CD1BC5986200ED27E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "MadnessDaze tvOS/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		D42953D11BAB2F5F00ABB43E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1285,6 +1604,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = FCTerrorGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.project.MadnessDaze;
 				PRODUCT_NAME = MadnessDaze;
 			};
@@ -1379,6 +1699,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B92E34CE1BC5986200ED27E2 /* Build configuration list for PBXNativeTarget "MadnessDaze tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B92E34CC1BC5986200ED27E2 /* Debug */,
+				B92E34CD1BC5986200ED27E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D42953D01BAB2F5F00ABB43E /* Build configuration list for PBXNativeTarget "MadnessDazeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

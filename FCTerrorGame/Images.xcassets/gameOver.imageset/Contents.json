@@ -6,12 +6,17 @@
     },
     {
       "idiom" : "universal",
-      "filename" : "gameOver.png",
+      "filename" : "gameOver@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
       "scale" : "3x"
+    },
+    {
+      "idiom" : "tv",
+      "filename" : "gameOver.png",
+      "scale" : "1x"
     }
   ],
   "info" : {

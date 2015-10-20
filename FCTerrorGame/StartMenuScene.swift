@@ -9,7 +9,7 @@
 import SpriteKit
 import AVFoundation
 
-class StartMenuScene: SKScene {
+class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     var manager = GameManager.sharedInstance;
     var newGame = SKLabelNode()
@@ -24,6 +24,11 @@ class StartMenuScene: SKScene {
     var yesTouch = 0
     var noTouch = 0
     
+    var labels: [SKLabelNode] = []
+    
+    var selected = 1;
+    
+    
     var musicPlayer = AVAudioPlayer()
     
     
@@ -31,8 +36,11 @@ class StartMenuScene: SKScene {
         
         if (!NSUserDefaults.standardUserDefaults().boolForKey("FirstPlay")){
             self.startScreen()
+        } else {
+            finishedTutorial();
+        
         }
-        self.startMenuOptions()
+
         
     }
     
@@ -53,20 +61,32 @@ class StartMenuScene: SKScene {
         self.musicPlayer.prepareToPlay()
         self.musicPlayer.volume = 0.5
         self.musicPlayer.play()
-        while(self.musicPlayer.playing){}
-        
-            if (!self.musicPlayer.playing){
-                    self.background.removeFromParent()
-                    NSUserDefaults.standardUserDefaults().setBool(true , forKey: "FirstPlay")
-                    NSUserDefaults.standardUserDefaults().synchronize()
-                    self.startMenuOptions()
-            }
-        
-        
+        self.musicPlayer.delegate = self
         
     }
     
     
+    func finishedTutorial () {
+        self.background.removeFromParent()
+        NSUserDefaults.standardUserDefaults().setBool(true , forKey: "FirstPlay")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        self.startMenuOptions()
+        
+        
+        #if os(tvOS)
+            setupGestureRecognizerTV();
+        #endif
+    
+    
+    }
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+        if (!NSUserDefaults.standardUserDefaults().boolForKey("FirstPlay")){
+            finishedTutorial();
+        }
+        
+    }
     
     func startMenuOptions(){
         
@@ -80,9 +100,9 @@ class StartMenuScene: SKScene {
         self.musicPlayer.numberOfLoops = -1
         self.musicPlayer.play()
         
-        
-        GameManager.addSoundArray("LANG-menu", frmt: "mp3", x: 0.0, y: 0.0)
-        
+        if(UIAccessibilityIsVoiceOverRunning()){
+            GameManager.addSoundArray("LANG-menu", frmt: "mp3", x: 0.0, y: 0.0)
+        }
         self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2)
         self.background.size = self.frame.size
@@ -204,6 +224,11 @@ class StartMenuScene: SKScene {
         
         
        self.manager.initStoryArray()
+        if let recognizers = self.view?.gestureRecognizers {
+            for recognizer in recognizers {
+                self.view?.removeGestureRecognizer(recognizer)
+            }
+        }
         
         
         self.view?.presentScene(scene, transition: transition)
@@ -220,95 +245,16 @@ class StartMenuScene: SKScene {
         self.manager.gameState.room = 0
         self.manager.playerPosition = 0
         self.manager.gameState.rotation = 1
+        if let recognizers = self.view?.gestureRecognizers {
+            for recognizer in recognizers {
+                self.view?.removeGestureRecognizer(recognizer)
+            }
+        }
         
         self.view?.presentScene(scene, transition: transition)
 
     }
-    
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touch = touches 
-        let location = touch.first!.locationInNode(self)
-        let node = self.nodeAtPoint(location)
-        
-        if(node.name == "testeNode"){
-            self.start()
-        }
-        
-        if (node.name == "newGame"){
-                newGameTouch++
-                loadGameTouch = 0
-                tutorialTouch = 0
-                GameManager.addSoundArray("\(manager.language)-iniciar", frmt: "mp3", x: 0.0, y: 0.0)
-                print("NEWGAME")
-            
-            }else if (node.name == "tutorial"){
-                print("TUTORIAL")
-                tutorialTouch++
-                newGameTouch = 0
-                loadGameTouch = 0
-                GameManager.addSoundArray("\(manager.language)-tutorial", frmt: "mp3", x: 0.0, y: 0.0)
-                }else if (node.name == "loadGame"){
-                    loadGameTouch++
-                    newGameTouch = 0
-                    tutorialTouch = 0
-                    print("LOADGAME")
-                    GameManager.addSoundArray("\(manager.language)-continuar", frmt: "mp3", x: 0.0, y: 0.0)
-                }
-        
-        if (node.name == "newGame" && newGameTouch > 1 && !manager.firstPlay){
-            GameManager.addSoundArray("\(manager.language)-novoJogoConfirma", frmt: "mp3", x: 0.0, y: 0.0)
-            self.newGameScreen()
-        } else if (node.name == "newGame" && newGameTouch > 1 && manager.firstPlay){
-            manager.gameState.eraseJson()
-            manager.eraseManager()
-            self.manager.initStoryArray()
-            self.start()
-        }
-            
-            
-        if (node.name == "tutorial" && tutorialTouch > 1){
-            print("PLAY TUTORIAL")
-            GameManager.addSoundArray("LANG-tutorialFull", frmt: "mp3", x: 0.0, y: 0.0)
-            self.tutorialTouch = 0
-            self.newGameTouch = 0
-            self.loadGameTouch = 0
-        }
-        
-        if (node.name == "loadGame" && loadGameTouch > 1 && !manager.firstPlay){
-            print("NOW LOADING GAME")
-            continueGame()
-        }
-        
-        if (node.name == "newGameNo"){
-            noTouch++
-            yesTouch = 0
-            print("NO")
-            GameManager.addSoundArray("\(manager.language)-nao", frmt: "mp3", x: 0.0, y: 0.0)
-        }else if (node.name == "newGameYes"){
-            yesTouch++
-            noTouch = 0
-            print("YES")
-            GameManager.addSoundArray("\(manager.language)-sim", frmt: "mp3", x: 0.0, y: 0.0)
-        }
-        
-        
-        
-        if (node.name == "newGameNo" && noTouch > 1){
-            self.newGameNo.removeFromParent()
-            self.newGameYes.removeFromParent()
-            newGameTouch = 0
-            loadGameTouch = 0
-            tutorialTouch = 0
-            noTouch = 0
-            yesTouch = 0
-            self.startMenuOptions()
-        }else if (node.name == "newGameYes" && yesTouch > 1){
-                manager.gameState.eraseJson()
-                manager.eraseManager()
-                self.manager.initStoryArray()
-                self.start()
-            }
-        }
+
     
     
     

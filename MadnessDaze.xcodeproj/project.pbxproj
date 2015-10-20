@@ -47,7 +47,7 @@
 		30FA96451BC2DCA000D80032 /* heartbeat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA96441BC2DCA000D80032 /* heartbeat.mp3 */; };
 		30FA96471BC2E83500D80032 /* HeartBeatSoundControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30FA96461BC2E83500D80032 /* HeartBeatSoundControl.swift */; };
 		30FA96491BC2EEED00D80032 /* playerSteps2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30FA96481BC2EEED00D80032 /* playerSteps2.mp3 */; };
-		B9115F181BD165C1000C93A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90BC8C71BD01F75002816D3 /* Images.xcassets */; };
+		B90FFFB51BD69B4C00DD3D2F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90BC8C71BD01F75002816D3 /* Images.xcassets */; };
 		B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B36A91B71181F00B1BE78 /* GameState.swift */; };
 		B91B8A781B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */; };
 		B92E34BD1BC5986100ED27E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E34BC1BC5986100ED27E2 /* AppDelegate.swift */; };
@@ -1134,7 +1134,6 @@
 				B92E34F51BC59B9F00ED27E2 /* pt-BR-lockedLockers.mp3 in Resources */,
 				B92E34C81BC5986200ED27E2 /* Main.storyboard in Resources */,
 				B92E34DD1BC59B9F00ED27E2 /* pt-BR-hallway-direita_frente_01.mp3 in Resources */,
-				B9115F181BD165C1000C93A1 /* Images.xcassets in Resources */,
 				B9E6D4331BD558E4006AF89F /* en-US-narrativa-escritorioAdmDireita.mp3 in Resources */,
 				B92E35031BC59BB400ED27E2 /* pt-BR-tutorial.mp3 in Resources */,
 				B9E6D4541BD55921006AF89F /* en-US-iniciar.mp3 in Resources */,
@@ -1163,6 +1162,7 @@
 				B92E34E31BC59B9F00ED27E2 /* pt-BR-hallway-guardExitToxin.mp3 in Resources */,
 				B9E6D43B1BD558E4006AF89F /* en-US-narrativa-escritorioAdm.mp3 in Resources */,
 				B92E34F81BC59B9F00ED27E2 /* (null) in Resources */,
+				B90FFFB51BD69B4C00DD3D2F /* Images.xcassets in Resources */,
 				B9E6D4271BD55897006AF89F /* en-US-hallway-direita_01.mp3 in Resources */,
 				B92E34D41BC59B8600ED27E2 /* roomMapping.json in Resources */,
 				B9E6D4491BD558EF006AF89F /* en-US-story1.mp3 in Resources */,

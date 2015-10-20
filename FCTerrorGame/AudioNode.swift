@@ -25,8 +25,8 @@ class AudioNode: NSObject {
         //GameManager.sharedInstance.enviroNode.listenerPosition = AVAudioMake3DPoint(0.0, 0.0, 0.0);
         //enviroNode.listenerPosition = gameManager.enviroNode.listenerPosition
         
-        
-           let str =  soundName.stringByReplacingOccurrencesOfString("LANG", withString: gameManager.language)
+
+        let str =  soundName.stringByReplacingOccurrencesOfString("LANG", withString: gameManager.language)
             
         print(str)
         let filePath: String = NSBundle.mainBundle().pathForResource(str, ofType: format)!

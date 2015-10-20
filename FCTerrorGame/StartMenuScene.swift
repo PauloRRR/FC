@@ -9,7 +9,7 @@
 import SpriteKit
 import AVFoundation
 
-class StartMenuScene: SKScene {
+class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     var manager = GameManager.sharedInstance;
     var newGame = SKLabelNode()
@@ -36,13 +36,11 @@ class StartMenuScene: SKScene {
         
         if (!NSUserDefaults.standardUserDefaults().boolForKey("FirstPlay")){
             self.startScreen()
+        } else {
+            finishedTutorial();
+        
         }
-        self.startMenuOptions()
-        
-        
-        #if os(tvOS)
-            setupGestureRecognizerTV();
-        #endif
+
         
     }
     
@@ -63,20 +61,32 @@ class StartMenuScene: SKScene {
         self.musicPlayer.prepareToPlay()
         self.musicPlayer.volume = 0.5
         self.musicPlayer.play()
-        while(self.musicPlayer.playing){}
-        
-            if (!self.musicPlayer.playing){
-                    self.background.removeFromParent()
-                    NSUserDefaults.standardUserDefaults().setBool(true , forKey: "FirstPlay")
-                    NSUserDefaults.standardUserDefaults().synchronize()
-                    self.startMenuOptions()
-            }
-        
-        
+        self.musicPlayer.delegate = self
         
     }
     
     
+    func finishedTutorial () {
+        self.background.removeFromParent()
+        NSUserDefaults.standardUserDefaults().setBool(true , forKey: "FirstPlay")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        self.startMenuOptions()
+        
+        
+        #if os(tvOS)
+            setupGestureRecognizerTV();
+        #endif
+    
+    
+    }
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+        if (!NSUserDefaults.standardUserDefaults().boolForKey("FirstPlay")){
+            finishedTutorial();
+        }
+        
+    }
     
     func startMenuOptions(){
         

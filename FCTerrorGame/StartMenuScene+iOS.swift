@@ -27,7 +27,8 @@ extension StartMenuScene {
             newGameTouch++
             loadGameTouch = 0
             tutorialTouch = 0
-            GameManager.addSoundArray("iniciar_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+            
+            manager.playDirectionNarration("LANG-iniciar", frmt: "mp3")
             print("NEWGAME")
             
         }else if (node.name == "tutorial"){
@@ -35,17 +36,20 @@ extension StartMenuScene {
             tutorialTouch++
             newGameTouch = 0
             loadGameTouch = 0
-            GameManager.addSoundArray("tutorial_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+           
+            manager.playDirectionNarration("LANG-tutorial", frmt: "mp3")
         }else if (node.name == "loadGame"){
             loadGameTouch++
             newGameTouch = 0
             tutorialTouch = 0
             print("LOADGAME")
-            GameManager.addSoundArray("continuar_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+            
+            manager.playDirectionNarration("LANG-continuar", frmt: "mp3")
         }
         
         if (node.name == "newGame" && newGameTouch > 1 && !manager.firstPlay){
-            GameManager.addSoundArray("novoJogoConfirma_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+            
+            manager.playDirectionNarration("LANG-novoJogoConfirma", frmt: "mp3")
             self.newGameScreen()
         } else if (node.name == "newGame" && newGameTouch > 1 && manager.firstPlay){
             manager.gameState.eraseJson()
@@ -57,7 +61,8 @@ extension StartMenuScene {
         
         if (node.name == "tutorial" && tutorialTouch > 1){
             print("PLAY TUTORIAL")
-            GameManager.addSoundArray("tutorialFull_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+            
+             manager.playDirectionNarration("LANG-tutorialFull", frmt: "mp3")
             self.tutorialTouch = 0
             self.newGameTouch = 0
             self.loadGameTouch = 0
@@ -72,12 +77,14 @@ extension StartMenuScene {
             noTouch++
             yesTouch = 0
             print("NO")
-            GameManager.addSoundArray("nao_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+
+             manager.playDirectionNarration("LANG-nao", frmt: "mp3")
         }else if (node.name == "newGameYes"){
             yesTouch++
             noTouch = 0
             print("YES")
-            GameManager.addSoundArray("sim_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+
+             manager.playDirectionNarration("LANG-sim", frmt: "mp3")
         }
         
         

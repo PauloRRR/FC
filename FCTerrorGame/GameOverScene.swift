@@ -58,8 +58,9 @@ class GameOverScene: SKScene {
     }
     
     func gameOverOptions(){
-        
-        GameManager.addSoundArray("LANG-gameOverTela", frmt: "mp3", x: 0.0, y: 0.0)
+        manager.playDirectionNarration("LANG-gameOverTela", frmt: "mp3")
+
+//        GameManager.addSoundArray("LANG-gameOverTela", frmt: "mp3", x: 0.0, y: 0.0)
         
         self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)

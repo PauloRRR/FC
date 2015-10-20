@@ -21,12 +21,14 @@ extension GameOverScene {
             tryAgainTouch++
             backToMenuTouch = 0
             print("restart")
-            GameManager.addSoundArray("tentarNovamente_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+            manager.playDirectionNarration("LANG-tentarNovamente", frmt: "mp3")
+//            GameManager.addSoundArray("LANG-tentarNovamente", frmt: "mp3", x: 0.0, y: 0.0)
         }else if (node.name == "backToMenu"){
             backToMenuTouch++
             tryAgainTouch = 0
             print("exit")
-            GameManager.addSoundArray("voltarMenu_PT-BR_01", frmt: "mp3", x: 0.0, y: 0.0)
+            manager.playDirectionNarration("LANG-voltarMenu", frmt: "mp3")
+//            GameManager.addSoundArray("LANG-voltarMenu", frmt: "mp3", x: 0.0, y: 0.0)
         }
         
         if (node.name == "tryAgain" && tryAgainTouch > 1){

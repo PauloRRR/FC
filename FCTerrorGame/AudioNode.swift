@@ -24,7 +24,12 @@ class AudioNode: NSObject {
         //self.player.position = AVAudioMake3DPoint(0.0, 0.0, 0.0);
         //GameManager.sharedInstance.enviroNode.listenerPosition = AVAudioMake3DPoint(0.0, 0.0, 0.0);
         //enviroNode.listenerPosition = gameManager.enviroNode.listenerPosition
-        let filePath: String = NSBundle.mainBundle().pathForResource(soundName, ofType: format)!
+        
+
+        let str =  soundName.stringByReplacingOccurrencesOfString("LANG", withString: gameManager.language)
+            
+        print(str)
+        let filePath: String = NSBundle.mainBundle().pathForResource(str, ofType: format)!
         let fileURL: NSURL = NSURL(fileURLWithPath: filePath)
         let audioFile = try? AVAudioFile(forReading: fileURL)
         let audioFormat = audioFile!.processingFormat

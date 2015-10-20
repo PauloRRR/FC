@@ -9,7 +9,11 @@
 import UIKit
 import SpriteKit
 
+
 extension SKNode {
+    
+    
+    
     class func unarchiveFromFile(file : String) -> SKNode? {
         if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
             let sceneData = try! NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
@@ -26,12 +30,17 @@ extension SKNode {
 }
 
 class GameViewController: UIViewController {
-
+    var manager = GameManager.sharedInstance
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let language = NSLocale.preferredLanguages()[0]
+        if(language == "pt-BR"){
+            manager.language = language
+        }
+        print(language)
         if let scene = StartMenuScene.unarchiveFromFile("GameScene") as? StartMenuScene {
             // Configure the view.
+            //self.view.isAccessibilityElement = false
             let skView = self.view as! SKView
             //skView.showsFPS = true
             //skView.showsNodeCount = true
@@ -43,6 +52,9 @@ class GameViewController: UIViewController {
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
+            
+            skView.accessibilityTraits = UIAccessibilityTraitAllowsDirectInteraction
+            skView.isAccessibilityElement = true
             
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill

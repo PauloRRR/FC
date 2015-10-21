@@ -59,7 +59,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         self.musicPlayer = try! AVAudioPlayer(contentsOfURL: url)
         
         self.musicPlayer.prepareToPlay()
-        self.musicPlayer.volume = 0.5
+        self.musicPlayer.volume = 1
         self.musicPlayer.play()
         self.musicPlayer.delegate = self
         
@@ -91,7 +91,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     func startMenuOptions(){
         
         
-        let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("menuMusic", ofType: "wav")!)
+        let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("menuMusic", ofType: "mp3")!)
         
         self.musicPlayer = try! AVAudioPlayer(contentsOfURL: url)
         

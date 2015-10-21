@@ -26,7 +26,7 @@ class GameManager {
     var i = 0
     var language = "en-US"
     var shot = BackGroundSoundNode(soundName: "gunshot", format: "mp3")
-    var moan = BackGroundSoundNode(soundName: "zombihoar", format: "wav")
+    var moan = BackGroundSoundNode(soundName: "zombihoar", format: "mp3")
     var firstPlay = Bool()
     var watched39 = false
     var watched128 = false
@@ -131,7 +131,7 @@ class GameManager {
     class func addSoundArray(sndName:String, frmt:String, x:Float, y:Float) {
         self.sharedInstance.audioArray.removeAll()
         let audio = AudioNode(soundName: sndName,format: frmt)
-        audio.setVolume(5.0)
+        audio.setVolume(1.0)
         self.sharedInstance.audioArray.append(audio)
         self.sharedInstance.audioArray[0].player3DPosition(x, y: y, z: 0.0)
         self.sharedInstance.audioArray[0].playOnce()
@@ -140,7 +140,7 @@ class GameManager {
     class func addRoomSoundArray(sndName:String, frmt:String, x:Float, y:Float) {
         self.sharedInstance.audioRoomArray.removeAll(keepCapacity: false)
         let audio = AudioNode(soundName: sndName,format: frmt)
-        audio.player.volume = 5.0
+        audio.player.volume = 1.0
         self.sharedInstance.audioRoomArray.append(audio)
         self.sharedInstance.audioRoomArray[0].player3DPosition(x, y: y, z: 0.0)
         self.sharedInstance.audioRoomArray[0].playOnce()

@@ -1663,7 +1663,7 @@
 
                 {
                         "sound": "scream4",
-                        "format": "wav",
+                        "format": "mp3",
                         "x": 10.0,
                         "y": 0.0
                   }

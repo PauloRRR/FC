@@ -129,6 +129,8 @@ class GameOverScene: SKScene {
         self.state.room = 0
         self.manager.playerPosition = 0
         self.state.rotation = 1
+        manager.enemiesCreated = true;
+
         
         let scene = GameScene(size: self.size)
         

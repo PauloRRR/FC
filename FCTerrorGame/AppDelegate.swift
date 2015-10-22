@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             /* Time and timezone settings */
             
-            notification.fireDate = NSDate(timeIntervalSinceNow: 10)
+            notification.fireDate = NSDate(timeIntervalSinceNow: 300000)
             notification.timeZone = NSCalendar.currentCalendar().timeZone
         
             let language = NSLocale.preferredLanguages()[0]

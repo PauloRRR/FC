@@ -529,7 +529,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             }else if(action["item"].stringValue == "needle"){
                     soundName = "LANG-narrativa_sonifero_enfermaria"
                 }else if (action["item"].stringValue == "tombKey"){
-                        soundName = "LANG-narrativa_encontreiChave_escritorioAdm"
+                        soundName = "LANG-encontreiChaveBilhete"
                     }
             
             manager.playDirectionNarration(soundName, frmt: "mp3")

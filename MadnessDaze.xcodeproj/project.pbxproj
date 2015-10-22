@@ -124,10 +124,6 @@
 		D41ADBFB1BD7F905000F6549 /* pt-BR-tentarNovamente.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41ADBF61BD7F905000F6549 /* pt-BR-tentarNovamente.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41ADBFC1BD7F905000F6549 /* pt-BR-voltarMenu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41ADBF71BD7F905000F6549 /* pt-BR-voltarMenu.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41ADBFD1BD7F905000F6549 /* pt-BR-voltarMenu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41ADBF71BD7F905000F6549 /* pt-BR-voltarMenu.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41ADBFF1BD7F933000F6549 /* en-US-tutorialFull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41ADBFE1BD7F933000F6549 /* en-US-tutorialFull.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41ADC001BD7F933000F6549 /* en-US-tutorialFull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41ADBFE1BD7F933000F6549 /* en-US-tutorialFull.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41ADC021BD7F948000F6549 /* pt-BR-tutorialFull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41ADC011BD7F948000F6549 /* pt-BR-tutorialFull.mp3 */; settings = {ASSET_TAGS = (); }; };
-		D41ADC031BD7F948000F6549 /* pt-BR-tutorialFull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41ADC011BD7F948000F6549 /* pt-BR-tutorialFull.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41ADC071BD7F975000F6549 /* en-US-story0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41ADC041BD7F975000F6549 /* en-US-story0.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41ADC081BD7F975000F6549 /* en-US-story0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41ADC041BD7F975000F6549 /* en-US-story0.mp3 */; settings = {ASSET_TAGS = (); }; };
 		D41ADC091BD7F975000F6549 /* en-US-story1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41ADC051BD7F975000F6549 /* en-US-story1.mp3 */; settings = {ASSET_TAGS = (); }; };
@@ -286,6 +282,18 @@
 		D485B1D51BB07213005C423D /* futura-condensed-normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D485B1961BB06AD7005C423D /* futura-condensed-normal.ttf */; };
 		D485B1D71BB072F8005C423D /* futura-condensed-bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D485B1D61BB072F8005C423D /* futura-condensed-bold.ttf */; };
 		D49F5E511BA208E50023174A /* StartMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49F5E501BA208E50023174A /* StartMenuScene.swift */; };
+		D4BCCFAE1BD864E80011A356 /* en-US-encontreiChaveBilhete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BCCFAD1BD864E80011A356 /* en-US-encontreiChaveBilhete.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4BCCFAF1BD864E80011A356 /* en-US-encontreiChaveBilhete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BCCFAD1BD864E80011A356 /* en-US-encontreiChaveBilhete.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4BCCFB11BD868F00011A356 /* pt-BR-encontreiChaveBilhete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BCCFB01BD868F00011A356 /* pt-BR-encontreiChaveBilhete.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4BCCFB21BD868F00011A356 /* pt-BR-encontreiChaveBilhete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BCCFB01BD868F00011A356 /* pt-BR-encontreiChaveBilhete.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4BCCFBA1BD873740011A356 /* en-US-tutorialFull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BCCFB91BD873740011A356 /* en-US-tutorialFull.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4BCCFBB1BD873740011A356 /* en-US-tutorialFull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BCCFB91BD873740011A356 /* en-US-tutorialFull.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4BCCFBD1BD8737D0011A356 /* pt-BR-tutorialFull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BCCFBC1BD8737D0011A356 /* pt-BR-tutorialFull.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4BCCFBE1BD8737D0011A356 /* pt-BR-tutorialFull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BCCFBC1BD8737D0011A356 /* pt-BR-tutorialFull.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4BCCFC01BD8770C0011A356 /* en-US-chegadaSalaFinal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BCCFBF1BD8770C0011A356 /* en-US-chegadaSalaFinal.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4BCCFC11BD8770C0011A356 /* en-US-chegadaSalaFinal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BCCFBF1BD8770C0011A356 /* en-US-chegadaSalaFinal.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4BCCFC31BD877620011A356 /* pt-BR-chegadaSalaFinal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BCCFC21BD877620011A356 /* pt-BR-chegadaSalaFinal.mp3 */; settings = {ASSET_TAGS = (); }; };
+		D4BCCFC41BD877620011A356 /* pt-BR-chegadaSalaFinal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D4BCCFC21BD877620011A356 /* pt-BR-chegadaSalaFinal.mp3 */; settings = {ASSET_TAGS = (); }; };
 		E3E2B7C71BBB06A2002B587F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3E2B7C51BBB06A2002B587F /* Interface.storyboard */; };
 		E3E2B7C91BBB06A2002B587F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E2B7C81BBB06A2002B587F /* Assets.xcassets */; };
 		E3E2B7D01BBB06A2002B587F /* Madness's Daze Watch App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3E2B7CF1BBB06A2002B587F /* Madness's Daze Watch App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -407,8 +415,6 @@
 		D41ADBF51BD7F905000F6549 /* pt-BR-gameOverTela.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-gameOverTela.mp3"; sourceTree = "<group>"; };
 		D41ADBF61BD7F905000F6549 /* pt-BR-tentarNovamente.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-tentarNovamente.mp3"; sourceTree = "<group>"; };
 		D41ADBF71BD7F905000F6549 /* pt-BR-voltarMenu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-voltarMenu.mp3"; sourceTree = "<group>"; };
-		D41ADBFE1BD7F933000F6549 /* en-US-tutorialFull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "en-US-tutorialFull.mp3"; sourceTree = "<group>"; };
-		D41ADC011BD7F948000F6549 /* pt-BR-tutorialFull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-tutorialFull.mp3"; sourceTree = "<group>"; };
 		D41ADC041BD7F975000F6549 /* en-US-story0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "en-US-story0.mp3"; sourceTree = "<group>"; };
 		D41ADC051BD7F975000F6549 /* en-US-story1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "en-US-story1.mp3"; sourceTree = "<group>"; };
 		D41ADC061BD7F975000F6549 /* en-US-story2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "en-US-story2.mp3"; sourceTree = "<group>"; };
@@ -497,6 +503,12 @@
 		D485B1961BB06AD7005C423D /* futura-condensed-normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "futura-condensed-normal.ttf"; sourceTree = "<group>"; };
 		D485B1D61BB072F8005C423D /* futura-condensed-bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "futura-condensed-bold.ttf"; sourceTree = "<group>"; };
 		D49F5E501BA208E50023174A /* StartMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartMenuScene.swift; sourceTree = "<group>"; };
+		D4BCCFAD1BD864E80011A356 /* en-US-encontreiChaveBilhete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "en-US-encontreiChaveBilhete.mp3"; sourceTree = "<group>"; };
+		D4BCCFB01BD868F00011A356 /* pt-BR-encontreiChaveBilhete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-encontreiChaveBilhete.mp3"; sourceTree = "<group>"; };
+		D4BCCFB91BD873740011A356 /* en-US-tutorialFull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "en-US-tutorialFull.mp3"; sourceTree = "<group>"; };
+		D4BCCFBC1BD8737D0011A356 /* pt-BR-tutorialFull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-tutorialFull.mp3"; sourceTree = "<group>"; };
+		D4BCCFBF1BD8770C0011A356 /* en-US-chegadaSalaFinal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "en-US-chegadaSalaFinal.mp3"; sourceTree = "<group>"; };
+		D4BCCFC21BD877620011A356 /* pt-BR-chegadaSalaFinal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "pt-BR-chegadaSalaFinal.mp3"; sourceTree = "<group>"; };
 		E3E2B7C31BBB06A2002B587F /* Madness's Daze Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Madness's Daze Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3E2B7C61BBB06A2002B587F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		E3E2B7C81BBB06A2002B587F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -876,6 +888,8 @@
 		D4E074931BD16625001B3F72 /* pt-BR */ = {
 			isa = PBXGroup;
 			children = (
+				D4BCCFC21BD877620011A356 /* pt-BR-chegadaSalaFinal.mp3 */,
+				D4BCCFB01BD868F00011A356 /* pt-BR-encontreiChaveBilhete.mp3 */,
 				D41ADC5E1BD7FBFE000F6549 /* pt-BR-equipamentosCorredor.mp3 */,
 				D41ADC5F1BD7FBFE000F6549 /* pt-BR-hallway-guardExitToxin.mp3 */,
 				D41ADC601BD7FBFE000F6549 /* pt-BR-lockedLockers.mp3 */,
@@ -907,6 +921,8 @@
 		D4E074941BD16654001B3F72 /* en-US */ = {
 			isa = PBXGroup;
 			children = (
+				D4BCCFBF1BD8770C0011A356 /* en-US-chegadaSalaFinal.mp3 */,
+				D4BCCFAD1BD864E80011A356 /* en-US-encontreiChaveBilhete.mp3 */,
 				D41ADC161BD7FAE3000F6549 /* en-US-equipamentosCorredor.mp3 */,
 				D41ADC171BD7FAE3000F6549 /* en-US-hallway-guardExitToxin.mp3 */,
 				D41ADC181BD7FAE3000F6549 /* en-US-lockedLockers.mp3 */,
@@ -938,7 +954,7 @@
 		D4E074C11BD1A5E5001B3F72 /* pt-BR */ = {
 			isa = PBXGroup;
 			children = (
-				D41ADC011BD7F948000F6549 /* pt-BR-tutorialFull.mp3 */,
+				D4BCCFBC1BD8737D0011A356 /* pt-BR-tutorialFull.mp3 */,
 			);
 			name = "pt-BR";
 			sourceTree = "<group>";
@@ -946,7 +962,7 @@
 		D4E074C21BD1A5F3001B3F72 /* en-US */ = {
 			isa = PBXGroup;
 			children = (
-				D41ADBFE1BD7F933000F6549 /* en-US-tutorialFull.mp3 */,
+				D4BCCFB91BD873740011A356 /* en-US-tutorialFull.mp3 */,
 			);
 			name = "en-US";
 			sourceTree = "<group>";
@@ -1139,9 +1155,10 @@
 				B92E34D51BC59B8900ED27E2 /* Level1.json in Resources */,
 				D41ADC391BD7FAE3000F6549 /* en-US-narrativa_naoPossoPassar.mp3 in Resources */,
 				D41ADC971BD7FBFF000F6549 /* pt-BR-narrativa-salaPertences.mp3 in Resources */,
+				D4BCCFAF1BD864E80011A356 /* en-US-encontreiChaveBilhete.mp3 in Resources */,
 				D41ADBB31BD7F5A3000F6549 /* playerSteps.mp3 in Resources */,
 				D41ADC771BD7FBFF000F6549 /* pt-BR-equipamentosCorredor.mp3 in Resources */,
-				D41ADC001BD7F933000F6549 /* en-US-tutorialFull.mp3 in Resources */,
+				D4BCCFB21BD868F00011A356 /* pt-BR-encontreiChaveBilhete.mp3 in Resources */,
 				D41ADC4D1BD7FAE3000F6549 /* en-US-narrativa-salaEnfermariaDireita.mp3 in Resources */,
 				D41ADCE11BD7FD68000F6549 /* en-US-hallway-finalCorredor_voltar_01.mp3 in Resources */,
 				B92E35161BC5A49B00ED27E2 /* GameScene.sks in Resources */,
@@ -1171,10 +1188,11 @@
 				D41ADCA11BD7FBFF000F6549 /* pt-BR-narrativa-salaRecreacaoEsquerda.mp3 in Resources */,
 				D41ADCC41BD7FCF8000F6549 /* pt-BR-hallway-direita_esquerda_frente_01.mp3 in Resources */,
 				B92E34F41BC59B9F00ED27E2 /* (null) in Resources */,
-				D41ADC031BD7F948000F6549 /* pt-BR-tutorialFull.mp3 in Resources */,
 				D41ADCCC1BD7FCF8000F6549 /* pt-BR-hallway-finalCorredor_voltar_01.mp3 in Resources */,
+				D4BCCFC11BD8770C0011A356 /* en-US-chegadaSalaFinal.mp3 in Resources */,
 				D41ADC991BD7FBFF000F6549 /* pt-BR-narrativa-salaPertencesDireita.mp3 in Resources */,
 				D41ADBCB1BD7F7E7000F6549 /* en-US-menu.mp3 in Resources */,
+				D4BCCFBE1BD8737D0011A356 /* pt-BR-tutorialFull.mp3 in Resources */,
 				D41ADBCD1BD7F7E7000F6549 /* en-US-nao.mp3 in Resources */,
 				D41ADCD51BD7FD68000F6549 /* en-US-hallway-direita_01.mp3 in Resources */,
 				B92E34F81BC59B9F00ED27E2 /* (null) in Resources */,
@@ -1218,7 +1236,9 @@
 				D41ADCC01BD7FCF8000F6549 /* pt-BR-hallway-direita_01.mp3 in Resources */,
 				D41ADBB11BD7F5A3000F6549 /* locked.mp3 in Resources */,
 				D41ADC7D1BD7FBFF000F6549 /* pt-BR-narrativa_descricao_salaRecreacao.mp3 in Resources */,
+				D4BCCFBB1BD873740011A356 /* en-US-tutorialFull.mp3 in Resources */,
 				D41ADC3F1BD7FAE3000F6549 /* en-US-narrativa-banheiroFemininoDireita.mp3 in Resources */,
+				D4BCCFC41BD877620011A356 /* pt-BR-chegadaSalaFinal.mp3 in Resources */,
 				D41ADC4F1BD7FAE3000F6549 /* en-US-narrativa-salaPertences.mp3 in Resources */,
 				D41ADC431BD7FAE3000F6549 /* en-US-narrativa-deVoltaQuarto.mp3 in Resources */,
 				D41ADBE31BD7F889000F6549 /* pt-BR-menu.mp3 in Resources */,
@@ -1304,6 +1324,7 @@
 				D41ADC7A1BD7FBFF000F6549 /* pt-BR-lockedLockers.mp3 in Resources */,
 				D41ADBBA1BD7F5A3000F6549 /* scream5.mp3 in Resources */,
 				D41ADC401BD7FAE3000F6549 /* en-US-narrativa-banheiroMasculinoEsquerda.mp3 in Resources */,
+				D4BCCFBD1BD8737D0011A356 /* pt-BR-tutorialFull.mp3 in Resources */,
 				D41ADC9A1BD7FBFF000F6549 /* pt-BR-narrativa-salaPertencesEsquerda.mp3 in Resources */,
 				D41ADCC11BD7FCF8000F6549 /* pt-BR-hallway-direita_esquerda_01.mp3 in Resources */,
 				D41ADCC71BD7FCF8000F6549 /* pt-BR-hallway-esquerda_01.mp3 in Resources */,
@@ -1323,6 +1344,7 @@
 				D41ADC141BD7F994000F6549 /* pt-BR-story2.mp3 in Resources */,
 				D41ADCDE1BD7FD68000F6549 /* en-US-hallway-esquerda_frente_01.mp3 in Resources */,
 				30F181971B96040200C2C2C5 /* roomMapping.json in Resources */,
+				D4BCCFBA1BD873740011A356 /* en-US-tutorialFull.mp3 in Resources */,
 				D41ADC9C1BD7FBFF000F6549 /* pt-BR-narrativa-salaRecreacao.mp3 in Resources */,
 				D485B1D71BB072F8005C423D /* futura-condensed-bold.ttf in Resources */,
 				D41ADC461BD7FAE3000F6549 /* en-US-narrativa-escritorioAdm.mp3 in Resources */,
@@ -1335,7 +1357,8 @@
 				D41ADC821BD7FBFF000F6549 /* pt-BR-narrativa_naoPossoSair.mp3 in Resources */,
 				D41ADC7E1BD7FBFF000F6549 /* pt-BR-narrativa_encontreiChave_escritorioAdm.mp3 in Resources */,
 				D41ADBB81BD7F5A3000F6549 /* scream4.mp3 in Resources */,
-				D41ADBFF1BD7F933000F6549 /* en-US-tutorialFull.mp3 in Resources */,
+				D4BCCFC31BD877620011A356 /* pt-BR-chegadaSalaFinal.mp3 in Resources */,
+				D4BCCFB11BD868F00011A356 /* pt-BR-encontreiChaveBilhete.mp3 in Resources */,
 				D41ADBE41BD7F889000F6549 /* pt-BR-nao.mp3 in Resources */,
 				D41ADCB01BD7FCB4000F6549 /* playerSteps2.mp3 in Resources */,
 				D41ADC3A1BD7FAE3000F6549 /* en-US-narrativa_naoPossoSair.mp3 in Resources */,
@@ -1366,6 +1389,7 @@
 				D41ADCCB1BD7FCF8000F6549 /* pt-BR-hallway-finalCorredor_voltar_01.mp3 in Resources */,
 				D41ADC071BD7F975000F6549 /* en-US-story0.mp3 in Resources */,
 				D41ADC3C1BD7FAE3000F6549 /* en-US-narrativa_sonifero_enfermaria.mp3 in Resources */,
+				D4BCCFC01BD8770C0011A356 /* en-US-chegadaSalaFinal.mp3 in Resources */,
 				D41ADC881BD7FBFF000F6549 /* pt-BR-narrativa-banheiroMasculinoEsquerda.mp3 in Resources */,
 				D41ADCA21BD7FBFF000F6549 /* pt-BR-nothingInteresting.mp3 in Resources */,
 				D41ADC091BD7F975000F6549 /* en-US-story1.mp3 in Resources */,
@@ -1382,11 +1406,11 @@
 				D41ADCC31BD7FCF8000F6549 /* pt-BR-hallway-direita_esquerda_frente_01.mp3 in Resources */,
 				D41ADCAC1BD7FCB4000F6549 /* gunshot.mp3 in Resources */,
 				D41ADC2E1BD7FAE3000F6549 /* en-US-equipamentosCorredor.mp3 in Resources */,
-				D41ADC021BD7F948000F6549 /* pt-BR-tutorialFull.mp3 in Resources */,
 				D41ADC4C1BD7FAE3000F6549 /* en-US-narrativa-salaEnfermariaDireita.mp3 in Resources */,
 				D41ADBCC1BD7F7E7000F6549 /* en-US-nao.mp3 in Resources */,
 				D41ADC961BD7FBFF000F6549 /* pt-BR-narrativa-salaPertences.mp3 in Resources */,
 				D41ADCD61BD7FD68000F6549 /* en-US-hallway-direita_esquerda_01.mp3 in Resources */,
+				D4BCCFAE1BD864E80011A356 /* en-US-encontreiChaveBilhete.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

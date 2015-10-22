@@ -199,7 +199,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             case "longPress":
                 if let hideable = level[gameState.room]["hide"].bool {
                     if (hideable) {
-                        NSNotificationCenter.defaultCenter().postNotificationName("muffle", object: self)    
+                        NSNotificationCenter.defaultCenter().postNotificationName("muffle", object: self)
                         gameState.playerHidden = true;
                     }
                 }

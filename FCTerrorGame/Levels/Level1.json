@@ -2273,15 +2273,8 @@
     {
         "id": 128,
         "background": "room128",
-        "playOnEnter": [
-            {
-                "sound": "LANG-hallway-guardExitToxin",
-                "format": "mp3",
-                "x": 0.0,
-                "y": 0.0
-            }
-        ],
-        
+        "hasStory": true,
+        "storyNumber": 3,
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",

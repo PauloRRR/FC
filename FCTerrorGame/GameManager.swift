@@ -23,7 +23,6 @@ class GameManager {
     var storyP = [StorySoundNode]()
     var directionNarration = [BackGroundSoundNode]()
     var gameState = GameState.sharedInstance
-    var i = 0
     var language = "en-US"
     var shot = BackGroundSoundNode(soundName: "gunshot", format: "mp3")
     var moan = BackGroundSoundNode(soundName: "zombihoar", format: "mp3")
@@ -43,7 +42,6 @@ class GameManager {
     func eraseManager(){
         self.watched39 = false
         self.watched128 = false
-        self.i = 0
         self.playerPosition = 0
         self.storyP.removeAll()
         self.isBreathing = false
@@ -100,7 +98,7 @@ class GameManager {
     }
     
     func initStoryArray(){
-        for (var i = 0; i < 3; i++){
+        for (var i = 0; i < 4; i++){
             let audio = StorySoundNode(soundName: "\(language)-story\(i)", format: "mp3")
             self.storyP.append(audio)
         }
@@ -112,20 +110,17 @@ class GameManager {
     }
     
     
-    func playStorySound(){
+    func playStorySound(index: Int){
         
-        if (self.i < self.storyP.count){
-            self.storyP[self.i].play()
-            self.storyP[self.i].played = true
-            self.i++
-        }
+            self.storyP[index].play()
+            self.storyP[index].played = true
+        
     }
     
     func stopStorySound(){
-        for (var i = 0; i < self.i; i++) {
+        for (var i = 0; i < 4; i++) {
             self.storyP[i].storyPlayer.stop()
         }
-    
     }
     
     class func addSoundArray(sndName:String, frmt:String, x:Float, y:Float) {

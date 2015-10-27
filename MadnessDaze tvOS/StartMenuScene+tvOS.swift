@@ -56,13 +56,35 @@ extension StartMenuScene {
                 labels[i].fontColor = UIColor.whiteColor()
             }
         }
+        voice();
         
         
         
+    }
+    
+    func voice () {
+        switch (selected) {
+            case 0:
+                manager.playDirectionNarration("LANG-continuar", frmt: "mp3")
+            
+                break;
+            
+            case 1:
+                manager.playDirectionNarration("LANG-iniciar", frmt: "mp3")
+                
+                break;
+                
+            case 2:
+                
+                manager.playDirectionNarration("LANG-tutorial", frmt: "mp3")
+                break;
         
+            default:
+                break;
         
-        
-        
+        }
+    
+    
     }
     
     func tappedUp   (gesture: UITapGestureRecognizer) {
@@ -98,6 +120,9 @@ extension StartMenuScene {
             self.manager.initStoryArray()
             self.start()
         
+        } else if (selected == 2) {
+            GameManager.addSoundArray("LANG-tutorialFull", frmt: "mp3", x: 0.0, y: 0.0)
+
         }
         
         print("selectClick")

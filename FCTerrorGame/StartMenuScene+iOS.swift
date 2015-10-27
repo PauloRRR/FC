@@ -61,8 +61,8 @@ extension StartMenuScene {
         
         if (node.name == "tutorial" && tutorialTouch > 1){
             print("PLAY TUTORIAL")
-            
-             manager.playDirectionNarration("LANG-tutorialFull", frmt: "mp3")
+            GameManager.addSoundArray("LANG-tutorialFull", frmt: "mp3", x: 0.0, y: 0.0)
+
             self.tutorialTouch = 0
             self.newGameTouch = 0
             self.loadGameTouch = 0

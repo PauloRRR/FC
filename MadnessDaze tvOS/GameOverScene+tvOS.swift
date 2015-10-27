@@ -51,11 +51,25 @@ extension GameOverScene {
                 labels[i].fontColor = UIColor.whiteColor()
             }
         }
-        
-        
-        
-        
-        
+        voice();
+    }
+    
+    
+    func voice () {
+        switch (selected) {
+        case 0:
+            manager.playDirectionNarration("LANG-tentarNovamente", frmt: "mp3")
+            
+            break;
+            
+        case 1:
+            manager.playDirectionNarration("LANG-voltarMenu", frmt: "mp3")
+            
+            break;
+        default:
+            break;
+            
+        }
         
         
     }

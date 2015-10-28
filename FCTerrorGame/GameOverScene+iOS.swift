@@ -18,12 +18,16 @@ extension GameOverScene {
         
         
         if (node.name == "tryAgain"){
+            self.tryAgain.fontColor = UIColor.redColor()
+            self.backToMenu.fontColor = UIColor.whiteColor()
             tryAgainTouch++
             backToMenuTouch = 0
             print("restart")
             manager.playDirectionNarration("LANG-tentarNovamente", frmt: "mp3")
 //            GameManager.addSoundArray("LANG-tentarNovamente", frmt: "mp3", x: 0.0, y: 0.0)
         }else if (node.name == "backToMenu"){
+            self.tryAgain.fontColor = UIColor.whiteColor()
+            self.backToMenu.fontColor = UIColor.redColor()
             backToMenuTouch++
             tryAgainTouch = 0
             print("exit")

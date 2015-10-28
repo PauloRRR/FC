@@ -73,7 +73,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             SKAction.sequence([
                 SKAction.waitForDuration(2.0),
                 SKAction.runBlock({
-                    if (!self.manager.storyP[self.manager.i-1].storyPlayer.playing){
+                    if (!self.manager.storyP[self.level[self.gameState.room]["storyNumber"].intValue].storyPlayer.playing){
                         self.enemyControl.updateEnemiesPosition()
                         self.enemyControl.playEnemiesPosition()
                         self.manager.updateEnemiesListenerPosition()
@@ -223,7 +223,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
         //&& !manager.storyP[manager.i-1].storyPlayer.playing == no swipe until speech is over
         let event = level[gameState.room]["events"][newAction]
-        if ((event.description != "null" &&  !manager.storyP[manager.i-1].storyPlayer.playing) && !gameState.debug) {
+        if ((event.description != "null" &&  !manager.storyP[self.level[self.gameState.room]["storyNumber"].intValue].storyPlayer.playing) && !gameState.debug) {
             switch event["action"].stringValue {
             case "pickItem":
                 pickItem(event)
@@ -420,7 +420,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     func checkStoryRequisite (action: JSON) {
         if let _ = action["hasStory"].bool {
             if (!manager.storyP[action["storyNumber"].intValue].played){
-                manager.playStorySound()
+                manager.playStorySound(action["storyNumber"].intValue)
             }
         }
     }

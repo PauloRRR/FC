@@ -24,6 +24,9 @@ extension StartMenuScene {
         #endif
         
         if (node.name == "newGame"){
+            self.newGame.fontColor = UIColor.redColor()
+            self.tutorial.fontColor = UIColor.whiteColor()
+            self.loadGame.fontColor = UIColor.whiteColor()
             newGameTouch++
             loadGameTouch = 0
             tutorialTouch = 0
@@ -33,12 +36,18 @@ extension StartMenuScene {
             
         }else if (node.name == "tutorial"){
             print("TUTORIAL")
+            self.newGame.fontColor = UIColor.whiteColor()
+            self.tutorial.fontColor = UIColor.redColor()
+            self.loadGame.fontColor = UIColor.whiteColor()
             tutorialTouch++
             newGameTouch = 0
             loadGameTouch = 0
            
             manager.playDirectionNarration("LANG-tutorial", frmt: "mp3")
         }else if (node.name == "loadGame"){
+            self.loadGame.fontColor = UIColor.redColor()
+            self.newGame.fontColor = UIColor.whiteColor()
+            self.tutorial.fontColor = UIColor.whiteColor()
             loadGameTouch++
             newGameTouch = 0
             tutorialTouch = 0
@@ -74,12 +83,16 @@ extension StartMenuScene {
         }
         
         if (node.name == "newGameNo"){
+            self.newGameNo.fontColor = UIColor.redColor()
+            self.newGameYes.fontColor = UIColor.whiteColor()
             noTouch++
             yesTouch = 0
             print("NO")
 
              manager.playDirectionNarration("LANG-nao", frmt: "mp3")
         }else if (node.name == "newGameYes"){
+            self.newGameNo.fontColor = UIColor.whiteColor()
+            self.newGameYes.fontColor = UIColor.redColor()
             yesTouch++
             noTouch = 0
             print("YES")

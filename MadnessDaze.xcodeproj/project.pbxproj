@@ -368,7 +368,7 @@
 		B90BC8C71BD01F75002816D3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B91B36A91B71181F00B1BE78 /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
 		B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlternateTapGestureRecognizer.swift; path = Subclass/UIAlternateTapGestureRecognizer.swift; sourceTree = "<group>"; };
-		B92E34BA1BC5986100ED27E2 /* MadnessDaze tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MadnessDaze tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B92E34BA1BC5986100ED27E2 /* MadnessDaze TV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MadnessDaze TV.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B92E34BC1BC5986100ED27E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B92E34C41BC5986200ED27E2 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Game.xcassets; sourceTree = "<group>"; };
 		B92E34C71BC5986200ED27E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -760,7 +760,7 @@
 				D42953C91BAB2F5F00ABB43E /* MadnessDazeTests.xctest */,
 				E3E2B7C31BBB06A2002B587F /* Madness's Daze Watch App.app */,
 				E3E2B7CF1BBB06A2002B587F /* Madness's Daze Watch App Extension.appex */,
-				B92E34BA1BC5986100ED27E2 /* MadnessDaze tvOS.app */,
+				B92E34BA1BC5986100ED27E2 /* MadnessDaze TV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1001,9 +1001,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B92E34B91BC5986100ED27E2 /* MadnessDaze tvOS */ = {
+		B92E34B91BC5986100ED27E2 /* MadnessDaze TV */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B92E34CE1BC5986200ED27E2 /* Build configuration list for PBXNativeTarget "MadnessDaze tvOS" */;
+			buildConfigurationList = B92E34CE1BC5986200ED27E2 /* Build configuration list for PBXNativeTarget "MadnessDaze TV" */;
 			buildPhases = (
 				B92E34B61BC5986100ED27E2 /* Sources */,
 				B92E34B71BC5986100ED27E2 /* Frameworks */,
@@ -1013,9 +1013,9 @@
 			);
 			dependencies = (
 			);
-			name = "MadnessDaze tvOS";
+			name = "MadnessDaze TV";
 			productName = "MadnessDaze tvOS";
-			productReference = B92E34BA1BC5986100ED27E2 /* MadnessDaze tvOS.app */;
+			productReference = B92E34BA1BC5986100ED27E2 /* MadnessDaze TV.app */;
 			productType = "com.apple.product-type.application";
 		};
 		D42953C81BAB2F5F00ABB43E /* MadnessDazeTests */ = {
@@ -1142,7 +1142,7 @@
 				E3E2B7C21BBB06A2002B587F /* Madness's Daze Watch App */,
 				D42953C81BAB2F5F00ABB43E /* MadnessDazeTests */,
 				E3E2B7CE1BBB06A2002B587F /* Madness's Daze Watch App Extension */,
-				B92E34B91BC5986100ED27E2 /* MadnessDaze tvOS */,
+				B92E34B91BC5986100ED27E2 /* MadnessDaze TV */,
 			);
 		};
 /* End PBXProject section */
@@ -1817,7 +1817,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B92E34CE1BC5986200ED27E2 /* Build configuration list for PBXNativeTarget "MadnessDaze tvOS" */ = {
+		B92E34CE1BC5986200ED27E2 /* Build configuration list for PBXNativeTarget "MadnessDaze TV" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B92E34CC1BC5986200ED27E2 /* Debug */,

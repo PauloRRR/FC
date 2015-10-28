@@ -117,5 +117,11 @@ extension StartMenuScene {
             self.manager.initStoryArray()
             self.start()
         }
+        
+        if (location.y > dot.position.y){
+            print("ABOVE DOT")
+        }else if(location.y < dot.position.y){
+            print("BELOW DOT")
+        }
     }
 }

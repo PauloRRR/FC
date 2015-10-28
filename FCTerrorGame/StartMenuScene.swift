@@ -23,6 +23,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     var tutorialTouch = 0
     var yesTouch = 0
     var noTouch = 0
+    var dot = SKShapeNode()
     
     var labels: [SKLabelNode] = []
     
@@ -90,6 +91,14 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     func startMenuOptions(){
         
+        dot = SKShapeNode(circleOfRadius: 10.0)
+        dot.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/3)
+        dot.alpha = 1
+//        dot.position.x = 0.5
+//        dot.position.y = 0.5
+        dot.zPosition = 3
+        dot.fillColor = UIColor.redColor()
+        self.addChild(dot)
         
         let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("menuMusic", ofType: "mp3")!)
         

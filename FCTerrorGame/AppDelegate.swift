@@ -32,34 +32,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings){
-            
-            let notification = UILocalNotification()
-            
-            /* Time and timezone settings */
-            
-            notification.fireDate = NSDate(timeIntervalSinceNow: 300000)
-            notification.timeZone = NSCalendar.currentCalendar().timeZone
         
-            let language = NSLocale.preferredLanguages()[0]
-            if(language == "pt-BR"){
+        let notification = UILocalNotification()
+        
+        /* Time and timezone settings */
+        
+        notification.fireDate = NSDate(timeIntervalSinceNow: 259200)
+        notification.timeZone = NSCalendar.currentCalendar().timeZone
+        
+        
+        let language = NSLocale.preferredLanguages()[0]
+        if(language == "pt-BR"){
             notification.alertBody = "Estamos LOUCOS de saudades de você! Venha jogar!"
-            }
-            else{
-                notification.alertBody = "We are INSANELY missing you! Come out to play!"
+            
         }
-        
-        
+        else{
+            notification.alertBody = "We are INSANELY missing you! Come out to play!"
             
-            /* Action settings */
-            notification.hasAction = true
-            notification.alertAction = "Madness's Daze"
-            
-            /* Badge settings */
-            notification.applicationIconBadgeNumber++
+        }
+        notification.hasAction = true
+        notification.alertAction = "Madness's Daze"
         
-            /* Schedule the notification */
-            application.scheduleLocalNotification(notification)
-            
+        /* Badge settings */
+        notification.applicationIconBadgeNumber++
+        
+        /* Schedule the notification */
+        application.scheduledLocalNotifications?.removeAll()
+        application.scheduleLocalNotification(notification)
+        
     }
     
     

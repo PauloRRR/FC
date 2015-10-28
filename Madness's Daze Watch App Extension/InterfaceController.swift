@@ -10,21 +10,28 @@ import WatchKit
 import Foundation
 
 class InterfaceController: WKInterfaceController {
-
+    
+    @IBOutlet var labelInfo: WKInterfaceLabel!
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
+        let language = NSLocale.preferredLanguages()[0]
+        if(language == "pt-BR"){
+            labelInfo.setText("Joghe agora e desvende as loucuras de Madness's Daze!")
+        }
+        else{
+            labelInfo.setText("Play now and uncover insanity of Madness's Daze!")
+        }
         
-        // Configure interface objects here.
     }
-
+    
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
     }
-
+    
     override func didDeactivate() {
         // This method is called when watch view controller is no longer visible
         super.didDeactivate()
     }
-
+    
 }

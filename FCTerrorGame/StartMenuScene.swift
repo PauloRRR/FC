@@ -264,9 +264,11 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         
         let scene = GameScene(size: self.size)
         
+        
         self.manager.gameState.room = 0
         self.manager.playerPosition = 0
         self.manager.gameState.rotation = 1
+
         if let recognizers = self.view?.gestureRecognizers {
             for recognizer in recognizers {
                 self.view?.removeGestureRecognizer(recognizer)

@@ -16,10 +16,10 @@ class InterfaceController: WKInterfaceController {
         super.awakeWithContext(context)
         let language = NSLocale.preferredLanguages()[0]
         if(language == "pt-BR"){
-            labelInfo.setText("Joghe agora e desvende as loucuras de Madness's Daze!")
+            labelInfo.setText("Jogue agora e desvende as loucuras de Madness's Daze!")
         }
         else{
-            labelInfo.setText("Play now and uncover insanity of Madness's Daze!")
+            labelInfo.setText("Play now and uncover the insanities of Madness's Daze!")
         }
         
     }

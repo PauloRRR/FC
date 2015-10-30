@@ -28,6 +28,8 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     var dot3 = SKNode()
     var isOnNewGameScreen = false
     var isOnStartMenuOptions = false
+    var location = CGPoint()
+    
     
     var labels: [SKLabelNode] = []
     
@@ -38,6 +40,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     
     override func didMoveToView(view: SKView) {
+        
         
         if (!NSUserDefaults.standardUserDefaults().boolForKey("FirstPlay")){
             self.startScreen()
@@ -81,6 +84,8 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         
         #if os(tvOS)
             setupGestureRecognizerTV();
+        #elseif os(iOS)
+            setupGestureRecognizerIOS();
         #endif
     
     

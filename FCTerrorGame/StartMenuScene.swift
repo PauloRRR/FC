@@ -23,6 +23,11 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     var tutorialTouch = 0
     var yesTouch = 0
     var noTouch = 0
+    var dot = SKNode()
+    var dot2 = SKNode()
+    var dot3 = SKNode()
+    var isOnNewGameScreen = false
+    var isOnStartMenuOptions = false
     
     var labels: [SKLabelNode] = []
     
@@ -90,7 +95,16 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     }
     
     func startMenuOptions(){
+        self.isOnStartMenuOptions = true
+        self.isOnNewGameScreen = false
+        self.dot3.removeFromParent()
         
+        dot.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2.5)
+        dot.zPosition = 3
+        self.addChild(dot)
+        dot2.position = CGPointMake(self.frame.size.width/2, dot.position.y * 1.75)
+        dot2.zPosition = 3
+        self.addChild(dot2)
         
         let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("menuMusic", ofType: "mp3")!)
         
@@ -155,6 +169,14 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         self.newGame.removeFromParent()
         self.tutorial.removeFromParent()
         self.loadGame.removeFromParent()
+        self.dot.removeFromParent()
+        self.dot2.removeFromParent()
+        self.isOnNewGameScreen = true
+        self.isOnStartMenuOptions = false
+        
+        dot3.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
+        dot3.zPosition = 3
+        self.addChild(dot3)
         
         
         self.newGameYes = SKLabelNode(fontNamed: "futura-condensed-normal")
@@ -243,9 +265,11 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         
         let scene = GameScene(size: self.size)
         
+        
         self.manager.gameState.room = 0
         self.manager.playerPosition = 0
         self.manager.gameState.rotation = 1
+
         if let recognizers = self.view?.gestureRecognizers {
             for recognizer in recognizers {
                 self.view?.removeGestureRecognizer(recognizer)

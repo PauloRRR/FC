@@ -1,7 +1,19 @@
 {
   "images" : [
     {
+      "resizing" : {
+        "mode" : "3-part-vertical",
+        "center" : {
+          "mode" : "tile",
+          "height" : 1
+        },
+        "cap-insets" : {
+          "top" : 119,
+          "bottom" : 120
+        }
+      },
       "idiom" : "tv",
+      "filename" : "renderSMALL.png",
       "scale" : "1x"
     }
   ],

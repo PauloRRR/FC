@@ -29,47 +29,41 @@ class GameState {
     
     init () {
         
-        let documentDirectoryURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! 
-        let fileDestinationUrl = documentDirectoryURL.URLByAppendingPathComponent("gameState.json")
-        if let data = try? String(contentsOfURL: fileDestinationUrl, encoding: NSUTF8StringEncoding) {
-            json = JSON(data: data.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: true)!)
-            if (json == JSON.nullJSON || debug) {
-                defaultJson();
-            } else {
-                loadJson();
-            }
-        } else {
-           defaultJson();
+        let state = NSUserDefaults.standardUserDefaults()
+        if (debug || state.valueForKey("level") == nil) {
+            print("🍻")
+            defaultJson();
+        
         }
-        
-        
-    
+        loadJson();
     
     }
     
     func loadJson() {
-        level = json["level"].intValue
-        room  = json["room"].intValue
-        items = json["items"].arrayObject as! [String]
+        let state = NSUserDefaults.standardUserDefaults()
+
+        level     = state.integerForKey("level")
+        room      = state.integerForKey("room")
+        rotation  = state.integerForKey("rotation")
+
+        items = state.objectForKey("items") as! [String]
+        
     
     }
     
     func defaultJson () {
-        json = JSON([
-            "level": level,
-            "room" : room,
-            "items": items
-            ])
-        saveState();
+        let state = NSUserDefaults.standardUserDefaults()
+        state.setInteger(1, forKey: "level")
+        state.setInteger(0, forKey: "room")
+        state.setInteger(1, forKey: "rotation")
+
+        state.setObject([], forKey: "items");
+        
+        state.synchronize()
     
     }
     
     func updateState () {
-        json = JSON([
-            "level": level,
-            "room" : room,
-            "items": items
-        ])
         saveState();
     }
     
@@ -79,26 +73,19 @@ class GameState {
         self.items.removeAll()
         rotation = 1
         
-        
-        
-        json = JSON([
-            "level": level,
-            "room": room,
-            "items": items
-        ])
-        
         saveState()
     }
     
     func saveState() {
+        let state = NSUserDefaults.standardUserDefaults()
+        state.setInteger(level, forKey: "level")
+        state.setInteger(room, forKey: "room")
+        state.setInteger(rotation, forKey: "rotation")
+        state.setObject(items, forKey: "items");
         
-        let documentDirectoryURL = NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! 
-        let fileDestinationUrl = documentDirectoryURL.URLByAppendingPathComponent("gameState.json")
-        let state = json.description
-        do {
-            try state.writeToURL(fileDestinationUrl, atomically: true, encoding: NSUTF8StringEncoding)
-        } catch _ {
-        }
+        state.synchronize()
+
+        
     }
     
     

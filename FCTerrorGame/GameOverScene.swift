@@ -19,6 +19,7 @@ class GameOverScene: SKScene {
     var backToMenu = SKLabelNode()
     var tryAgainTouch = 0
     var backToMenuTouch = 0
+    var div = SKNode()
     
     
     var labels: [SKLabelNode] = []
@@ -37,7 +38,6 @@ class GameOverScene: SKScene {
     }
     
     func gameOverScreen(){
-        
         
         self.background = SKSpriteNode(imageNamed: "gameOver")
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)
@@ -61,6 +61,10 @@ class GameOverScene: SKScene {
         manager.playDirectionNarration("LANG-gameOverTela", frmt: "mp3")
 
 //        GameManager.addSoundArray("LANG-gameOverTela", frmt: "mp3", x: 0.0, y: 0.0)
+        
+        div.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
+        div.zPosition = 3
+        self.addChild(div)
         
         self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)
@@ -105,6 +109,7 @@ class GameOverScene: SKScene {
 
 
     func mainMenu () {
+        self.div.removeFromParent()
         let transition = SKTransition.fadeWithDuration(0)
         let scene = StartMenuScene(size: self.size)
         let state = GameState()
@@ -125,6 +130,7 @@ class GameOverScene: SKScene {
     }
     
     func retry () {
+        self.div.removeFromParent()
         let transition = SKTransition.fadeWithDuration(0)
         self.state.room = 0
         self.manager.playerPosition = 0

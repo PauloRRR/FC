@@ -37,7 +37,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     var musicPlayer = AVAudioPlayer()
     var lastVolume: Float = 0.0;
 
-    
+    let appDelegate : AppDelegate = AppDelegate().sharedInstance()
     
     override func didMoveToView(view: SKView) {
         

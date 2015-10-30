@@ -93,6 +93,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     
     func finishedTutorial () {
+        appDelegate.registerNotification()
         self.background.removeFromParent()
         NSUserDefaults.standardUserDefaults().setBool(true , forKey: "FirstPlay")
         NSUserDefaults.standardUserDefaults().synchronize()

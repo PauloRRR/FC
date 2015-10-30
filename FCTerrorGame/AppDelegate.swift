@@ -25,19 +25,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
             
             /* First ask the user if we are allowed to perform local notifications */
-            let settings = UIUserNotificationSettings(forTypes: .Alert,categories: nil)
-            application.registerUserNotificationSettings(settings)
             
             return true
     }
     
     func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings){
         
+        
+    }
+    
+    func registerNotification(){
+        let settings = UIUserNotificationSettings(forTypes: .Alert,categories: nil)
+        UIApplication.sharedApplication().registerUserNotificationSettings(settings)
+        
         let notification = UILocalNotification()
         
         /* Time and timezone settings */
         
-        notification.fireDate = NSDate(timeIntervalSinceNow: 259200)
+        notification.fireDate = NSDate(timeIntervalSinceNow: 10)
         notification.timeZone = NSCalendar.currentCalendar().timeZone
         
         
@@ -57,11 +62,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         notification.applicationIconBadgeNumber++
         
         /* Schedule the notification */
-        application.scheduledLocalNotifications?.removeAll()
-        application.scheduleLocalNotification(notification)
-        
+        UIApplication.sharedApplication().scheduledLocalNotifications?.removeAll()
+        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+
+
     }
     
+    func sharedInstance() -> AppDelegate{
+        return UIApplication.sharedApplication().delegate as! AppDelegate
+    }
     
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

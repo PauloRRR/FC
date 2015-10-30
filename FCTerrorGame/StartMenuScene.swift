@@ -30,7 +30,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     
     var musicPlayer = AVAudioPlayer()
-    
+    let appDelegate : AppDelegate = AppDelegate().sharedInstance()
     
     override func didMoveToView(view: SKView) {
         
@@ -67,6 +67,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     
     func finishedTutorial () {
+        appDelegate.registerNotification()
         self.background.removeFromParent()
         NSUserDefaults.standardUserDefaults().setBool(true , forKey: "FirstPlay")
         NSUserDefaults.standardUserDefaults().synchronize()

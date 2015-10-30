@@ -16,8 +16,12 @@ class BackGround3dAudio: NSObject {
     var enviroNode = AVAudioEnvironmentNode()
     var audioFileBuffer = AVAudioPCMBuffer()
     
+    var lastVolume: Float = 0.0
+
+    
     
     init(soundName:String,format:String) {
+        super.init()
         
         self.player.renderingAlgorithm = AVAudio3DMixingRenderingAlgorithm.HRTF
         let filePath: String = NSBundle.mainBundle().pathForResource(soundName, ofType: format)!
@@ -55,12 +59,27 @@ class BackGround3dAudio: NSObject {
         dap.rolloffFactor = 1.5;
         
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("muffleSound"), name: "muffle", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("unmuffleSound"), name: "unmuffle", object: nil)
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self);
+    }
+    
+    
+    func mute() {
+        lastVolume = player.volume;
+        player.volume = 0.0;
+    }
+    
+    func normalVolume() {
+        player.volume = lastVolume;
     }
 
     func playLoop(){
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("muffleSound"), name: "muffle", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("unmuffleSound"), name: "unmuffle", object: nil)
+
         self.player.volume = 0.6
         self.player.rate = -0.5
         self.player.scheduleBuffer(audioFileBuffer, atTime: nil, options:.Loops, completionHandler: nil)

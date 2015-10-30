@@ -17,9 +17,10 @@ class AudioNode: NSObject {
     var enviroNode = AVAudioEnvironmentNode()
     var gameManager = GameManager.sharedInstance
     var audioFileBuffer = AVAudioPCMBuffer()
+    var lastVolume: Float = 0.0;
 
     init(soundName:String,format:String) {
-        
+        super.init()
         self.player.renderingAlgorithm = AVAudio3DMixingRenderingAlgorithm.HRTF
         //self.player.position = AVAudioMake3DPoint(0.0, 0.0, 0.0);
         //GameManager.sharedInstance.enviroNode.listenerPosition = AVAudioMake3DPoint(0.0, 0.0, 0.0);
@@ -65,8 +66,27 @@ class AudioNode: NSObject {
         dap.maximumDistance = 300.0;
         dap.rolloffFactor = 1.5;
 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("mute"), name: "muteSound", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("normalVolume"), name: "resumeSound", object: nil)
 
+        
+        
+        
     }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self);
+    }
+    
+    func mute() {
+        lastVolume = player.volume;
+        player.volume = 0.0;
+    }
+    
+    func normalVolume() {
+        player.volume = lastVolume;
+    }
+    
     
     func playLoop(){
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("muffleSound"), name: "muffle", object: nil)

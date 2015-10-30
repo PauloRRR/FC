@@ -30,6 +30,11 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         let swipeDown    = UISwipeGestureRecognizer(target: self, action: Selector("swipeDown:"))
         let longPress    = UILongPressGestureRecognizer(target: self, action: Selector("longPress:"))
         
+        #if os(tvOS)
+            setupGestureRecognizerTV();
+        #endif
+        
+        
         let alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
         
         let tapGesture = UITapGestureRecognizer(target: self, action: Selector("tapping:"))

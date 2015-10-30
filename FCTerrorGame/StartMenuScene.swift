@@ -35,6 +35,8 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     
     var musicPlayer = AVAudioPlayer()
+    var lastVolume: Float = 0.0;
+
     
     
     override func didMoveToView(view: SKView) {
@@ -46,8 +48,27 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         
         }
 
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("mute"), name: "muteSound", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("normalVolume"), name: "resumeSound", object: nil)
+        
+        
+        
         
     }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self);
+    }
+    
+    func mute() {
+        lastVolume = musicPlayer.volume;
+        musicPlayer.volume = 0.0;
+    }
+    
+    func normalVolume() {
+        musicPlayer.volume = lastVolume;
+    }
+    
     
     func startScreen(){
         

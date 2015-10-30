@@ -41,11 +41,10 @@ extension StartMenuScene {
     }
     
     
-    override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        
-    }
-    
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func pressesEnded(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
+        if (presses.first?.type == UIPressType.Menu) {
+            super.pressesBegan(presses, withEvent: event);
+        }
     }
     
     func updateColor () {

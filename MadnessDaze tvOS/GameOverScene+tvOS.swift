@@ -16,18 +16,28 @@ extension GameOverScene {
         let tapRecognizerDown   = UITapGestureRecognizer(target: self, action: Selector("tappedDown:"))
         let tapRecognizerLeft   = UITapGestureRecognizer(target: self, action: Selector("tappedLeft:"))
         let tapRecognizerSelect = UITapGestureRecognizer(target: self, action: Selector("selectClick:"))
+        let tapRecognizerMenu   = UITapGestureRecognizer(target: self, action: Selector("mainMenu"))
+        let tapRecognizerPlay   = UITapGestureRecognizer(target: self, action: Selector("retry"))
+        
         
         tapRecognizerUp.allowedPressTypes       = [UIPressType.UpArrow.rawValue];
         tapRecognizerRight.allowedPressTypes    = [UIPressType.RightArrow.rawValue];
         tapRecognizerDown.allowedPressTypes     = [UIPressType.DownArrow.rawValue];
         tapRecognizerLeft.allowedPressTypes     = [UIPressType.LeftArrow.rawValue];
         tapRecognizerSelect.allowedPressTypes   = [UIPressType.Select.rawValue];
+        tapRecognizerMenu.allowedPressTypes     = [UIPressType.Menu.rawValue];
+        tapRecognizerMenu.allowedPressTypes     = [UIPressType.PlayPause.rawValue];
+
         
         view!.addGestureRecognizer(tapRecognizerUp);
         view!.addGestureRecognizer(tapRecognizerRight);
         view!.addGestureRecognizer(tapRecognizerDown);
         view!.addGestureRecognizer(tapRecognizerLeft);
         view!.addGestureRecognizer(tapRecognizerSelect);
+        view!.addGestureRecognizer(tapRecognizerMenu);
+        view!.addGestureRecognizer(tapRecognizerPlay);
+
+        
         
         labels.append(tryAgain)
         labels.append(backToMenu)

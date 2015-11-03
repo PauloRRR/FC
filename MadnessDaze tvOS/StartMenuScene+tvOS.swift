@@ -20,18 +20,25 @@ extension StartMenuScene {
         let tapRecognizerDown   = UITapGestureRecognizer(target: self, action: Selector("tappedDown:"))
         let tapRecognizerLeft   = UITapGestureRecognizer(target: self, action: Selector("tappedLeft:"))
         let tapRecognizerSelect = UITapGestureRecognizer(target: self, action: Selector("selectClick:"))
+        let tapRecognizerPlay   = UITapGestureRecognizer(target: self, action: Selector("tappedPlay:"))
+
         
         tapRecognizerUp.allowedPressTypes       = [UIPressType.UpArrow.rawValue];
         tapRecognizerRight.allowedPressTypes    = [UIPressType.RightArrow.rawValue];
         tapRecognizerDown.allowedPressTypes     = [UIPressType.DownArrow.rawValue];
         tapRecognizerLeft.allowedPressTypes     = [UIPressType.LeftArrow.rawValue];
         tapRecognizerSelect.allowedPressTypes   = [UIPressType.Select.rawValue];
+        tapRecognizerPlay.allowedPressTypes     = [UIPressType.PlayPause.rawValue];
+
+        
         
         view!.addGestureRecognizer(tapRecognizerUp);
         view!.addGestureRecognizer(tapRecognizerRight);
         view!.addGestureRecognizer(tapRecognizerDown);
         view!.addGestureRecognizer(tapRecognizerLeft);
         view!.addGestureRecognizer(tapRecognizerSelect);
+        view!.addGestureRecognizer(tapRecognizerPlay);
+        
         
         labels.append(loadGame)
         labels.append(newGame)
@@ -41,11 +48,10 @@ extension StartMenuScene {
     }
     
     
-    override func pressesBegan(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
-        
-    }
-    
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func pressesEnded(presses: Set<UIPress>, withEvent event: UIPressesEvent?) {
+        if (presses.first?.type == UIPressType.Menu) {
+            super.pressesBegan(presses, withEvent: event);
+        }
     }
     
     func updateColor () {
@@ -126,5 +132,17 @@ extension StartMenuScene {
         }
         
         print("selectClick")
+    }
+    
+    
+    func tappedPlay (gesture: UITapGestureRecognizer) {
+        if (!manager.firstPlay) {
+            continueGame();
+        } else {
+            manager.gameState.eraseJson()
+            manager.eraseManager()
+            self.manager.initStoryArray()
+            self.start()
+        }
     }
 }

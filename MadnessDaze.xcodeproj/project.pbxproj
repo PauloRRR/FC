@@ -61,6 +61,7 @@
 		B97F78BB1B98CDDD00232E98 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F78BA1B98CDDD00232E98 /* GameOverScene.swift */; };
 		B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */; };
 		B985E0761B75300200CBAC43 /* Level1.json in Resources */ = {isa = PBXBuildFile; fileRef = B985E0751B75300200CBAC43 /* Level1.json */; };
+		B9F501D81BE3C2F6008A1CE7 /* GameScene+tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F501D61BE3C155008A1CE7 /* GameScene+tvOS.swift */; };
 		D41ADB4B1BD6B8DF000F6549 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B90BC8C71BD01F75002816D3 /* Images.xcassets */; };
 		D41ADBAA1BD7F5A3000F6549 /* asylum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41ADBA11BD7F5A3000F6549 /* asylum.mp3 */; };
 		D41ADBAB1BD7F5A3000F6549 /* asylum.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D41ADBA11BD7F5A3000F6549 /* asylum.mp3 */; };
@@ -384,6 +385,7 @@
 		B97F78BA1B98CDDD00232E98 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		B985E0751B75300200CBAC43 /* Level1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = Level1.json; path = Levels/Level1.json; sourceTree = "<group>"; };
+		B9F501D61BE3C155008A1CE7 /* GameScene+tvOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameScene+tvOS.swift"; sourceTree = "<group>"; };
 		D41ADBA11BD7F5A3000F6549 /* asylum.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = asylum.mp3; sourceTree = "<group>"; };
 		D41ADBA21BD7F5A3000F6549 /* breathing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = breathing.mp3; sourceTree = "<group>"; };
 		D41ADBA31BD7F5A3000F6549 /* footsteps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = footsteps.mp3; sourceTree = "<group>"; };
@@ -726,6 +728,7 @@
 				B92E34C61BC5986200ED27E2 /* Main.storyboard */,
 				B92E34C91BC5986200ED27E2 /* Assets.xcassets */,
 				B92E34CB1BC5986200ED27E2 /* Info.plist */,
+				B9F501D61BE3C155008A1CE7 /* GameScene+tvOS.swift */,
 				B92E35231BC6D0DE00ED27E2 /* StartMenuScene+tvOS.swift */,
 				B94C73771BCED63A001F0323 /* GameOverScene+tvOS.swift */,
 			);
@@ -1451,6 +1454,7 @@
 				B92E350A1BC59BBF00ED27E2 /* BackGround3dAudio.swift in Sources */,
 				B92E35091BC59BBF00ED27E2 /* StorySoundNode.swift in Sources */,
 				B92E35081BC59BBF00ED27E2 /* AudioCoordinate.swift in Sources */,
+				B9F501D81BE3C2F6008A1CE7 /* GameScene+tvOS.swift in Sources */,
 				B92E34D31BC59B7600ED27E2 /* EnemyBot.swift in Sources */,
 				B94C73781BCED63A001F0323 /* GameOverScene+tvOS.swift in Sources */,
 				B92E35061BC59BBF00ED27E2 /* AudioNode.swift in Sources */,

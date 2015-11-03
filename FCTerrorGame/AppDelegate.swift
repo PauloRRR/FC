@@ -42,7 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /* Time and timezone settings */
         
-        notification.fireDate = NSDate(timeIntervalSinceNow: 10)
+        notification.fireDate = NSDate(timeIntervalSinceNow: 14*24*60*60)
         notification.timeZone = NSCalendar.currentCalendar().timeZone
         
         
@@ -57,12 +57,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         notification.hasAction = true
         notification.alertAction = "Madness's Daze"
+
         
         /* Badge settings */
         notification.applicationIconBadgeNumber++
         
         /* Schedule the notification */
-        UIApplication.sharedApplication().scheduledLocalNotifications?.removeAll()
+        UIApplication.sharedApplication().cancelAllLocalNotifications()
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
 
 

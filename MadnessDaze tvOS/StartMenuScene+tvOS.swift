@@ -69,28 +69,29 @@ extension StartMenuScene {
     }
     
     func voice () {
-        switch (selected) {
+        if (isOnNewGameScreen) {
+
+        } else if (isOnStartMenuOptions) {
+            switch (selected) {
             case 0:
                 manager.playDirectionNarration("LANG-continuar", frmt: "mp3")
-            
                 break;
-            
+                
             case 1:
                 manager.playDirectionNarration("LANG-iniciar", frmt: "mp3")
-                
                 break;
                 
             case 2:
-                
                 manager.playDirectionNarration("LANG-tutorial", frmt: "mp3")
                 break;
-        
             default:
                 break;
+                
+            }
+        
+        
         
         }
-    
-    
     }
     
     func tappedUp   (gesture: UITapGestureRecognizer) {
@@ -121,9 +122,9 @@ extension StartMenuScene {
         if (selected == 0) {
             continueGame();
         } else if (selected == 1) {
-            
-            if (!manager.firstPlay) {
+            if (!manager.firstPlay  && false) {
                 newGameScreen();
+                
             
             
             } else {

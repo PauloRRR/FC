@@ -17,11 +17,12 @@ extension StartMenuScene {
         let location = touch.first!.locationInNode(self)
         _ = self.nodeAtPoint(location)
         self.location = touch.first!.locationInNode(self)
-        #if os(iOS)
-            print("iOS")
-            #else
-            print("tvOS")
-        #endif
+
+//        #if os(iOS)
+//            print("iOS")
+//            #else
+//            print("tvOS")
+//        #endif
         
         //LOCATION BY NODE NAME
 //        if (node.name == "newGame"){
@@ -228,7 +229,7 @@ extension StartMenuScene {
     }
     
     @IBAction func choose(sender: AnyObject){
-        if (location.y > dot2.position.y && location.y > dot.position.y && isOnStartMenuOptions ){
+        if (self.location.y > dot2.position.y && self.location.y > dot.position.y && isOnStartMenuOptions ){
             self.loadGame.fontColor = UIColor.redColor()
             self.newGame.fontColor = UIColor.whiteColor()
             self.tutorial.fontColor = UIColor.whiteColor()
@@ -236,7 +237,7 @@ extension StartMenuScene {
             print("LOADGAME")
             
             manager.playDirectionNarration("LANG-continuar", frmt: "mp3")
-        }else if(location.y < dot2.position.y && location.y > dot.position.y && isOnStartMenuOptions){
+        }else if(self.location.y < dot2.position.y && self.location.y > dot.position.y && isOnStartMenuOptions){
             self.newGame.fontColor = UIColor.redColor()
             self.tutorial.fontColor = UIColor.whiteColor()
             self.loadGame.fontColor = UIColor.whiteColor()
@@ -244,7 +245,7 @@ extension StartMenuScene {
             
             manager.playDirectionNarration("LANG-iniciar", frmt: "mp3")
             print("NEWGAME")
-        } else if (location.y < dot.position.y && location.y < dot2.position.y && isOnStartMenuOptions){
+        } else if (self.location.y < dot.position.y && self.location.y < dot2.position.y && isOnStartMenuOptions){
             print("TUTORIAL")
             self.newGame.fontColor = UIColor.whiteColor()
             self.tutorial.fontColor = UIColor.redColor()
@@ -254,14 +255,14 @@ extension StartMenuScene {
             
         }
         
-        if (location.y > dot3.position.y && isOnNewGameScreen){
+        if (self.location.y > dot3.position.y && isOnNewGameScreen){
             self.newGameNo.fontColor = UIColor.whiteColor()
             self.newGameYes.fontColor = UIColor.redColor()
             
             print("YES")
             
             manager.playDirectionNarration("LANG-sim", frmt: "mp3")
-        }else if(location.y < dot3.position.y && isOnNewGameScreen){
+        }else if(self.location.y < dot3.position.y && isOnNewGameScreen){
             self.newGameNo.fontColor = UIColor.redColor()
             self.newGameYes.fontColor = UIColor.whiteColor()
             
@@ -272,7 +273,7 @@ extension StartMenuScene {
     }
     
     @IBAction func confirm(sender: AnyObject){
-        if (location.y > dot2.position.y && location.y > dot.position.y && !manager.firstPlay && isOnStartMenuOptions){
+        if (self.location.y > dot2.position.y && self.location.y > dot.position.y && !manager.firstPlay && isOnStartMenuOptions){
             print("NOW LOADING GAME")
             self.loadGame.fontColor = UIColor.redColor()
             self.newGame.fontColor = UIColor.whiteColor()
@@ -280,13 +281,15 @@ extension StartMenuScene {
             continueGame()
         }
         
-        if (location.y < dot2.position.y && location.y > dot.position.y && !manager.firstPlay && isOnStartMenuOptions){
+        if (self.location.y < dot2.position.y && self.location.y > dot.position.y && !manager.firstPlay && isOnStartMenuOptions){
             self.newGame.fontColor = UIColor.redColor()
             self.tutorial.fontColor = UIColor.whiteColor()
             self.loadGame.fontColor = UIColor.whiteColor()
             manager.playDirectionNarration("LANG-novoJogoConfirma", frmt: "mp3")
+            self.location = self.dot3.position
             self.newGameScreen()
-        } else if (location.y < dot2.position.y && location.y > dot.position.y && manager.firstPlay && isOnStartMenuOptions){
+        } else
+            if (self.location.y < dot2.position.y && self.location.y > dot.position.y && manager.firstPlay && isOnStartMenuOptions){
             self.newGame.fontColor = UIColor.redColor()
             self.tutorial.fontColor = UIColor.whiteColor()
             self.loadGame.fontColor = UIColor.whiteColor()
@@ -296,7 +299,7 @@ extension StartMenuScene {
             self.start()
         }
         
-        if (location.y < dot2.position.y && location.y < dot.position.y && isOnStartMenuOptions){
+        if (self.location.y < dot2.position.y && self.location.y < dot.position.y && isOnStartMenuOptions){
             print("PLAY TUTORIAL")
             self.newGame.fontColor = UIColor.whiteColor()
             self.tutorial.fontColor = UIColor.redColor()
@@ -305,14 +308,18 @@ extension StartMenuScene {
             
         }
         
+       
         
-        
-        if (location.y > dot3.position.y && isOnNewGameScreen){
+        if (self.location.y > dot3.position.y && isOnNewGameScreen && !isOnStartMenuOptions){
+            self.newGameNo.fontColor = UIColor.whiteColor()
+            self.newGameYes.fontColor = UIColor.redColor()
             manager.gameState.eraseJson()
             manager.eraseManager()
             self.manager.initStoryArray()
-            //self.start()
-        }else if (location.y < dot3.position.y && isOnNewGameScreen){
+            self.start()
+        }else if (self.location.y < dot3.position.y && isOnNewGameScreen && !isOnStartMenuOptions){
+            self.newGameNo.fontColor = UIColor.redColor()
+            self.newGameYes.fontColor = UIColor.whiteColor()
             self.newGameNo.removeFromParent()
             self.newGameYes.removeFromParent()
             
@@ -320,4 +327,5 @@ extension StartMenuScene {
         }
         
     }
+    
 }

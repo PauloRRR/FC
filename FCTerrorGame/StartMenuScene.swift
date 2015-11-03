@@ -29,6 +29,8 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     var isOnNewGameScreen = false
     var isOnStartMenuOptions = false
     var location = CGPoint()
+    var teste = false
+    
     
     
     var labels: [SKLabelNode] = []
@@ -125,6 +127,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     func startMenuOptions(){
         self.isOnStartMenuOptions = true
         self.isOnNewGameScreen = false
+        self.dot3.hidden = true
         self.dot3.removeFromParent()
         
         dot.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2.5)
@@ -206,6 +209,8 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         dot3.zPosition = 3
         self.addChild(dot3)
         
+        
+        self.dot.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
         
         self.newGameYes = SKLabelNode(fontNamed: "futura-condensed-normal")
         self.newGameYes.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/1.5)

@@ -26,7 +26,7 @@ extension GameOverScene {
         tapRecognizerLeft.allowedPressTypes     = [UIPressType.LeftArrow.rawValue];
         tapRecognizerSelect.allowedPressTypes   = [UIPressType.Select.rawValue];
         tapRecognizerMenu.allowedPressTypes     = [UIPressType.Menu.rawValue];
-        tapRecognizerMenu.allowedPressTypes     = [UIPressType.PlayPause.rawValue];
+        tapRecognizerPlay.allowedPressTypes     = [UIPressType.PlayPause.rawValue];
 
         
         view!.addGestureRecognizer(tapRecognizerUp);

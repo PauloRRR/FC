@@ -172,6 +172,13 @@ class GameManager {
             coord.pinpointPlayer(self.enemies[i].enemyPosition)
             self.enemies[i].audio.enviroNode.listenerPosition = AVAudio3DPoint(x: coord.coordX(playerPosition), y: coord.coordY(playerPosition), z: 0)
             self.enemies[i].audio.enviroNode.listenerAngularOrientation = enviroNode.listenerAngularOrientation
+            print(coord.distance())
+            if(coord.distance() > 100.0){
+                self.enemies[i].audio.player.volume = 0.0
+            }else{
+                self.enemies[i].audio.player.volume = 2.0
+            }
+            
             if(coord.distance() <= 15.0){
                 nearCount++
                 

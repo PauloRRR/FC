@@ -121,10 +121,18 @@ extension StartMenuScene {
         if (selected == 0) {
             continueGame();
         } else if (selected == 1) {
-            manager.gameState.eraseJson()
-            manager.eraseManager()
-            self.manager.initStoryArray()
-            self.start()
+            
+            if (!manager.firstPlay) {
+                newGameScreen();
+            
+            
+            } else {
+                manager.gameState.eraseJson()
+                manager.eraseManager()
+                self.manager.initStoryArray()
+                self.start()
+            }
+
         
         } else if (selected == 2) {
             GameManager.addSoundArray("LANG-tutorialFull", frmt: "mp3", x: 0.0, y: 0.0)

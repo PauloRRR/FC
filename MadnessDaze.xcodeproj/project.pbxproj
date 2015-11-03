@@ -302,7 +302,6 @@
 		E3E2B7D91BBB06A2002B587F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E2B7D81BBB06A2002B587F /* ExtensionDelegate.swift */; };
 		E3E2B7DB1BBB06A2002B587F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E2B7DA1BBB06A2002B587F /* NotificationController.swift */; };
 		E3E2B7DD1BBB06A2002B587F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3E2B7DC1BBB06A2002B587F /* Assets.xcassets */; };
-		E3E2B7E11BBB06A2002B587F /* Madness's Daze Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E3E2B7C31BBB06A2002B587F /* Madness's Daze Watch App.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -319,13 +318,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = E3E2B7CE1BBB06A2002B587F;
 			remoteInfo = "Madness's Daze Watch App Extension";
-		};
-		E3E2B7DF1BBB06A2002B587F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D471FDB11B6FD3B000D80921 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E3E2B7C21BBB06A2002B587F;
-			remoteInfo = "Madness's Daze Watch App";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -347,7 +339,6 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				E3E2B7E11BBB06A2002B587F /* Madness's Daze Watch App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1051,7 +1042,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				E3E2B7E01BBB06A2002B587F /* PBXTargetDependency */,
 			);
 			name = MadnessDaze;
 			productName = FCTerrorGame;
@@ -1524,11 +1514,6 @@
 			target = E3E2B7CE1BBB06A2002B587F /* Madness's Daze Watch App Extension */;
 			targetProxy = E3E2B7D11BBB06A2002B587F /* PBXContainerItemProxy */;
 		};
-		E3E2B7E01BBB06A2002B587F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E3E2B7C21BBB06A2002B587F /* Madness's Daze Watch App */;
-			targetProxy = E3E2B7DF1BBB06A2002B587F /* PBXContainerItemProxy */;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -1670,7 +1655,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1709,7 +1694,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

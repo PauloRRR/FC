@@ -45,7 +45,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             object: nil)
         
         //GameManager.clearRoomSoundArray(); // Room sounds now stop playing on change room
-       
+        
         
         swipeLeft.direction  = .Left
         swipeUp.direction    = .Up

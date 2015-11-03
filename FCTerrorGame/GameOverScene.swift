@@ -20,7 +20,7 @@ class GameOverScene: SKScene {
     var tryAgainTouch = 0
     var backToMenuTouch = 0
     var div = SKNode()
-    
+    var location = CGPoint()
     
     var labels: [SKLabelNode] = []
     var selected = 0;
@@ -51,6 +51,8 @@ class GameOverScene: SKScene {
             self.gameOverOptions()
             #if os(tvOS)
                 self.setupGestureRecognizerTV();
+            #elseif os(iOS)
+                self.setupGestureRecognizerIOS();
             #endif
             })
         

@@ -29,6 +29,7 @@ class GameManager {
     var firstPlay = Bool()
     var watched39 = false
     var watched128 = false
+    var watched174 = false
     var heartBeat = HeartBeatSoundControl(soundName: "heartbeat", format: "mp3")
     
     // METHODS
@@ -42,6 +43,7 @@ class GameManager {
     func eraseManager(){
         self.watched39 = false
         self.watched128 = false
+        self.watched174 = false
         self.playerPosition = 0
         self.storyP.removeAll()
         self.isBreathing = false
@@ -98,7 +100,7 @@ class GameManager {
     }
     
     func initStoryArray(){
-        for (var i = 0; i < 4; i++){
+        for (var i = 0; i < 5; i++){
             let audio = StorySoundNode(soundName: "\(language)-story\(i)", format: "mp3")
             self.storyP.append(audio)
         }
@@ -118,7 +120,7 @@ class GameManager {
     }
     
     func stopStorySound(){
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 5; i++) {
             self.storyP[i].storyPlayer.stop()
         }
     }

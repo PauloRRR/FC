@@ -7,8 +7,9 @@
 //
 
 import SpriteKit
+import AVFoundation
 
-class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureRecognizerDelegate {
+class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureRecognizerDelegate, AVAudioPlayerDelegate {
     var gameState = GameState.sharedInstance;
     var level: JSON!
     var background: SKSpriteNode?
@@ -16,6 +17,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var manager = GameManager.sharedInstance
     var playerHidden = false;
     var hasGun = false
+    var musicPlayer = AVAudioPlayer()
+
     override func didMoveToView(view: SKView) {
         //self.manager.setPlayerPosition(0)
         manager.firstPlay = false
@@ -407,9 +410,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                     }
                     break;
                 case 8:
-                    
                         soundName = "LANG-hallway-direita_esquerda_frente_01"
-                    
                 break;
                 default:
                     break;
@@ -490,6 +491,14 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             
             gameState.room = action["room"].intValue
             print("\(gameState.room)")
+            if(gameState.room == 1 && gameState.debug){
+                gameState.items.append("watchedLockersRoom")
+                gameState.items.append("tombKey")
+                gameState.items.append("foundGuard")
+                gameState.items.append("allItems")
+                gameState.items.append("lockerKey")
+                gameState.items.append("needle")
+            }
             if (gameState.room == 39 && !manager.watched39){
                 gameState.items.append("watchedLockersRoom")
                 manager.watched39 = true
@@ -509,6 +518,18 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             self.manager.setPlayerPosition(gameState.room)
             self.manager.updateEnemiesListenerPosition()
             gameState.updateState()
+            
+            if (gameState.room == 174){
+                manager.watched174 = true
+                let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(manager.language)-chegadaSalaFinal", ofType: "mp3")!)
+                
+                self.musicPlayer = try! AVAudioPlayer(contentsOfURL: url)
+                
+                self.musicPlayer.prepareToPlay()
+                self.musicPlayer.volume = 1
+                self.musicPlayer.play()
+                self.musicPlayer.delegate = self
+            }
             /*
             let transition = SKTransition.fadeWithDuration(0)
             let scene = GameScene(size: self.size)
@@ -522,6 +543,32 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             */
             loadRoom()
         }
+    }
+    
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+        if (manager.watched174){
+            manager.gameState.eraseJson()
+            manager.eraseManager()
+            self.manager.initStoryArray()
+            self.manager.firstPlay = true
+            let transition = SKTransition.fadeWithDuration(0)
+            let scene = StartMenuScene(size: self.size)
+
+            gameState.room = 0
+            gameState.rotation = 1
+            self.manager.playerPosition = 0
+            
+            
+            if let recognizers = self.view?.gestureRecognizers {
+                for recognizer in recognizers {
+                    self.view?.removeGestureRecognizer(recognizer)
+                }
+            }
+            
+            
+            self.view?.presentScene(scene, transition: transition)
+        }
+        
     }
     
     func pickItem (action :JSON) {

@@ -34,8 +34,10 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     
     var labels: [SKLabelNode] = []
+    var newGameLabels: [SKLabelNode] = []
     
     var selected = 1;
+    var newGameSelected = 0;
     
     
     var musicPlayer = AVAudioPlayer()
@@ -76,7 +78,6 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     
     func startScreen(){
-        
         
         self.background = SKSpriteNode(imageNamed: "splashScreen")
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)
@@ -125,6 +126,11 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     }
     
     func startMenuOptions(){
+        newGameLabels.removeAll()
+        
+        selected = 1;
+
+        
         self.isOnStartMenuOptions = true
         self.isOnNewGameScreen = false
         self.dot3.hidden = true
@@ -194,9 +200,18 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         self.loadGame.zPosition = 1
         addChild(self.loadGame)
         
+        
+        labels.append(loadGame)
+        labels.append(newGame)
+        labels.append(tutorial)
+        
     }
     
     func newGameScreen(){
+        labels.removeAll()
+        
+        newGameSelected = 0;
+        
         self.newGame.removeFromParent()
         self.tutorial.removeFromParent()
         self.loadGame.removeFromParent()
@@ -240,6 +255,11 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         self.newGameNo.fontColor = UIColor.whiteColor()
         self.newGameNo.zPosition = 1
         addChild(self.newGameNo)
+        
+        
+        newGameLabels.append(newGameYes)
+        newGameLabels.append(newGameNo)
+
     }
     
     

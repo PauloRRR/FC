@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>StringsTable</key>
-        <string>Acknowledgements</string>
-        <key>PreferenceSpecifiers</key>
-        <array>
-            <dict>
-                <key>Type</key>
-                <string>PSGroupSpecifier</string>
-                <key>Title</key>
-                <string></string>
-                <key>FooterText</key>
-                <string>
+<dict>
+	<key>StringsTable</key>
+	<string>Acknowledgements</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string></string>
+			<key>FooterText</key>
+			<string>
 Sounds:
 
 Horror Ambience Deep (https://freesound.org/people/buxxx/sounds/194846/) by buxxx (https://freesound.org/people/buxxx/) is licensed under CC0 1.0
@@ -47,7 +47,7 @@ Rain and Thunder 4 (https://freesound.org/people/FlatHill/sounds/237729/) by Fla
 
 Running (https://www.freesound.org/people/SoundProject123456789/sounds/263083/) by SoundProject123456789 (https://freesound.org/people/SoundProject123456789/) is licensed under CC0 1.0
                 </string>
-            </dict>
-        </array>
-    </dict>
+		</dict>
+	</array>
+</dict>
 </plist>

@@ -57,6 +57,7 @@
 		B92E35241BC6D0DE00ED27E2 /* StartMenuScene+tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E35231BC6D0DE00ED27E2 /* StartMenuScene+tvOS.swift */; };
 		B94C73761BCED604001F0323 /* GameOverScene+iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C73751BCED604001F0323 /* GameOverScene+iOS.swift */; };
 		B94C73781BCED63A001F0323 /* GameOverScene+tvOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C73771BCED63A001F0323 /* GameOverScene+tvOS.swift */; };
+		B972E53F1BEA6ECD004575B2 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B972E53E1BEA6ECD004575B2 /* Settings.bundle */; };
 		B974A8DD1B98B9BC004DFE75 /* StorySoundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B974A8DC1B98B9BC004DFE75 /* StorySoundNode.swift */; };
 		B97F78BB1B98CDDD00232E98 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97F78BA1B98CDDD00232E98 /* GameOverScene.swift */; };
 		B985E0741B7519E100CBAC43 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */; };
@@ -372,6 +373,7 @@
 		B92E35231BC6D0DE00ED27E2 /* StartMenuScene+tvOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StartMenuScene+tvOS.swift"; sourceTree = "<group>"; };
 		B94C73751BCED604001F0323 /* GameOverScene+iOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameOverScene+iOS.swift"; sourceTree = "<group>"; };
 		B94C73771BCED63A001F0323 /* GameOverScene+tvOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "GameOverScene+tvOS.swift"; sourceTree = "<group>"; };
+		B972E53E1BEA6ECD004575B2 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B974A8DC1B98B9BC004DFE75 /* StorySoundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorySoundNode.swift; sourceTree = "<group>"; };
 		B97F78BA1B98CDDD00232E98 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		B985E0731B7519E100CBAC43 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -778,6 +780,7 @@
 				B90BC8C71BD01F75002816D3 /* Images.xcassets */,
 				D471FDCB1B6FD3B000D80921 /* LaunchScreen.xib */,
 				D471FDBC1B6FD3B000D80921 /* Supporting Files */,
+				B972E53E1BEA6ECD004575B2 /* Settings.bundle */,
 			);
 			path = FCTerrorGame;
 			sourceTree = "<group>";
@@ -1106,7 +1109,6 @@
 					};
 					D471FDB81B6FD3B000D80921 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = Z83BJJ28JR;
 					};
 					E3E2B7C21BBB06A2002B587F = {
 						CreatedOnToolsVersion = 7.0;
@@ -1381,6 +1383,7 @@
 				D41ADCCB1BD7FCF8000F6549 /* pt-BR-hallway-finalCorredor_voltar_01.mp3 in Resources */,
 				D41ADC071BD7F975000F6549 /* en-US-story0.mp3 in Resources */,
 				D41ADC3C1BD7FAE3000F6549 /* en-US-narrativa_sonifero_enfermaria.mp3 in Resources */,
+				B972E53F1BEA6ECD004575B2 /* Settings.bundle in Resources */,
 				D4BCCFC01BD8770C0011A356 /* en-US-chegadaSalaFinal.mp3 in Resources */,
 				D41ADC881BD7FBFF000F6549 /* pt-BR-narrativa-banheiroMasculinoEsquerda.mp3 in Resources */,
 				D41ADCA21BD7FBFF000F6549 /* pt-BR-nothingInteresting.mp3 in Resources */,

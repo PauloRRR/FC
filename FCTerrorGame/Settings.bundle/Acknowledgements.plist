@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>StringsTable</key>
+        <string>Acknowledgements</string>
+        <key>PreferenceSpecifiers</key>
+        <array>
+            <dict>
+                <key>Type</key>
+                <string>PSGroupSpecifier</string>
+                <key>Title</key>
+                <string></string>
+                <key>FooterText</key>
+                <string>
+Sounds:
+
+Horror Ambience Deep (https://freesound.org/people/buxxx/sounds/194846/) by buxxx (https://freesound.org/people/buxxx/) is licensed under CC0 1.0
+
+Breathing Female (https://freesound.org/people/Kuroseishin/sounds/95567/) by Kuroseishin (https://freesound.org/people/Kuroseishin/) is licensed under CC0 1.0
+
+Breath (https://freesound.org/people/mcroce/sounds/234335/) by mcroce (https://freesound.org/people/mcroce/) is licensed under CC0 1.0
+
+Closing Door (https://freesound.org/people/VitaminL/sounds/244992/) by VitaminL (https://freesound.org/people/VitaminL/) is licensed under CC BY 3.0
+
+Nice, simple knock on door (http://www.freesound.org/people/ndhfilms/sounds/243786/) by ndhfilms (https://freesound.org/people/ndhfilms/) is licensed under CC0 1.0
+
+Nice, simple knock on door (http://www.freesound.org/people/ndhfilms/sounds/243786/) by ndhfilms (https://freesound.org/people/ndhfilms/) is licensed under CC0 1.0
+
+Door Locked (http://freesound.org/people/Benagain/sounds/321087/) by Benagain (https://freesound.org/people/Benagain/) is licensed under CC0 1.0
+
+Front Door Open 02 (https://freesound.org/people/Otakua/sounds/219893/) by Otakua (https://freesound.org/people/Otakua/) is licensed under CC BY 3.0
+
+WS_20002 ICE train 11.9.2007 girl singing old (processed) (https://freesound.org/people/toiletrolltube/sounds/181317/) by toiletrolltube (https://freesound.org/people/toiletrolltube/) is licensed under CC0 1.0
+
+Heartbeats (https://freesound.org/people/fuzzpapi/sounds/147338/) by fuzzpapi (https://freesound.org/people/fuzzpapi/) is licensed under CC0 1.0
+
+Heart Beating (https://freesound.org/people/michorvath/sounds/273150/) by michorvath (https://freesound.org/people/michorvath/) is licensed under CC0 1.0
+
+Lights Flicker On (http://freesound.org/people/mmaruska/sounds/232447/) by mmaruska (https://freesound.org/people/mmaruska/) is licensed under CC0 1.0
+
+Maggoty 3 (https://freesound.org/people/thatjeffcarter/sounds/177785/) by thatjeffcarter (https://freesound.org/people/thatjeffcarter/) is licensed under CC BY 3.0
+
+Footsteps in puddles (https://www.freesound.org/people/VlatkoBlazek/sounds/260979/) by VlatkoBlazek (https://freesound.org/people/VlatkoBlazek/) is licensed under CC BY 3.0
+
+Rain and Thunder 4 (https://freesound.org/people/FlatHill/sounds/237729/) by FlatHill (https://freesound.org/people/FlatHill/) is licensed under CC0 1.0
+
+Running (https://www.freesound.org/people/SoundProject123456789/sounds/263083/) by SoundProject123456789 (https://freesound.org/people/SoundProject123456789/) is licensed under CC0 1.0
+                </string>
+            </dict>
+        </array>
+    </dict>
+</plist>

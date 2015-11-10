@@ -13,6 +13,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var gameState = GameState.sharedInstance;
     var level: JSON!
     var background: SKSpriteNode?
+    var overlay: SKSpriteNode?
+    
     var enemyControl = EnemyControl()
     var manager = GameManager.sharedInstance
     var playerHidden = false;
@@ -37,9 +39,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             setupGestureRecognizerTV();
         #endif
         
-        
-        let alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
-        
         let tapGesture = UITapGestureRecognizer(target: self, action: Selector("tapping:"))
         
         NSNotificationCenter.defaultCenter().addObserver(self,
@@ -55,11 +54,8 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         swipeRight.direction = .Right
         swipeDown.direction  = .Down
         longPress.minimumPressDuration = 0.15;
-        alternateTap.numberOfTapsRequired = 5;
-        alternateTap.delegate = self
         tapGesture.delegate = self
         
-        view.addGestureRecognizer(alternateTap)
         view.addGestureRecognizer(longPress)
         view.addGestureRecognizer(swipeLeft)
         view.addGestureRecognizer(swipeUp)
@@ -170,10 +166,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
     }
     
-    func alternateTapping(gesture: UITapGestureRecognizer) {
-        //doAction("alternateTap");
-    
-    }
     
     func tapping(gesture: UITapGestureRecognizer){
         doAction("tap")
@@ -216,16 +208,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 NSNotificationCenter.defaultCenter().postNotificationName("unmuffle", object: self)
                 gameState.playerHidden = false;
                 break;
-//            case "alternateTap":
-//                if (!manager.storyP[manager.i-1].storyPlayer.playing || gameState.debug){
-//                    
-//                    var alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
-//                    tapNumber++
-//                    if (tapNumber >= alternateTap.numberOfTapsRequired){
-//                        println("YAY IM FREE!!!!!!!")
-//                        }
-//                }
-//                break;
             default:
                 break;
         }

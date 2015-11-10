@@ -54,7 +54,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         swipeUp.direction    = .Up
         swipeRight.direction = .Right
         swipeDown.direction  = .Down
-        longPress.minimumPressDuration = 1.0;
+        longPress.minimumPressDuration = 0.15;
         alternateTap.numberOfTapsRequired = 5;
         alternateTap.delegate = self
         tapGesture.delegate = self

@@ -177,6 +177,7 @@ class GameManager {
             print(coord.distance())
             if(coord.distance() > 100.0){
                 self.enemies[i].audio.player.volume = 0.0
+                NSNotificationCenter.defaultCenter().postNotificationName("stopBeat", object: nil)
             }else{
                 self.enemies[i].audio.player.volume = 2.0
             }

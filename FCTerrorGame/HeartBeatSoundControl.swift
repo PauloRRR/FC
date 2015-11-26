@@ -76,10 +76,12 @@ class HeartBeatSoundControl: NSObject {
     
     func speedBeat(){
         self.player.rate = 1.6
+        NSNotificationCenter.defaultCenter().postNotificationName("normalBeat", object: nil)
     }
     
     func normalBeat(){
         self.player.rate = 0.8
+        //NSNotificationCenter.defaultCenter().postNotificationName("normalBeat", object: nil)
     }
     
     

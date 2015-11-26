@@ -13,7 +13,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var gameState = GameState.sharedInstance;
     var level: JSON!
     var background: SKSpriteNode?
-    var overlay: SKSpriteNode?
+    var bloodOverlay: SKSpriteNode?
     
     var enemyControl = EnemyControl()
     var manager = GameManager.sharedInstance
@@ -68,8 +68,15 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         
         self.runEnemyBehavior()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("normalPulse"), name: "normalBeat", object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("fastPulse"), name: "speedBeat", object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("stopPulse"), name: "stopBeat", object: nil);
+        
     }
 
+
+    
+    
     // MARK: Enemy Behavior
     
     func runEnemyBehavior(){
@@ -132,6 +139,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             playSoundArray(levelSounds)
 
         }
+        //bloodPulse(6);
 
     }
 
@@ -572,6 +580,40 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     }
     
+    func stopPulse() {
+        bloodPulse(0);
+    }
+    
+    func normalPulse() {
+        bloodPulse(6);
+    }
+    
+    func fastPulse() {
+        bloodPulse(12);
+    }
+    
+    
+    func bloodPulse (bpm: Int) {
+        if let bloodOverlay = bloodOverlay {
+                bloodOverlay.removeActionForKey("bloodOverlay");
+                bloodOverlay.removeFromParent();
+        }
+        if (bpm > 0) {
+            bloodOverlay = SKSpriteNode(imageNamed: "bloodOverlay");
+            bloodOverlay?.zPosition = 1;
+            bloodOverlay?.position = CGPoint(x: frame.midX, y: frame.midY)
+            bloodOverlay?.alpha = 0;
+            self.addChild(bloodOverlay!)
+            
+            bloodOverlay?.runAction(SKAction.repeatActionForever(SKAction.sequence([
+                SKAction.fadeAlphaTo(0.5, duration: 2.0/Double(bpm/3)),
+                SKAction.fadeAlphaTo(0.0, duration: 1.0/Double(bpm/3)),
+                ])),
+                withKey: "bloodOverlay")
+        }
+        
+        
+    }
     
     func playSoundArray (action : [JSON]) {
         for sound: JSON in action {

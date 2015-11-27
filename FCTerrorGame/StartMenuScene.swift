@@ -115,7 +115,6 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
             setupGestureRecognizerIOS();
         #endif
     
-        GameAnalytics.addDesignEventWithEventId("Event:FinishedTutorial")
     }
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {

@@ -22,7 +22,6 @@
 		B91B36AA1B71181F00B1BE78 /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B36A91B71181F00B1BE78 /* GameState.swift */; };
 		B91B8A781B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91B8A771B8261470060CF44 /* UIAlternateTapGestureRecognizer.swift */; };
 		B92578A61C07847800C35861 /* libGameAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B92578A51C07847800C35861 /* libGameAnalytics.a */; };
-		B92578A71C07847800C35861 /* libGameAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B92578A51C07847800C35861 /* libGameAnalytics.a */; };
 		B92578B01C0787E300C35861 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92578AF1C0787E300C35861 /* AdSupport.framework */; };
 		B92578B21C0787F800C35861 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92578B11C0787F800C35861 /* SystemConfiguration.framework */; };
 		B92578B41C07880F00C35861 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B92578B31C07880F00C35861 /* libz.tbd */; };
@@ -554,7 +553,6 @@
 				B92578BC1C07884B00C35861 /* SystemConfiguration.framework in Frameworks */,
 				B92578BA1C07883F00C35861 /* libsqlite3.tbd in Frameworks */,
 				B92578B81C07883800C35861 /* libz.tbd in Frameworks */,
-				B92578A71C07847800C35861 /* libGameAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

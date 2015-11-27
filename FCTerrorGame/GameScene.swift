@@ -124,8 +124,10 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             
         }
         
+        #if os(iOS)
+            GameAnalytics.addDesignEventWithEventId("Progression:Enter:" + gameState.level.description + ":" + gameState.room.description);
+        #endif
         
-        GameAnalytics.addDesignEventWithEventId("Progression:Enter:" + gameState.level.description + ":" + gameState.room.description);
         /*
         GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatusStart,
             progression01: gameState.level.description,
@@ -478,9 +480,13 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             default:
                 break;
             }
-            GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatusComplete,
-                progression01: gameState.level.description,
-                progression02: gameState.room.description, progression03: "")
+            
+            #if os(iOS)
+                GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatusComplete,
+                    progression01: gameState.level.description,
+                    progression02: gameState.room.description, progression03: "")
+            #endif
+
             
             gameState.room = action["room"].intValue
             print("\(gameState.room)")
@@ -568,7 +574,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         var soundName = ""
         if (checkPrerequisite(action) && checkItem(action)) {
             gameState.items.append(action["item"].stringValue)
-            GameAnalytics.addDesignEventWithEventId("Progression:Item:" + gameState.level.description + ":" + action["item"].stringValue);
+            #if os(iOS)
+                GameAnalytics.addDesignEventWithEventId("Progression:Item:" + gameState.level.description + ":" + action["item"].stringValue);
+            #endif
             gameState.updateState()
             if(action["item"].stringValue == "lockerKey"){
                 soundName = "LANG-narrativa_encontreiChave_escritorioAdm"
@@ -619,8 +627,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     }
     
     func presentGameOver () {
-        
-        GameAnalytics.addDesignEventWithEventId("Progression:Death:" + gameState.level.description + ":" + gameState.room.description);
+        #if os(iOS)
+            GameAnalytics.addDesignEventWithEventId("Progression:Death:" + gameState.level.description + ":" + gameState.room.description);
+        #endif
         
         /*
         GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatusFail,

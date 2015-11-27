@@ -123,7 +123,15 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             }
             
         }
-
+        
+        
+        GameAnalytics.addDesignEventWithEventId("Progression:Enter:" + gameState.level.description + ":" + gameState.room.description);
+        /*
+        GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatusStart,
+            progression01: gameState.level.description,
+            progression02: gameState.room.description, progression03: "")
+        */
+        
         gameState.saveState()
         manager.listenerAngularPosition(Float(gameState.rotation)*(90.0));
         checkStoryRequisite(level[gameState.room])
@@ -470,6 +478,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             default:
                 break;
             }
+            GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatusComplete,
+                progression01: gameState.level.description,
+                progression02: gameState.room.description, progression03: "")
             
             gameState.room = action["room"].intValue
             print("\(gameState.room)")
@@ -557,6 +568,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         var soundName = ""
         if (checkPrerequisite(action) && checkItem(action)) {
             gameState.items.append(action["item"].stringValue)
+            GameAnalytics.addDesignEventWithEventId("Progression:Item:" + gameState.level.description + ":" + action["item"].stringValue);
             gameState.updateState()
             if(action["item"].stringValue == "lockerKey"){
                 soundName = "LANG-narrativa_encontreiChave_escritorioAdm"
@@ -607,6 +619,15 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     }
     
     func presentGameOver () {
+        
+        GameAnalytics.addDesignEventWithEventId("Progression:Death:" + gameState.level.description + ":" + gameState.room.description);
+        
+        /*
+        GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatusFail,
+            progression01: gameState.level.description,
+            progression02: gameState.room.description, progression03: "")
+        */
+        
         self.enemyControl.gameOver()
         self.manager.stopBGSound()
         let transition = SKTransition.fadeWithDuration(0)

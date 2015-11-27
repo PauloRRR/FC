@@ -116,6 +116,7 @@ extension StartMenuScene {
             self.tutorial.fontColor = UIColor.redColor()
             self.loadGame.fontColor = UIColor.whiteColor()
             GameManager.addSoundArray("LANG-tutorialFull", frmt: "mp3", x: 0.0, y: 0.0)
+            GameAnalytics.addDesignEventWithEventId("UI:Tutorial")
             
         }
         

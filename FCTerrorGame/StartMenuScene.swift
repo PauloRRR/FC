@@ -115,6 +115,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         
         
         self.runAction(SKAction.waitForDuration(35.0), completion: {
+            self.tutorialPlaying.removeFromParent()
             self.background.removeFromParent()
             self.background = SKSpriteNode(imageNamed: "tutorial1")
             self.background.position = CGPoint(x: self.frame.midX, y: self.frame.midY)

@@ -175,7 +175,6 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
             setupGestureRecognizerIOS();
         #endif
     
-    
     }
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {

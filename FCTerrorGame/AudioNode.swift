@@ -149,7 +149,7 @@ class AudioNode: NSObject {
     
     func muffleSound(){
         print(self.player.rate)
-        self.player.rate = -0.5
+        self.player.rate = -0.2
     }
     
     func unmuffleSound(){

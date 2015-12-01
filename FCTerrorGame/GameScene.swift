@@ -16,7 +16,12 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var manager = GameManager.sharedInstance
     var playerHidden = false;
     var hasGun = false
+    var soundWarning = SKSpriteNode(imageNamed:"soundWarning")
+    let soundWarningAction = SKAction.sequence([SKAction.fadeInWithDuration(1.0),SKAction.fadeOutWithDuration(0)])
+    var soundWarningAnimation = false
     override func didMoveToView(view: SKView) {
+        scene!.scaleMode = SKSceneScaleMode.AspectFit
+         self.backgroundColor = (UIColor.blackColor())
         //self.manager.setPlayerPosition(0)
         manager.firstPlay = false
         if let filePath = NSBundle.mainBundle().pathForResource("Level1", ofType: "json") {
@@ -46,7 +51,12 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         
         //GameManager.clearRoomSoundArray(); // Room sounds now stop playing on change room
        
+        soundWarning.size = CGSize(width: soundWarning.size.width * 0.5, height: soundWarning.size.height * 0.5)
+        soundWarning.position = CGPoint(x: self.frame.width * 0.9, y: self.frame.height * 0.9)
+        soundWarning.zPosition = 2.0
+        soundWarning.alpha = 0;
         
+        self.addChild(soundWarning)
         swipeLeft.direction  = .Left
         swipeUp.direction    = .Up
         swipeRight.direction = .Right
@@ -82,12 +92,24 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                         self.enemyControl.updateEnemiesPosition()
                         self.enemyControl.playEnemiesPosition()
                         self.manager.updateEnemiesListenerPosition()
+                        self.stopSoundWarning()
                     }else{
                         self.enemyControl.stopEnemiesPosition()
+                        self.soundWarning.runAction(SKAction.repeatActionForever(self.soundWarningAction))
+                        self.soundWarningAnimation = true
+
                     }
                 })
                 ])
             ))
+    }
+    func stopSoundWarning(){
+        if soundWarningAnimation == true{
+            soundWarning.removeAllActions()
+            soundWarning.alpha = 0
+            soundWarningAnimation = false
+        }
+        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {

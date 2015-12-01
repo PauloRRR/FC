@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings){
         
-        
+        NSNotificationCenter.defaultCenter().postNotificationName("waitNotification", object: nil)
     }
     
     func registerNotification(){

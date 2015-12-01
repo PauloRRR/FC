@@ -28,31 +28,33 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     var dot3 = SKNode()
     var isOnNewGameScreen = false
     var isOnStartMenuOptions = false
-    
+    var headphone : SKSpriteNode!
+    var headphoneFrames : [SKTexture]!
     var labels: [SKLabelNode] = []
-    
+    var soundWarning = SKSpriteNode(imageNamed:"soundWarning")
+    let soundWarningAction = SKAction.sequence([SKAction.fadeInWithDuration(1.0),SKAction.fadeOutWithDuration(0)])
     var selected = 1;
-    
-    
     var musicPlayer = AVAudioPlayer()
     var lastVolume: Float = 0.0;
 
     let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func didMoveToView(view: SKView) {
-        
-        if (!NSUserDefaults.standardUserDefaults().boolForKey("FirstPlay")){
-            self.startScreen()
-        } else {
-            finishedTutorial();
-        
-        }
+       scene!.scaleMode = SKSceneScaleMode.AspectFit
+        self.headPhoneScreen()
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("mute"), name: "muteSound", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("normalVolume"), name: "resumeSound", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("waitNotification"), name: "waitNotification", object: nil)
         
+        soundWarning.size = CGSize(width: soundWarning.size.width * 0.5, height: soundWarning.size.height * 0.5)
+        soundWarning.position = CGPoint(x: self.frame.width * 0.9, y: self.frame.height * 0.9)
+        soundWarning.zPosition = 2.0
+        print("\(self.frame.width)")
+        soundWarning.alpha = 0;
+        self.addChild(soundWarning)
         
-        
+
         
     }
     
@@ -69,6 +71,54 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         musicPlayer.volume = lastVolume;
     }
     
+    func headPhoneScreen(){
+        
+        
+        backgroundColor = (UIColor.blackColor())
+        headphone = SKSpriteNode(imageNamed: "headphone")
+        headphone.position = CGPoint(x:CGRectGetMidX(self.frame), y:self.frame.size.height*0.6)
+        addChild(headphone)
+        var label = SKLabelNode(text: "")
+
+        if(manager.language == "en-US"){
+            label = SKLabelNode(text: "Put your headphones on")
+        }else
+        {
+            label = SKLabelNode(text: "Coloque os fone de ouvido")
+        }
+        label.position.y = self.frame.height * (-0.5)
+        headphone.addChild(label)
+        
+        headphone.runAction(
+            SKAction.sequence([
+               SKAction.playSoundFileNamed("\(manager.language)-fonesDeOuvido", waitForCompletion: true),
+               SKAction.fadeOutWithDuration(3.0),
+               SKAction.runBlock({
+                
+                self.headphone.removeFromParent()
+
+                #if os(iOS)
+                    self.appDelegate.registerNotification()
+                #endif
+                
+                
+                })
+            ])
+        )
+        //soundWarning.removeAllActions()
+        
+    }
+    
+    func waitNotification(){
+                if (!NSUserDefaults.standardUserDefaults().boolForKey("FirstPlay")){
+            self.startScreen()
+        } else {
+            self.finishedTutorial()
+        }
+    }
+    
+    
+    
     
     func startScreen(){
         
@@ -79,23 +129,21 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         self.background.zPosition = 0
         
         addChild(self.background)
-        
         let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(manager.language)-tutorialFull", ofType: "mp3")!)
-        
+
         self.musicPlayer = try! AVAudioPlayer(contentsOfURL: url)
         
         self.musicPlayer.prepareToPlay()
         self.musicPlayer.volume = 1
         self.musicPlayer.play()
         self.musicPlayer.delegate = self
+        soundWarning.runAction(SKAction.repeatAction(soundWarningAction, count: Int(self.musicPlayer.duration)))
         
     }
     
     
     func finishedTutorial () {
-        #if os(iOS)
-            appDelegate.registerNotification()
-        #endif
+        
         self.background.removeFromParent()
         NSUserDefaults.standardUserDefaults().setBool(true , forKey: "FirstPlay")
         NSUserDefaults.standardUserDefaults().synchronize()
@@ -109,6 +157,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     
     }
+    
     
     func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
         if (!NSUserDefaults.standardUserDefaults().boolForKey("FirstPlay")){

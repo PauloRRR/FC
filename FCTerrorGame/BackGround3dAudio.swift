@@ -81,7 +81,7 @@ class BackGround3dAudio: NSObject {
         
 
         self.player.volume = 0.6
-        self.player.rate = -0.5
+        self.player.rate = 1.0
         self.player.scheduleBuffer(audioFileBuffer, atTime: nil, options:.Loops, completionHandler: nil)
         self.player.play()
     }
@@ -97,12 +97,12 @@ class BackGround3dAudio: NSObject {
     
     func muffleSound(){
         print("muffled")
-        self.player.rate = -1.5
+        self.player.rate = 0.2
         
     }
 
     func unmuffleSound(){
-        self.player.rate = -0.5
+        self.player.rate = 1.0
         
     }
 

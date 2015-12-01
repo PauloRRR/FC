@@ -2302,6 +2302,8 @@
     {
         "id": 129,
         "background": "room129",
+        "hasStory": true,
+        "storyNumber": 4,
         "events": {
             "swipeUp": {
                 "action": "gotoRoom",
@@ -3109,17 +3111,8 @@
 
     {
         "id": 174,
-        "background": "room174",
-        "playOnEnter": [
-
-                {
-                        "sound": "LANG-chegadaSalaFinal",
-                        "format": "mp3",
-                        "x": 0.0,
-                        "y": 0.0
-                  }
-
-        ]
+        "background": "room174"
+        
     }
 
 ]

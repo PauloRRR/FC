@@ -40,9 +40,7 @@ extension StartMenuScene {
         view!.addGestureRecognizer(tapRecognizerPlay);
         
         
-        labels.append(loadGame)
-        labels.append(newGame)
-        labels.append(tutorial)
+
         
         updateColor();
     }
@@ -55,13 +53,24 @@ extension StartMenuScene {
     }
     
     func updateColor () {
-        for (var i = 0; i < labels.count; i++) {
-            if (i == selected) {
-                labels[i].fontColor = UIColor.redColor()
-            } else {
-                labels[i].fontColor = UIColor.whiteColor()
+        if (isOnStartMenuOptions) {
+            for (var i = 0; i < labels.count; i++) {
+                if (i == selected) {
+                    labels[i].fontColor = UIColor.redColor()
+                } else {
+                    labels[i].fontColor = UIColor.whiteColor()
+                }
+            }
+        } else if (isOnNewGameScreen) {
+            for (var i = 0; i < newGameLabels.count; i++) {
+                if (i == newGameSelected) {
+                    newGameLabels[i].fontColor = UIColor.redColor()
+                } else {
+                    newGameLabels[i].fontColor = UIColor.whiteColor()
+                }
             }
         }
+
         voice();
         
         
@@ -69,37 +78,46 @@ extension StartMenuScene {
     }
     
     func voice () {
-        switch (selected) {
+        if (isOnNewGameScreen) {
+
+        } else if (isOnStartMenuOptions) {
+            switch (selected) {
             case 0:
                 manager.playDirectionNarration("LANG-continuar", frmt: "mp3")
-            
                 break;
-            
+                
             case 1:
                 manager.playDirectionNarration("LANG-iniciar", frmt: "mp3")
-                
                 break;
                 
             case 2:
-                
                 manager.playDirectionNarration("LANG-tutorial", frmt: "mp3")
                 break;
-        
             default:
                 break;
+                
+            }
+        
+        
         
         }
-    
-    
     }
     
     func tappedUp   (gesture: UITapGestureRecognizer) {
-        print("tapUp")
-        if (selected-1 < 0) {
-            selected = labels.count-1
-        }
-        else {
-            selected = (selected-1)%labels.count;
+        if (isOnStartMenuOptions) {
+            if (selected-1 < 0) {
+                selected = labels.count-1
+            }
+            else {
+                selected = (selected-1)%labels.count;
+            }
+        } else if (isOnNewGameScreen) {
+            if (newGameSelected-1 < 0) {
+                newGameSelected = newGameLabels.count-1
+            }
+            else {
+                newGameSelected = (newGameSelected-1)%newGameLabels.count;
+            }
         }
         updateColor();
         
@@ -108,8 +126,12 @@ extension StartMenuScene {
         print("tapRight")
     }
     func tappedDown (gesture: UITapGestureRecognizer) {
-        print("tapDown")
-        selected = (selected+1)%labels.count;
+        if (isOnStartMenuOptions) {
+            selected = (selected+1)%labels.count;
+        } else if (isOnNewGameScreen) {
+            newGameSelected = (newGameSelected+1)%newGameLabels.count;
+        }
+
         updateColor();
         
     }
@@ -118,20 +140,54 @@ extension StartMenuScene {
     }
     
     func selectClick(gesture: UITapGestureRecognizer) {
-        if (selected == 0) {
-            continueGame();
-        } else if (selected == 1) {
-            manager.gameState.eraseJson()
-            manager.eraseManager()
-            self.manager.initStoryArray()
-            self.start()
-        
-        } else if (selected == 2) {
-            GameManager.addSoundArray("LANG-tutorialFull", frmt: "mp3", x: 0.0, y: 0.0)
-
-        }
-        
         print("selectClick")
+        if (isOnStartMenuOptions) {
+            switch (selected) {
+            case 0:
+                continueGame()
+                break;
+                
+            case 1:
+                if (!manager.firstPlay) {
+                    newGameScreen();
+                    updateColor();
+                } else {
+                    manager.gameState.eraseJson()
+                    manager.eraseManager()
+                    self.manager.initStoryArray()
+                    self.start()
+                }
+                break;
+
+            default:
+                GameManager.addSoundArray("LANG-tutorialFull", frmt: "mp3", x: 0.0, y: 0.0)
+                break;
+                
+            }
+        } else if (isOnNewGameScreen) {
+            self.newGameNo.removeFromParent()
+            self.newGameYes.removeFromParent()
+            
+            switch (newGameSelected) {
+            case 0:
+
+                manager.gameState.eraseJson()
+                manager.eraseManager()
+                self.manager.initStoryArray()
+                self.start()
+                break;
+            default:
+                self.startMenuOptions()
+                updateColor()
+                break;
+                
+            }
+        
+        
+        
+        
+        }
+
     }
     
     

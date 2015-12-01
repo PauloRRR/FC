@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        /*
+        GameAnalytics.configureBuild("alpha 0.1.0")
+        GameAnalytics.initializeWithGameKey("f26489aff6b1bfc34ebba320819eda56", gameSecret: "21c010cf90aebccd6bc0b98ee833640921472a16");
+        */
         return true
     }
 

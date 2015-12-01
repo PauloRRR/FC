@@ -7,11 +7,14 @@
 //
 
 import SpriteKit
+import AVFoundation
 
-class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureRecognizerDelegate {
+class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureRecognizerDelegate, AVAudioPlayerDelegate {
     var gameState = GameState.sharedInstance;
     var level: JSON!
     var background: SKSpriteNode?
+    var overlay: SKSpriteNode?
+    
     var enemyControl = EnemyControl()
     var manager = GameManager.sharedInstance
     var playerHidden = false;
@@ -39,9 +42,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             setupGestureRecognizerTV();
         #endif
         
-        
-        let alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
-        
         let tapGesture = UITapGestureRecognizer(target: self, action: Selector("tapping:"))
         
         NSNotificationCenter.defaultCenter().addObserver(self,
@@ -61,12 +61,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         swipeUp.direction    = .Up
         swipeRight.direction = .Right
         swipeDown.direction  = .Down
-        longPress.minimumPressDuration = 1.0;
-        alternateTap.numberOfTapsRequired = 5;
-        alternateTap.delegate = self
+        longPress.minimumPressDuration = 0.15;
         tapGesture.delegate = self
         
-        view.addGestureRecognizer(alternateTap)
         view.addGestureRecognizer(longPress)
         view.addGestureRecognizer(swipeLeft)
         view.addGestureRecognizer(swipeUp)
@@ -146,7 +143,17 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             }
             
         }
-
+        
+        #if os(iOS)
+            GameAnalytics.addDesignEventWithEventId("Progression:Enter:" + gameState.level.description + ":" + gameState.room.description);
+        #endif
+        
+        /*
+        GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatusStart,
+            progression01: gameState.level.description,
+            progression02: gameState.room.description, progression03: "")
+        */
+        
         gameState.saveState()
         manager.listenerAngularPosition(Float(gameState.rotation)*(90.0));
         checkStoryRequisite(level[gameState.room])
@@ -189,10 +196,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
     }
     
-    func alternateTapping(gesture: UITapGestureRecognizer) {
-        //doAction("alternateTap");
-    
-    }
     
     func tapping(gesture: UITapGestureRecognizer){
         doAction("tap")
@@ -235,16 +238,6 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 NSNotificationCenter.defaultCenter().postNotificationName("unmuffle", object: self)
                 gameState.playerHidden = false;
                 break;
-//            case "alternateTap":
-//                if (!manager.storyP[manager.i-1].storyPlayer.playing || gameState.debug){
-//                    
-//                    var alternateTap = UIAlternateTapGestureRecognizer(target: self, action: Selector("alternateTapping:"));
-//                    tapNumber++
-//                    if (tapNumber >= alternateTap.numberOfTapsRequired){
-//                        println("YAY IM FREE!!!!!!!")
-//                        }
-//                }
-//                break;
             default:
                 break;
         }
@@ -429,9 +422,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                     }
                     break;
                 case 8:
-                    
                         soundName = "LANG-hallway-direita_esquerda_frente_01"
-                    
                 break;
                 default:
                     break;
@@ -510,8 +501,23 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
                 break;
             }
             
+            #if os(iOS)
+                GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatusComplete,
+                    progression01: gameState.level.description,
+                    progression02: gameState.room.description, progression03: "")
+            #endif
+
+            
             gameState.room = action["room"].intValue
             print("\(gameState.room)")
+            if(gameState.room == 1 && gameState.debug){
+                gameState.items.append("watchedLockersRoom")
+                gameState.items.append("tombKey")
+                gameState.items.append("foundGuard")
+                gameState.items.append("allItems")
+                gameState.items.append("lockerKey")
+                gameState.items.append("needle")
+            }
             if (gameState.room == 39 && !manager.watched39){
                 gameState.items.append("watchedLockersRoom")
                 manager.watched39 = true
@@ -531,6 +537,18 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             self.manager.setPlayerPosition(gameState.room)
             self.manager.updateEnemiesListenerPosition()
             gameState.updateState()
+            
+            if (gameState.room == 174){
+                manager.watched174 = true
+                let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(manager.language)-chegadaSalaFinal", ofType: "mp3")!)
+                
+                self.musicPlayer = try! AVAudioPlayer(contentsOfURL: url)
+                
+                self.musicPlayer.prepareToPlay()
+                self.musicPlayer.volume = 1
+                self.musicPlayer.play()
+                self.musicPlayer.delegate = self
+            }
             /*
             let transition = SKTransition.fadeWithDuration(0)
             let scene = GameScene(size: self.size)
@@ -546,10 +564,39 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
     }
     
+    func audioPlayerDidFinishPlaying(player: AVAudioPlayer, successfully flag: Bool) {
+        if (manager.watched174){
+            manager.gameState.eraseJson()
+            manager.eraseManager()
+            self.manager.initStoryArray()
+            self.manager.firstPlay = true
+            let transition = SKTransition.fadeWithDuration(0)
+            let scene = StartMenuScene(size: self.size)
+
+            gameState.room = 0
+            gameState.rotation = 1
+            self.manager.playerPosition = 0
+            
+            
+            if let recognizers = self.view?.gestureRecognizers {
+                for recognizer in recognizers {
+                    self.view?.removeGestureRecognizer(recognizer)
+                }
+            }
+            
+            
+            self.view?.presentScene(scene, transition: transition)
+        }
+        
+    }
+    
     func pickItem (action :JSON) {
         var soundName = ""
         if (checkPrerequisite(action) && checkItem(action)) {
             gameState.items.append(action["item"].stringValue)
+            #if os(iOS)
+                GameAnalytics.addDesignEventWithEventId("Progression:Item:" + gameState.level.description + ":" + action["item"].stringValue);
+            #endif
             gameState.updateState()
             if(action["item"].stringValue == "lockerKey"){
                 soundName = "LANG-narrativa_encontreiChave_escritorioAdm"
@@ -600,6 +647,16 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     }
     
     func presentGameOver () {
+        #if os(iOS)
+            GameAnalytics.addDesignEventWithEventId("Progression:Death:" + gameState.level.description + ":" + gameState.room.description);
+        #endif
+        
+        /*
+        GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatusFail,
+            progression01: gameState.level.description,
+            progression02: gameState.room.description, progression03: "")
+        */
+        
         self.enemyControl.gameOver()
         self.manager.stopBGSound()
         let transition = SKTransition.fadeWithDuration(0)

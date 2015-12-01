@@ -122,7 +122,6 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     func startScreen(){
         
-        
         self.background = SKSpriteNode(imageNamed: "splashScreen")
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)
         self.background.size = self.frame.size
@@ -153,8 +152,9 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         
         #if os(tvOS)
             setupGestureRecognizerTV();
+        #elseif os(iOS)
+            setupGestureRecognizerIOS();
         #endif
-    
     
     }
     
@@ -167,8 +167,14 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     }
     
     func startMenuOptions(){
+        newGameLabels.removeAll()
+        
+        selected = 1;
+
+        
         self.isOnStartMenuOptions = true
         self.isOnNewGameScreen = false
+        self.dot3.hidden = true
         self.dot3.removeFromParent()
         
         dot.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2.5)
@@ -235,9 +241,18 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         self.loadGame.zPosition = 1
         addChild(self.loadGame)
         
+        
+        labels.append(loadGame)
+        labels.append(newGame)
+        labels.append(tutorial)
+        
     }
     
     func newGameScreen(){
+        labels.removeAll()
+        
+        newGameSelected = 0;
+        
         self.newGame.removeFromParent()
         self.tutorial.removeFromParent()
         self.loadGame.removeFromParent()
@@ -250,6 +265,8 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         dot3.zPosition = 3
         self.addChild(dot3)
         
+        
+        self.dot.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
         
         self.newGameYes = SKLabelNode(fontNamed: "futura-condensed-normal")
         self.newGameYes.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/1.5)
@@ -279,6 +296,11 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         self.newGameNo.fontColor = UIColor.whiteColor()
         self.newGameNo.zPosition = 1
         addChild(self.newGameNo)
+        
+        
+        newGameLabels.append(newGameYes)
+        newGameLabels.append(newGameNo)
+
     }
     
     

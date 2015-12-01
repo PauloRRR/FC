@@ -18,6 +18,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     var background = SKSpriteNode()
     var newGameYes = SKLabelNode()
     var newGameNo = SKLabelNode()
+    var tutorialPlaying = SKLabelNode()
     var newGameTouch = 0
     var loadGameTouch = 0
     var tutorialTouch = 0
@@ -122,7 +123,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     func startScreen(){
         
-        self.background = SKSpriteNode(imageNamed: "splashScreen")
+        self.background = SKSpriteNode(imageNamed: "background")
         self.background.position = CGPoint(x: frame.midX, y: frame.midY)
         self.background.size = self.frame.size
         self.background.zPosition = 0
@@ -137,6 +138,51 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         self.musicPlayer.play()
         self.musicPlayer.delegate = self
         soundWarning.runAction(SKAction.repeatAction(soundWarningAction, count: Int(self.musicPlayer.duration)))
+        
+        
+        
+        
+        self.runAction(SKAction.waitForDuration(35.0), completion: {
+            self.tutorialPlaying.removeFromParent()
+            self.background.removeFromParent()
+            self.background = SKSpriteNode(imageNamed: "tutorial1")
+            self.background.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+            self.background.size = self.frame.size
+            self.background.zPosition = 0
+            
+            self.addChild(self.background)
+            
+            self.runAction(SKAction.waitForDuration(10.0), completion: {
+                self.background.removeFromParent()
+                self.background = SKSpriteNode(imageNamed: "tutorial2")
+                self.background.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+                self.background.size = self.frame.size
+                self.background.zPosition = 0
+                
+                self.addChild(self.background)
+                
+                self.runAction(SKAction.waitForDuration(5.0), completion: {
+                    self.background.removeFromParent()
+                    self.background = SKSpriteNode(imageNamed: "tutorial3")
+                    self.background.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+                    self.background.size = self.frame.size
+                    self.background.zPosition = 0
+                    
+                    self.addChild(self.background)
+                    
+                    self.runAction(SKAction.waitForDuration(15.0), completion: {
+                        self.background.removeFromParent()
+                        self.background = SKSpriteNode(imageNamed: "tutorial4")
+                        self.background.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+                        self.background.size = self.frame.size
+                        self.background.zPosition = 0
+                        
+                        self.addChild(self.background)
+                    })
+                })
+            })
+        })
+        
         
     }
     

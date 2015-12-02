@@ -32,6 +32,9 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     var headphone : SKSpriteNode!
     var headphoneFrames : [SKTexture]!
     var labels: [SKLabelNode] = []
+    var newGameLabels: [SKLabelNode] = []
+    var location = CGPoint()
+    var newGameSelected = 0
     var soundWarning = SKSpriteNode(imageNamed:"soundWarning")
     let soundWarningAction = SKAction.sequence([SKAction.fadeInWithDuration(1.0),SKAction.fadeOutWithDuration(0)])
     var selected = 1;
@@ -76,7 +79,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         
         
         backgroundColor = (UIColor.blackColor())
-        headphone = SKSpriteNode(imageNamed: "headphone")
+        headphone = SKSpriteNode(imageNamed: "soundWarning")
         headphone.position = CGPoint(x:CGRectGetMidX(self.frame), y:self.frame.size.height*0.6)
         addChild(headphone)
         var label = SKLabelNode(text: "")

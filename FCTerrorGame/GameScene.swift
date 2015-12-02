@@ -14,7 +14,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     var level: JSON!
     var background: SKSpriteNode?
     var overlay: SKSpriteNode?
-    
+    var musicPlayer = AVAudioPlayer()
     var enemyControl = EnemyControl()
     var manager = GameManager.sharedInstance
     var playerHidden = false;

@@ -160,7 +160,8 @@ extension StartMenuScene {
                 break;
 
             default:
-                GameManager.addSoundArray("LANG-tutorialFull", frmt: "mp3", x: 0.0, y: 0.0)
+                //GameManager.addSoundArray("LANG-tutorialFull", frmt: "mp3", x: 0.0, y: 0.0)
+                self.playTutorial()
                 break;
                 
             }

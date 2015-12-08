@@ -18,7 +18,6 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     var background = SKSpriteNode()
     var newGameYes = SKLabelNode()
     var newGameNo = SKLabelNode()
-    var tutorialPlaying = SKLabelNode()
     var newGameTouch = 0
     var loadGameTouch = 0
     var tutorialTouch = 0
@@ -40,12 +39,15 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     var selected = 1;
     var musicPlayer = AVAudioPlayer()
     var lastVolume: Float = 0.0;
+    var tutorialLabel = SKLabelNode()
 
     let appDelegate : AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     override func didMoveToView(view: SKView) {
        scene!.scaleMode = SKSceneScaleMode.AspectFit
+
         self.headPhoneScreen()
+
 
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("mute"), name: "muteSound", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("normalVolume"), name: "resumeSound", object: nil)
@@ -125,15 +127,21 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     
     func startScreen(){
+        self.tutorialLabel = SKLabelNode(fontNamed: "futura-condensed-normal")
+        if(manager.language == "en-US"){
+            self.tutorialLabel.text = "NOW PLAYING TUTORIAL"
+        }else{
+            self.tutorialLabel.text = "TOCANDO TUTORIAL"
+        }
+        self.tutorialLabel.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
+        self.tutorialLabel.name = "tutorialLabel"
+        self.tutorialLabel.fontSize = 0.1 * self.frame.size.width
+        self.tutorialLabel.fontColor = UIColor.whiteColor()
+        self.tutorialLabel.zPosition = 1
+        self.addChild(self.tutorialLabel)
         
-        self.background = SKSpriteNode(imageNamed: "background")
-        self.background.position = CGPoint(x: frame.midX, y: frame.midY)
-        self.background.size = self.frame.size
-        self.background.zPosition = 0
-        
-        addChild(self.background)
         let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(manager.language)-tutorialFull", ofType: "mp3")!)
-
+        
         self.musicPlayer = try! AVAudioPlayer(contentsOfURL: url)
         
         self.musicPlayer.prepareToPlay()
@@ -142,11 +150,15 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         self.musicPlayer.delegate = self
         soundWarning.runAction(SKAction.repeatAction(soundWarningAction, count: Int(self.musicPlayer.duration)))
         
+        self.background = SKSpriteNode(imageNamed: "background")
+        self.background.position = CGPoint(x: frame.midX, y: frame.midY)
+        self.background.size = self.frame.size
+        self.background.zPosition = 0
         
-        
+        addChild(self.background)
         
         self.runAction(SKAction.waitForDuration(35.0), completion: {
-            self.tutorialPlaying.removeFromParent()
+            self.tutorialLabel.removeFromParent()
             self.background.removeFromParent()
             self.background = SKSpriteNode(imageNamed: "tutorial1")
             self.background.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
@@ -185,7 +197,147 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
                 })
             })
         })
+
         
+    }
+    
+    func playTutorial(){
+        self.isOnStartMenuOptions = false
+        self.newGame.removeFromParent()
+        self.loadGame.removeFromParent()
+        self.tutorial.removeFromParent()
+        
+        self.tutorialLabel = SKLabelNode(fontNamed: "futura-condensed-normal")
+        if(manager.language == "en-US"){
+            self.tutorialLabel.text = "NOW PLAYING TUTORIAL"
+        }else{
+            self.tutorialLabel.text = "TOCANDO TUTORIAL"
+        }
+        self.tutorialLabel.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
+        self.tutorialLabel.name = "tutorialLabel"
+        self.tutorialLabel.fontSize = 0.1 * self.frame.size.width
+        self.tutorialLabel.fontColor = UIColor.whiteColor()
+        self.tutorialLabel.zPosition = 1
+        self.addChild(self.tutorialLabel)
+        
+        let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("\(manager.language)-tutorialFull", ofType: "mp3")!)
+        
+        self.musicPlayer = try! AVAudioPlayer(contentsOfURL: url)
+        
+        self.musicPlayer.prepareToPlay()
+        self.musicPlayer.volume = 1
+        self.musicPlayer.play()
+        self.musicPlayer.delegate = self
+        soundWarning.runAction(SKAction.repeatAction(soundWarningAction, count: Int(self.musicPlayer.duration)))
+        
+        self.background = SKSpriteNode(imageNamed: "background")
+        self.background.position = CGPoint(x: frame.midX, y: frame.midY)
+        self.background.size = self.frame.size
+        self.background.zPosition = 0
+        
+        addChild(self.background)
+        
+        self.runAction(SKAction.waitForDuration(35.0), completion: {
+            self.tutorialLabel.removeFromParent()
+            self.background.removeFromParent()
+            self.background = SKSpriteNode(imageNamed: "tutorial1")
+            self.background.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+            self.background.size = self.frame.size
+            self.background.zPosition = 0
+            
+            self.addChild(self.background)
+            
+            self.runAction(SKAction.waitForDuration(10.0), completion: {
+                self.background.removeFromParent()
+                self.background = SKSpriteNode(imageNamed: "tutorial2")
+                self.background.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+                self.background.size = self.frame.size
+                self.background.zPosition = 0
+                
+                self.addChild(self.background)
+                
+                self.runAction(SKAction.waitForDuration(5.0), completion: {
+                    self.background.removeFromParent()
+                    self.background = SKSpriteNode(imageNamed: "tutorial3")
+                    self.background.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+                    self.background.size = self.frame.size
+                    self.background.zPosition = 0
+                    
+                    self.addChild(self.background)
+                    
+                    self.runAction(SKAction.waitForDuration(15.0), completion: {
+                        self.background.removeFromParent()
+                        self.background = SKSpriteNode(imageNamed: "tutorial4")
+                        self.background.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+                        self.background.size = self.frame.size
+                        self.background.zPosition = 0
+                        
+                        self.addChild(self.background)
+                        
+                        self.runAction(SKAction.waitForDuration(15.0), completion:{
+                            self.background.removeFromParent()
+                            self.background = SKSpriteNode(imageNamed: "background")
+                            self.background.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+                            self.background.size = self.frame.size
+                            self.background.zPosition = 0
+                            
+                            self.addChild(self.background)
+                            
+                            self.newGame = SKLabelNode(fontNamed: "futura-condensed-normal")
+                            self.newGame.position = CGPoint(x: self.frame.size.width/2, y: self.frame.size.height/2.1)
+                            
+                            if(self.manager.language == "pt-BR"){
+                                self.newGame.text = "INICIAR"
+                            }else{
+                                self.newGame.text = "START"
+                            }
+                            
+                            
+                            self.newGame.name = "newGame"
+                            self.newGame.fontSize = 0.1 * self.frame.size.width
+                            self.newGame.fontColor = UIColor.whiteColor()
+                            self.newGame.zPosition = 1
+                            self.addChild(self.newGame)
+                            
+                            self.tutorial = SKLabelNode(fontNamed: "futura-condensed-normal")
+                            self.tutorial.position = CGPoint(x: self.newGame.position.x, y: self.newGame.position.y/2.6)
+                            self.tutorial.name = "tutorial"
+                            self.tutorial.text = "TUTORIAL"
+                            self.tutorial.fontSize = 0.1 * self.frame.size.width
+                            self.tutorial.fontColor = UIColor.whiteColor()
+                            self.tutorial.zPosition = 1
+                            self.addChild(self.tutorial)
+                            
+                            self.loadGame = SKLabelNode(fontNamed: "futura-condensed-normal")
+                            self.loadGame.position = CGPoint(x: self.newGame.position.x, y: self.newGame.position.y * 1.6)
+                            self.loadGame.name = "loadGame"
+                            if(self.manager.language == "pt-BR"){
+                                self.loadGame.text = "CONTINUAR"
+                            }else{
+                                self.loadGame.text = "CONTINUE"
+                            }
+                            
+                            self.loadGame.fontSize = 0.1 * self.frame.size.width
+                            self.loadGame.fontColor = UIColor.whiteColor()
+                            self.loadGame.zPosition = 1
+                            self.addChild(self.loadGame)
+                            self.isOnStartMenuOptions = true
+                            if(UIAccessibilityIsVoiceOverRunning()){
+                                GameManager.addSoundArray("LANG-menu", frmt: "mp3", x: 0.0, y: 0.0)
+                            }
+                            let url = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("menuMusic", ofType: "mp3")!)
+                            
+                            self.musicPlayer = try! AVAudioPlayer(contentsOfURL: url)
+                            
+                            self.musicPlayer.prepareToPlay()
+                            self.musicPlayer.volume = 0.5
+                            self.musicPlayer.numberOfLoops = -1
+                            self.musicPlayer.play()
+                        })
+                    })
+                })
+            })
+        })
         
     }
     

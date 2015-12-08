@@ -145,7 +145,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         }
         
         #if os(iOS)
-            GameAnalytics.addDesignEventWithEventId("Progression:Enter:" + gameState.level.description + ":" + gameState.room.description);
+            //GameAnalytics.addDesignEventWithEventId("Progression:Enter:" + gameState.level.description + ":" + gameState.room.description);
         #endif
         
         /*
@@ -502,9 +502,9 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
             }
             
             #if os(iOS)
-                GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatusComplete,
-                    progression01: gameState.level.description,
-                    progression02: gameState.room.description, progression03: "")
+                //GameAnalytics.addProgressionEventWithProgressionStatus(GAProgressionStatusComplete,
+                    //progression01: gameState.level.description,
+                    //progression02: gameState.room.description, progression03: "")
             #endif
 
             
@@ -595,7 +595,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         if (checkPrerequisite(action) && checkItem(action)) {
             gameState.items.append(action["item"].stringValue)
             #if os(iOS)
-                GameAnalytics.addDesignEventWithEventId("Progression:Item:" + gameState.level.description + ":" + action["item"].stringValue);
+                //GameAnalytics.addDesignEventWithEventId("Progression:Item:" + gameState.level.description + ":" + action["item"].stringValue);
             #endif
             gameState.updateState()
             if(action["item"].stringValue == "lockerKey"){
@@ -648,7 +648,7 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
     
     func presentGameOver () {
         #if os(iOS)
-            GameAnalytics.addDesignEventWithEventId("Progression:Death:" + gameState.level.description + ":" + gameState.room.description);
+            //GameAnalytics.addDesignEventWithEventId("Progression:Death:" + gameState.level.description + ":" + gameState.room.description);
         #endif
         
         /*

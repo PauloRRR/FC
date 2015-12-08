@@ -25,8 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
             
             /* First ask the user if we are allowed to perform local notifications */
-            GameAnalytics.configureBuild("alpha 0.1.0")
-            GameAnalytics.initializeWithGameKey("f26489aff6b1bfc34ebba320819eda56", gameSecret: "21c010cf90aebccd6bc0b98ee833640921472a16");
+            //GameAnalytics.configureBuild("alpha 0.1.0")
+            //GameAnalytics.initializeWithGameKey("f26489aff6b1bfc34ebba320819eda56", gameSecret: "21c010cf90aebccd6bc0b98ee833640921472a16");
             
             return true
     }

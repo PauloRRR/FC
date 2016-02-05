@@ -34,8 +34,9 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UIApplication.sharedApplication().idleTimerDisabled = true
-        let language = NSLocale.preferredLanguages()[0]
-        if(language == "pt-BR"){
+        var language = NSLocale.preferredLanguages()[0]
+        if(language.hasPrefix("pt").boolValue){
+            language = "pt-BR"
             manager.language = language
         }
         print(language)

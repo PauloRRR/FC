@@ -86,11 +86,10 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         addChild(headphone)
         var label = SKLabelNode(text: "")
 
-        if(manager.language == "en-US"){
+        if(manager.language == "pt-BR"){
+            label = SKLabelNode(text: "Coloque os fones de ouvido")
+        } else {
             label = SKLabelNode(text: "Put your headphones on")
-        }else
-        {
-            label = SKLabelNode(text: "Coloque os fone de ouvido")
         }
         label.position.y = self.frame.height * (-0.5)
         headphone.addChild(label)
@@ -128,10 +127,10 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     
     func startScreen(){
         self.tutorialLabel = SKLabelNode(fontNamed: "futura-condensed-normal")
-        if(manager.language == "en-US"){
-            self.tutorialLabel.text = "NOW PLAYING TUTORIAL"
-        }else{
+        if(manager.language == "pt-BR"){
             self.tutorialLabel.text = "TOCANDO TUTORIAL"
+        } else {
+            self.tutorialLabel.text = "NOW PLAYING TUTORIAL"
         }
         self.tutorialLabel.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
         self.tutorialLabel.name = "tutorialLabel"
@@ -208,10 +207,10 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         self.tutorial.removeFromParent()
         
         self.tutorialLabel = SKLabelNode(fontNamed: "futura-condensed-normal")
-        if(manager.language == "en-US"){
-            self.tutorialLabel.text = "NOW PLAYING TUTORIAL"
-        }else{
+        if(manager.language == "pt-BR"){
             self.tutorialLabel.text = "TOCANDO TUTORIAL"
+        } else {
+            self.tutorialLabel.text = "NOW PLAYING TUTORIAL"
         }
         self.tutorialLabel.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2)
         self.tutorialLabel.name = "tutorialLabel"

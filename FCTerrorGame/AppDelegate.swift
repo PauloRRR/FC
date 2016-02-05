@@ -48,14 +48,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         notification.timeZone = NSCalendar.currentCalendar().timeZone
         
         
-        let language = NSLocale.preferredLanguages()[0]
-        if(language == "pt-BR"){
-            notification.alertBody = "Estamos LOUCOS de saudades de você! Venha jogar!"
-            
+        var language = NSLocale.preferredLanguages()[0]
+        if (language.hasPrefix("pt").boolValue) {
+            language = "pt-BR";
         }
-        else{
+        if (language == "pt-BR"){
+            notification.alertBody = "Estamos LOUCOS de saudades de você! Venha jogar!"
+        } else{
             notification.alertBody = "We are INSANELY missing you! Come out to play!"
-            
         }
         notification.hasAction = true
         notification.alertAction = "Madness's Daze"

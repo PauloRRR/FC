@@ -104,6 +104,8 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
 
                 #if os(iOS)
                     self.appDelegate.registerNotification()
+                #else
+                    self.waitNotification()
                 #endif
                 
                 
@@ -115,7 +117,7 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
     }
     
     func waitNotification(){
-                if (!NSUserDefaults.standardUserDefaults().boolForKey("FirstPlay")){
+        if (!NSUserDefaults.standardUserDefaults().boolForKey("FirstPlay")){
             self.startScreen()
         } else {
             self.finishedTutorial()

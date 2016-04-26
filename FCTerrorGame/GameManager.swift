@@ -79,7 +79,7 @@ class GameManager {
         var zed = -1
         let coord = AudioCoordinate()
         coord.pinpointListener(playerPosition)
-        for (var i = 0; i < self.enemies.count; i++){
+        for i in 0 ..< self.enemies.count{
             coord.pinpointPlayer(self.enemies[i].enemyPosition)
             if(coord.distance() <= 30.0){
                 zed = i
@@ -100,7 +100,7 @@ class GameManager {
     }
     
     func initStoryArray(){
-        for (var i = 0; i < 5; i++){
+        for i in 0 ..< 5{
             let audio = StorySoundNode(soundName: "\(language)-story\(i)", format: "mp3")
             self.storyP.append(audio)
         }
@@ -120,7 +120,7 @@ class GameManager {
     }
     
     func stopStorySound(){
-        for (var i = 0; i < 5; i++) {
+        for i in 0 ..< 5 {
             self.storyP[i].storyPlayer.stop()
         }
     }
@@ -151,7 +151,7 @@ class GameManager {
     
     
     func setListenerPosition(x:Float, y:Float){
-        for (var i = 0; i < self.audioArray.count; i++){
+        for i in 0 ..< self.audioArray.count{
             self.audioArray[i].listener3DPosition(x, y: y, z: 0)
         }
     }
@@ -170,7 +170,7 @@ class GameManager {
         let coord = AudioCoordinate()
         var nearCount = 0
         coord.pinpointListener(playerPosition)
-        for (var i = 0; i < self.enemies.count; i++){
+        for i in 0 ..< self.enemies.count{
             coord.pinpointPlayer(self.enemies[i].enemyPosition)
             self.enemies[i].audio.enviroNode.listenerPosition = AVAudio3DPoint(x: coord.coordX(playerPosition), y: coord.coordY(playerPosition), z: 0)
             self.enemies[i].audio.enviroNode.listenerAngularOrientation = enviroNode.listenerAngularOrientation
@@ -182,7 +182,7 @@ class GameManager {
             }
             
             if(coord.distance() <= 15.0){
-                nearCount++
+                nearCount += 1
                 
                 
                 if (coord.distance() <= 0.0 && (!gameState.playerHidden && !gameState.godMode) ) {

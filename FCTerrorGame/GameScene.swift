@@ -32,20 +32,21 @@ class GameScene: SKScene, UIGestureRecognizerDelegate, UIAlternateTapGestureReco
         } else {
             level = JSON.nullJSON
         }
-        let swipeLeft    = UISwipeGestureRecognizer(target: self, action: Selector("swipeLeft:"))
-        let swipeUp      = UISwipeGestureRecognizer(target: self, action: Selector("swipeUp:"))
-        let swipeRight   = UISwipeGestureRecognizer(target: self, action: Selector("swipeRight:"))
-        let swipeDown    = UISwipeGestureRecognizer(target: self, action: Selector("swipeDown:"))
-        let longPress    = UILongPressGestureRecognizer(target: self, action: Selector("longPress:"))
+        let swipeLeft    = UISwipeGestureRecognizer(target: self, action: #selector(GameScene.swipeLeft(_:)))
+        let swipeUp      = UISwipeGestureRecognizer(target: self, action: #selector(GameScene.swipeUp(_:)))
+        let swipeRight   = UISwipeGestureRecognizer(target: self, action: #selector(GameScene.swipeRight(_:)))
+        let swipeDown    = UISwipeGestureRecognizer(target: self, action: #selector(GameScene.swipeDown(_:)))
+        let longPress    = UILongPressGestureRecognizer(target: self, action: #selector(GameScene.longPress(_:)))
         
         #if os(tvOS)
             setupGestureRecognizerTV();
         #endif
         
-        let tapGesture = UITapGestureRecognizer(target: self, action: Selector("tapping:"))
+        let tapGesture = UITapGestureRecognizer(target: self, action:
+            #selector(GameScene.tapping(_:)))
         
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: Selector("presentGameOver"),
+            selector: #selector(GameScene.presentGameOver),
             name: "gameOver",
             object: nil)
         

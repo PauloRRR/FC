@@ -15,12 +15,12 @@ extension StartMenuScene {
     
     
     func setupGestureRecognizerTV () {
-        let tapRecognizerUp     = UITapGestureRecognizer(target: self, action: Selector("tappedUp:"))
-        let tapRecognizerRight  = UITapGestureRecognizer(target: self, action: Selector("tappedRight:"))
-        let tapRecognizerDown   = UITapGestureRecognizer(target: self, action: Selector("tappedDown:"))
-        let tapRecognizerLeft   = UITapGestureRecognizer(target: self, action: Selector("tappedLeft:"))
-        let tapRecognizerSelect = UITapGestureRecognizer(target: self, action: Selector("selectClick:"))
-        let tapRecognizerPlay   = UITapGestureRecognizer(target: self, action: Selector("tappedPlay:"))
+        let tapRecognizerUp     = UITapGestureRecognizer(target: self, action: #selector(StartMenuScene.tappedUp(_:)))
+        let tapRecognizerRight  = UITapGestureRecognizer(target: self, action: #selector(StartMenuScene.tappedRight(_:)))
+        let tapRecognizerDown   = UITapGestureRecognizer(target: self, action: #selector(StartMenuScene.tappedDown(_:)))
+        let tapRecognizerLeft   = UITapGestureRecognizer(target: self, action: #selector(StartMenuScene.tappedLeft(_:)))
+        let tapRecognizerSelect = UITapGestureRecognizer(target: self, action: #selector(StartMenuScene.selectClick(_:)))
+        let tapRecognizerPlay   = UITapGestureRecognizer(target: self, action: #selector(StartMenuScene.tappedPlay(_:)))
 
         
         tapRecognizerUp.allowedPressTypes       = [UIPressType.UpArrow.rawValue];
@@ -54,7 +54,7 @@ extension StartMenuScene {
     
     func updateColor () {
         if (isOnStartMenuOptions) {
-            for (var i = 0; i < labels.count; i++) {
+            for i in 0 ..< labels.count {
                 if (i == selected) {
                     labels[i].fontColor = UIColor.redColor()
                 } else {
@@ -62,7 +62,7 @@ extension StartMenuScene {
                 }
             }
         } else if (isOnNewGameScreen) {
-            for (var i = 0; i < newGameLabels.count; i++) {
+            for i in 0 ..< newGameLabels.count {
                 if (i == newGameSelected) {
                     newGameLabels[i].fontColor = UIColor.redColor()
                 } else {

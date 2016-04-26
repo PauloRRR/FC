@@ -46,19 +46,19 @@ class EnemyBot: NSObject {
             
                 if(self.arrayPosition == self.map.count - 1){
                     going = false
-                    self.arrayPosition--
+                    self.arrayPosition -= 1
                 }
                 else{
-                    self.arrayPosition++
+                    self.arrayPosition += 1
                 }
             }
             else{
                 if(self.arrayPosition == 0){
                     going = true
-                    self.arrayPosition++
+                    self.arrayPosition += 1
                 }
                 else{
-                    self.arrayPosition--
+                    self.arrayPosition -= 1
                 }
             
             }

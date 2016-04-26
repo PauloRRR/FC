@@ -59,8 +59,8 @@ class BackGround3dAudio: NSObject {
         dap.rolloffFactor = 1.5;
         
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("muffleSound"), name: "muffle", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("unmuffleSound"), name: "unmuffle", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BackGround3dAudio.muffleSound), name: "muffle", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BackGround3dAudio.unmuffleSound), name: "unmuffle", object: nil)
     }
     
     deinit {

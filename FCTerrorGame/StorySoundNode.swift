@@ -24,8 +24,8 @@ class StorySoundNode : NSObject {
         storyPlayer.volume = 1
         
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("mute"), name: "muteSound", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("normalVolume"), name: "resumeSound", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(StorySoundNode.mute), name: "muteSound", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(StorySoundNode.normalVolume), name: "resumeSound", object: nil)
         
     }
     

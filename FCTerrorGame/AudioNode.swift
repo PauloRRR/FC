@@ -66,8 +66,8 @@ class AudioNode: NSObject {
         dap.maximumDistance = 300.0;
         dap.rolloffFactor = 1.5;
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("mute"), name: "muteSound", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("normalVolume"), name: "resumeSound", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AudioNode.mute), name: "muteSound", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AudioNode.normalVolume), name: "resumeSound", object: nil)
 
         
         
@@ -89,8 +89,8 @@ class AudioNode: NSObject {
     
     
     func playLoop(){
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("muffleSound"), name: "muffle", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("unmuffleSound"), name: "unmuffle", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AudioNode.muffleSound), name: "muffle", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AudioNode.unmuffleSound), name: "unmuffle", object: nil)
 
         self.player.scheduleBuffer(audioFileBuffer, atTime: nil, options:.Loops, completionHandler: nil)
         self.player.play()

@@ -62,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         
         /* Badge settings */
-        notification.applicationIconBadgeNumber++
+        notification.applicationIconBadgeNumber += 1
         
         /* Schedule the notification */
         UIApplication.sharedApplication().cancelAllLocalNotifications()

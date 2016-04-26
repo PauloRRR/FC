@@ -40,7 +40,9 @@ class GameViewController: UIViewController {
             manager.language = language
         }
         print(language)
-        if let scene = StartMenuScene.unarchiveFromFile("GameScene") as? StartMenuScene {
+        if let scene = StartMenuScene.unarchiveFromFile("GameScene") as? StartMenuScene
+        //if let scene = StartMenuScene(fileNamed: "GameScene")
+        {
             // Configure the view.
             //self.view.isAccessibilityElement = false
             let skView = self.view as! SKView

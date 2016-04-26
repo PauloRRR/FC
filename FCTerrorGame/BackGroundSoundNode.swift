@@ -26,8 +26,8 @@ class BackGroundSoundNode: NSObject {
         backgroundPlayer.prepareToPlay()
         backgroundPlayer.volume = 1
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("mute"), name: "muteSound", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("normalVolume"), name: "resumeSound", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BackGroundSoundNode.mute), name: "muteSound", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(BackGroundSoundNode.normalVolume), name: "resumeSound", object: nil)
         
     }
     

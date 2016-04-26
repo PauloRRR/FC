@@ -21,12 +21,12 @@ extension StartMenuScene {
     }
     
     func setupGestureRecognizerIOS(){
-        let aSelector : Selector = "choose:"
+        let aSelector : Selector = #selector(StartMenuScene.choose(_:))
         let tapGesture = UITapGestureRecognizer(target: self, action: aSelector)
         tapGesture.numberOfTapsRequired = 1
         self.view!.addGestureRecognizer(tapGesture)
         
-        let bSelector : Selector = "confirm:"
+        let bSelector : Selector = #selector(StartMenuScene.confirm(_:))
         let doubleTapGesture = UITapGestureRecognizer(target: self, action: bSelector)
         doubleTapGesture.numberOfTapsRequired = 2
         self.view!.addGestureRecognizer(doubleTapGesture)

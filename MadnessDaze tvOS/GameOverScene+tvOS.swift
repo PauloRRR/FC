@@ -11,13 +11,15 @@ import SpriteKit
 
 extension GameOverScene {
     func setupGestureRecognizerTV () {
-        let tapRecognizerUp     = UITapGestureRecognizer(target: self, action: Selector("tappedUp:"))
-        let tapRecognizerRight  = UITapGestureRecognizer(target: self, action: Selector("tappedRight:"))
-        let tapRecognizerDown   = UITapGestureRecognizer(target: self, action: Selector("tappedDown:"))
-        let tapRecognizerLeft   = UITapGestureRecognizer(target: self, action: Selector("tappedLeft:"))
-        let tapRecognizerSelect = UITapGestureRecognizer(target: self, action: Selector("selectClick:"))
-        let tapRecognizerMenu   = UITapGestureRecognizer(target: self, action: Selector("mainMenu"))
-        let tapRecognizerPlay   = UITapGestureRecognizer(target: self, action: Selector("retry"))
+        let tapRecognizerUp     = UITapGestureRecognizer(target: self, action: #selector(GameOverScene.tappedUp(_:)))
+        let tapRecognizerRight  = UITapGestureRecognizer(target: self, action: #selector(GameOverScene.tappedRight(_:)))
+        let tapRecognizerDown   = UITapGestureRecognizer(target: self, action: #selector(GameOverScene.tappedDown(_:)))
+        let tapRecognizerLeft   = UITapGestureRecognizer(target: self, action: #selector(GameOverScene.tappedLeft(_:)))
+        let tapRecognizerSelect = UITapGestureRecognizer(target: self, action: #selector(GameOverScene.selectClick(_:)))
+        let tapRecognizerMenu   = UITapGestureRecognizer(target: self, action: #selector(self.mainMenu))
+        let tapRecognizerPlay   = UITapGestureRecognizer(target: self, action: #selector(self.retry))
+        //let tapRecognizerMenu   = UITapGestureRecognizer(target: self, action: Selector("mainMenu"))
+        //let tapRecognizerPlay   = UITapGestureRecognizer(target: self, action: Selector("retry"))
         
         
         tapRecognizerUp.allowedPressTypes       = [UIPressType.UpArrow.rawValue];
@@ -54,7 +56,7 @@ extension GameOverScene {
     }
     
     func updateColor () {
-        for (var i = 0; i < labels.count; i++) {
+        for i in 0 ..< labels.count {
             if (i == selected) {
                 labels[i].fontColor = UIColor.redColor()
             } else {

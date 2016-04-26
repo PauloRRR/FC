@@ -49,9 +49,9 @@ class StartMenuScene: SKScene, AVAudioPlayerDelegate {
         self.headPhoneScreen()
 
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("mute"), name: "muteSound", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("normalVolume"), name: "resumeSound", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("waitNotification"), name: "waitNotification", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(StartMenuScene.mute), name: "muteSound", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(StartMenuScene.normalVolume), name: "resumeSound", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(StartMenuScene.waitNotification), name: "waitNotification", object: nil)
         
         soundWarning.size = CGSize(width: soundWarning.size.width * 0.5, height: soundWarning.size.height * 0.5)
         soundWarning.position = CGPoint(x: self.frame.width * 0.9, y: self.frame.height * 0.9)

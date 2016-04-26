@@ -21,7 +21,7 @@ class HeadPhoneScene: SKScene {
         var pulseFrames = [SKTexture]()
         
         let numImages = headphoneAnimatedAtlas.textureNames.count
-        for var i=1; i<=numImages/2; i++ {
+        for i in 1 ... numImages/2{
             let bearTextureName = "Screen_\(i)"
             pulseFrames.append(headphoneAnimatedAtlas.textureNamed(bearTextureName))
         }

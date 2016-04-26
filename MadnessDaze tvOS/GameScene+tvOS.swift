@@ -13,7 +13,7 @@ import SpriteKit
 extension GameScene {
     func setupGestureRecognizerTV () {
 
-        let tapRecognizerMenu   = UITapGestureRecognizer(target: self, action: Selector("tappedMenu:"))
+        let tapRecognizerMenu   = UITapGestureRecognizer(target: self, action: #selector(GameScene.tappedMenu(_:)))
         
         tapRecognizerMenu.allowedPressTypes     = [UIPressType.Menu.rawValue];
         

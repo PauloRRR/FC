@@ -37,7 +37,7 @@ class UIAlternateTapGestureRecognizer: UIGestureRecognizer {
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent) {
         super.touchesEnded(touches, withEvent: event);
-        tapCount++;
+        tapCount += 1;
         if let delegate = self.delegate {
             if (delegate is UIAlternateTapGestureRecognizerDelegate) {
                 (delegate as! UIAlternateTapGestureRecognizerDelegate).didTap!(self)

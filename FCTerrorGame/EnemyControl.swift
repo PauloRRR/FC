@@ -24,7 +24,7 @@ class EnemyControl{
         if let filePath = NSBundle.mainBundle().pathForResource("Enemy", ofType: "json") {
             enemiesJson =  JSON(data: NSData(contentsOfFile: filePath)!)
             manager.enemies = [EnemyBot]();
-            for(var i = 0; i < enemiesJson.count; i++){
+            for i in 0 ..< enemiesJson.count{
                 let id = enemiesJson[i]["id"].stringValue
                 let startRoom = enemiesJson[i]["startRoomPosition"].intValue
                 let map = enemiesJson[i]["map"].arrayObject
@@ -41,20 +41,20 @@ class EnemyControl{
     }
     
     func updateEnemiesPosition(){
-        for(var i = 0; i < manager.enemies.count; i++){
+        for i in 0 ..< manager.enemies.count{
            manager.enemiesPosition[i] = manager.enemies[i].moveToAdjacentRoom()
            //manager.updateEnemiesListenerPosition()
         }
     }
     
     func stopEnemiesPosition(){
-        for(var i = 0; i < manager.enemies.count; i++){
+        for i in 0 ..< manager.enemies.count{
             manager.enemies[i].stopFootsteps()
             manager.enemies[i].stopBreath()
         }
     }
     func playEnemiesPosition(){
-        for(var i = 0; i < manager.enemies.count; i++){
+        for i in 0 ..< manager.enemies.count{
             manager.enemies[i].playFootsteps()
         }
     }
